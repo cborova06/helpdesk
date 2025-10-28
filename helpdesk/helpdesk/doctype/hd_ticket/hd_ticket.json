@@ -65,7 +65,15 @@
   "feedback_rating",
   "feedback",
   "feedback_extra",
-  "meta_tab"
+  "meta_tab",
+  "ai_insight_tab",
+  "last_sentiment",
+  "sentiment_trend",
+  "effort_score",
+  "effort_band",
+  "column_break_ypsk",
+  "ai_summary",
+  "ai_reply_suggestion"
  ],
  "fields": [
   {
@@ -441,13 +449,64 @@
    "fieldtype": "Data",
    "label": "Status Category",
    "read_only": 1
+  },
+  {
+   "fieldname": "ai_insight_tab",
+   "fieldtype": "Tab Break",
+   "label": "AI Insight"
+  },
+  {
+   "fieldname": "last_sentiment",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Last Sentiment",
+   "options": "\nPositive\nNegative\nNautral",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sentiment_trend",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Sentiment Trend",
+   "read_only": 1
+  },
+  {
+   "fieldname": "effort_score",
+   "fieldtype": "Float",
+   "in_standard_filter": 1,
+   "label": "Effort Score",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "effort_band",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Effort Band",
+   "options": "\nLow\nMedium\nHigh",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ypsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ai_summary",
+   "fieldtype": "Text",
+   "label": "AI Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ai_reply_suggestion",
+   "fieldtype": "Text Editor",
+   "label": "AI Reply Suggestion"
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-issue",
  "idx": 61,
  "links": [],
- "modified": "2025-09-04 19:44:36.006061",
+ "modified": "2025-10-28 17:51:11.488622",
  "modified_by": "Administrator",
  "module": "Helpdesk",
  "name": "HD Ticket",
