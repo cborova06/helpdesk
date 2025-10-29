@@ -25,6 +25,7 @@
     "@vueuse/integrations": "^13.8.0",
     "dayjs": "^1.11.7",
     "echarts": "^5.4.1",
+    "esbuild": "^0.25.0",
     "frappe-ui": "0.1.192",
     "gemoji": "^8.1.0",
     "lodash": "^4.17.21",
@@ -37,12 +38,12 @@
     "unplugin-icons": "^0.16.1",
     "unplugin-vue-components": "^0.25.2",
     "vee-validate": "^4.8.2",
+    "vite": "^7.1.12",
     "vue": "^3.5.14",
     "vue-echarts": "^6.5.4",
     "vue-router": "^4.2.2",
     "vuedraggable": "^4.1.0",
-    "zod": "^3.21.4",
-    "esbuild": "^0.25.0"
+    "zod": "^3.21.4"
   },
   "resolutions": {
     "cheerio": "1.1.2",
@@ -64,12 +65,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "prettier": "2.8.4",
-    "typescript": "^5.0.2",
-    "vite": "^5.4.21",
-    "vite-plugin-pwa": "^0.20.5",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.5",
-    "tailwindcss": "^3.4.15"
+    "prettier": "2.8.4",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.0.2",
+    "vite": "^5.4.21",
+    "vite-plugin-pwa": "^0.20.5"
   }
 }
