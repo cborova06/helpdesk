@@ -64,7 +64,7 @@
     <!-- action buttons -->
     <div class="mt-auto flex justify-between">
       <Button
-        label="Back"
+        :label="__('Back')"
         theme="gray"
         variant="outline"
         :disabled="loading"
@@ -72,14 +72,14 @@
       />
       <div class="flex gap-2">
         <Button
-          label="Update Account"
+          :label="__('Update Account')"
           variant="solid"
           @click="updateAccount"
           :loading="loading"
         />
         <Button
           v-if="accountData.enable_incoming"
-          label="Pull Emails"
+          :label="__('Pull Emails')"
           variant="subtle"
           @click="pullEmails"
           :loading="loadingPull"

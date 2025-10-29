@@ -13,7 +13,7 @@
           <TextInput
             ref="searchInput"
             class="flex-1"
-            placeholder="Search tickets, comments, and communications..."
+            :placeholder="__('Search tickets, comments, and communications...')"
             autocomplete="off"
             :model-value="query"
             @update:model-value="updateQuery"
@@ -83,7 +83,7 @@
               class="ml-auto text-ink-gray-5"
               variant="gray-ghost"
               @click="clearFilters"
-              label="Clear all filters"
+              :label="__('Clear all filters')"
             />
           </div>
         </div>
@@ -340,9 +340,9 @@ const priorityFilterOptions = computed(() => {
 
 const doctypesFilterOptions = computed(() => {
   return [
-    { value: "HD Ticket", label: "Tickets", count: 0 },
-    { value: "Communication", label: "Emails", count: 0 },
-    { value: "HD Ticket Comment", label: "Comments", count: 0 },
+    { value: "HD Ticket", label: __('Tickets'), count: 0 },
+    { value: "Communication", label: __('Emails'), count: 0 },
+    { value: "HD Ticket Comment", label: __('Comments'), count: 0 },
   ];
 });
 

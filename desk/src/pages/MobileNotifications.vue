@@ -9,7 +9,7 @@
       <Tooltip :text="'Mark all as read'">
         <div>
           <Button
-            :label="'Mark all as read'"
+            :label="__('Mark all as read')"
             @click="() => notificationStore.clear.submit()"
           >
             <template #prefix>

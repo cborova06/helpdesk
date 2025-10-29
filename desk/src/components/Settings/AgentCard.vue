@@ -9,7 +9,7 @@
           </p>
           <Badge
             v-if="showStatus"
-            :label="'Inactive'"
+            :label="__('Inactive')"
             :theme="'gray'"
             :class="
               showStatus && !agent.is_active ? 'opacity-100' : 'opacity-0'

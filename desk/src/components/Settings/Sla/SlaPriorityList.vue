@@ -49,7 +49,7 @@
       <Button
         v-if="slaData.priorities.length !== priorityOptions.length"
         variant="subtle"
-        label="Add row"
+        :label="__('Add row')"
         @click="addRow"
         icon-left="plus"
       />
@@ -130,27 +130,27 @@ const addRow = () => {
 
 const columns = computed(() => [
   {
-    label: "Priority",
+    label: __('Priority'),
     key: "priority",
     isRequired: true,
   },
   {
-    label: "Default priority",
+    label: __('Default priority'),
     key: "default_priority",
     isRequired: true,
   },
   {
-    label: "First response time",
+    label: __('First response time'),
     key: "response_time",
     isRequired: true,
   },
   {
-    label: "Resolution time",
+    label: __('Resolution time'),
     key: "resolution_time",
     isRequired: true,
   },
   //   slaData.value.apply_sla_for_resolution && {
-  //     label: "Resolution time",
+  //     label: __('Resolution time'),
   //     key: "resolution_time",
   //     isRequired: Boolean(slaData.value.apply_sla_for_resolution),
   //   },

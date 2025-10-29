@@ -62,7 +62,7 @@
             size="md"
             variant="solid"
             theme="red"
-            :label="'Cancel'"
+            :label="__('Cancel')"
             @click="cancelCall"
             class="rounded-lg"
           >
@@ -76,7 +76,7 @@
             size="md"
             variant="solid"
             theme="green"
-            :label="'Accept'"
+            :label="__('Accept')"
             class="rounded-lg"
             @click="acceptIncomingCall"
           >
@@ -88,7 +88,7 @@
             size="md"
             variant="solid"
             theme="red"
-            :label="'Reject'"
+            :label="__('Reject')"
             class="rounded-lg"
             @click="rejectIncomingCall"
           >

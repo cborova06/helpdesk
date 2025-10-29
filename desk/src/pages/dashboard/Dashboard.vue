@@ -15,7 +15,7 @@
           :options="options"
           class="!form-control !w-48"
           v-model="preset"
-          placeholder="Select Range"
+          :placeholder="__('Select Range')"
           @change="filters.period = preset"
         >
           <template #default>
@@ -36,7 +36,7 @@
           ref="datePickerRef"
           v-model="filters.period"
           variant="outline"
-          placeholder="Period"
+          :placeholder="__('Period')"
           @update:model-value="
             (e:string) => {
               showDatePicker = false;
@@ -53,7 +53,7 @@
           v-if="isManager"
           class="form-control w-48"
           doctype="HD Team"
-          placeholder="Team"
+          :placeholder="__('Team')"
           v-model="filters.team"
           :page-length="5"
           :hide-me="true"
@@ -66,7 +66,7 @@
           v-if="isManager"
           class="form-control w-48"
           doctype="HD Agent"
-          placeholder="Agent"
+          :placeholder="__('Agent')"
           v-model="filters.agent"
           :page-length="5"
           :filters="agentFilter"
@@ -266,35 +266,35 @@ const options = computed(() => [
     hideLabel: true,
     items: [
       {
-        label: "Today",
+        label: __('Today'),
         onClick: () => {
           preset.value = "Today";
           filters.period = getLastXDays(0);
         },
       },
       {
-        label: "Last 7 Days",
+        label: __('Last 7 Days'),
         onClick: () => {
           preset.value = "Last 7 Days";
           filters.period = getLastXDays(7);
         },
       },
       {
-        label: "Last 30 Days",
+        label: __('Last 30 Days'),
         onClick: () => {
           preset.value = "Last 30 Days";
           filters.period = getLastXDays(30);
         },
       },
       {
-        label: "Last 60 Days",
+        label: __('Last 60 Days'),
         onClick: () => {
           preset.value = "Last 60 Days";
           filters.period = getLastXDays(60);
         },
       },
       {
-        label: "Last 90 Days",
+        label: __('Last 90 Days'),
         onClick: () => {
           preset.value = "Last 90 Days";
           filters.period = getLastXDays(90);
@@ -303,7 +303,7 @@ const options = computed(() => [
     ],
   },
   {
-    label: "Custom Range",
+    label: __('Custom Range'),
     onClick: () => {
       showDatePicker.value = true;
       setTimeout(() => {
@@ -391,7 +391,7 @@ onMounted(() => {
 
 usePageMeta(() => {
   return {
-    title: "Dashboard",
+    title: __('Dashboard'),
   };
 });
 </script>

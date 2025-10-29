@@ -84,17 +84,17 @@
       <span>{{ emptyText }}</span>
       <Button
         v-if="title == 'Emails'"
-        label="New Email"
+        :label="__('New Email')"
         @click="communicationAreaRef?.toggleEmailBox() ?? toggleEmailBox()"
       />
       <Button
         v-else-if="title == 'Comments'"
-        label="New Comment"
+        :label="__('New Comment')"
         @click="communicationAreaRef?.toggleCommentBox() ?? toggleCommentBox()"
       />
       <Button
         v-else-if="title == 'Calls'"
-        label="Make a Call"
+        :label="__('Make a Call')"
         @click="makeCall()"
       />
     </div>

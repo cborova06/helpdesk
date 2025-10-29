@@ -1,12 +1,12 @@
 <template>
   <div class="px-10 py-8">
     <SettingsLayoutHeader
-      title="Business Holidays"
+      :title="__('Business Holidays')"
       description="Set your team’s working days, hours, and holidays using a template or custom schedule."
     >
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="goToNew()"

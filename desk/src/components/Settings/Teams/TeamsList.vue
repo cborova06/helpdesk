@@ -2,12 +2,12 @@
   <div class="w-full h-full flex flex-col">
     <!-- Header -->
     <SettingsLayoutHeader
-      title="Teams"
+      :title="__('Teams')"
       description="Create and manage teams and assign agents to specific teams."
     >
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="() => (showForm = !showForm)"
@@ -17,7 +17,7 @@
       <template #bottom-section>
         <FormControl
           v-model="search"
-          :placeholder="'Search'"
+          :placeholder="__('Search')"
           type="text"
           :debounce="300"
           class="w-60"

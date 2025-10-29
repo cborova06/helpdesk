@@ -34,6 +34,6 @@ import { useKeymapStore } from "@/stores/keymap";
 
 const keymapStore = useKeymapStore();
 const options = {
-  title: "Shortcuts",
+  title: __('Shortcuts'),
 };
 </script>

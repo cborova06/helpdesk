@@ -162,7 +162,7 @@ const statusDropdown = computed(() => {
   }));
 });
 const breadcrumbs = computed(() => {
-  let items = [{ label: "Tickets", route: { name: "TicketsAgent" } }];
+  let items = [{ label: __('Tickets'), route: { name: "TicketsAgent" } }];
   if (route.query.view) {
     const currView: ComputedRef<View> = findView(route.query.view as string);
     if (currView) {
@@ -202,14 +202,14 @@ const defaultActions = computed(() => {
 
   if (showMergeOption.value) {
     items.push({
-      label: "Merge Ticket",
+      label: __('Merge Ticket'),
       icon: LucideMerge,
       condition: () => !ticket.value.doc.is_merged,
       onClick: () => (showMergeModal.value = true),
     });
   }
   // items.push({
-  //   label: "Jump to ticket",
+  //   label: __('Jump to ticket'),
   //   icon: LucideTicket,
   //   onClick: () => {
   //     console.log("HELLO");

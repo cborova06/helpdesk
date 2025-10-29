@@ -26,12 +26,12 @@
           </FileUploader>
           <Button
             v-if="contact.doc?.image"
-            label="Remove photo"
+            :label="__('Remove photo')"
             @click="updateImage(null)"
           />
           <Button
             v-if="!contact.doc?.user && isManager"
-            label="Invite as user"
+            :label="__('Invite as user')"
             @click="inviteContact"
             :loading="isLoading"
           />
@@ -41,7 +41,7 @@
             <div class="text-xs">Emails</div>
             <MultiSelect
               v-model:items="emails"
-              placeholder="john.doe@example.com"
+              :placeholder="__('john.doe@example.com')"
               :validate="validateEmail"
             />
           </div>
@@ -49,7 +49,7 @@
             <div class="text-xs">Phone Nos</div>
             <MultiSelect
               v-model:items="phones"
-              placeholder="+91 98765 43210"
+              :placeholder="__('+91 98765 43210')"
               :validate="validatePhone"
             />
           </div>
@@ -58,7 +58,7 @@
             <Link
               doctype="HD Customer"
               class="form-control flex-1"
-              placeholder="Link to a customer"
+              :placeholder="__('Link to a customer')"
               v-model="selectedCustomer"
               :hide-me="true"
             />
@@ -229,7 +229,7 @@ const options = computed(() => ({
   title: contact.doc?.name,
   actions: [
     {
-      label: "Save",
+      label: __('Save'),
       theme: "gray",
       variant: "solid",
       onClick: () => update(),

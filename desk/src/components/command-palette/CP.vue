@@ -8,7 +8,7 @@
               <LucideSearch class="h-4 w-4" />
             </div>
             <ComboboxInput
-              placeholder="Search tickets, emails, comments, or #234 to navigate to ticket"
+              :placeholder="__('Search tickets, emails, comments, or #234 to navigate to ticket')"
               class="pl-11.5 pr-4.5 w-full border-none bg-transparent py-3 text-base text-gray-800 placeholder:text-gray-500 focus:ring-0"
               autocomplete="off"
               @input="onInput"
@@ -87,13 +87,13 @@ const navigationItems = computed(() => {
     });
   } else {
     items.push({
-      title: "Tickets",
+      title: __('Tickets'),
       icon: () => h(LucideTicket),
       route: { name: "TicketsAgent" },
     });
   }
   items.push({
-    title: "Knowledge Base",
+    title: __('Knowledge Base'),
     icon: () => h(LucideBookOpen),
     route: {
       name: isCustomerPortal.value
@@ -103,14 +103,14 @@ const navigationItems = computed(() => {
   });
 
   return {
-    title: "Jump to",
+    title: __('Jump to'),
     component: h(CPGroup),
     items,
   };
 });
 
 const fullSearchItem = computed(() => ({
-  title: "Search",
+  title: __('Search'),
   hideTitle: true,
   component: h(CPGroup),
   items: [

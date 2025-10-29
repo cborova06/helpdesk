@@ -21,7 +21,7 @@ ERROR_MSG_RESOLUTION = "Resolution time differs by more than 1 second"
 def get_ticket_obj():
     return {
         "doctype": "HD Ticket",
-        "subject": "Test Ticket",
+        "subject": _("Test Ticket"),
         "description": "Test Ticket Description",
     }
 

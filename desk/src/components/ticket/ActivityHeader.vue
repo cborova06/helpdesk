@@ -91,13 +91,13 @@ const defaultActions = computed(() => {
   let actions = [
     {
       icon: h(EmailIcon, { class: "h-4 w-4" }),
-      label: "Email",
+      label: __('Email'),
       onClick: () =>
         communicationAreaRef?.value?.toggleEmailBox() ?? toggleEmailBox(),
     },
     {
       icon: h(CommentIcon, { class: "h-4 w-4" }),
-      label: "Comment",
+      label: __('Comment'),
       onClick: () =>
         communicationAreaRef?.value?.toggleCommentBox() ?? toggleCommentBox(),
     },
@@ -114,12 +114,12 @@ const callActions = computed(() => {
   let actions = [
     {
       icon: h(PhoneIcon, { class: "h-4 w-4" }),
-      label: "Make a Call",
+      label: __('Make a Call'),
       onClick: () => makeCall(),
     },
     {
       icon: "edit-3",
-      label: "Log a Call",
+      label: __('Log a Call'),
       onClick: () => {
         showCallLogModal.value = true;
       },

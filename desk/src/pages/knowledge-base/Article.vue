@@ -61,12 +61,12 @@
             <div class="flex gap-2" v-if="editable">
               <DiscardButton
                 :hide-dialog="!isDirty"
-                title="Discard changes?"
+                :title="__('Discard changes?')"
                 message="Are you sure you want to discard changes?"
                 @discard="handleDiscard"
               />
 
-              <Button label="Save" @click="handleSave" variant="solid" />
+              <Button :label="__('Save')" @click="handleSave" variant="solid" />
             </div>
           </div>
           <!-- Title -->
@@ -74,7 +74,7 @@
             ref="titleRef"
             class="w-full resize-none border-0 text-3xl font-bold placeholder-ink-gray-3 p-0 pb-3 border-b border-gray-200 focus:ring-0 focus:border-gray-200 overflow-hidden"
             v-model="title"
-            placeholder="Title"
+            :placeholder="__('Title')"
             rows="1"
             wrap="soft"
             maxlength="140"
@@ -310,11 +310,11 @@ function handleArticleUpdate() {
 
 function handleDelete() {
   $dialog({
-    title: "Delete Article",
+    title: __('Delete Article'),
     message: "Are you sure you want to delete this article?",
     actions: [
       {
-        label: "Confirm",
+        label: __('Confirm'),
         variant: "solid",
         onClick({ close }) {
           deleteArticle.submit(
@@ -384,19 +384,19 @@ const editorClass = computed(() => {
 
 const articleActions = computed(() => [
   {
-    label: "Edit",
+    label: __('Edit'),
     icon: "edit",
     onClick: () => {
       handleEditMode();
     },
   },
   {
-    label: "Move To",
+    label: __('Move To'),
     icon: "corner-up-right",
     onClick: () => (moveToModal.value = true),
   },
   {
-    label: "Share",
+    label: __('Share'),
     icon: "link",
     onClick: () => {
       const url = new URL(window.location.href);
@@ -409,9 +409,9 @@ const articleActions = computed(() => [
     hideLabel: true,
     items: [
       {
-        label: "Delete",
+        label: __('Delete'),
         component: h(Button, {
-          label: "Delete",
+          label: __('Delete'),
           variant: "ghost",
           iconLeft: "trash-2",
           theme: "red",
@@ -426,7 +426,7 @@ const articleActions = computed(() => [
 const breadcrumbs = computed(() => {
   const items: Breadcrumb[] = [
     {
-      label: "Knowledge Base",
+      label: __('Knowledge Base'),
       route: {
         name: isCustomerPortal.value
           ? "CustomerKnowledgeBase"

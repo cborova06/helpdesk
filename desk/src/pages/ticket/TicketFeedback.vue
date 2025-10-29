@@ -53,7 +53,7 @@
           <FormControl
             v-model="text"
             type="textarea"
-            placeholder="Tell us more"
+            :placeholder="__('Tell us more')"
           />
         </div>
       </div>

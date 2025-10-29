@@ -34,7 +34,7 @@ function handleDiscard() {
     },
     actions: [
       {
-        label: "Confirm",
+        label: __('Confirm'),
         variant: "solid",
         onClick(close: Function) {
           emit("discard");

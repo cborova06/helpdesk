@@ -97,7 +97,7 @@
                         class="w-full flex !justify-start"
                         icon-left="edit"
                         variant="ghost"
-                        label="Edit"
+                        :label="__('Edit')"
                         @click="
                           () => {
                             closePopover();

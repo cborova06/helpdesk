@@ -154,7 +154,7 @@
           size="sm"
           variant="subtle"
           :disabled="false"
-          label="New Subject"
+          :label="__('New Subject')"
         />
       </template>
       <template #actions>
@@ -317,7 +317,7 @@ function updateField(name: string, value: string, callback = () => {}) {
 }
 
 const breadcrumbs = computed(() => {
-  let items = [{ label: "Tickets", route: { name: "TicketsAgent" } }];
+  let items = [{ label: __('Tickets'), route: { name: "TicketsAgent" } }];
   items.push({
     label: ticket.data?.subject,
     route: { name: "TicketAgent" },
@@ -341,23 +341,23 @@ const tabs: ComputedRef<TabObject[]> = computed(() => {
   const _tabs = [
     {
       name: "details",
-      label: "Details",
+      label: __('Details'),
       icon: DetailsIcon,
       condition: () => isMobileView.value,
     },
     {
       name: "activity",
-      label: "Activity",
+      label: __('Activity'),
       icon: ActivityIcon,
     },
     {
       name: "email",
-      label: "Emails",
+      label: __('Emails'),
       icon: EmailIcon,
     },
     {
       name: "comment",
-      label: "Comments",
+      label: __('Comments'),
       icon: CommentIcon,
     },
   ];
@@ -365,7 +365,7 @@ const tabs: ComputedRef<TabObject[]> = computed(() => {
   if (isCallingEnabled.value) {
     _tabs.push({
       name: "call",
-      label: "Calls",
+      label: __('Calls'),
       icon: PhoneIcon,
     });
   }

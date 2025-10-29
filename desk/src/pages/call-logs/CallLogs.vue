@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Button
-          label="New Call Log"
+          :label="__('New Call Log')"
           theme="gray"
           variant="solid"
           @click="newCallLog"
@@ -59,7 +59,7 @@ const options = computed(() => {
     selectable: true,
     showSelectBanner: true,
     emptyState: {
-      title: "No Call Logs Found",
+      title: __('No Call Logs Found'),
       icon: PhoneIcon,
     },
     columnConfig: {
@@ -135,7 +135,7 @@ function openCallLog(id: string): void {
 
 usePageMeta(() => {
   return {
-    title: "Call Logs",
+    title: __('Call Logs'),
   };
 });
 </script>

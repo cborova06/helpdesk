@@ -47,7 +47,7 @@ const apps = createResource({
       {
         name: "frappe",
         logo: "/assets/helpdesk/desk/desk.png",
-        title: "Desk",
+        title: __('Desk'),
         route: "/app",
       },
     ];

@@ -31,7 +31,7 @@
     <template #body-content>
       <div class="flex flex-col gap-4">
         <FormControl
-          label="New Holiday List Name"
+          :label="__('New Holiday List Name')"
           type="text"
           v-model="duplicateDialog.name"
         />
@@ -41,10 +41,10 @@
       <div class="flex gap-2 justify-end">
         <Button
           variant="subtle"
-          label="Close"
+          :label="__('Close')"
           @click="duplicateDialog.show = false"
         />
-        <Button variant="solid" label="Duplicate" @click="duplicate()" />
+        <Button variant="solid" :label="__('Duplicate')" @click="duplicate()" />
       </div>
     </template>
   </Dialog>
@@ -73,7 +73,7 @@ const isConfirmingDelete = ref(false);
 
 const dropdownOptions = [
   {
-    label: "Duplicate",
+    label: __('Duplicate'),
     onClick: () => {
       duplicateDialog.value.show = true;
       duplicateDialog.value.name = props.data.name + " (Copy)";

@@ -144,12 +144,12 @@ def get_ticket_count(from_date, to_date, conds="", return_result=False):
     )
 
     return {
-        "title": "Tickets",
+        "title": _("Tickets"),
         "value": current_month_tickets,
         "delta": delta_in_percentage,
         "deltaSuffix": "%",
         "negativeIsBetter": True,
-        "tooltip": "Total number of tickets created",
+        "tooltip": _("Total number of tickets created"),
     }
 
 
@@ -210,12 +210,12 @@ def get_sla_fulfilled_count(from_date, to_date, conds="", resolved_statuses=None
         current_month_fulfilled_percentage - prev_month_fulfilled_percentage
     )
     return {
-        "title": "% SLA Fulfilled",
+        "title": _("% SLA Fulfilled"),
         "value": current_month_fulfilled_percentage,
         "suffix": "%",
         "delta": delta_in_percentage,
         "deltaSuffix": "%",
-        "tooltip": "% of tickets created that were resolved within SLA",
+        "tooltip": _("% of tickets created that were resolved within SLA"),
     }
 
 
@@ -259,13 +259,13 @@ def get_avg_first_response_time(from_date, to_date, conds=""):
     delta = current_month_avg - prev_month_avg if prev_month_avg else 0
 
     return {
-        "title": "Avg. First Response",
+        "title": _("Avg. First Response"),
         "value": current_month_avg,
         "suffix": " hrs",
         "delta": delta,
         "deltaSuffix": " hrs",
         "negativeIsBetter": True,
-        "tooltip": "Avg. time taken to first respond to a ticket",
+        "tooltip": _("Avg. time taken to first respond to a ticket"),
     }
 
 
@@ -306,13 +306,13 @@ def get_avg_resolution_time(from_date, to_date, conds="", resolved_statuses=None
 
     delta = current_month_avg - prev_month_avg if prev_month_avg else 0
     return {
-        "title": "Avg. Resolution",
+        "title": _("Avg. Resolution"),
         "value": current_month_avg,
         "suffix": " days",
         "delta": delta,
         "deltaSuffix": " days",
         "negativeIsBetter": True,
-        "tooltip": "Avg. time taken to resolve a ticket",
+        "tooltip": _("Avg. time taken to resolve a ticket"),
     }
 
 
@@ -355,12 +355,12 @@ def get_avg_feedback_score(from_date, to_date, conds=""):
     delta = current_month_avg - prev_month_avg
 
     return {
-        "title": "Avg. Feedback Rating",
+        "title": _("Avg. Feedback Rating"),
         "value": current_month_avg * 5,
         "suffix": "/5",
         "delta": delta * 5,
         "deltaSuffix": " stars",
-        "tooltip": "Avg. feedback rating for the tickets resolved",
+        "tooltip": _("Avg. feedback rating for the tickets resolved"),
     }
 
 
@@ -408,7 +408,7 @@ def get_team_chart_data(from_date, to_date, filters=None):
             result,
             "Tickets by Team",
             "Total Tickets by Team",
-            {"key": "team", "type": "category", "title": "Team", "timeGrain": "day"},
+            {"key": "team", "type": "category", "title": _("Team"), "timeGrain": "day"},
             "Tickets",
             [{"name": "count", "type": "bar"}],
         )
@@ -439,7 +439,7 @@ def get_ticket_type_chart_data(from_date, to_date, filters=None):
             result,
             "Tickets by Type",
             "Total Tickets by Type",
-            {"key": "type", "type": "category", "title": "Type", "timeGrain": "day"},
+            {"key": "type", "type": "category", "title": _("Type"), "timeGrain": "day"},
             "Tickets",
             [{"name": "count", "type": "bar"}],
         )
@@ -473,7 +473,7 @@ def get_ticket_priority_chart_data(from_date, to_date, filters=None):
             {
                 "key": "priority",
                 "type": "category",
-                "title": "Priority",
+                "title": _("Priority"),
                 "timeGrain": "day",
             },
             "Tickets",
@@ -556,7 +556,7 @@ def get_ticket_trend_data(
         result,
         "Ticket Trend",
         subtitle,
-        {"key": "date", "type": "time", "title": "Date", "timeGrain": "day"},
+        {"key": "date", "type": "time", "title": _("Date"), "timeGrain": "day"},
         "Tickets",
         [
             {"name": "closed", "type": "bar"},
@@ -570,7 +570,7 @@ def get_ticket_trend_data(
         ],
         stacked=True,
         y2Axis={
-            "title": "% SLA",
+            "title": _("% SLA"),
             "yMin": 0,
             "yMax": 100,
         },
@@ -625,7 +625,7 @@ def get_feedback_trend_data(from_date, to_date, conds=""):
         result,
         "Feedback Trend",
         subtitle,
-        {"key": "date", "type": "time", "title": "Date", "timeGrain": "day"},
+        {"key": "date", "type": "time", "title": _("Date"), "timeGrain": "day"},
         "Rated Tickets",
         [
             {"name": "rated_tickets", "type": "bar"},
@@ -638,7 +638,7 @@ def get_feedback_trend_data(from_date, to_date, conds=""):
             },
         ],
         y2Axis={
-            "title": "Rating",
+            "title": _("Rating"),
             "yMin": 0,
             "yMax": 5,
         },

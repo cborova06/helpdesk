@@ -7,7 +7,7 @@
             <h3 class="text-2xl font-semibold leading-6 text-ink-gray-9">
               {{ __(dialogOptions.title) || __("Untitled") }}
             </h3>
-            <Badge v-if="isDirty" :label="'Not Saved'" theme="orange" />
+            <Badge v-if="isDirty" :label="__('Not Saved')" theme="orange" />
           </div>
           <div class="flex items-center gap-1">
             <Button
@@ -21,51 +21,51 @@
         <div class="flex flex-col gap-4">
           <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <FormLabel label="Type" required />
+              <FormLabel :label="__('Type')" required />
               <Select
                 v-model="callLog.type"
                 :options="callLogTypeOptions"
-                placeholder="Select"
+                :placeholder="__('Select')"
               />
               <ErrorMessage :message="errors.type" />
             </div>
             <div class="flex flex-col gap-1.5">
-              <FormLabel label="To" required />
+              <FormLabel :label="__('To')" required />
               <FormControl
                 v-model="callLog.to"
                 type="text"
-                placeholder="+18596748596"
+                :placeholder="__('+18596748596')"
               />
               <ErrorMessage :message="errors.to" />
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <FormLabel label="From" required />
+              <FormLabel :label="__('From')" required />
               <FormControl
                 v-model="callLog.from"
                 type="text"
-                placeholder="+19138276548"
+                :placeholder="__('+19138276548')"
               />
               <ErrorMessage :message="errors.from" />
             </div>
             <div class="flex flex-col gap-1.5">
-              <FormLabel label="Status" required />
+              <FormLabel :label="__('Status')" required />
               <Select
                 v-model="callLog.status"
                 :options="callLogStatusOptions"
-                placeholder="Select"
+                :placeholder="__('Select')"
               ></Select>
               <ErrorMessage :message="errors.status" />
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <FormLabel label="Duration" required />
+              <FormLabel :label="__('Duration')" required />
               <FormControl
                 v-model="callLog.duration"
                 type="number"
-                placeholder="Duration"
+                :placeholder="__('Duration')"
                 description="Call duration in seconds"
               />
               <ErrorMessage :message="errors.duration" />
@@ -77,8 +77,8 @@
               <Link
                 :value="callLog.receiver"
                 :doctype="'User'"
-                :placeholder="'Select'"
-                label="Call Received By"
+                :placeholder="__('Select')"
+                :label="__('Call Received By')"
                 @change="(data) => (callLog.receiver = data)"
               />
             </div>
@@ -89,8 +89,8 @@
               <Link
                 :value="callLog.caller"
                 :doctype="'User'"
-                :placeholder="'Select'"
-                label="Caller"
+                :placeholder="__('Select')"
+                :label="__('Caller')"
                 @change="(data) => (callLog.caller = data)"
               />
             </div>
@@ -98,8 +98,8 @@
               <Link
                 :value="callLog.ticket"
                 :doctype="'HD Ticket'"
-                :placeholder="'Select'"
-                label="Ticket"
+                :placeholder="__('Select')"
+                :label="__('Ticket')"
                 :show-description="true"
                 @change="(data) => (callLog.ticket = String(data))"
               />
@@ -199,21 +199,21 @@ const callLogData = createResource({
 
 const callLogTypeOptions = [
   { label: "", value: "" },
-  { label: "Incoming", value: "Incoming" },
-  { label: "Outgoing", value: "Outgoing" },
+  { label: __('Incoming'), value: "Incoming" },
+  { label: __('Outgoing'), value: "Outgoing" },
 ];
 
 const callLogStatusOptions = [
   { label: "", value: "" },
-  { label: "Completed", value: "Completed" },
-  { label: "Busy", value: "Busy" },
-  { label: "Failed", value: "Failed" },
-  { label: "Initiated", value: "Initiated" },
-  { label: "Queued", value: "Queued" },
-  { label: "Canceled", value: "Canceled" },
-  { label: "Ringing", value: "Ringing" },
-  { label: "No Answer", value: "No Answer" },
-  { label: "In Progress", value: "In Progress" },
+  { label: __('Completed'), value: "Completed" },
+  { label: __('Busy'), value: "Busy" },
+  { label: __('Failed'), value: "Failed" },
+  { label: __('Initiated'), value: "Initiated" },
+  { label: __('Queued'), value: "Queued" },
+  { label: __('Canceled'), value: "Canceled" },
+  { label: __('Ringing'), value: "Ringing" },
+  { label: __('No Answer'), value: "No Answer" },
+  { label: __('In Progress'), value: "In Progress" },
 ];
 
 const dialogOptions = computed<DialogProps["options"]>(() => ({

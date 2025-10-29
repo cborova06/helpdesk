@@ -91,11 +91,11 @@ const props = defineProps({
 });
 
 const priorityOptions = [
-  { label: "Low", value: "0" },
-  { label: "Low-Medium", value: "1" },
-  { label: "Medium", value: "2" },
-  { label: "Medium-High", value: "3" },
-  { label: "High", value: "4" },
+  { label: __('Low'), value: "0" },
+  { label: __('Low-Medium'), value: "1" },
+  { label: __('Medium'), value: "2" },
+  { label: __('Medium-High'), value: "3" },
+  { label: __('High'), value: "4" },
 ];
 
 const duplicateDialog = ref({
@@ -123,7 +123,7 @@ const deleteAssignmentRule = () => {
 
 const dropdownOptions = [
   {
-    label: "Duplicate",
+    label: __('Duplicate'),
     onClick: () => {
       duplicateDialog.value = {
         show: true,

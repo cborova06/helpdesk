@@ -458,33 +458,40 @@
   {
    "fieldname": "last_sentiment",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Last Sentiment",
-   "options": "\nPositive\nNegative\nNautral",
-   "read_only": 1
+   "options": "\nOlumlu\nPositive\nN\u00f6tr\nNeutral\nOlumsuz\nNegative",
+   "read_only": 1,
+   "translatable": 1
   },
   {
    "fieldname": "sentiment_trend",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Sentiment Trend",
-   "read_only": 1
+   "read_only": 1,
+   "translatable": 1
   },
   {
    "fieldname": "effort_score",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Effort Score",
    "precision": "2",
-   "read_only": 1
+   "read_only": 1,
+   "translatable": 1
   },
   {
    "fieldname": "effort_band",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Effort Band",
-   "options": "\nLow\nMedium\nHigh",
-   "read_only": 1
+   "options": "\nD\u00fc\u015f\u00fck\nLow\nOrta\nMedium\nY\u00fcksek\nHigh",
+   "read_only": 1,
+   "translatable": 1
   },
   {
    "fieldname": "column_break_ypsk",
@@ -506,7 +513,7 @@
  "icon": "fa fa-issue",
  "idx": 61,
  "links": [],
- "modified": "2025-10-28 17:51:11.488622",
+ "modified": "2025-10-29 14:53:43.990364",
  "modified_by": "Administrator",
  "module": "Helpdesk",
  "name": "HD Ticket",

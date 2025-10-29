@@ -1,6 +1,7 @@
 {
 	"private": true,
 	"scripts": {
+		"prebuild": "bash ../brv_license_app/brv_license_app/scripts/prebuild_i18n.sh",
 		"postinstall": "cd desk && yarn install",
 		"dev": "cd desk && yarn dev",
 		"build": "cd desk && yarn build",

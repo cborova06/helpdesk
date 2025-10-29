@@ -38,7 +38,7 @@
     <Button
       v-if="slaData.support_and_resolution.length < 7"
       variant="subtle"
-      label="Add row"
+      :label="__('Add row')"
       @click="addWorkDay"
       icon-left="plus"
     />
@@ -84,17 +84,17 @@ const addWorkDay = () => {
 
 const columns: Column[] = [
   {
-    label: "Day",
+    label: __('Day'),
     key: "workday",
     isRequired: true,
   },
   {
-    label: "Start time",
+    label: __('Start time'),
     key: "start_time",
     isRequired: true,
   },
   {
-    label: "End time",
+    label: __('End time'),
     key: "end_time",
     isRequired: true,
   },

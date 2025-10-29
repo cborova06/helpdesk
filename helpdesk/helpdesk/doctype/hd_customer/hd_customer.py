@@ -10,19 +10,19 @@ class HDCustomer(Document):
     def default_list_data():
         columns = [
             {
-                "label": "Name",
+                "label": _("Name"),
                 "key": "name",
                 "width": "17rem",
                 "type": "Data",
             },
             {
-                "label": "Domain",
+                "label": _("Domain"),
                 "key": "domain",
                 "width": "24rem",
                 "type": "Data",
             },
             {
-                "label": "Created On",
+                "label": _("Created On"),
                 "key": "creation",
                 "width": "8rem",
                 "type": "Datetime",

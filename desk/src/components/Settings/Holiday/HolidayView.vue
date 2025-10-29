@@ -23,14 +23,14 @@
           :variant="'subtle'"
           :theme="'orange'"
           size="sm"
-          label="Unsaved changes"
+          :label="__('Unsaved changes')"
           v-if="isDirty"
         />
       </div>
     </div>
     <div class="flex gap-2 items-center">
       <Button
-        label="Save"
+        :label="__('Save')"
         theme="gray"
         variant="solid"
         @click="saveHoliday()"
@@ -58,8 +58,8 @@
           :type="'text'"
           size="sm"
           variant="subtle"
-          placeholder="Name"
-          label="Name"
+          :placeholder="__('Name')"
+          :label="__('Name')"
           v-model="holidayData.holiday_list_name"
           required
           @change="validateHoliday('holiday_list_name')"
@@ -73,8 +73,8 @@
         :type="'textarea'"
         size="sm"
         variant="subtle"
-        placeholder="Description"
-        label="Description"
+        :placeholder="__('Description')"
+        :label="__('Description')"
         v-model="holidayData.description"
       />
     </div>
@@ -88,11 +88,11 @@
       </div>
       <div class="mt-3.5 flex gap-5 flex-col md:flex-row">
         <div class="w-full space-y-1.5">
-          <FormLabel label="From date" for="from_date" required />
+          <FormLabel :label="__('From date')" for="from_date" required />
           <DatePicker
             v-model="holidayData.from_date"
             variant="subtle"
-            placeholder="11/01/2025"
+            :placeholder="__('11/01/2025')"
             class="w-full"
             id="from_date"
             :formatter="(date) => getFormattedDate(date)"
@@ -110,11 +110,11 @@
           />
         </div>
         <div class="w-full space-y-1.5">
-          <FormLabel label="To date" for="to_date" required />
+          <FormLabel :label="__('To date')" for="to_date" required />
           <DatePicker
             v-model="holidayData.to_date"
             variant="subtle"
-            placeholder="25/12/2025"
+            :placeholder="__('25/12/2025')"
             class="w-full"
             id="to_date"
             :formatter="(date) => getFormattedDate(date)"
@@ -177,7 +177,7 @@
       <div class="mt-2.5 flex justify-between items-center">
         <Button
           variant="subtle"
-          label="Add Holiday"
+          :label="__('Add Holiday')"
           @click="dialog.show = true"
           icon-left="plus"
         />
@@ -198,7 +198,7 @@
   <AddHolidayModal v-model="dialog" />
   <ConfirmDialog
     v-model="showConfirmDialog"
-    title="Unsaved changes"
+    :title="__('Unsaved changes')"
     message="Are you sure you want to go back? Unsaved changes will be lost."
     :onConfirm="goBack"
     :onCancel="() => (showConfirmDialog = false)"

@@ -12,7 +12,7 @@
         <Button
           variant="solid"
           :loading="isLoading"
-          label="Rename"
+          :label="__('Rename')"
           @click="handleRename"
         />
       </div>

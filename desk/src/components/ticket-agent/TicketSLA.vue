@@ -37,8 +37,9 @@
       <div class="border-l border-outline-gray-2 h-[13px]" />
       <!-- First Response -->
       <div class="flex items-center gap-1">
-        <span>First Response</span>
+        <span>{{ __('First Response') }}</span>
         <Badge
+          v-if="firstResponse.color"
           :label="firstResponse.label"
           variant="subtle"
           :theme="firstResponse.color"
@@ -48,7 +49,7 @@
       <div class="border-l border-outline-gray-2 h-[13px]" />
       <!-- Resolution by -->
       <div class="flex items-center gap-1">
-        <span>Resolution </span>
+        <span>{{ __('Resolution') }}</span>
         <Badge
           v-if="resolutionBy"
           :label="resolutionBy.label"
@@ -64,6 +65,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import { TicketSymbol } from "@/types";
 import { copyToClipboard } from "@/utils";
 import { dayjs } from "frappe-ui";
@@ -71,8 +73,7 @@ import Badge from "frappe-ui/src/components/Badge/Badge.vue";
 import { computed, inject } from "vue";
 
 const ticket = inject(TicketSymbol);
-
-const firstResponse = computed(() => {
+const firstResponse = computed<{ label: string; color: "gray" | "blue" | "green" | "orange" | "red" | "" }>(() => {
   if (ticket.value?.get?.loading) return { label: "", color: "" };
   if (
     !ticket.value.doc.first_responded_on &&
@@ -80,8 +81,8 @@ const firstResponse = computed(() => {
   ) {
     let responseBy = formatTimeShort(ticket.value.doc.response_by);
     return {
-      label: `Due in ${responseBy}`,
-      color: "orange",
+      label: __('Due in {0}', responseBy),
+      color: "orange" as const,
     };
   } else if (
     dayjs(ticket.value.doc.first_responded_on).isBefore(
@@ -93,8 +94,8 @@ const firstResponse = computed(() => {
       ticket.value.doc.creation
     );
     return {
-      label: `Fulfilled in ${responseBy}`,
-      color: "green",
+      label: __('Fulfilled in {0}', responseBy),
+      color: "green" as const,
     };
   } else {
     let responseBy = formatTimeShort(
@@ -102,8 +103,8 @@ const firstResponse = computed(() => {
       ticket.value.doc.response_by
     );
     return {
-      label: `Failed by ${responseBy}`,
-      color: "red",
+      label: __('Failed by {0}', responseBy),
+      color: "red" as const,
     };
   }
 });
@@ -119,7 +120,7 @@ const resolutionBy = computed(() => {
     )
   ) {
     return {
-      label: `On Hold`,
+      label: __('On Hold'),
       color: "blue",
     };
   } else if (
@@ -128,7 +129,7 @@ const resolutionBy = computed(() => {
   ) {
     let resolutionBy = formatTimeShort(ticket.value.doc?.resolution_by);
     return {
-      label: `Due in ${resolutionBy}`,
+      label: __('Due in {0}', resolutionBy),
       color: "purple",
     };
   } else if (
@@ -141,7 +142,7 @@ const resolutionBy = computed(() => {
       ticket.value.doc?.creation
     );
     return {
-      label: `Fulfilled in ${resolutionBy}`,
+      label: __('Fulfilled in {0}', resolutionBy),
       color: "green",
     };
   } else {
@@ -150,7 +151,7 @@ const resolutionBy = computed(() => {
       ticket.value.doc?.resolution_by
     );
     return {
-      label: `Failed by ${resolutionBy}`,
+      label: __('Failed by {0}', resolutionBy),
       color: "red",
     };
   }

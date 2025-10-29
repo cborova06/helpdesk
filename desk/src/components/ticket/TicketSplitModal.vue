@@ -8,10 +8,10 @@
           from this email onwards will be moved to new ticket.
         </p>
         <FormControl
-          label="New Ticket Subject"
+          :label="__('New Ticket Subject')"
           type="text"
           v-model="subject"
-          placeholder="Add a subject for the new ticket"
+          :placeholder="__('Add a subject for the new ticket')"
         />
         <div
           class="flex items-center gap-2 rounded-md p-2 ring-1 ring-gray-200"
@@ -30,7 +30,7 @@
       <Button
         class="w-full"
         variant="solid"
-        label="Split into new ticket"
+        :label="__('Split into new ticket')"
         :loading="splitTicket.loading"
         :icon-left="LucideSplit"
         @click="handleTicketSplit"

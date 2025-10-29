@@ -44,7 +44,7 @@
                 type="text"
                 :value="query"
                 autocomplete="off"
-                placeholder="Search"
+                :placeholder="__('Search')"
                 @change="
                   (e) => {
                     query = e.target.value;

@@ -25,12 +25,12 @@
           :error-message="(value) => `${value} is an invalid email address`"
         />
         <Button
-          :label="'CC'"
+          :label="__('CC')"
           :class="[cc ? 'bg-gray-300 hover:bg-gray-200' : '']"
           @click="toggleCC()"
         />
         <Button
-          :label="'BCC'"
+          :label="__('BCC')"
           :class="[bcc ? 'bg-gray-300 hover:bg-gray-200' : '']"
           @click="toggleBCC()"
         />
@@ -134,7 +134,7 @@
         <div
           class="flex items-center justify-end space-x-2 sm:mt-0 w-[40%] mr-9"
         >
-          <Button label="Discard" @click="handleDiscard" />
+          <Button :label="__('Discard')" @click="handleDiscard" />
           <Button
             variant="solid"
             :disabled="emailEmpty"

@@ -20,7 +20,7 @@
       </template>
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="$emit('update:step', 'fd')"

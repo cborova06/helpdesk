@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Button
-          label="New contact"
+          :label="__('New contact')"
           theme="gray"
           variant="solid"
           @click="showNewContactModal = !showNewContactModal"
@@ -70,7 +70,7 @@ const options = computed(() => {
       },
     },
     emptyState: {
-      title: "No Contacts Found",
+      title: __('No Contacts Found'),
     },
   };
 });
@@ -92,7 +92,7 @@ function handleContactUpdated(): void {
 }
 usePageMeta(() => {
   return {
-    title: "Contacts",
+    title: __('Contacts'),
   };
 });
 </script>

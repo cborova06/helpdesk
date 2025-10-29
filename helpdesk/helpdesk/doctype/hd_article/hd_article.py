@@ -62,25 +62,25 @@ class HDArticle(Document):
     def default_list_data():
         columns = [
             {
-                "label": "Title",
+                "label": _("Title"),
                 "type": "Data",
                 "key": "title",
                 "width": "20rem",
             },
             {
-                "label": "Status",
+                "label": _("Status"),
                 "type": "status",
                 "key": "status",
                 "width": "10rem",
             },
             {
-                "label": "Author",
+                "label": _("Author"),
                 "type": "Link",
                 "key": "author",
                 "width": "17rem",
             },
             {
-                "label": "Last Modified",
+                "label": _("Last Modified"),
                 "type": "Datetime",
                 "key": "modified",
                 "width": "8rem",

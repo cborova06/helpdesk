@@ -18,8 +18,8 @@
       <form class="space-y-2" @submit.prevent="newTeam.submit">
         <FormControl
           v-model="newTeamTitle"
-          label="Title"
-          placeholder="Product experts"
+          :label="__('Title')"
+          :placeholder="__('Product experts')"
           type="text"
         />
       </form>

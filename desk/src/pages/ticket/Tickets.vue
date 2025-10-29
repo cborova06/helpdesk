@@ -3,7 +3,7 @@
     <LayoutHeader>
       <template #left-header>
         <ViewBreadcrumbs
-          label="Tickets"
+          :label="__('Tickets')"
           :route-name="isCustomerPortal ? 'TicketsCustomer' : 'TicketsAgent'"
           :options="dropdownOptions"
           :dropdown-actions="viewActions"
@@ -14,7 +14,7 @@
         <RouterLink
           :to="{ name: isCustomerPortal ? 'TicketNew' : 'TicketAgentNew' }"
         >
-          <Button label="Create" theme="gray" variant="solid">
+          <Button :label="__('Create')" theme="gray" variant="solid">
             <template #prefix>
               <LucidePlus class="h-4 w-4" />
             </template>
@@ -27,13 +27,13 @@
       :options="options"
       @empty-state-action="
         () =>
-          $router.push({
+          router.push({
             name: isCustomerPortal ? 'TicketNew' : 'TicketAgentNew',
           })
       "
       @row-click="
         (row) =>
-          $router.push({
+          router.push({
             name: isCustomerPortal ? 'TicketCustomer' : 'TicketAgent',
             params: { ticketId: row },
           })
@@ -41,7 +41,7 @@
     />
     <ExportModal
       v-model="showExportModal"
-      :rowCount="$refs.listViewRef?.list?.data?.total_count ?? 0"
+      :rowCount="listViewRef?.list?.data?.total_count ?? 0"
       @update="
         ({ export_type, export_all }) => exportRows(export_type, export_all)
       "
@@ -71,6 +71,7 @@ import { dayjs } from "@/dayjs";
 import { useAuthStore } from "@/stores/auth";
 import { globalStore } from "@/stores/globalStore";
 import { useTicketStatusStore } from "@/stores/ticketStatus";
+import { __ } from "@/translation";
 import { View } from "@/types";
 import { getIcon, isCustomerPortal } from "@/utils";
 import { Badge, FeatherIcon, toast, Tooltip, usePageMeta } from "frappe-ui";
@@ -101,7 +102,7 @@ const { getStatus } = useTicketStatusStore();
 const listSelections = ref(new Set());
 const selectBannerActions = [
   {
-    label: "Export",
+    label: __('Export'),
     icon: "download",
     onClick: (selections: Set<string>) => {
       listSelections.value = new Set(selections);
@@ -144,13 +145,122 @@ const options = {
     resolution_by: {
       custom: ({ row, item }) => handle_resolution_by_field(row, item),
     },
+    last_sentiment: {
+      label: __('Son Duygu'),
+      width: '140px',
+      align: 'left',
+      custom: ({ item }) => {
+        if (!item) return '';
+        const normalized = (item || '').toLowerCase().trim();
+        let config;
+        
+        if (normalized.includes('olumlu') || normalized.includes('positive')) {
+          config = { emoji: '😊', theme: 'green', label: __('Olumlu') };
+        } else if (normalized.includes('nötr') || normalized.includes('neutral') || normalized.includes('nautral')) {
+          config = { emoji: '😐', theme: 'yellow', label: __('Nötr') };
+        } else if (normalized.includes('olumsuz') || normalized.includes('negative')) {
+          config = { emoji: '😟', theme: 'red', label: __('Olumsuz') };
+        } else {
+          config = { emoji: '❓', theme: 'gray', label: item };
+        }
+        
+        return h(Badge, {
+          label: `${config.emoji} ${config.label}`,
+          theme: config.theme,
+          variant: 'subtle'
+        });
+      }
+    },
+    sentiment_trend: {
+      label: __('Duygu Trendi'),
+      width: '150px',
+      align: 'left',
+      custom: ({ item }) => {
+        if (!item) return '';
+        const trend_lower = (item || '').toLowerCase().trim();
+        let config;
+        
+        if (trend_lower.includes('improv') || trend_lower.includes('yüksel') || trend_lower.includes('iyileş')) {
+          config = { emoji: '📈', theme: 'green', label: __('İyileşiyor') };
+        } else if (trend_lower.includes('declin') || trend_lower.includes('düş') || trend_lower.includes('kötü')) {
+          config = { emoji: '📉', theme: 'red', label: __('Kötüleşiyor') };
+        } else if (trend_lower.includes('stabil') || trend_lower.includes('stabl') || trend_lower.includes('sabit')) {
+          config = { emoji: '➡️', theme: 'blue', label: __('Stabil') };
+        } else if (trend_lower.includes('volat') || trend_lower.includes('dalgal')) {
+          config = { emoji: '〰️', theme: 'orange', label: __('Değişken') };
+        } else {
+          config = { emoji: '📊', theme: 'gray', label: item };
+        }
+        
+        return h(Badge, {
+          label: `${config.emoji} ${config.label}`,
+          theme: config.theme,
+          variant: 'subtle'
+        });
+      }
+    },
+    effort_score: {
+      label: __('Efor Skoru'),
+      width: '120px',
+      align: 'left',
+      custom: ({ item }) => {
+        if (item === null || item === undefined || item === '') return '';
+        const score = parseFloat(item);
+        if (isNaN(score)) return item;
+        
+        let config;
+        if (score <= 29) {
+          config = { indicator: '🟢', theme: 'green' };
+        } else if (score <= 49) {
+          config = { indicator: '🟡', theme: 'yellow' };
+        } else if (score <= 69) {
+          config = { indicator: '🟠', theme: 'orange' };
+        } else if (score <= 89) {
+          config = { indicator: '🔴', theme: 'red' };
+        } else {
+          config = { indicator: '🔴🔴', theme: 'red' };
+        }
+        
+        return h(Badge, {
+          label: `${config.indicator} ${score.toFixed(1)}`,
+          theme: config.theme,
+          variant: 'subtle'
+        });
+      }
+    },
+    effort_band: {
+      label: __('Efor Bandı'),
+      width: '130px',
+      align: 'left',
+      custom: ({ item }) => {
+        if (!item) return '';
+        const normalized = (item || '').toLowerCase().trim();
+        let config;
+        
+        if (normalized.includes('düşük') || normalized.includes('low')) {
+          config = { emoji: '✅', theme: 'green', label: __('Düşük') };
+        } else if (normalized.includes('orta') || normalized.includes('medium')) {
+          config = { emoji: '⚠️', theme: 'orange', label: __('Orta') };
+        } else if (normalized.includes('yüksek') || normalized.includes('high')) {
+          config = { emoji: '🔴', theme: 'red', label: __('Yüksek') };
+        } else {
+          config = { emoji: '❓', theme: 'gray', label: item };
+        }
+        
+        return h(Badge, {
+          label: `${config.emoji} ${config.label}`,
+          theme: config.theme,
+          variant: 'subtle'
+        });
+      }
+    },
   },
   isCustomerPortal: isCustomerPortal.value,
   selectable: true,
   showSelectBanner: true,
   selectBannerActions,
   emptyState: {
-    title: "No Tickets Found",
+    title: __('No Tickets Found'),
     icon: h(TicketIcon, {
       class: "h-10 w-10",
     }),
@@ -165,20 +275,20 @@ const options = {
 function handle_response_by_field(row: any, item: string) {
   if (!row.first_responded_on && dayjs(item).isBefore(new Date())) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
   }
   if (row.first_responded_on && dayjs(row.first_responded_on).isBefore(item)) {
     return h(Badge, {
-      label: "Fulfilled",
+      label: __('Fulfilled'),
       theme: "green",
       variant: "outline",
     });
   } else if (dayjs(row.first_responded_on).isAfter(item)) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
@@ -197,19 +307,19 @@ function handle_resolution_by_field(row: any, item: string) {
   const status = getStatus(row.status) || {};
   if (status.category === "Paused") {
     return h(Badge, {
-      label: "Paused",
+      label: __('Paused'),
       theme: "blue",
       variant: "outline",
     });
   } else if (row.resolution_date && dayjs(row.resolution_date).isBefore(item)) {
     return h(Badge, {
-      label: "Fulfilled",
+      label: __('Fulfilled'),
       theme: "green",
       variant: "outline",
     });
   } else if (dayjs(row.resolution_date).isAfter(item)) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
@@ -281,12 +391,13 @@ const dropdownOptions = computed(() => {
       group: "Default Views",
       items: [
         {
-          label: "List View",
+          label: __('List View'),
           icon: "align-justify",
-          onClick: () =>
-            router.push({
+          onClick: async () => {
+            return router.push({
               name: isCustomerPortal.value ? "TicketsCustomer" : "TicketsAgent",
-            }),
+            });
+          },
         },
       ],
     },
@@ -317,7 +428,7 @@ const dropdownOptions = computed(() => {
     hideLabel: true,
     items: [
       {
-        label: "Create View",
+        label: __('Create View'),
         icon: "plus",
         onClick: () => {
           resetState();
@@ -341,7 +452,7 @@ const viewActions = (view) => {
       hideLabel: true,
       items: [
         {
-          label: "Duplicate",
+          label: __('Duplicate'),
           icon: h(FeatherIcon, { name: "copy" }),
           onClick: () => {
             viewDialog.view.label = _view.label + " (New)";
@@ -357,7 +468,7 @@ const viewActions = (view) => {
   ];
   if (!_view.public || isManager) {
     actions[0].items.push({
-      label: "Edit",
+      label: __('Edit'),
       icon: h(EditIcon, { class: "h-4 w-4" }),
       onClick: () => {
         viewDialog.view.label = _view.label;
@@ -400,7 +511,7 @@ const viewActions = (view) => {
                 "This view is currently public. Changing it to private will hide it for all the users.",
               actions: [
                 {
-                  label: "Confirm",
+                  label: __('Confirm'),
                   variant: "solid",
                   onClick({ close }) {
                     close();
@@ -420,8 +531,8 @@ const viewActions = (view) => {
       hideLabel: true,
       items: [
         {
-          label: "Delete",
-          icon: "trash-2",
+          label: __('Delete'),
+          icon: h(FeatherIcon, { name: "trash-2" }),
           onClick: () => {
             $dialog({
               title: `Delete ${_view.label}?`,
@@ -433,7 +544,7 @@ const viewActions = (view) => {
               }`,
               actions: [
                 {
-                  label: "Confirm",
+                  label: __('Confirm'),
                   variant: "solid",
                   onClick({ close }) {
                     if (route.query.view === _view.name) {
@@ -462,13 +573,14 @@ const viewActions = (view) => {
 function parseViews(views: View[]) {
   return views?.map((view) => {
     return {
-      ...view,
+      label: view.label || 'Untitled View',
+      icon: view.icon || 'list',
       onClick: () => {
         currentView.value = {
           label: view.label,
           icon: view.icon,
         };
-        router.push({
+        return router.push({
           name: view.route_name,
           query: {
             view: view.name,
@@ -548,7 +660,7 @@ function resetState() {
 onMounted(() => {
   if (!route.query.view) {
     currentView.value = {
-      label: "List",
+      label: __('List'),
       icon: "lucide:align-justify",
     };
   }
@@ -558,7 +670,7 @@ onMounted(() => {
 });
 usePageMeta(() => {
   return {
-    title: "Tickets",
+    title: __('Tickets'),
   };
 });
 </script>

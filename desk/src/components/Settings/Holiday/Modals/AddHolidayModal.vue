@@ -10,13 +10,13 @@
     <template #body-content>
       <div class="flex flex-col gap-4 mt-4">
         <div class="flex flex-col gap-1.5">
-          <FormLabel label="Date" required />
+          <FormLabel :label="__('Date')" required />
           <DatePicker
             :value="dayjs(dialog.holiday_date).format('MM-DD-YYYY')"
             @update:model-value="dialog.holiday_date = $event"
             :formatter="(date) => getFormattedDate(date)"
             variant="subtle"
-            placeholder="Date"
+            :placeholder="__('Date')"
             class="w-full"
             id="holiday_date"
             required
@@ -29,8 +29,8 @@
             :type="'textarea'"
             size="sm"
             variant="subtle"
-            placeholder="National holiday, etc."
-            label="Description"
+            :placeholder="__('National holiday, etc.')"
+            :label="__('Description')"
             v-model="dialog.description"
             required
             @change="errors.description = ''"
@@ -44,13 +44,13 @@
         <Button
           variant="subtle"
           theme="gray"
-          label="Cancel"
+          :label="__('Cancel')"
           @click="dialog.show = false"
         />
         <Button
           variant="solid"
           icon-left="plus"
-          label="Add Holiday"
+          :label="__('Add Holiday')"
           @click="onSave"
         />
       </div>

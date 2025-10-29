@@ -23,12 +23,12 @@
           </FileUploader>
           <Button
             v-if="customer.doc?.image"
-            label="Remove photo"
+            :label="__('Remove photo')"
             @click="updateImage(null)"
           />
         </div>
         <form class="w-full" @submit.prevent="update">
-          <Input v-model="domain" label="Domain" placeholder="example.com" />
+          <Input v-model="domain" :label="__('Domain')" :placeholder="__('example.com')" />
         </form>
       </div>
     </template>
@@ -81,7 +81,7 @@ const options = computed(() => ({
   title: customer.doc?.name,
   actions: [
     {
-      label: "Save",
+      label: __('Save'),
       theme: "gray",
       variant: "solid",
       onClick: () => update(),

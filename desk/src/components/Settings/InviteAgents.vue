@@ -3,21 +3,21 @@
     <form @submit.prevent="onSubmit" class="flex flex-col gap-5">
       <div class="sticky top-0 z-10 bg-white pt-8 pb-1">
         <SettingsLayoutHeader
-          title="Invite Agents"
+          :title="__('Invite Agents')"
           description="Easily invite new agents, managers, or admins"
         />
       </div>
       <FormControl
         type="textarea"
         :required="true"
-        label="Invite by email"
-        placeholder="user1@example.com, user2@example.com, ..."
+        :label="__('Invite by email')"
+        :placeholder="__('user1@example.com, user2@example.com, ...')"
         v-model="emails"
         :debounce="100"
         description="Comma separated emails to invite"
       />
       <FormControl
-        label="Role"
+        :label="__('Role')"
         type="select"
         :required="true"
         :options="roleOptions"

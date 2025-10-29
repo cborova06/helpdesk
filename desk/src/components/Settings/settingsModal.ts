@@ -28,52 +28,52 @@ export const tabs = [
     hideLabel: true,
     items: [
       {
-        label: "Email Accounts",
+        label: __('Email Accounts'),
         icon: markRaw(LucideMail),
         component: markRaw(EmailConfig),
       },
       {
-        label: "Email Notifications",
+        label: __('Email Notifications'),
         icon: markRaw(LucideMailOpen),
         component: markRaw(EmailNotifications),
       },
       {
-        label: "Branding",
+        label: __('Branding'),
         icon: markRaw(ImageUp),
         component: markRaw(Branding),
       },
       {
-        label: "Agents",
+        label: __('Agents'),
         icon: markRaw(LucideUser),
         component: markRaw(Agents),
       },
       {
-        label: "Invite Agents",
+        label: __('Invite Agents'),
         icon: markRaw(LucideUserPlus),
         component: markRaw(InviteAgents),
       },
       {
-        label: "Teams",
+        label: __('Teams'),
         icon: markRaw(LucideUsers),
         component: markRaw(TeamsConfig),
       },
       {
-        label: "SLA Policies",
+        label: __('SLA Policies'),
         icon: markRaw(ShieldCheck),
         component: markRaw(Sla),
       },
       {
-        label: "Business Holidays",
+        label: __('Business Holidays'),
         icon: markRaw(Briefcase),
         component: markRaw(HolidayList),
       },
       {
-        label: "Assignment Rules",
+        label: __('Assignment Rules'),
         icon: markRaw(h(Settings, { class: "rotate-90" })),
         component: markRaw(AssignmentRules),
       },
       {
-        label: "Field Dependencies",
+        label: __('Field Dependencies'),
         icon: markRaw(FieldDependencyIcon),
         component: markRaw(FieldDependencyConfig),
       },
@@ -83,7 +83,7 @@ export const tabs = [
     label: __("Integrations"),
     items: [
       {
-        label: "Telephony",
+        label: __('Telephony'),
         icon: markRaw(PhoneIcon),
         component: markRaw(Telephony),
       },

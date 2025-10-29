@@ -16,7 +16,7 @@
             class="w-full"
             type="text"
             v-model="searchInput"
-            placeholder="Type emails"
+            :placeholder="__('Type emails')"
             @input="(val) => onSearchInputChange(val)"
           />
           <Button

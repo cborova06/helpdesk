@@ -6,7 +6,7 @@ frappe.views.calendar["HD Service Holiday List"] = {
     start: "holiday_date",
     end: "holiday_date",
     id: "name",
-    title: "description",
+    title: __('description'),
     allDay: "allDay",
   },
   order_by: `from_date`,

@@ -47,7 +47,7 @@
           <FormControl
             v-model="subject"
             type="text"
-            placeholder="A short description"
+            :placeholder="__('A short description')"
           />
         </div>
         <SearchArticles
@@ -73,7 +73,7 @@
           >
             <template #bottom-right>
               <Button
-                label="Submit"
+                :label="__('Submit')"
                 theme="gray"
                 variant="solid"
                 :disabled="
@@ -92,12 +92,12 @@
           ref="editor"
           v-model:attachments="attachments"
           v-model:content="description"
-          placeholder="Detailed explanation"
+          :placeholder="__('Detailed explanation')"
           expand
         >
           <template #bottom-right>
             <Button
-              label="Submit"
+              :label="__('Submit')"
               theme="gray"
               variant="solid"
               :disabled="
@@ -275,13 +275,13 @@ function sanitize(html: string) {
 const breadcrumbs = computed(() => {
   const items = [
     {
-      label: "Tickets",
+      label: __('Tickets'),
       route: {
         name: isCustomerPortal.value ? "TicketsCustomer" : "TicketsAgent",
       },
     },
     {
-      label: "New Ticket",
+      label: __('New Ticket'),
       route: {
         name: "TicketNew",
       },
@@ -291,7 +291,7 @@ const breadcrumbs = computed(() => {
 });
 
 usePageMeta(() => ({
-  title: "New Ticket",
+  title: __('New Ticket'),
 }));
 
 onMounted(() => {

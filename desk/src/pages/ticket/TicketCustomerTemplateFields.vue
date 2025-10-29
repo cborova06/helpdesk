@@ -65,7 +65,7 @@ const slaData = computed(() => {
   if (ticket.data.priority === "Unclassified") {
     return [
       {
-        title: "Expected First Response",
+        title: __('Expected First Response'),
         showSla: ticket.data.first_responded_on,
         label: responseSla,
         theme: responseSla === "Fulfilled" ? "green" : "red",
@@ -82,14 +82,14 @@ const slaData = computed(() => {
 
   return [
     {
-      title: "Expected First Response",
+      title: __('Expected First Response'),
       showSla: ticket.data.first_responded_on,
       label: responseSla,
       theme: responseSla === "Fulfilled" ? "green" : "red",
       value: ticket.data.response_by,
     },
     {
-      title: "Expected Resolution",
+      title: __('Expected Resolution'),
       showSla: ticket.data.resolution_date,
       label: resolutionSla,
       theme: resolutionSla === "Fulfilled" ? "green" : "red",

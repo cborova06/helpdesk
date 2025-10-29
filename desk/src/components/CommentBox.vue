@@ -66,8 +66,8 @@
       >
         <template #bottom v-if="editable">
           <div class="flex flex-row-reverse gap-2">
-            <Button label="Save" @click="handleSaveComment" variant="solid" />
-            <Button label="Discard" @click="handleDiscard" />
+            <Button :label="__('Save')" @click="handleSaveComment" variant="solid" />
+            <Button :label="__('Discard')" @click="handleDiscard" />
           </div>
         </template>
       </TextEditor>

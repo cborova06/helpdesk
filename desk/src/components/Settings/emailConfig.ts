@@ -9,42 +9,42 @@ import { RenderField, EmailService, EmailAccount } from "@/types";
 import { validateEmailWithZod } from "@/utils";
 const fixedFields: RenderField[] = [
   {
-    label: "Account Name",
+    label: __('Account Name'),
     name: "email_account_name",
     type: "text",
-    placeholder: "Support / Sales",
+    placeholder: __('Support / Sales'),
   },
   {
-    label: "Email ID",
+    label: __('Email ID'),
     name: "email_id",
     type: "email",
-    placeholder: "johndoe@example.com",
+    placeholder: __('johndoe@example.com'),
   },
 ];
 
 export const incomingOutgoingFields: RenderField[] = [
   {
-    label: "Enable Incoming",
+    label: __('Enable Incoming'),
     name: "enable_incoming",
     type: "checkbox",
     description:
       "If enabled, tickets can be created from the incoming emails on this account.",
   },
   {
-    label: "Enable Outgoing",
+    label: __('Enable Outgoing'),
     name: "enable_outgoing",
     type: "checkbox",
     description: "If enabled, outgoing emails can be sent from this account.",
   },
   {
-    label: "Default Incoming",
+    label: __('Default Incoming'),
     name: "default_incoming",
     type: "checkbox",
     description:
       "If enabled, all replies to your company (eg: replies@yourcomany.com) will come to this account. Note: Only one account can be default incoming.",
   },
   {
-    label: "Default Outgoing",
+    label: __('Default Outgoing'),
     name: "default_outgoing",
     type: "checkbox",
     description:
@@ -55,32 +55,32 @@ export const incomingOutgoingFields: RenderField[] = [
 export const popularProviderFields = [
   ...fixedFields,
   {
-    label: "Password",
+    label: __('Password'),
     name: "password",
     type: "password",
-    placeholder: "********",
+    placeholder: __('********'),
   },
 ];
 
 export const customProviderFields = [
   ...fixedFields,
   {
-    label: "Frappe Mail Site",
+    label: __('Frappe Mail Site'),
     name: "frappe_mail_site",
     type: "text",
-    placeholder: "https://frappemail.com",
+    placeholder: __('https://frappemail.com'),
   },
   {
-    label: "API Key",
+    label: __('API Key'),
     name: "api_key",
     type: "text",
-    placeholder: "********",
+    placeholder: __('********'),
   },
   {
-    label: "API Secret",
+    label: __('API Secret'),
     name: "api_secret",
     type: "password",
-    placeholder: "********",
+    placeholder: __('********'),
   },
 ];
 

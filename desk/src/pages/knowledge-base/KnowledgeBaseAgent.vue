@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Dropdown :options="headerOptions">
-          <Button label="Add new" variant="solid">
+          <Button :label="__('Add new')" variant="solid">
             <template #prefix>
               <LucidePlus class="h-4 w-4" />
             </template>
@@ -92,7 +92,7 @@ const generalCategory = createResource({
 
 const headerOptions = [
   {
-    label: "Category",
+    label: __('Category'),
     icon: "folder",
     onClick: () => {
       resetState();
@@ -101,7 +101,7 @@ const headerOptions = [
     },
   },
   {
-    label: "Article",
+    label: __('Article'),
     icon: "file-text",
     onClick: () => {
       router.push({
@@ -110,7 +110,7 @@ const headerOptions = [
           id: generalCategory.data,
         },
         query: {
-          title: "General",
+          title: __('General'),
         },
       });
     },
@@ -119,7 +119,7 @@ const headerOptions = [
 
 const groupByActions = [
   {
-    label: "Add New Article",
+    label: __('Add New Article'),
     icon: "plus",
     onClick: (groupedRow) => {
       router.push({
@@ -134,7 +134,7 @@ const groupByActions = [
     },
   },
   {
-    label: "Edit Title",
+    label: __('Edit Title'),
     icon: "edit",
     onClick: (groupedRow) => {
       editTitle.value = true;
@@ -145,7 +145,7 @@ const groupByActions = [
     },
   },
   {
-    label: "Merge",
+    label: __('Merge'),
     icon: LucideMerge,
     onClick: (groupedRow) => {
       mergeModal.value = true;
@@ -154,7 +154,7 @@ const groupByActions = [
     },
   },
   {
-    label: "Share",
+    label: __('Share'),
     icon: "link",
     onClick: async ({ group }) => {
       const { label, value } = group;
@@ -167,7 +167,7 @@ const groupByActions = [
     },
   },
   {
-    label: "Delete",
+    label: __('Delete'),
     icon: "trash-2",
     onClick: (groupedRow) => {
       handleCategoryDelete(groupedRow);
@@ -178,7 +178,7 @@ const groupByActions = [
 const listSelections = ref(new Set());
 const selectBannerActions = [
   {
-    label: "Move To",
+    label: __('Move To'),
     icon: "corner-up-right",
     onClick: (selections: Set<string>) => {
       listSelections.value = new Set(selections);
@@ -186,16 +186,16 @@ const selectBannerActions = [
     },
   },
   {
-    label: "Delete",
+    label: __('Delete'),
     icon: "trash-2",
     onClick: (selections: Set<string>) => {
       listSelections.value = selections;
       $dialog({
-        title: "Delete articles?",
+        title: __('Delete articles?'),
         message: `Are you sure you want to delete these articles?`,
         actions: [
           {
-            label: "Confirm",
+            label: __('Confirm'),
             variant: "solid",
             onClick({ close }) {
               handleDeleteArticles();
@@ -298,11 +298,11 @@ function handleCategoryUpdate() {
 
 function handleCategoryDelete(groupedRow) {
   $dialog({
-    title: "Delete category?",
+    title: __('Delete category?'),
     message: `All articles from this category will move to General category.`,
     actions: [
       {
-        label: "Confirm",
+        label: __('Confirm'),
         variant: "solid",
         onClick(close: Function) {
           deleteCategory.submit(
@@ -407,15 +407,15 @@ const options = computed(() => {
 
 const statusMap = {
   Published: {
-    label: "Published",
+    label: __('Published'),
     theme: "green",
   },
   Draft: {
-    label: "Draft",
+    label: __('Draft'),
     theme: "orange",
   },
   Archived: {
-    label: "Archived",
+    label: __('Archived'),
     theme: "gray",
   },
 };
@@ -426,7 +426,7 @@ onMounted(() => {
 
 usePageMeta(() => {
   return {
-    title: "Knowledge Base",
+    title: __('Knowledge Base'),
   };
 });
 </script>

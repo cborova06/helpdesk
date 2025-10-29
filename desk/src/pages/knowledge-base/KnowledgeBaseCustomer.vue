@@ -11,7 +11,7 @@
       <SearchPopover
         :popoverClass="['max-w-[310px] md:max-w-[842px] !top-1']"
         v-model="query"
-        placeholder="Ask a question..."
+        :placeholder="__('Ask a question...')"
         size="md"
         :autofocus="true"
       />
@@ -42,7 +42,7 @@ onMounted(() => {
 });
 usePageMeta(() => {
   return {
-    title: "Knowledge Base",
+    title: __('Knowledge Base'),
   };
 });
 </script>

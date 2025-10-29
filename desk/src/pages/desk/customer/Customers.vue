@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Button
-          label="New customer"
+          :label="__('New customer')"
           theme="gray"
           variant="solid"
           @click="isDialogVisible = !isDialogVisible"
@@ -79,14 +79,14 @@ const options = computed(() => {
       },
     },
     emptyState: {
-      title: "No Customers Found",
+      title: __('No Customers Found'),
     },
   };
 });
 
 usePageMeta(() => {
   return {
-    title: "Customers",
+    title: __('Customers'),
   };
 });
 </script>

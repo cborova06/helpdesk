@@ -11,14 +11,14 @@
           :type="'select'"
           size="sm"
           variant="subtle"
-          placeholder="Select Priority"
-          label="Priority"
+          :placeholder="__('Select Priority')"
+          :label="__('Priority')"
           v-model="priorityData.priority"
           :options="priorityOptions"
           required
         />
         <div>
-          <FormLabel label="Response time" required />
+          <FormLabel :label="__('Response time')" required />
           <Popover class="mt-2">
             <template #target="{ togglePopover }" class="w-max">
               <div
@@ -42,7 +42,7 @@
           </Popover>
         </div>
         <div>
-          <FormLabel label="Resolution time" required />
+          <FormLabel :label="__('Resolution time')" required />
           <Popover class="mt-2">
             <template #target="{ togglePopover }" class="w-max">
               <div
@@ -67,7 +67,7 @@
         </div>
         <Checkbox
           v-model="priorityData.default_priority"
-          label="Set default priority"
+          :label="__('Set default priority')"
         />
       </div>
     </template>
@@ -87,9 +87,9 @@
             variant="subtle"
             theme="gray"
             @click="dialog = false"
-            label="Cancel"
+            :label="__('Cancel')"
           />
-          <Button variant="solid" @click="onSave" label="Save" />
+          <Button variant="solid" @click="onSave" :label="__('Save')" />
         </div>
       </div>
     </template>

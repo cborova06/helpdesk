@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4 px-10 py-8">
     <SettingsLayoutHeader
-      title="Customise your Helpdesk"
+      :title="__('Customise your Helpdesk')"
       description="Customise Helpdesk with your own branding."
     />
 
@@ -27,7 +27,7 @@
             <Button
               @click="openFileSelector()"
               iconLeft="upload"
-              label="Upload Image"
+              :label="__('Upload Image')"
               :loading="config.loading"
             />
           </template>
@@ -35,7 +35,7 @@
 
         <div v-else>
           <Button
-            label="Remove"
+            :label="__('Remove')"
             @click="update('', config.doctype, config.fieldname)"
             iconLeft="trash"
             :loading="config.loading"
@@ -79,14 +79,14 @@ const loadingState = reactive({
 
 const brandingConfig = computed(() => [
   {
-    title: "Brand Logo",
+    title: __('Brand Logo'),
     image: state.brandLogo,
     doctype: "HD Settings",
     fieldname: "brand_logo",
     loading: loadingState.logoLoading,
   },
   {
-    title: "Brand Favicon",
+    title: __('Brand Favicon'),
     image: state.brandFavicon,
     doctype: "Website Settings",
     fieldname: "favicon",

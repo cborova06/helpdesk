@@ -9,7 +9,7 @@
     <template #body-content>
       <AutocompleteNew
         v-if="showRestrictedMembers"
-        placeholder="Search agents"
+        :placeholder="__('Search agents')"
         :model-value="search"
         :options="members"
         @update:model-value="

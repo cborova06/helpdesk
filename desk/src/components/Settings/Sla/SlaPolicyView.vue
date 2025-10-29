@@ -21,7 +21,7 @@
             :variant="'subtle'"
             :theme="'orange'"
             size="sm"
-            label="Unsaved changes"
+            :label="__('Unsaved changes')"
             v-if="isDirty"
           />
         </div>
@@ -35,7 +35,7 @@
           <span class="text-sm text-ink-gray-7 font-medium">Enabled</span>
         </div>
         <Button
-          label="Save"
+          :label="__('Save')"
           theme="gray"
           variant="solid"
           @click="saveSla()"
@@ -52,8 +52,8 @@
           :type="'text'"
           size="sm"
           variant="subtle"
-          placeholder="Name"
-          label="Name"
+          :placeholder="__('Name')"
+          :label="__('Name')"
           v-model="slaData.service_level"
           required
           @change="validateSlaData('service_level')"
@@ -65,8 +65,8 @@
         :type="'textarea'"
         size="sm"
         variant="subtle"
-        placeholder="Description"
-        label="Description"
+        :placeholder="__('Description')"
+        :label="__('Description')"
         v-model="slaData.description"
       />
     </div>
@@ -83,7 +83,7 @@
       <div class="mt-3">
         <div class="flex items-center justify-between">
           <Checkbox
-            label="Set as default SLA"
+            :label="__('Set as default SLA')"
             :model-value="slaData.default_sla"
             @update:model-value="toggleDefaultSla"
             class="text-ink-gray-6 text-base font-medium"
@@ -119,7 +119,7 @@
               from this UI.
             </span>
             <Button
-              label="I understand, add conditions"
+              :label="__('I understand, add conditions')"
               variant="subtle"
               theme="gray"
               @click="useNewUI = true"
@@ -142,11 +142,11 @@
       </div>
       <div class="mt-3.5 flex gap-5 flex-col md:flex-row">
         <div class="w-full space-y-1.5">
-          <FormLabel label="From date" for="from_date" />
+          <FormLabel :label="__('From date')" for="from_date" />
           <DatePicker
             v-model="slaData.start_date"
             variant="subtle"
-            placeholder="11/01/2025"
+            :placeholder="__('11/01/2025')"
             class="w-full"
             id="from_date"
             @change="validateSlaData('start_date')"
@@ -159,11 +159,11 @@
           <ErrorMessage :message="slaDataErrors.start_date" />
         </div>
         <div class="w-full space-y-1.5">
-          <FormLabel label="To date" for="to_date" />
+          <FormLabel :label="__('To date')" for="to_date" />
           <DatePicker
             v-model="slaData.end_date"
             variant="subtle"
-            placeholder="25/12/2025"
+            :placeholder="__('25/12/2025')"
             class="w-full"
             id="to_date"
             @change="validateSlaData('end_date')"
@@ -336,7 +336,7 @@ if (slaActiveScreen.value.data && slaActiveScreen.value.fetchData) {
 const goBack = () => {
   const confirmDialogInfo = {
     show: true,
-    title: "Unsaved changes",
+    title: __('Unsaved changes'),
     message: "Are you sure you want to go back? Unsaved changes will be lost.",
     onConfirm: goBack,
   };
@@ -373,7 +373,7 @@ const saveSla = () => {
     if (isOldSla.value && useNewUI.value) {
       showConfirmDialog.value = {
         show: true,
-        title: "Confirm overwrite",
+        title: __('Confirm overwrite'),
         message:
           "Your old conditions will be overwritten. Are you sure you want to save?",
         onConfirm: () => {

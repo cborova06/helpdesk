@@ -11,7 +11,7 @@
         ref="searchInput"
         v-model="search"
         type="text"
-        :placeholder="'Site Down'"
+        :placeholder="__('Site Down')"
       >
         <template #prefix>
           <FeatherIcon name="search" class="h-4 w-4 text-gray-500" />
@@ -48,7 +48,7 @@
       </div>
       <div class="flex justify-end mt-4">
         <Button
-          label="New Canned Response"
+          :label="__('New Canned Response')"
           @click="
             () => {
               $router.push('/canned-responses#new');

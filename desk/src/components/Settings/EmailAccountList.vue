@@ -2,12 +2,12 @@
   <div>
     <!-- header -->
     <SettingsLayoutHeader
-      title="Email Accounts"
+      :title="__('Email Accounts')"
       description="Manage your email accounts and configure incoming and outgoing settings."
     >
       <template #actions>
         <Button
-          label="Add Account"
+          :label="__('Add Account')"
           theme="gray"
           variant="solid"
           @click="emit('update:step', 'email-add')"

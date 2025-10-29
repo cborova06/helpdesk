@@ -3,6 +3,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 import relativeTime from "dayjs/plugin/relativeTime";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import "dayjs/locale/tr";
 import { useAuthStore } from "./stores/auth";
 
 const authStore = useAuthStore();
@@ -28,5 +29,11 @@ d.extend(function (_, cls) {
 d.extend(utc);
 d.extend(timezone);
 d.tz.setDefault(authStore.timezone);
+
+// Set locale based on Frappe language
+const language = (window as any).frappe?.boot?.lang || 'en';
+if (language === 'tr') {
+  d.locale('tr');
+}
 
 export const dayjs = d;

@@ -21,11 +21,11 @@
         <div class="flex flex-col gap-2 mt-6">
           <FormControl
             v-model="contactDetails.phone"
-            label="Phone"
+            :label="__('Phone')"
             type="text"
             size="sm"
             variant="subtle"
-            placeholder="+918956895623"
+            :placeholder="__('+918956895623')"
             :disabled="false"
           />
           <ErrorMessage :message="error" />

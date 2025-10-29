@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prebuild": "bash ../../brv_license_app/brv_license_app/scripts/prebuild_i18n.sh",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"

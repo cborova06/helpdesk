@@ -42,7 +42,7 @@ class TicketAnalytics:
             self.columns.append(
                 {
                     "label": _("Contact"),
-                    "options": "Contact",
+                    "options": _("Contact"),
                     "fieldname": "contact",
                     "fieldtype": "Link",
                     "width": 200,
@@ -55,7 +55,7 @@ class TicketAnalytics:
                     "label": _("User"),
                     "fieldname": "user",
                     "fieldtype": "Link",
-                    "options": "User",
+                    "options": _("User"),
                     "width": 200,
                 }
             )
@@ -66,7 +66,7 @@ class TicketAnalytics:
                     "label": _("Ticket Type"),
                     "fieldname": "ticket_type",
                     "fieldtype": "Link",
-                    "options": "HD Ticket Type",
+                    "options": _("HD Ticket Type"),
                     "width": 200,
                 }
             )
@@ -77,7 +77,7 @@ class TicketAnalytics:
                     "label": _("Ticket Priority"),
                     "fieldname": "priority",
                     "fieldtype": "Link",
-                    "options": "HD Ticket Priority",
+                    "options": _("HD Ticket Priority"),
                     "width": 200,
                 }
             )

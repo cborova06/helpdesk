@@ -16,11 +16,11 @@
   >
     <template #body-content>
       <div class="flex flex-col gap-4">
-        <FormControl type="text" v-model="mobileNumber" label="Mobile Number" />
+        <FormControl type="text" v-model="mobileNumber" :label="__('Mobile Number')" />
         <FormControl
           type="select"
           v-model="callMedium"
-          :label="'Calling Medium'"
+          :label="__('Calling Medium')"
           :options="['Twilio', 'Exotel']"
         />
         <div class="flex flex-col gap-1">
