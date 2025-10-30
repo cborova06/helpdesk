@@ -2,7 +2,7 @@
   <div class="flex w-[382px] flex-col border-l gap-4">
     <!-- Ticket ID -->
     <div class="flex items-center justify-between border-b px-5 py-3">
-      <span class="cursor-copy text-lg font-semibold">__("Ticket details")</span>
+      <span class="cursor-copy text-lg font-semibold">{{ __("Ticket details") }}</span>
     </div>
     <!-- user info and sla info -->
     <div class="flex flex-col gap-4 pt-0 px-5 py-3 border-b">
