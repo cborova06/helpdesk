@@ -51,6 +51,7 @@ import {
 } from "frappe-ui";
 import DatePicker from "frappe-ui/src/components/DatePicker/DatePicker.vue";
 import { computed, h } from "vue";
+import { __ } from "@/translation";
 
 interface P {
   field: Field;

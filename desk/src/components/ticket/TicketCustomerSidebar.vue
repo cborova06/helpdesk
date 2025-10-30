@@ -90,6 +90,7 @@ import { Field } from "@/types";
 import { formatTime } from "@/utils";
 import { Avatar, Tooltip } from "frappe-ui";
 import { computed, inject } from "vue";
+import { __ } from "@/translation";
 
 const emit = defineEmits(["open"]);
 

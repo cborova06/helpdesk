@@ -130,6 +130,7 @@ import { onMounted, ref } from "vue";
 import { fieldDependenciesList } from "./fieldDependency";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
 import DocumentationButton from "@/components/DocumentationButton.vue";
+import { __ } from "@/translation";
 
 onMounted(() => {
   fieldDependenciesList.reload();
@@ -143,7 +144,7 @@ function getOptions(rowName: string) {
     onConfirmDelete: () => {
       fieldDependenciesList.delete.submit(rowName, {
         onSuccess: () => {
-          toast.success("Field dependency deleted successfully");
+          toast.success(__("Field dependency deleted successfully"));
           fieldDependenciesList.reload();
         },
       });
@@ -159,7 +160,7 @@ function handleSwitchToggle(rowName: string, value: boolean) {
     },
     {
       onSuccess: () => {
-        toast.success("Field dependency updated successfully.");
+        toast.success(__("Field dependency updated successfully."));
       },
     }
   );

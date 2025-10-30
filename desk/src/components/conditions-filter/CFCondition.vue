@@ -124,6 +124,7 @@ import GroupIcon from "~icons/lucide/group";
 import UnGroupIcon from "~icons/lucide/ungroup";
 import CFConditions from "./CFConditions.vue";
 import { filterableFields } from "./filterableFields";
+import { __ } from "@/translation";
 
 const show = ref(false);
 const emit = defineEmits([

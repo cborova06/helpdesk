@@ -121,6 +121,7 @@ import {
   uploadFunction,
 } from "@/utils";
 import { useStorage } from "@vueuse/core";
+import { __ } from "@/translation";
 
 const { updateOnboardingStep } = useOnboarding("helpdesk");
 const { agents: agentsList } = useAgentStore();

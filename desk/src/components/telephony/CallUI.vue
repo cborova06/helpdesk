@@ -47,6 +47,7 @@ import TwilioCallUI from "./TwilioCallUI.vue";
 import ExotelCallUI from "./ExotelCallUI.vue";
 import { useTelephonyStore } from "@/stores/telephony";
 import { storeToRefs } from "pinia";
+import { __ } from "@/translation";
 
 const telephonyStore = useTelephonyStore();
 const { defaultCallingMedium, isExotelEnabled, isTwilioEnabled } =

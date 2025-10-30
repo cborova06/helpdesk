@@ -97,6 +97,7 @@ import { inject, onBeforeUnmount, ref, watch } from "vue";
 import CountUpTimer from "./CountUpTimer.vue";
 import AvatarIcon from "./Icons/AvatarIcon.vue";
 import MinimizeIcon from "./Icons/MinimizeIcon.vue";
+import { __ } from "@/translation";
 
 const telephonyStore = useTelephonyStore();
 

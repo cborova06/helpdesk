@@ -63,6 +63,7 @@ import { PreserveVideoControls } from "@/tiptap-extensions";
 import { getFontFamily } from "@/utils";
 import { TextEditor as FTextEditor, TextEditorFixedMenu } from "frappe-ui";
 import { computed, nextTick, ref } from "vue";
+import { __ } from "@/translation";
 
 interface P {
   modelValue: string;

@@ -147,6 +147,7 @@ import { computed, h, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import IconDot from "~icons/lucide/dot";
 import IconMoreHorizontal from "~icons/lucide/more-horizontal";
+import { __ } from "@/translation";
 const props = defineProps({
   articleId: {
     type: String,
@@ -254,7 +255,7 @@ function handleMoveToCategory(category: string) {
       onSuccess: () => {
         article.reload();
         moveToModal.value = false;
-        toast.success("Article moved");
+        toast.success(__("Article moved"));
       },
       onError: (error: Error) => {
         let msg = error?.messages?.[0] || error.message;
@@ -300,7 +301,7 @@ function handleArticleUpdate() {
             category: props.articleId,
           },
         });
-        toast.success("Article updated");
+        toast.success(__("Article updated"));
         isDirty.value = false;
         article.reload();
       },
@@ -324,7 +325,7 @@ function handleDelete() {
             },
             {
               onSuccess: () => {
-                toast.success("Article deleted");
+                toast.success(__("Article deleted"));
                 router.push({
                   name: "AgentKnowledgeBase",
                 });

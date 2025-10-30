@@ -51,6 +51,7 @@ import { Button } from "frappe-ui";
 import SlaWorkDaysListItem from "./SlaWorkDaysListItem.vue";
 import { slaData, slaDataErrors } from "@/stores/sla";
 import { getGridTemplateColumnsForTable } from "@/utils";
+import { __ } from "@/translation";
 
 interface Column {
   key: string;

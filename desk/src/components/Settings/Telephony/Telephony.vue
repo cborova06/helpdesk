@@ -1,6 +1,6 @@
 <template>
   <div class="px-10 py-8">
-    <SettingsLayoutHeader description="Configure your telephony settings.">
+    <SettingsLayoutHeader :description="__('Configure your telephony settings.')">
       <template #title>
         <div class="flex items-center gap-2">
           <h1 class="text-lg font-semibold text-ink-gray-8">{{ __("Telephony") }}</h1>
@@ -256,6 +256,7 @@ import { nextTick, ref, watch } from "vue";
 import { isDocDirty, validateExotel, validateTwilio } from "./utils";
 import { useAuthStore } from "@/stores/auth";
 import { useTelephonyStore } from "@/stores/telephony";
+import { __ } from "@/translation";
 
 const auth = useAuthStore();
 const telephonyStore = useTelephonyStore();
@@ -325,11 +326,11 @@ async function save() {
   validateTwilio(twilio.doc, telephonyAgent.doc, twilioErrors);
   validateExotel(exotel.doc, telephonyAgent.doc, exotelErrors);
   if (Object.values(twilioErrors.value).some((v) => v)) {
-    toast.error("Please fill all required fields for Twilio");
+    toast.error(__("Please fill all required fields for Twilio"));
     return;
   }
   if (Object.values(exotelErrors.value).some((v) => v)) {
-    toast.error("Please fill all required fields for Exotel");
+    toast.error(__("Please fill all required fields for Exotel"));
     return;
   }
 
@@ -370,7 +371,7 @@ async function save() {
   const results = await Promise.all(promises);
 
   if (!results.some((result) => result == undefined)) {
-    toast.success("Telephony settings updated!");
+    toast.success(__("Telephony settings updated!"));
   }
 
   // Reload twilio to prevent "doc has been modified" error, as an application is created and doc is updated on save

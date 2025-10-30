@@ -97,6 +97,7 @@ import { call, toast } from "frappe-ui";
 import { computed, h, reactive, ref } from "vue";
 import CircleAlert from "~icons/lucide/circle-alert";
 import EmailProviderIcon from "./EmailProviderIcon.vue";
+import { __ } from "@/translation";
 import {
   customProviderFields,
   emailIcon,
@@ -212,7 +213,7 @@ function pullEmails() {
     .then(() => {
       localStorage.removeItem(`loading-emails-${state.email_account_name}`);
       loadingPull.value = null;
-      toast.success("Emails pulled successfully");
+      toast.success(__("Emails pulled successfully"));
     })
     .catch(() => {
       localStorage.removeItem(`loading-emails-${state.email_account_name}`);
@@ -255,7 +256,7 @@ async function callSetValue(values) {
 
 function succesHandler() {
   emit("update:step", "email-list");
-  toast.success("Email account updated successfully");
+  toast.success(__("Email account updated successfully"));
 }
 
 function errorHandler() {

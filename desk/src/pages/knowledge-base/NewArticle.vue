@@ -88,6 +88,7 @@ import { useUserStore } from "@/stores/user";
 import { Article } from "@/types";
 import { textEditorMenuButtons } from "@/utils";
 import { useRoute, useRouter } from "vue-router";
+import { __ } from "@/translation";
 
 const userStore = useUserStore();
 const user = userStore.getUser();
@@ -115,7 +116,7 @@ function handleCreateArticle() {
     { title: title.value, content: content.value, category: categoryId.value },
     {
       onSuccess: (article: Article) => {
-        toast.success("Article created");
+        toast.success(__("Article created"));
         if (isManager) {
           updateOnboardingStep("first_article");
         }

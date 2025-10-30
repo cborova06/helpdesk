@@ -67,6 +67,7 @@ import MultiSelectCombobox from "@/components/frappe-ui/MultiSelectCombobox.vue"
 import { getMeta } from "@/stores/meta";
 import { Switch } from "frappe-ui";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps<{
   parentFieldValues: string[];

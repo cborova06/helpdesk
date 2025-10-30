@@ -54,6 +54,7 @@ import { Button, createResource, toast } from "frappe-ui";
 import { inject, ref } from "vue";
 import { holidayListActiveScreen } from "@/stores/holidayList";
 import { ConfirmDelete } from "@/utils";
+import { __ } from "@/translation";
 
 const props = defineProps({
   data: {
@@ -95,7 +96,7 @@ const duplicate = () => {
     },
     onSuccess: (data) => {
       holidayList.reload();
-      toast.success("Holiday list duplicated");
+      toast.success(__("Holiday list duplicated"));
       duplicateDialog.value = {
         show: false,
         name: "",
@@ -119,7 +120,7 @@ const deleteHolidayList = () => {
 
   holidayList.delete.submit(props.data.name, {
     onSuccess: () => {
-      toast.success("Holiday list deleted");
+      toast.success(__("Holiday list deleted"));
     },
   });
 };

@@ -117,12 +117,26 @@ onMounted(() => {
       toast.info(`User ${data.user} updated ${data.field} to ${data.value}`);
     }
   });
+
+  // Listen for real-time communication updates
+  $socket.on("helpdesk:ticket-update", (data: any) => {
+    const ticketID = data?.ticket_id || data;
+    if (String(ticketID) === String(props.ticketId)) {
+      // Reload ticket data to show new communications
+      ticketComposable.value.ticket.reload();
+      
+      // Also reload activities to show the new communication in activity feed
+      ticketComposable.value.activities.reload();
+    }
+  });
 });
 
 onBeforeUnmount(() => {
   stopViewing(props.ticketId);
   showEmailBox.value = false;
   showCommentBox.value = false;
+  $socket.off("helpdesk:ticket-update");
+  $socket.off("ticket_update");
 });
 </script>
 

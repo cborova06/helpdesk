@@ -35,6 +35,7 @@ import { slaDataErrors, validateSlaData } from "@/stores/sla";
 import { watchDebounced } from "@vueuse/core";
 import CFConditions from "@/components/conditions-filter/CFConditions.vue";
 import { validateConditions } from "@/utils";
+import { __ } from "@/translation";
 
 const props = defineProps({
   conditions: {

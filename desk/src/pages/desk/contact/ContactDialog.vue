@@ -88,6 +88,7 @@ import Link from "@/components/frappe-ui/Link.vue";
 import MultiSelect from "@/components/MultiSelect.vue";
 import { useAuthStore } from "@/stores/auth";
 import { AutoCompleteItem, File } from "@/types";
+import { __ } from "@/translation";
 
 interface Props {
   name: {
@@ -125,7 +126,7 @@ const emails = computed({
   },
   set(newVal) {
     if (newVal.length === 0) {
-      toast.error("At least one email is required");
+      toast.error(__("At least one email is required"));
       return;
     }
     if (newVal.length !== contact.doc.email_ids.length) {
@@ -239,7 +240,7 @@ const options = computed(() => ({
 
 function update(): void {
   if (!isDirty.value) {
-    toast.error("No changes to save");
+    toast.error(__("No changes to save"));
     return;
   }
   contact.setValue.submit({
@@ -283,7 +284,7 @@ function validatePhone(input: AutoCompleteItem): string | void {
 function validateFile(file: File): string | void {
   let extn = file.name.split(".").pop().toLowerCase();
   if (!["png", "jpg", "jpeg"].includes(extn)) {
-    toast.error("Invalid file type, only PNG and JPG images are allowed");
+    toast.error(__("Invalid file type, only PNG and JPG images are allowed"));
     return "Invalid file type, only PNG and JPG images are allowed";
   }
 }
@@ -298,7 +299,7 @@ async function inviteContact(): Promise<void> {
         contact: contact.doc.name,
       }
     );
-    toast.success("Contact invited successfully");
+    toast.success(__("Contact invited successfully"));
     await contact.setValue.submit({
       user: user,
     });

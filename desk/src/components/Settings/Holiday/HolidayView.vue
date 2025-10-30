@@ -237,6 +237,7 @@ import {
 } from "../settingsModal";
 import HolidaysCalendarView from "./HolidaysCalendarView.vue";
 import AddHolidayModal from "./Modals/AddHolidayModal.vue";
+import { __ } from "@/translation";
 
 const dialog = ref({
   show: false,
@@ -350,7 +351,7 @@ const createHoliday = () => {
     },
     {
       onSuccess(data) {
-        toast.success("Holiday list created");
+        toast.success(__("Holiday list created"));
         holidayListActiveScreen.value.data = data;
         holidayListActiveScreen.value.screen = "view";
         getHolidayData.submit({
@@ -368,7 +369,7 @@ const updateHolidayResource = createResource({
     getHolidayData.submit({
       docname: data.name,
     });
-    toast.success("Holiday list updated");
+    toast.success(__("Holiday list updated"));
   },
 });
 

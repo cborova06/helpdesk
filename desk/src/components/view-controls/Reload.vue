@@ -7,6 +7,7 @@
 </template>
 
 <script setup>
+import { __ } from "@/translation";
 defineProps({
   loading: {
     type: Boolean,

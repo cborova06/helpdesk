@@ -123,6 +123,7 @@ import { Avatar, FeatherIcon } from "frappe-ui";
 import { PropType, Ref, computed, h, inject, nextTick, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import FeedbackBox from "../ticket-agent/FeedbackBox.vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   activities: {

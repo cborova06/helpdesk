@@ -41,6 +41,7 @@ import { ref } from "vue";
 import { Dialog } from "frappe-ui";
 import IconPicker from "@/components/IconPicker.vue";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 let viewDialog = defineModel();
 

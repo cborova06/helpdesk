@@ -48,6 +48,7 @@
 
 <script setup>
 import { TextEditor, call, TextInput } from "frappe-ui";
+import { __ } from "@/translation";
 
 const props = defineProps({
   name: {

@@ -72,6 +72,7 @@
 import { ref, computed } from "vue";
 import { Popover } from "frappe-ui";
 import { gemoji } from "gemoji";
+import { __ } from "@/translation";
 
 const search = ref("");
 const emoji = defineModel();

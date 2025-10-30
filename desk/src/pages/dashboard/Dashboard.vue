@@ -148,6 +148,7 @@ import {
   usePageMeta,
 } from "frappe-ui";
 import { computed, h, onMounted, reactive, ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const { isManager, userId } = useAuthStore();
 

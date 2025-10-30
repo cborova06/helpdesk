@@ -69,6 +69,9 @@ doc_events = {
             "helpdesk.search_sqlite.delete_doc_index",
         ],
     },
+    "Communication": {
+        "after_insert": "helpdesk.extends.communication.after_insert",
+    },
 }
 
 has_permission = {

@@ -67,6 +67,7 @@ import { Button, Checkbox, Popover, Select } from "frappe-ui";
 import { inject, ref } from "vue";
 import EditResponseResolutionModal from "./Modals/EditResponseResolutionModal.vue";
 import { formatTimeHMS } from "./utils";
+import { __ } from "@/translation";
 
 const props = defineProps({
   columns: {

@@ -99,6 +99,7 @@ import { useDevice } from "@/composables";
 import { useScreenSize } from "@/composables/screen";
 import { showCommentBox, showEmailBox } from "@/pages/ticket/modalStates";
 import { ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const emit = defineEmits(["update"]);
 const content = defineModel("content");

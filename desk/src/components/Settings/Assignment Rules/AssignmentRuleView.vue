@@ -328,6 +328,7 @@ import AssignmentRulesSection from "./AssignmentRulesSection.vue";
 import AssignmentSchedule from "./AssignmentSchedule.vue";
 import { convertToConditions } from "@/utils";
 import { disableSettingModalOutsideClick } from "../settingsModal";
+import { __ } from "@/translation";
 
 const isDirty = ref(false);
 const initialData = ref(null);
@@ -487,7 +488,7 @@ const createAssignmentRule = () => {
         })
         .then(() => {
           isLoading.value = false;
-          toast.success("Assignment rule created");
+          toast.success(__("Assignment rule created"));
         });
       assignmentRulesActiveScreen.value = {
         screen: "view",
@@ -574,7 +575,7 @@ const updateAssignmentRule = async () => {
   }
 
   isLoading.value = false;
-  toast.success("Assignment rule updated");
+  toast.success(__("Assignment rule updated"));
 };
 
 watch(

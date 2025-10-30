@@ -117,6 +117,7 @@ import { IndicatorIcon } from "../icons";
 import TicketNavigation from "./TicketNavigation.vue";
 import TicketSLA from "./TicketSLA.vue";
 import TicketSubjectModal from "./TicketSubjectModal.vue";
+import { __ } from "@/translation";
 
 defineProps({
   viewers: {

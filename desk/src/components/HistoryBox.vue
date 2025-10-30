@@ -63,6 +63,7 @@
 import { SelectIcon } from "@/components/icons";
 import { dateFormat, dateTooltipFormat, timeAgo } from "@/utils";
 import { ref } from "vue";
+import { __ } from "@/translation";
 const props = defineProps({
   activity: {
     type: Object,

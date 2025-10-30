@@ -39,6 +39,7 @@
 import { createResource, Dialog, ErrorMessage, toast } from "frappe-ui";
 import { ref, watch } from "vue";
 import { z } from "zod";
+import { __ } from "@/translation";
 
 const emit = defineEmits(["onUpdate"]);
 const show = defineModel<boolean>();
@@ -79,7 +80,7 @@ const onSubmit = () => {
     auto: true,
     onSuccess: () => {
       emit("onUpdate");
-      toast.success("Contact updated");
+      toast.success(__("Contact updated"));
       show.value = false;
     },
   });

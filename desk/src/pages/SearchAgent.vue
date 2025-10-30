@@ -213,6 +213,7 @@ import {
 } from "frappe-ui";
 import { computed, nextTick, onMounted, ref, useTemplateRef, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { __ } from "@/translation";
 
 // Icons
 

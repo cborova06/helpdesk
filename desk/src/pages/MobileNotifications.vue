@@ -77,6 +77,7 @@ import { dayjs } from "@/dayjs";
 import { Notification } from "@/types";
 import { UserAvatar } from "@/components";
 import LucideBell from "~icons/lucide/bell";
+import { __ } from "@/translation";
 const notificationStore = useNotificationStore();
 const target = ref(null);
 onClickOutside(

@@ -160,6 +160,7 @@ import { ref, watch } from "vue";
 import { holidayData } from "@/stores/holidayList";
 import dayjs from "dayjs";
 import AddHolidayModal from "./Modals/AddHolidayModal.vue";
+import { __ } from "@/translation";
 
 const dialog = ref({
   show: false,

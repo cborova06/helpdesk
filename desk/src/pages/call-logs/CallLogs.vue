@@ -46,6 +46,7 @@ import CallLogDetailModal from "./CallLogDetailModal.vue";
 import CallLogModal from "./CallLogModal.vue";
 import { statusColorMap, statusLabelMap } from "./utils";
 import { PhoneIcon } from "@/components/icons";
+import { __ } from "@/translation";
 
 const showCallLogModal = ref(false);
 const showCallLogDetailModal = ref(false);

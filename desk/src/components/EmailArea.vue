@@ -133,6 +133,7 @@ import { computed, ref } from "vue";
 import LucideSplit from "~icons/lucide/split";
 import { ReplyAllIcon, ReplyIcon } from "./icons";
 import TicketSplitModal from "./ticket/TicketSplitModal.vue";
+import { __ } from "@/translation";
 const props = defineProps({
   activity: {
     type: Object,

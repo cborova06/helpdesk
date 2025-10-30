@@ -210,6 +210,7 @@ import { LoadingIndicator, Popover } from "frappe-ui";
 import { nextTick } from "vue";
 import LucideCheckSquare from "~icons/lucide/check-square";
 import LucideSquare from "~icons/lucide/square";
+import { __ } from "@/translation";
 
 export default {
   name: "Autocomplete",

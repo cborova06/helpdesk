@@ -152,6 +152,7 @@ import { isTouchScreenDevice } from "@/utils";
 import Draggable from "vuedraggable";
 import { computed, ref, inject } from "vue";
 import { watchOnce } from "@vueuse/core";
+import { __ } from "@/translation";
 
 const props = defineProps({
   hideLabel: {

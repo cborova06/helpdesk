@@ -153,6 +153,7 @@ import LucideCheck from "~icons/lucide/check";
 import IconMoreHorizontal from "~icons/lucide/more-horizontal";
 import AgentCard from "./AgentCard.vue";
 import { activeFilter, showNewAgentsDialog, useAgents } from "./agents";
+import { __ } from "@/translation";
 
 const { getUserRole, updateUserRoleCache } = useUserStore();
 const { isManager } = useAuthStore();

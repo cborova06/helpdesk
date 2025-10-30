@@ -66,6 +66,7 @@ import { StarRating } from "@/components";
 import { createListResource, createResource } from "frappe-ui";
 import { inject, ref, watch } from "vue";
 import { ITicket } from "./symbols";
+import { __ } from "@/translation";
 
 interface P {
   open: boolean;

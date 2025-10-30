@@ -134,6 +134,7 @@
 <script setup lang="ts">
 import { FieldCriteriaState } from "@/types";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps<{
   isNew: boolean;

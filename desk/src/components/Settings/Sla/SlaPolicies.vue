@@ -39,6 +39,7 @@ import { resetSlaData, slaActiveScreen } from "@/stores/sla";
 import { Button } from "frappe-ui";
 import SlaPolicyList from "./SlaPolicyList.vue";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
+import { __ } from "@/translation";
 
 const goToNew = () => {
   resetSlaData();

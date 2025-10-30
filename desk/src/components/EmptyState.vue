@@ -17,6 +17,7 @@
 
 <script setup lang="ts">
 import { VNode } from "vue";
+import { __ } from "@/translation";
 interface Props {
   title: string;
   icon?: VNode | string;

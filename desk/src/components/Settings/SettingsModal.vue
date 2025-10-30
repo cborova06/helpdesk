@@ -72,6 +72,7 @@
 import { Dialog } from "frappe-ui";
 import { ModelRef, ref, watch } from "vue";
 import ConfirmDialog from "@/components/ConfirmDialog.vue";
+import { __ } from "@/translation";
 import {
   activeTab,
   disableSettingModalOutsideClick,

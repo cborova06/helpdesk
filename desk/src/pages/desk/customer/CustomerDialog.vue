@@ -44,6 +44,7 @@ import {
   toast,
 } from "frappe-ui";
 import { computed } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   name: {
@@ -69,10 +70,10 @@ const customer = createDocumentResource({
   auto: true,
   setValue: {
     onSuccess() {
-      toast.success("Customer updated");
+      toast.success(__("Customer updated"));
     },
     onError() {
-      toast.error("Error updating customer");
+      toast.error(__("Error updating customer"));
     },
   },
 });

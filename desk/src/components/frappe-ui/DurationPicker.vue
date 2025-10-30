@@ -137,6 +137,7 @@
 </template>
 
 <script setup lang="ts">
+import { __ } from "@/translation";
 import {
   ref,
   computed,

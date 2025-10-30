@@ -137,6 +137,7 @@ import {
   type DialogProps,
 } from "frappe-ui";
 import { computed, ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const show = defineModel<boolean>();
 const editMode = ref(false);
@@ -260,7 +261,7 @@ const resetCallLog = () => {
 function updateCallLog() {
   validateCallLog();
   if (Object.values(errors.value).some((error) => error)) {
-    toast.error("Please fill all required fields");
+    toast.error(__("Please fill all required fields"));
     return;
   }
   loading.value = true;
@@ -306,7 +307,7 @@ function updateCallLog() {
 function createCallLog() {
   validateCallLog();
   if (Object.values(errors.value).some((error) => error)) {
-    toast.error("Please fill all required fields");
+    toast.error(__("Please fill all required fields"));
     return;
   }
   loading.value = true;

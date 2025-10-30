@@ -22,6 +22,7 @@ import { computed, ComputedRef } from "vue";
 import { slaData } from "@/stores/sla";
 import { useTicketStatusStore } from "@/stores/ticketStatus";
 import { HDTicketStatus } from "@/types/doctypes";
+import { __ } from "@/translation";
 
 const { statuses } = useTicketStatusStore();
 

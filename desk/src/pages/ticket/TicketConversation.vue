@@ -51,6 +51,7 @@ import { computed, inject, nextTick, watch } from "vue";
 import { useRoute } from "vue-router";
 import TicketCommunication from "./TicketCommunication.vue";
 import { ITicket } from "./symbols";
+import { __ } from "@/translation";
 
 interface P {
   focus?: string;

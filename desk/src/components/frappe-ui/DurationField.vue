@@ -131,6 +131,7 @@
 <script setup>
 import { Popover } from "frappe-ui";
 import { computed, ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   modelValue: {

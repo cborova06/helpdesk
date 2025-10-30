@@ -44,6 +44,7 @@ import { Dialog, createResource, toast } from "frappe-ui";
 import { ref } from "vue";
 import LucideSplit from "~icons/lucide/split";
 import TriangleAlert from "~icons/lucide/triangle-alert";
+import { __ } from "@/translation";
 
 interface Props {
   ticket_id: string;
@@ -74,7 +75,7 @@ const splitTicket = createResource({
     if (!communication_id) throw { message: "Communication ID is required" };
   },
   onSuccess: (newTicket: string) => {
-    toast.success("Ticket split successfully");
+    toast.success(__("Ticket split successfully"));
     showDialog.value = false;
     window.open(
       window.location.origin + "/helpdesk/tickets/" + newTicket,

@@ -34,6 +34,7 @@ import { LayoutHeader } from "@/components";
 import CategoryFolderContainer from "@/components/knowledge-base/CategoryFolderContainer.vue";
 import SearchPopover from "@/components/SearchPopover.vue";
 import { capture } from "@/telemetry";
+import { __ } from "@/translation";
 
 const query = ref("");
 

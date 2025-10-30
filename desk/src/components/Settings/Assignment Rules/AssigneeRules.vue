@@ -119,6 +119,7 @@ import {
 import AssigneeSearch from "./AssigneeSearch.vue";
 import { computed } from "vue";
 import { useUserStore } from "@/stores/user";
+import { __ } from "@/translation";
 
 const { getUser } = useUserStore();
 

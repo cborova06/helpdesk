@@ -29,6 +29,7 @@ import { Breadcrumbs, createResource } from "frappe-ui";
 import LayoutHeader from "@/components/LayoutHeader.vue";
 import ArticleCard from "@/components/knowledge-base/ArticleCard.vue";
 import { capture } from "@/telemetry";
+import { __ } from "@/translation";
 
 const props = defineProps({
   categoryId: {

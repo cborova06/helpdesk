@@ -72,6 +72,7 @@ import {
 import { ref } from "vue";
 import dayjs from "dayjs";
 import { holidayData } from "@/stores/holidayList";
+import { __ } from "@/translation";
 
 interface ModelType {
   show: boolean;
@@ -134,7 +135,7 @@ const onSave = () => {
       getFormattedDate(holidayExists.holiday_date) !==
         getFormattedDate(dialog.value.editing.holiday_date)
     ) {
-      toast.error("Holiday already exists");
+      toast.error(__("Holiday already exists"));
       return;
     }
     const holidayIndex = holidayData.value.holidays.indexOf(
@@ -151,7 +152,7 @@ const onSave = () => {
         getFormattedDate(dialog.value.holiday_date)
     );
     if (index !== -1) {
-      toast.error("Holiday already exists");
+      toast.error(__("Holiday already exists"));
       return;
     }
     holidayData.value.holidays.push({

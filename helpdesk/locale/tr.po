@@ -2105,3 +2105,294 @@ msgstr "(Tümünü Gör)"
 
 msgid "View Name"
 msgstr "Görünüm Adı"
+
+msgid "Add New Customer"
+msgstr "Yeni Müşteri Ekle"
+
+msgid "No Customers Found"
+msgstr "Müşteri Bulunamadı"
+
+msgid "New customer"
+msgstr "Yeni müşteri"
+
+msgid "All available priorities have already been added"
+msgstr "Tüm mevcut öncelikler zaten eklenmiş"
+
+msgid "Article created"
+msgstr "Makale oluşturuldu"
+
+msgid "Article deleted"
+msgstr "Makale silindi"
+
+msgid "Article moved"
+msgstr "Makale taşındı"
+
+msgid "Articles deleted"
+msgstr "Makaleler silindi"
+
+msgid "Articles moved"
+msgstr "Makaleler taşındı"
+
+msgid "Article updated"
+msgstr "Makale güncellendi"
+
+msgid "Assignment rule created"
+msgstr "Atama kuralı oluşturuldu"
+
+msgid "Assignment rule deleted"
+msgstr "Atama kuralı silindi"
+
+msgid "Assignment rule duplicated"
+msgstr "Atama kuralı kopyalandı"
+
+msgid "Assignment rule updated"
+msgstr "Atama kuralı güncellendi"
+
+msgid "At least one email is required"
+msgstr "En az bir e-posta gereklidir"
+
+msgid "At least one email required"
+msgstr "En az bir e-posta gerekli"
+
+msgid "A workday with this name already exists"
+msgstr "Bu adda bir iş günü zaten mevcut"
+
+msgid "Brand logo updated"
+msgstr "Marka logosu güncellendi"
+
+msgid "Cannot enable rule without adding users in it"
+msgstr "Kullanıcı eklemeden kural etkinleştirilemez"
+
+msgid "Category created"
+msgstr "Kategori oluşturuldu"
+
+msgid "Category deleted"
+msgstr "Kategori silindi"
+
+msgid "Category merged"
+msgstr "Kategori birleştirildi"
+
+msgid "Category updated"
+msgstr "Kategori güncellendi"
+
+msgid "Comment cannot be empty"
+msgstr "Yorum boş olamaz"
+
+msgid "Comment deleted"
+msgstr "Yorum silindi"
+
+msgid "Comment updated"
+msgstr "Yorum güncellendi"
+
+msgid "Contact created"
+msgstr "İletişim oluşturuldu"
+
+msgid "Contact invited successfully"
+msgstr "İletişim başarıyla davet edildi"
+
+msgid "Contact updated"
+msgstr "İletişim güncellendi"
+
+msgid "Contact with email already exists"
+msgstr "Bu e-posta ile iletişim zaten mevcut"
+
+msgid "Copied to clipboard"
+msgstr "Panoya kopyalandı"
+
+msgid "Create New Contact"
+msgstr "Yeni İletişim Oluştur"
+
+msgid "Customer created"
+msgstr "Müşteri oluşturuldu"
+
+msgid "Customer name is required"
+msgstr "Müşteri adı gereklidir"
+
+msgid "Customer updated"
+msgstr "Müşteri güncellendi"
+
+msgid "Email account created"
+msgstr "E-posta hesabı oluşturuldu"
+
+msgid "Email account updated successfully"
+msgstr "E-posta hesabı başarıyla güncellendi"
+
+msgid "Email should not be empty"
+msgstr "E-posta boş olmamalıdır"
+
+msgid "Emails pulled successfully"
+msgstr "E-postalar başarıyla çekildi"
+
+msgid "Enter a valid email"
+msgstr "Geçerli bir e-posta girin"
+
+msgid "Enter a valid phone number"
+msgstr "Geçerli bir telefon numarası girin"
+
+msgid "Error updating customer"
+msgstr "Müşteri güncellenirken hata oluştu"
+
+msgid "Error uploading file"
+msgstr "Dosya yüklenirken hata oluştu"
+
+msgid "Error: Unable to find the holiday to update"
+msgstr "Hata: Güncellenecek tatil bulunamadı"
+
+msgid "Failed to update, please try again"
+msgstr "Güncelleme başarısız, lütfen tekrar deneyin"
+
+msgid "Favicon updated, please refresh the page to see the changes"
+msgstr "Favicon güncellendi, değişiklikleri görmek için sayfayı yenileyin"
+
+msgid "Field dependency deleted successfully"
+msgstr "Alan bağımlılığı başarıyla silindi"
+
+msgid "Field dependency updated successfully."
+msgstr "Alan bağımlılığı başarıyla güncellendi."
+
+msgid "First name should not be empty"
+msgstr "Ad boş olmamalıdır"
+
+msgid "Holiday already exists"
+msgstr "Tatil zaten mevcut"
+
+msgid "Holiday list created"
+msgstr "Tatil listesi oluşturuldu"
+
+msgid "Holiday list deleted"
+msgstr "Tatil listesi silindi"
+
+msgid "Holiday list duplicated"
+msgstr "Tatil listesi kopyalandı"
+
+msgid "Holiday list updated"
+msgstr "Tatil listesi güncellendi"
+
+msgid "Holiday with the same day and repetition already exists"
+msgstr "Aynı gün ve tekrarla tatil zaten mevcut"
+
+msgid "Invalid file type, only PNG and JPG images are allowed"
+msgstr "Geçersiz dosya türü, yalnızca PNG ve JPG görsellere izin verilir"
+
+msgid "Invitation cancelled successfully"
+msgstr "Davet başarıyla iptal edildi"
+
+msgid "Invites sent successfully!"
+msgstr "Davetler başarıyla gönderildi!"
+
+msgid "Item(s) deleted successfully"
+msgstr "Öğe(ler) başarıyla silindi"
+
+msgid "No changes to save"
+msgstr "Kaydedilecek değişiklik yok"
+
+msgid "Please fill all required fields"
+msgstr "Lütfen tüm gerekli alanları doldurun"
+
+msgid "Please fill all required fields for Exotel"
+msgstr "Lütfen Exotel için tüm gerekli alanları doldurun"
+
+msgid "Please fill all required fields for Twilio"
+msgstr "Lütfen Twilio için tüm gerekli alanları doldurun"
+
+msgid "Please fix the errors in the form"
+msgstr "Lütfen formdaki hataları düzeltin"
+
+msgid "Please select a day of the week"
+msgstr "Lütfen haftanın bir gününü seçin"
+
+msgid "Please select a priority"
+msgstr "Lütfen bir öncelik seçin"
+
+msgid "Please select at least one repetition option"
+msgstr "Lütfen en az bir tekrar seçeneği seçin"
+
+msgid "Resolution time must be a positive number"
+msgstr "Çözüm süresi pozitif bir sayı olmalıdır"
+
+msgid "Response time must be a positive number"
+msgstr "Yanıt süresi pozitif bir sayı olmalıdır"
+
+msgid "SLA policy created"
+msgstr "SLA politikası oluşturuldu"
+
+msgid "SLA policy deleted"
+msgstr "SLA politikası silindi"
+
+msgid "SLA policy duplicated"
+msgstr "SLA politikası kopyalandı"
+
+msgid "SLA policy status updated"
+msgstr "SLA politikası durumu güncellendi"
+
+msgid "SLA policy updated"
+msgstr "SLA politikası güncellendi"
+
+msgid "SLA set as default cannot be disabled"
+msgstr "Varsayılan olarak ayarlanan SLA devre dışı bırakılamaz"
+
+msgid "Subject is required"
+msgstr "Konu gereklidir"
+
+msgid "Team created"
+msgstr "Takım oluşturuldu"
+
+msgid "Team deleted"
+msgstr "Takım silindi"
+
+msgid "Team renamed"
+msgstr "Takım yeniden adlandırıldı"
+
+msgid "Telephony settings updated!"
+msgstr "Telefon ayarları güncellendi!"
+
+msgid "Ticket closed"
+msgstr "Ticket kapatıldı"
+
+msgid "Ticket merged successfully"
+msgstr "Ticket başarıyla birleştirildi"
+
+msgid "Ticket not found"
+msgstr "Ticket bulunamadı"
+
+msgid "Ticket split successfully"
+msgstr "Ticket başarıyla bölündü"
+
+msgid "Ticket updated"
+msgstr "Ticket güncellendi"
+
+msgid "Unable to make call."
+msgstr "Arama yapılamıyor."
+
+msgid "Workday added"
+msgstr "İş günü eklendi"
+
+msgid "Workday updated"
+msgstr "İş günü güncellendi"
+
+msgid "Comma separated emails to invite"
+msgstr "Davet etmek için virgülle ayrılmış e-postalar"
+
+msgid "Easily invite new agents, managers, or admins"
+msgstr "Kolayca yeni temsilciler, yöneticiler veya yöneticiler davet edin"
+
+msgid "Send Invites"
+msgstr "Davetleri Gönder"
+
+msgid "Configure your telephony settings."
+msgstr "Telefon ayarlarınızı yapılandırın."
+
+msgid "Set your team's working days, hours, and holidays using a template or custom schedule."
+msgstr "Ekibinizin çalışma günlerini, saatlerini ve tatillerini bir şablon veya özel program kullanarak ayarlayın."
+
+msgid "Customise Helpdesk with your own branding."
+msgstr "Yardım Masasını kendi markanızla özelleştirin."
+
+msgid "Manage your email accounts and configure incoming and outgoing settings."
+msgstr "E-posta hesaplarınızı yönetin ve gelen ve giden ayarlarını yapılandırın."
+
+msgid "Create and manage teams and assign agents to specific teams."
+msgstr "Takımlar oluşturun, yönetin ve belirli takımlara temsilciler atayın."
+
+msgid "Can work on tickets, create custom views and manage private views."
+msgstr "Biletler üzerinde çalışabilir, özel görünümler oluşturabilir ve özel görünümleri yönetebilir."

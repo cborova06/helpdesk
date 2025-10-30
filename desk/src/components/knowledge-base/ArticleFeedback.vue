@@ -43,6 +43,7 @@ import {
 } from "@/components/icons";
 import { setFeedback } from "@/stores/knowledgeBase";
 import { ref } from "vue";
+import { __ } from "@/translation";
 
 interface P {
   feedback: FeedbackAction;

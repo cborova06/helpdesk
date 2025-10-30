@@ -18,7 +18,7 @@ import { getMeta } from "./stores/meta";
  */
 export async function copy(s: string) {
   const { copy: c } = useClipboard();
-  c(s).then(() => toast.success("Copied to clipboard"));
+  c(s).then(() => toast.success(__("Copied to clipboard")));
 }
 
 /**

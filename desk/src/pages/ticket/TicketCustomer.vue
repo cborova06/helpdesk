@@ -84,6 +84,7 @@ import TicketConversation from "./TicketConversation.vue";
 import TicketFeedback from "./TicketFeedback.vue";
 import TicketTextEditor from "./TicketTextEditor.vue";
 import { useTicketStatusStore } from "@/stores/ticketStatus";
+import { __ } from "@/translation";
 
 interface P {
   ticketId: string;
@@ -115,7 +116,7 @@ const ticket = createResource({
     });
   },
   onError: () => {
-    toast.error("Ticket not found");
+    toast.error(__("Ticket not found"));
     router.replace("/my-tickets");
   },
 });
@@ -174,7 +175,7 @@ function updateTicket(fieldname: string, value: string) {
     auto: true,
     onSuccess: () => {
       ticket.reload();
-      toast.success("Ticket updated");
+      toast.success(__("Ticket updated"));
     },
   });
 }
@@ -201,7 +202,7 @@ function showConfirmationDialog() {
             { fieldname: "status", value: "Closed" },
             {
               onSuccess: () => {
-                toast.success("Ticket closed");
+                toast.success(__("Ticket closed"));
               },
             }
           );
@@ -251,8 +252,9 @@ const showFeedback = computed(() => {
 
 onMounted(() => {
   document.title = props.ticketId;
-  socket.on("helpdesk:ticket-update", (ticketID) => {
-    if (ticketID === Number(props.ticketId)) {
+  socket.on("helpdesk:ticket-update", (data) => {
+    const ticketID = data?.ticket_id || data;
+    if (String(ticketID) === String(props.ticketId)) {
       ticket.reload();
     }
   });

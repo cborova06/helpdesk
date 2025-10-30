@@ -44,6 +44,7 @@ import { Button, Select } from "frappe-ui";
 import WorkDayModal from "./Modals/WorkDayModal.vue";
 import { ConfirmDelete, getGridTemplateColumnsForTable } from "@/utils";
 import { slaData } from "@/stores/sla";
+import { __ } from "@/translation";
 
 interface Column {
   key: string;

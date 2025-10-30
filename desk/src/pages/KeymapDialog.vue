@@ -31,6 +31,7 @@
 import { Badge } from "frappe-ui";
 import { isEmpty } from "lodash";
 import { useKeymapStore } from "@/stores/keymap";
+import { __ } from "@/translation";
 
 const keymapStore = useKeymapStore();
 const options = {

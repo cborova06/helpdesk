@@ -3,7 +3,7 @@
     <!-- header -->
     <SettingsLayoutHeader
       :title="__('Email Accounts')"
-      description="Manage your email accounts and configure incoming and outgoing settings."
+      :description="__('Manage your email accounts and configure incoming and outgoing settings.')"
     >
       <template #actions>
         <Button
@@ -39,6 +39,7 @@ import { EmailAccount } from "@/types";
 import { createListResource } from "frappe-ui";
 import EmailAccountCard from "./EmailAccountCard.vue";
 import SettingsLayoutHeader from "./SettingsLayoutHeader.vue";
+import { __ } from "@/translation";
 
 const emit = defineEmits(["update:step"]);
 

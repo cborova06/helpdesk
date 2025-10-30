@@ -80,6 +80,7 @@ import { createResource } from "frappe-ui";
 import { isEmpty } from "lodash";
 import { Icon } from "@iconify/vue";
 import { capture } from "@/telemetry";
+import { __ } from "@/translation";
 interface P {
   query: string;
   hideViewAll?: boolean;

@@ -43,6 +43,7 @@ import NewCustomerDialog from "@/components/desk/global/NewCustomerDialog.vue";
 import { Avatar, usePageMeta } from "frappe-ui";
 import { computed, h, ref } from "vue";
 import CustomerDialog from "./CustomerDialog.vue";
+import { __ } from "@/translation";
 
 const isDialogVisible = ref(false);
 const isCustomerDialogVisible = ref(false);

@@ -39,6 +39,7 @@
 import { ref } from "vue";
 import { Dialog } from "frappe-ui";
 import { Link } from "@/components";
+import { __ } from "@/translation";
 defineProps<{
   categoryId: string;
   categoryTitle: string;

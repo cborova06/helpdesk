@@ -64,6 +64,7 @@
 <script setup>
 import { TextEditor, createListResource } from "frappe-ui";
 import { ref, computed, nextTick, watch, onMounted } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   doctype: {

@@ -2,7 +2,8 @@
 # See license.txt
 
 import frappe
-from frappe.tests import IntegrationTestCase
+from frappe import _
+from frappe.tests.utils import FrappeTestCase
 from frappe.utils import add_to_date, get_datetime, getdate
 
 from helpdesk.test_utils import (
@@ -31,7 +32,7 @@ agent = "agent@test.com"
 agent2 = "agent2@test.com"
 
 
-class TestHDTicket(IntegrationTestCase):
+class TestHDTicket(FrappeTestCase):
     def setUp(self):
         frappe.db.delete("HD Ticket")
         frappe.get_doc(

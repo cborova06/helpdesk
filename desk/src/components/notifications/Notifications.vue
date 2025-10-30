@@ -94,6 +94,7 @@ import { useSidebarStore } from "@/stores/sidebar";
 import { Notification } from "@/types";
 import { onClickOutside } from "@vueuse/core";
 import { ref } from "vue";
+import { __ } from "@/translation";
 
 const notificationStore = useNotificationStore();
 const sidebarStore = useSidebarStore();

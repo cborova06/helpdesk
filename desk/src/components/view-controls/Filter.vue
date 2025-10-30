@@ -170,6 +170,7 @@ import {
   Tooltip,
 } from "frappe-ui";
 import { computed, h, inject } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   default_filters: {

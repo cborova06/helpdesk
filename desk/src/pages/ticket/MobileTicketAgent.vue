@@ -228,6 +228,7 @@ import { setupCustomizations } from "@/composables/formCustomisation";
 import { useScreenSize } from "@/composables/screen";
 import { globalStore } from "@/stores/globalStore";
 import { useTicketStatusStore } from "@/stores/ticketStatus";
+import { socket } from "@/socket";
 import { useUserStore } from "@/stores/user";
 import { TabObject, TicketTab } from "@/types";
 import { useActiveTabManager } from "@/composables/useActiveTabManager";
@@ -235,6 +236,7 @@ import { useTelephonyStore } from "@/stores/telephony";
 import { storeToRefs } from "pinia";
 import { HDTicketStatus } from "@/types/doctypes";
 import SetContactPhoneModal from "@/components/ticket/SetContactPhoneModal.vue";
+import { __ } from "@/translation";
 
 const telephonyStore = useTelephonyStore();
 const { isCallingEnabled } = storeToRefs(telephonyStore);
@@ -486,15 +488,25 @@ function updateTicket(fieldname: string, value: string) {
     onSuccess: () => {
       isLoading.value = false;
       ticket.reload();
-      toast.success("Ticket updated");
+      toast.success(__("Ticket updated"));
     },
   });
 }
 onMounted(() => {
   document.title = props.ticketId;
+  
+  // Listen for real-time communication updates
+  socket.on("helpdesk:ticket-update", (data: any) => {
+    const ticketID = data?.ticket_id || data;
+    if (String(ticketID) === String(props.ticketId)) {
+      // Reload ticket data to show new communications
+      ticket.value.reload();
+    }
+  });
 });
 
 onUnmounted(() => {
   document.title = "Helpdesk";
+  socket.off("helpdesk:ticket-update");
 });
 </script>

@@ -31,6 +31,7 @@ import {
   assignmentRulesErrors,
 } from "../../../stores/assignmentRules";
 import AssignmentScheduleItem from "./AssignmentScheduleItem.vue";
+import { __ } from "@/translation";
 
 const columns = [
   {

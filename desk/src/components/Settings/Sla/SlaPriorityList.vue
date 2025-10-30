@@ -72,6 +72,7 @@ import {
 } from "@/stores/sla";
 import { watchDebounced } from "@vueuse/core";
 import { getGridTemplateColumnsForTable } from "@/utils";
+import { __ } from "@/translation";
 
 createResource({
   url: "frappe.client.get_list",
@@ -114,7 +115,7 @@ const addRow = () => {
   );
 
   if (availablePriorities.length === 0) {
-    toast.error("All available priorities have already been added");
+    toast.error(__("All available priorities have already been added"));
     return;
   }
 

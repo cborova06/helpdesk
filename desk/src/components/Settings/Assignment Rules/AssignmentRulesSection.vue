@@ -43,6 +43,7 @@ import { validateConditions } from "@/utils";
 import { watchDebounced } from "@vueuse/core";
 import { Button, Dropdown, ErrorMessage, FeatherIcon } from "frappe-ui";
 import { validateAssignmentRule } from "../../../stores/assignmentRules";
+import { __ } from "@/translation";
 
 const props = defineProps({
   conditions: Array<any>,

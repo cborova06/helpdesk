@@ -32,6 +32,7 @@
 import { LoadingIndicator } from "frappe-ui";
 import SlaPolicyListItem from "./SlaPolicyListItem.vue";
 import { inject } from "vue";
+import { __ } from "@/translation";
 
 const slaPolicyList = inject<any>("slaPolicyList");
 </script>

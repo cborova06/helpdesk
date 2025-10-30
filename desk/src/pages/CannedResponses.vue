@@ -143,6 +143,7 @@ import {
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import EmptyState from "../components/EmptyState.vue";
+import { __ } from "@/translation";
 
 const { getUser } = useUserStore();
 

@@ -25,6 +25,42 @@ import { translationPlugin } from "./translation";
 import CircleAlert from "~icons/lucide/circle-alert";
 import { initSocket } from "./socket";
 
+// Safety shim: prevent ResizeObserver.observe from throwing when a Vue component
+// instance (with $el) or a falsy/invalid target is passed by third-party components.
+if (typeof window !== "undefined" && typeof window.ResizeObserver !== "undefined") {
+  const NativeResizeObserver = window.ResizeObserver;
+  // Avoid double-patching
+  if (NativeResizeObserver && NativeResizeObserver.name !== "SafeResizeObserver") {
+    class SafeResizeObserver extends NativeResizeObserver {
+      observe(target, options) {
+        // Prefer the raw Element if available
+        const el = target?.nodeType === 1 ? target : target?.$el?.nodeType === 1 ? target.$el : null;
+        if (el) {
+          return super.observe(el, options);
+        }
+        // If the element isn't ready yet (e.g., called before mount), try once on next frame
+        // instead of throwing, so libraries relying on RO don't break initialization.
+        if (target && target.$el === undefined) {
+          // Non-element, non-Vue object: skip silently
+          return;
+        }
+        requestAnimationFrame(() => {
+          const nextEl = target?.$el?.nodeType === 1 ? target.$el : null;
+          if (nextEl) {
+            try {
+              super.observe(nextEl, options);
+            } catch (_) {
+              // no-op: best-effort fallback
+            }
+          }
+        });
+        // Spec returns void
+      }
+    }
+    window.ResizeObserver = SafeResizeObserver;
+  }
+}
+
 const globalComponents = {
   Badge,
   Button,

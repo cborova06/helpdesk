@@ -18,6 +18,7 @@
 </template>
 <script>
 import { Button, Dialog } from "frappe-ui";
+import { __ } from "@/translation";
 
 export default {
   name: "ConfirmDialog",

@@ -18,6 +18,7 @@ import { ref } from "vue";
 import Resizer from "../Resizer.vue";
 import TicketContactTab from "./TicketContactTab.vue";
 import TicketDetailsTab from "./TicketDetailsTab.vue";
+import { __ } from "@/translation";
 
 const currentTab = ref("details");
 const tabs = [

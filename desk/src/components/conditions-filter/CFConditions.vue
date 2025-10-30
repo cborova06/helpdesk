@@ -34,6 +34,7 @@ import { Button, Dropdown } from "frappe-ui";
 import { computed, onMounted } from "vue";
 import CFCondition from "./CFCondition.vue";
 import { filterableFields } from "./filterableFields";
+import { __ } from "@/translation";
 
 const props = defineProps({
   conditions: {

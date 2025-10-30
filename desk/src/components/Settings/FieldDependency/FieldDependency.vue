@@ -86,6 +86,7 @@ import { getFieldOptions, hiddenChildFields } from "./fieldDependency";
 import FieldDependencyCriteria from "./FieldDependencyCriteria.vue";
 import FieldDependencyFieldsSelection from "./FieldDependencyFieldsSelection.vue";
 import FieldDependencyValueSelection from "./FieldDependencyValueSelection.vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   fieldDependencyName: {

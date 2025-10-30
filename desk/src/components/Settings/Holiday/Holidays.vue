@@ -2,7 +2,7 @@
   <div class="px-10 py-8">
     <SettingsLayoutHeader
       :title="__('Business Holidays')"
-      description="Set your team’s working days, hours, and holidays using a template or custom schedule."
+      :description="__('Set your team\'s working days, hours, and holidays using a template or custom schedule.')"
     >
       <template #actions>
         <Button
@@ -27,6 +27,7 @@ import {
 } from "@/stores/holidayList";
 import HolidayList from "./HolidayList.vue";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
+import { __ } from "@/translation";
 
 const goToNew = () => {
   resetHolidayData();

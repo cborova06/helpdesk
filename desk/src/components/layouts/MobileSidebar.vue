@@ -134,6 +134,7 @@ import {
 } from "./layoutSettings";
 import { useTelephonyStore } from "@/stores/telephony";
 import { storeToRefs } from "pinia";
+import { __ } from "@/translation";
 const { pinnedViews, publicViews } = useView();
 
 const notificationStore = useNotificationStore();

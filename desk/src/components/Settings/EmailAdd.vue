@@ -107,6 +107,7 @@ import {
   validateInputs,
 } from "./emailConfig";
 import EmailProviderIcon from "./EmailProviderIcon.vue";
+import { __ } from "@/translation";
 
 interface E {
   (event: "update:step", value: EmailStep): void;
@@ -148,7 +149,7 @@ const addEmailRes = createResource({
     };
   },
   onSuccess: () => {
-    toast.success("Email account created");
+    toast.success(__("Email account created"));
     emit("update:step", "email-list");
     updateOnboardingStep("setup_email_account");
   },

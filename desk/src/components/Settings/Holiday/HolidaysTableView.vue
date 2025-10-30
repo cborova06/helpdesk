@@ -61,6 +61,7 @@ import dayjs from "dayjs";
 import { ConfirmDelete, getFormattedDate } from "@/utils";
 import { holidayData } from "@/stores/holidayList";
 import AddHolidayModal from "./Modals/AddHolidayModal.vue";
+import { __ } from "@/translation";
 
 const isConfirmingDelete = ref(false);
 

@@ -144,6 +144,7 @@ import weekday from "dayjs/plugin/weekday";
 import { Checkbox, FormLabel, Select, toast } from "frappe-ui";
 import { computed, ref } from "vue";
 import { getRepetitionText } from "./utils";
+import { __ } from "@/translation";
 
 dayjs.extend(weekday);
 dayjs.extend(isSameOrBefore);
@@ -279,14 +280,14 @@ const editHoliday = (holiday: any) => {
 
 const saveHoliday = () => {
   if (!recurringHolidayData.value.day) {
-    toast.error("Please select a day of the week");
+    toast.error(__("Please select a day of the week"));
     return;
   }
 
   const { all, first, second, third, fourth, fifth } =
     recurringHolidayData.value.repetition;
   if (!all && !first && !second && !third && !fourth && !fifth) {
-    toast.error("Please select at least one repetition option");
+    toast.error(__("Please select at least one repetition option"));
     return;
   }
 
@@ -297,7 +298,7 @@ const saveHoliday = () => {
       props.holidays[holidayData.editIndex] = { ...holidayData };
       updateWeeklyOffDates();
     } else {
-      toast.error("Error: Unable to find the holiday to update");
+      toast.error(__("Error: Unable to find the holiday to update"));
       return;
     }
   } else {
@@ -309,7 +310,7 @@ const saveHoliday = () => {
     );
 
     if (isDuplicate) {
-      toast.error("Holiday with the same day and repetition already exists");
+      toast.error(__("Holiday with the same day and repetition already exists"));
       return;
     }
 

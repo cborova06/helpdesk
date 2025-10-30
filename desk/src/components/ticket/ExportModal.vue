@@ -40,6 +40,7 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
+import { __ } from "@/translation";
 
 defineProps<{
   rowCount: number;

@@ -170,6 +170,7 @@ import { computed, inject } from "vue";
 import { NestedPopover } from "frappe-ui";
 import { useSortable } from "@vueuse/integrations/useSortable";
 import Autocomplete from "@/components/frappe-ui/Autocomplete.vue";
+import { __ } from "@/translation";
 import {
   AscendingIcon,
   DescendingIcon,

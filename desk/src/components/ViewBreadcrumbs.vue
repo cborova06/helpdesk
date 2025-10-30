@@ -86,6 +86,7 @@ import { useScreenSize } from "@/composables/screen";
 import { Icon } from "@iconify/vue";
 import { Dropdown } from "frappe-ui";
 import { useRoute } from "vue-router";
+import { __ } from "@/translation";
 
 const props = defineProps({
   routeName: {

@@ -186,6 +186,7 @@ import {
 } from "frappe-ui";
 import { useOnboarding } from "frappe-ui/frappe";
 import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const editorRef = ref(null);
 const showCannedResponseSelectorModal = ref(false);

@@ -165,6 +165,7 @@ import {
 import { useRoute, useRouter } from "vue-router";
 import EmptyState from "./EmptyState.vue";
 import ListRows from "./ListRows.vue";
+import { __ } from "@/translation";
 
 interface P {
   options: {
@@ -249,7 +250,7 @@ function handleBulkDelete(hide: Function, selections: Set<string>) {
     items: JSON.stringify(Array.from(selections)),
     doctype: props.options.doctype,
   }).then(() => {
-    toast.success("Item(s) deleted successfully");
+    toast.success(__("Item(s) deleted successfully"));
     hide();
     reset();
   });

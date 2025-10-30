@@ -44,6 +44,7 @@ import { Avatar, toast, usePageMeta } from "frappe-ui";
 import { computed, h, ref } from "vue";
 import ContactDialog from "./ContactDialog.vue";
 import { showNewContactModal } from "./dialogState";
+import { __ } from "@/translation";
 
 const isContactDialogVisible = ref(false);
 const selectedContact = ref(null);
@@ -86,7 +87,7 @@ function openContact(id: string): void {
 }
 
 function handleContactUpdated(): void {
-  toast.success("Contact updated");
+  toast.success(__("Contact updated"));
   isContactDialogVisible.value = !isContactDialogVisible.value;
   listViewRef.value?.reload();
 }

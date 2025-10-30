@@ -66,6 +66,7 @@ import {
 import { computed, h, onMounted, reactive, ref } from "vue";
 import { useRouter } from "vue-router";
 import LucideMerge from "~icons/lucide/merge";
+import { __ } from "@/translation";
 
 const router = useRouter();
 const { $dialog } = globalStore();
@@ -220,7 +221,7 @@ function handleMoveToCategory(category: string) {
         listViewRef.value?.reload();
         listViewRef.value?.unselectAll();
         listSelections.value.clear();
-        toast.success("Articles moved");
+        toast.success(__("Articles moved"));
       },
       onError: (error: Error) => {
         const title = error?.messages?.[0] || error.message;
@@ -251,7 +252,7 @@ function handleCategoryCreate() {
             isEdit: 1,
           },
         });
-        toast.success("Category created");
+        toast.success(__("Category created"));
         capture("category_created", {
           data: {
             category: category.title,
@@ -286,7 +287,7 @@ function handleCategoryUpdate() {
         showCategoryModal.value = false;
         editTitle.value = false;
 
-        toast.success("Category updated");
+        toast.success(__("Category updated"));
         resetState();
       },
       onError: (error: string) => {
@@ -312,7 +313,7 @@ function handleCategoryDelete(groupedRow) {
             },
             {
               onSuccess: () => {
-                toast.success("Category deleted");
+                toast.success(__("Category deleted"));
                 listViewRef.value.reload();
               },
             }
@@ -334,7 +335,7 @@ function handleDeleteArticles() {
         listViewRef.value?.reload();
         listViewRef.value?.unselectAll();
         listSelections.value?.clear();
-        toast.success("Articles deleted");
+        toast.success(__("Articles deleted"));
       },
     }
   );
@@ -349,7 +350,7 @@ function handleMergeCategory(source: string, target: string) {
     {
       onSuccess: () => {
         listViewRef.value.reload();
-        toast.success("Category merged");
+        toast.success(__("Category merged"));
         mergeModal.value = false;
         resetState();
       },

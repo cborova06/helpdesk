@@ -79,6 +79,7 @@ import { watchDebounced } from "@vueuse/core";
 import { createResource } from "frappe-ui";
 import { computed, ref, useAttrs, watch } from "vue";
 import Autocomplete from "./Autocomplete.vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   doctype: {

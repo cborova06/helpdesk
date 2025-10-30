@@ -37,6 +37,7 @@
 import { Popover, createResource } from "frappe-ui";
 import AppsIcon from "./icons/AppsIcon.vue";
 import ChevronRight from "~icons/lucide/chevron-right";
+import { __ } from "@/translation";
 
 const apps = createResource({
   url: "frappe.apps.get_apps",

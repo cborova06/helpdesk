@@ -65,6 +65,7 @@ import { LoadingIndicator, TabList, TabPanel, Tabs } from "frappe-ui";
 import { storeToRefs } from "pinia";
 import { computed, ComputedRef, inject, ref } from "vue";
 import TicketAgentActivities from "../ticket/TicketAgentActivities.vue";
+import { __ } from "@/translation";
 
 const ticket = inject(TicketSymbol);
 const activities = inject(ActivitiesSymbol);

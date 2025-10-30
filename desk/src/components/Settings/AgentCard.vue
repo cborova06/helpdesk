@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { Avatar } from "frappe-ui";
+import { __ } from "@/translation";
 
 defineProps({
   agent: {

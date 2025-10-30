@@ -28,6 +28,7 @@ import { Autocomplete, Link } from "@/components";
 import { Field } from "@/types";
 import { createResource, FormControl } from "frappe-ui";
 import { computed, h } from "vue";
+import { __ } from "@/translation";
 
 type Value = string | number | boolean;
 

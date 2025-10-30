@@ -51,6 +51,7 @@ import { dayjs } from "@/dayjs";
 import { Field } from "@/types";
 import { computed, inject } from "vue";
 import { ITicket } from "./symbols";
+import { __ } from "@/translation";
 
 const ticket = inject(ITicket);
 

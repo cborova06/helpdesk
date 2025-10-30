@@ -3,7 +3,7 @@
     <!-- Header -->
     <SettingsLayoutHeader
       :title="__('Teams')"
-      description="Create and manage teams and assign agents to specific teams."
+      :description="__('Create and manage teams and assign agents to specific teams.')"
     >
       <template #actions>
         <Button
@@ -80,6 +80,7 @@
 import { Avatar, FormControl, createListResource } from "frappe-ui";
 import { ref, watch } from "vue";
 import NewTeamModal from "../NewTeamModal.vue";
+import { __ } from "@/translation";
 
 interface E {
   (event: "update:step", step: string, team: string): void;

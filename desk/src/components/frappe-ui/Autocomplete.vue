@@ -134,6 +134,7 @@ import {
 } from "@headlessui/vue";
 import { Popover, Button, FeatherIcon } from "frappe-ui";
 import { ref, computed, useAttrs, useSlots, watch, nextTick } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   modelValue: {

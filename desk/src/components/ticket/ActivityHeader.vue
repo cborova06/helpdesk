@@ -73,6 +73,7 @@ import { toggleCommentBox, toggleEmailBox } from "@/pages/ticket/modalStates";
 import { Dropdown } from "frappe-ui";
 import { storeToRefs } from "pinia";
 import { computed, h, inject, ref, Ref } from "vue";
+import { __ } from "@/translation";
 defineProps({
   title: {
     type: String,

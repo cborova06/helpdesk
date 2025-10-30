@@ -19,6 +19,7 @@
 import { Autocomplete } from "@/components";
 import { createListResource } from "frappe-ui";
 import { computed, ref } from "vue";
+import { __ } from "@/translation";
 
 const emit = defineEmits(["change"]);
 

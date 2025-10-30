@@ -23,6 +23,7 @@
 <script setup lang="ts">
 import { TicketSymbol } from "@/types";
 import { inject, ref } from "vue";
+import { __ } from "@/translation";
 
 const ticket = inject(TicketSymbol);
 const showSubjectDialog = defineModel();

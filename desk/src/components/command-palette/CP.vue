@@ -67,6 +67,7 @@ import LucideBookOpen from "~icons/lucide/book-open";
 import { showCommentBox, showEmailBox } from "@/pages/ticket/modalStates";
 import LucideTicket from "~icons/lucide/ticket";
 import CPGroup from "./CPGroup.vue";
+import { __ } from "@/translation";
 const router = useRouter();
 
 // Reactive data

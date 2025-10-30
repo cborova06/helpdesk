@@ -4,7 +4,7 @@
       <div class="sticky top-0 z-10 bg-white pt-8 pb-1">
         <SettingsLayoutHeader
           :title="__('Invite Agents')"
-          description="Easily invite new agents, managers, or admins"
+          :description="__('Easily invite new agents, managers, or admins')"
         />
       </div>
       <FormControl
@@ -14,7 +14,7 @@
         :placeholder="__('user1@example.com, user2@example.com, ...')"
         v-model="emails"
         :debounce="100"
-        description="Comma separated emails to invite"
+        :description="__('Comma separated emails to invite')"
       />
       <FormControl
         :label="__('Role')"
@@ -30,7 +30,7 @@
         class="w-fit mt-1"
         :disabled="cancelInviteResource.loading"
         :loading="inviteByEmailResource.loading"
-        >Send Invites</Button
+        >{{ __("Send Invites") }}</Button
       >
     </form>
     <template v-if="pendingInvitesResource.data?.length">
@@ -101,6 +101,7 @@ import { FormControl, Button, Tooltip, createResource, toast } from "frappe-ui";
 import { computed, ref } from "vue";
 import { useOnboarding } from "frappe-ui/frappe";
 import SettingsLayoutHeader from "./SettingsLayoutHeader.vue";
+import { __ } from "@/translation";
 
 const authStore = useAuthStore();
 const { isAdmin, isManager } = authStore;
@@ -163,7 +164,7 @@ const roleDescription = computed(
 
 const onSubmit = async () => {
   if (emails.value.trim() === "") {
-    toast.error("At least one email required");
+    toast.error(__("At least one email required"));
   }
   await inviteByEmailResource.submit({
     emails: emails.value,
@@ -225,7 +226,7 @@ const cancelInviteResource = createResource({
   url: "frappe.core.api.user_invitation.cancel_invitation",
   method: "PATCH",
   onSuccess() {
-    toast.success("Invitation cancelled successfully");
+    toast.success(__("Invitation cancelled successfully"));
     pendingInvitesResource.fetch();
   },
 });

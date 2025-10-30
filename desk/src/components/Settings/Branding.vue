@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-4 px-10 py-8">
     <SettingsLayoutHeader
       :title="__('Customise your Helpdesk')"
-      description="Customise Helpdesk with your own branding."
+      :description="__('Customise Helpdesk with your own branding.')"
     />
 
     <!-- Brand Logo & Favicon -->
@@ -51,6 +51,7 @@ import { useConfigStore } from "@/stores/config";
 import { Avatar, createResource, FileUploader, toast } from "frappe-ui";
 import { computed, reactive } from "vue";
 import SettingsLayoutHeader from "./SettingsLayoutHeader.vue";
+import { __ } from "@/translation";
 
 const config = useConfigStore();
 
@@ -105,7 +106,7 @@ const settingsResource = createResource({
     }
   },
   onError() {
-    toast.error("Failed to update, please try again");
+    toast.error(__("Failed to update, please try again"));
     loadingState.logoLoading = false;
     loadingState.faviconLoading = false;
   },
@@ -127,13 +128,13 @@ function handleLogoChange(url: string) {
   state.brandLogo = url;
   loadingState.logoLoading = false;
 
-  toast.success("Brand logo updated");
+  toast.success(__("Brand logo updated"));
 }
 
 function handleFaviconChange(url: string) {
   state.brandFavicon = url;
   loadingState.faviconLoading = false;
-  toast.success("Favicon updated, please refresh the page to see the changes");
+  toast.success(__("Favicon updated, please refresh the page to see the changes"));
 }
 </script>
 

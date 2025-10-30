@@ -75,6 +75,7 @@ import {
 import { ref, inject } from "vue";
 import { slaActiveScreen } from "@/stores/sla";
 import { ConfirmDelete } from "@/utils";
+import { __ } from "@/translation";
 
 const slaPolicyList = inject<any>("slaPolicyList");
 
@@ -118,7 +119,7 @@ const duplicate = () => {
     },
     onSuccess: (data) => {
       slaPolicyList.reload();
-      toast.success("SLA policy duplicated");
+      toast.success(__("SLA policy duplicated"));
       duplicateDialog.value = {
         show: false,
         name: "",
@@ -143,14 +144,14 @@ const deleteSla = () => {
 
   slaPolicyList.delete.submit(props.data.name, {
     onSuccess: () => {
-      toast.success("SLA policy deleted");
+      toast.success(__("SLA policy deleted"));
     },
   });
 };
 
 const onToggle = () => {
   if (props.data.default_sla) {
-    toast.error("SLA set as default cannot be disabled");
+    toast.error(__("SLA set as default cannot be disabled"));
     return;
   }
   slaPolicyList.setValue.submit(
@@ -160,7 +161,7 @@ const onToggle = () => {
     },
     {
       onSuccess: () => {
-        toast.success("SLA policy status updated");
+        toast.success(__("SLA policy status updated"));
       },
     }
   );

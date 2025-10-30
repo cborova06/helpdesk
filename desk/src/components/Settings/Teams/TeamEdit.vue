@@ -148,6 +148,7 @@ import AgentCard from "../AgentCard.vue";
 import Settings from "~icons/lucide/settings-2";
 import { assignmentRulesActiveScreen } from "@/stores/assignmentRules";
 import { setActiveSettingsTab } from "../settingsModal";
+import { __ } from "@/translation";
 
 const props = defineProps<{
   teamName: string;
@@ -167,7 +168,7 @@ const team = createDocumentResource({
   auto: true,
   delete: {
     onSuccess() {
-      toast.success("Team deleted");
+      toast.success(__("Team deleted"));
       emit("update:step", "team-list");
     },
   },
@@ -227,7 +228,7 @@ const renameDialogOptions = {
   actions: [
     {
       label: __('Confirm'),
-      variant: "solid",
+      variant: "solid" as const,
       loading: team.loading,
       onClick: ({ close }) => {
         renameTeam(close);
@@ -252,7 +253,7 @@ function renameTeam(close) {
         return "New and old title cannot be same";
     },
     onSuccess() {
-      toast.success("Team renamed");
+      toast.success(__("Team renamed"));
       close();
       emit("update:step", "team-list");
     },

@@ -34,6 +34,7 @@ import {
 } from "@/utils";
 import { Badge, Tooltip } from "frappe-ui";
 import { computed, onUnmounted, ref, watch } from "vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   ticket: {

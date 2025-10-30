@@ -280,6 +280,7 @@ import SlaPriorityList from "./SlaPriorityList.vue";
 import SlaStatusList from "./SlaStatusList.vue";
 import { disableSettingModalOutsideClick } from "../settingsModal";
 import { useOnboarding } from "frappe-ui/frappe";
+import { __ } from "@/translation";
 
 const { updateOnboardingStep } = useOnboarding("helpdesk");
 
@@ -409,7 +410,7 @@ const createSla = () => {
     },
     {
       onSuccess(data) {
-        toast.success("SLA policy created");
+        toast.success(__("SLA policy created"));
         slaActiveScreen.value.data = data;
         slaActiveScreen.value.screen = "view";
         getSlaData.submit({
@@ -447,7 +448,7 @@ const updateSla = () => {
     {
       onSuccess() {
         getSlaData.submit();
-        toast.success("SLA policy updated");
+        toast.success(__("SLA policy updated"));
         slaPolicyList.reload();
       },
     }
@@ -456,7 +457,7 @@ const updateSla = () => {
 
 const toggleEnabled = () => {
   if (slaData.value.default_sla) {
-    toast.error("SLA set as default cannot be disabled");
+    toast.error(__("SLA set as default cannot be disabled"));
     return;
   }
   slaData.value.enabled = !slaData.value.enabled;
