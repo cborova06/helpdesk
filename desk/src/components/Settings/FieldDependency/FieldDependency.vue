@@ -19,7 +19,7 @@
           <!-- Switch -->
           <div class="flex gap-2 items-center">
             <Switch v-model="state.enabled" class="!w-fit" />
-            <span class="text-p-base text-ink-gray-6">Enabled</span>
+            <span class="text-p-base text-ink-gray-6">{{ __("Enabled") }}</span>
           </div>
           <!-- Actions -->
           <div class="flex gap-1">

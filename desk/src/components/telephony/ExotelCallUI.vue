@@ -19,7 +19,7 @@
       <span>{{
         contact?.full_name ?? (contact?.mobile_no || contact?.phone)
       }}</span>
-      <span>·</span>
+      <span>{{ __("·") }}</span>
       <div v-if="callStatus == 'In progress'">
         {{ counterUp?.updatedTime }}
       </div>

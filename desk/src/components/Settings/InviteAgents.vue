@@ -34,7 +34,7 @@
       >
     </form>
     <template v-if="pendingInvitesResource.data?.length">
-      <h2 class="mt-8 text-base font-semibold">Pending Invites</h2>
+      <h2 class="mt-8 text-base font-semibold">{{ __("Pending Invites") }}</h2>
       <ul class="flex flex-col gap-[0.375rem] mt-3">
         <li
           v-for="invite in pendingInvitesResource.data"

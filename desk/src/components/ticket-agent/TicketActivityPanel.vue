@@ -23,7 +23,7 @@
       <div v-else class="flex items-center justify-center flex-col mt-20">
         <LoadingIndicator :scale="8" class="text-ink-gray-5" />
         <p class="text-xl font-medium text-ink-gray-5 absolute top-[50%]">
-          Loading...
+          {{ __("Loading...") }}
         </p>
       </div>
     </TabPanel>

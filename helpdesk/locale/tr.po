@@ -1904,3 +1904,204 @@ msgstr "Davetleri Gönder"
 
 msgid "Clear All"
 msgstr "Tümünü Temizle"
+
+msgid "No agents found"
+msgstr "Ajan bulunamadı"
+
+msgid "Categories"
+msgstr "Kategoriler"
+
+msgid "Create a ticket &rightarrow;"
+msgstr "Ticket oluştur &rightarrow;"
+
+msgid "Created By"
+msgstr "Oluşturan"
+
+msgid "Enabled"
+msgstr "Etkin"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "No answers found"
+msgstr "Cevap bulunamadı"
+
+msgid "No members found"
+msgstr "Üye bulunamadı"
+
+msgid "Press enter to search"
+msgstr "Aramak için Enter'a basın"
+
+msgid "Searching..."
+msgstr "Aranıyor..."
+
+msgid "You are all caught up!"
+msgstr "Hepsi tamam!"
+
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+msgid "Activity"
+msgstr "Aktivite"
+
+msgid "added a"
+msgstr "ekledi"
+
+msgid "Add recurring holidays such as weekends."
+msgstr "Hafta sonu gibi tekrarlayan tatilleri ekleyin."
+
+msgid "Apps"
+msgstr "Uygulamalar"
+
+msgid "Assignee"
+msgstr "Atanan"
+
+msgid "BCC:"
+msgstr "BCC:"
+
+msgid "CC:"
+msgstr "CC:"
+
+msgid "changes from"
+msgstr "değişiklikler"
+
+msgid "Choose how long this SLA policy will be active."
+msgstr "Bu SLA politikasının ne kadar süre aktif olacağını seçin."
+
+msgid "Choose the duration of this holiday list."
+msgstr "Bu tatil listesinin süresini seçin."
+
+msgid "Choose the email service provider you want to configure."
+msgstr "Yapılandırmak istediğiniz e-posta servis sağlayıcısını seçin."
+
+msgid "comment"
+msgstr "yorum"
+
+msgid "Details"
+msgstr "Detaylar"
+
+msgid "Edit Email"
+msgstr "E-postayı Düzenle"
+
+msgid "Email"
+msgstr "E-posta"
+
+msgid "emails/ comments"
+msgstr "e-postalar/ yorumlar"
+
+msgid "Field Dependencies"
+msgstr "Alan Bağımlılıkları"
+
+msgid "Holidays"
+msgstr "Tatiller"
+
+msgid "Hrs"
+msgstr "Saat"
+
+msgid "in"
+msgstr "içinde"
+
+msgid "Min"
+msgstr "Dakika"
+
+msgid "No field dependencies found."
+msgstr "Alan bağımlılığı bulunamadı."
+
+msgid "No items in the list"
+msgstr "Listede öğe yok"
+
+msgid "No options found"
+msgstr "Seçenek bulunamadı"
+
+msgid "No priorities in the list"
+msgstr "Listede öncelik yok"
+
+msgid "No shortcuts defined"
+msgstr "Kısayol tanımlanmamış"
+
+msgid "No teams found"
+msgstr "Takım bulunamadı"
+
+msgid "No workdays in the list"
+msgstr "Listede çalışma günü yok"
+
+msgid "Other"
+msgstr "Diğer"
+
+msgid "Pending Invites"
+msgstr "Bekleyen Davetler"
+
+msgid "Pick an option"
+msgstr "Bir seçenek seçin"
+
+msgid "Please add an email account to continue."
+msgstr "Devam etmek için lütfen bir e-posta hesabı ekleyin."
+
+msgid "Please select a child field first"
+msgstr "Lütfen önce bir alt alan seçin"
+
+msgid "Please select a parent field first"
+msgstr "Lütfen önce bir üst alan seçin"
+
+msgid "Please select a parent value first"
+msgstr "Lütfen önce bir üst değer seçin"
+
+msgid "Portal"
+msgstr "Portal"
+
+msgid "Priority"
+msgstr "Öncelik"
+
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+msgid "Searched for:"
+msgstr "Aranan:"
+
+msgid "Sec"
+msgstr "Saniye"
+
+msgid "Select a rating"
+msgstr "Bir değerlendirme seçin"
+
+msgid "Select child field value"
+msgstr "Alt alan değeri seçin"
+
+msgid "Select parent field value"
+msgstr "Üst alan değeri seçin"
+
+msgid "Select time"
+msgstr "Zaman seçin"
+
+msgid "Service Level Agreements (SLAs)"
+msgstr "Hizmet Seviyesi Anlaşmaları (SLA)"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Setup Email"
+msgstr "E-posta Kurulumu"
+
+msgid "SLA"
+msgstr "SLA"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Telephony"
+msgstr "Telefon"
+
+msgid "TO:"
+msgstr "KIME:"
+
+msgid "Valid from"
+msgstr "Geçerlilik başlangıcı"
+
+msgid "via"
+msgstr "üzerinden"
+
+msgid "(View All)"
+msgstr "(Tümünü Gör)"
+
+msgid "View Name"
+msgstr "Görünüm Adı"

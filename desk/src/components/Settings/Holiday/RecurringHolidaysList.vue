@@ -44,7 +44,7 @@
       <hr class="my-0.5" v-if="index !== holidays.length - 1" />
     </div>
     <div v-if="holidays?.length === 0" class="text-center p-4 text-gray-600">
-      No items in the list
+      {{ __("No items in the list") }}
     </div>
   </div>
   <Button

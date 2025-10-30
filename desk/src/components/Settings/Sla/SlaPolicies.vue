@@ -3,7 +3,7 @@
     <SettingsLayoutHeader>
       <template #title>
         <h1 class="text-lg font-semibold text-ink-gray-8">
-          Service Level Agreements (SLAs)
+          {{ __("Service Level Agreements (SLAs)") }}
         </h1>
       </template>
       <template #description>

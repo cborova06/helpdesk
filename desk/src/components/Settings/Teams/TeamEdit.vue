@@ -93,15 +93,14 @@
         </div>
       </div>
       <div v-else class="flex justify-center h-full">
-        <p class="text-p-base text-gray-500">No members found</p>
+        <p class="text-p-base text-gray-500">{{ __("No members found") }}</p>
       </div>
     </div>
   </div>
   <Dialog v-model="showDelete" :options="{ title: 'Delete team' }">
     <template #body-content>
       <p class="text-p-base text-ink-gray-7">
-        Are you sure you want to delete this team? This action cannot be
-        reversed!
+        {{ __("Are you sure you want to delete this team? This action cannot be reversed!") }}
       </p>
       <Button
         variant="solid"

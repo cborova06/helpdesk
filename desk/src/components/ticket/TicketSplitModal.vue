@@ -4,7 +4,7 @@
       <div class="flex flex-col gap-4">
         <p class="text-p-base text-ink-gray-8">
           All
-          <span class="underline">emails/ comments</span>
+          <span class="underline">{{ __("emails/ comments") }}</span>
           from this email onwards will be moved to new ticket.
         </p>
         <FormControl

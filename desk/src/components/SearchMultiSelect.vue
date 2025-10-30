@@ -173,7 +173,7 @@
           v-if="filteredOptions.length === 0"
           class="px-2 py-4 text-center text-sm text-ink-gray-5"
         >
-          No options found
+          {{ __("No options found") }}
         </div>
       </div>
     </div>

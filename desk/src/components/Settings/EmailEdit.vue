@@ -6,7 +6,7 @@
       aria-level="1"
       class="flex gap-1 justify-between pt-[5px]"
     >
-      <h5 class="text-lg font-semibold">Edit Email</h5>
+      <h5 class="text-lg font-semibold">{{ __("Edit Email") }}</h5>
     </div>
     <div class="w-fit">
       <EmailProviderIcon

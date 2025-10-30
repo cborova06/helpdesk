@@ -19,7 +19,7 @@
         }"
       >
         {{ column.label }}
-        <span v-if="column.isRequired" class="text-red-500">*</span>
+        <span v-if="column.isRequired" class="text-red-500">{{ __("*") }}</span>
       </div>
     </div>
     <hr v-if="slaData.priorities?.length !== 0" />
@@ -34,7 +34,7 @@
       v-if="slaData.priorities?.length === 0"
       class="text-center p-4 text-gray-600"
     >
-      No priorities in the list
+      {{ __("No priorities in the list") }}
     </div>
   </div>
   <div

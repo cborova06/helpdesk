@@ -11,9 +11,9 @@
           <span class="font-medium text-gray-800">
             {{ commenter }}
           </span>
-          <span> added a</span>
+          <span> {{ __("added a") }}</span>
           <span class="max-w-xs truncate font-medium text-gray-800">
-            comment
+            {{ __("comment") }}
           </span>
         </p>
       </div>

@@ -5,7 +5,7 @@
     <!-- left box -->
     <div class="flex-1 flex flex-col gap-1.5">
       <span class="block text-xs text-ink-gray-5">
-        Select parent field value
+        {{ __("Select parent field value") }}
       </span>
       <div class="border flex-1 border-r-0 rounded-l p-2 flex flex-col gap-2">
         <template v-if="state.selectedParentField">
@@ -56,7 +56,7 @@
           <div
             class="flex flex-col items-center mt-20 h-full text-ink-gray-4 text-sm"
           >
-            Please select a parent field first
+            {{ __("Please select a parent field first") }}
           </div>
         </template>
       </div>
@@ -64,7 +64,7 @@
     <!-- right box -->
     <div class="flex-1 flex flex-col gap-1.5">
       <span class="block text-xs text-ink-gray-5 pl-1.5">
-        Select child field value
+        {{ __("Select child field value") }}
       </span>
       <div class="border flex-1 rounded-r p-2 flex flex-col gap-2">
         <template
@@ -116,14 +116,14 @@
           <div
             class="flex flex-col items-center mt-20 h-full text-ink-gray-4 text-sm"
           >
-            Please select a child field first
+            {{ __("Please select a child field first") }}
           </div>
         </template>
         <template v-else>
           <div
             class="flex flex-col items-center mt-20 h-full text-ink-gray-4 text-sm"
           >
-            Please select a parent value first
+            {{ __("Please select a parent value first") }}
           </div>
         </template>
       </div>

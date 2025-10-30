@@ -79,10 +79,10 @@
                   :ticket="ticket.data"
                 />
                 <!-- SLA Section -->
-                <h3 class="px-6 pt-3 font-semibold text-base">SLA</h3>
+                <h3 class="px-6 pt-3 font-semibold text-base">{{ __("SLA") }}</h3>
                 <TicketAgentDetails :ticket="ticket.data" />
                 <!-- Ticket Fields -->
-                <h3 class="px-6 pt-3 font-semibold text-base">Details</h3>
+                <h3 class="px-6 pt-3 font-semibold text-base">{{ __("Details") }}</h3>
                 <TicketAgentFields
                   :ticket="ticket.data"
                   @update="({ field, value }) => updateTicket(field, value)"
@@ -145,7 +145,7 @@
     />
     <Dialog v-model="showSubjectDialog">
       <template #body-title>
-        <h3>Rename</h3>
+        <h3>{{ __("Rename") }}</h3>
       </template>
       <template #body-content>
         <FormControl

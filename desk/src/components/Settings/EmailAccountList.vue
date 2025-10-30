@@ -29,7 +29,7 @@
     </div>
     <!-- fallback if no email accounts -->
     <div v-else class="flex items-center justify-center h-64 text-gray-500">
-      Please add an email account to continue.
+      {{ __("Please add an email account to continue.") }}
     </div>
   </div>
 </template>

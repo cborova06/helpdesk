@@ -5,8 +5,7 @@
         Work schedule and holidays
       </div>
       <div class="text-p-sm text-ink-gray-6 max-w-lg">
-        Set working days, hours, and holidays by selecting a predefined schedule
-        or creating a new one.
+        {{ __("Set working days, hours, and holidays by selecting a predefined schedule or creating a new one.") }}
       </div>
     </div>
     <NestedPopover>

@@ -22,15 +22,15 @@
           v-if="!ticket.doc.via_customer_portal"
           class="text-ink-gray-4 flex items-center"
         >
-          <span class="text-ink-gray-4 mr-[6px]">via</span>
+          <span class="text-ink-gray-4 mr-[6px]">{{ __("via") }}</span>
           <EmailIcon class="size-4 inline-block mr-1" />
-          <span class="">Email</span>
+          <span class="">{{ __("Email") }}</span>
         </div>
         <!-- Via Portal -->
         <div v-else class="text-ink-gray-4 flex items-center">
-          <span class="text-ink-gray-4 mr-[6px]">via</span>
+          <span class="text-ink-gray-4 mr-[6px]">{{ __("via") }}</span>
           <GlobeIcon class="size-4 inline-block mr-1" />
-          <span class="font-medium">Portal</span>
+          <span class="font-medium">{{ __("Portal") }}</span>
         </div>
       </div>
       <!-- divider -->

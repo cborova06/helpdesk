@@ -32,7 +32,7 @@
           @click="toggleEnabled"
         >
           <Switch size="sm" v-model="slaData.enabled" />
-          <span class="text-sm text-ink-gray-7 font-medium">Enabled</span>
+          <span class="text-sm text-ink-gray-7 font-medium">{{ __("Enabled") }}</span>
         </div>
         <Button
           :label="__('Save')"
@@ -135,9 +135,9 @@
     <hr class="my-8" />
     <div>
       <div class="flex flex-col gap-1">
-        <span class="text-lg font-semibold text-ink-gray-8">Valid from</span>
+        <span class="text-lg font-semibold text-ink-gray-8">{{ __("Valid from") }}</span>
         <span class="text-p-sm text-ink-gray-6">
-          Choose how long this SLA policy will be active.
+          {{ __("Choose how long this SLA policy will be active.") }}
         </span>
       </div>
       <div class="mt-3.5 flex gap-5 flex-col md:flex-row">

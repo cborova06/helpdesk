@@ -51,7 +51,7 @@
                 </button>
               </div>
             </div>
-            <div class="text-xs text-gray-600 mt-1">Hrs</div>
+            <div class="text-xs text-gray-600 mt-1">{{ __("Hrs") }}</div>
           </div>
 
           <!-- Minutes -->
@@ -86,7 +86,7 @@
                 </button>
               </div>
             </div>
-            <div class="text-xs text-gray-600 mt-1">Min</div>
+            <div class="text-xs text-gray-600 mt-1">{{ __("Min") }}</div>
           </div>
 
           <!-- Seconds -->
@@ -120,7 +120,7 @@
                 </button>
               </div>
             </div>
-            <div class="text-xs text-gray-600 mt-1">Sec</div>
+            <div class="text-xs text-gray-600 mt-1">{{ __("Sec") }}</div>
           </div>
         </div>
       </div>

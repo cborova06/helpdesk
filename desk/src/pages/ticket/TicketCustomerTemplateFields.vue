@@ -1,13 +1,13 @@
 <template>
   <div class="grid grid-cols-3 md:grid-cols-1 gap-4 border-b px-5 py-2.5">
     <div class="space-y-1.5">
-      <span class="block text-sm text-gray-700"> Status </span>
+      <span class="block text-sm text-gray-700"> {{ __("Status") }} </span>
       <span class="block break-words text-base font-medium text-gray-900">
         {{ ticket.data.status }}
       </span>
     </div>
     <div class="space-y-1.5">
-      <span class="block text-sm text-gray-700"> Priority </span>
+      <span class="block text-sm text-gray-700"> {{ __("Priority") }} </span>
       <span class="block break-words text-base font-medium text-gray-900">
         {{ ticket.data.priority }}
       </span>

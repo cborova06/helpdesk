@@ -28,7 +28,7 @@
                 <div v-if="priorityData.response_time">
                   {{ formatTimeHMS(priorityData.response_time) }}
                 </div>
-                <div v-else class="text-gray-500">Select time</div>
+                <div v-else class="text-gray-500">{{ __("Select time") }}</div>
               </div>
             </template>
             <template #body>
@@ -52,7 +52,7 @@
                 <div v-if="priorityData.resolution_time">
                   {{ formatTimeHMS(priorityData.resolution_time) }}
                 </div>
-                <div v-else class="text-gray-500">Select time</div>
+                <div v-else class="text-gray-500">{{ __("Select time") }}</div>
               </div>
             </template>
             <template #body>

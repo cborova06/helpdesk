@@ -83,7 +83,7 @@
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold text-ink-gray-8">Valid from</span>
         <span class="text-p-sm text-ink-gray-6">
-          Choose the duration of this holiday list.
+          {{ __("Choose the duration of this holiday list.") }}
         </span>
       </div>
       <div class="mt-3.5 flex gap-5 flex-col md:flex-row">
@@ -136,7 +136,7 @@
           Recurring holidays
         </div>
         <div class="text-p-sm text-ink-gray-6">
-          Add recurring holidays such as weekends.
+          {{ __("Add recurring holidays such as weekends.") }}
         </div>
       </div>
       <div class="mt-5">
@@ -150,7 +150,7 @@
     <div>
       <div class="flex justify-between items-center">
         <div class="flex justify-between flex-col gap-1">
-          <span class="text-lg font-semibold text-ink-gray-8">Holidays</span>
+          <span class="text-lg font-semibold text-ink-gray-8">{{ __("Holidays") }}</span>
           <div class="text-p-sm text-ink-gray-6">
             Add holidays here to make sure they’re excluded from SLA
             calculations.

@@ -14,7 +14,7 @@
             class="flex gap-1 items-center flex-1 mr-7 max-w-fit overflow-hidden"
           >
             <UserAvatar :name="user.name" :expand="true" />
-            <span>in</span>
+            <span>{{ __("in") }}</span>
             <Link
               class="form-control"
               doctype="HD Article Category"

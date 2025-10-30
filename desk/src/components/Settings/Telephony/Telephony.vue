@@ -3,7 +3,7 @@
     <SettingsLayoutHeader description="Configure your telephony settings.">
       <template #title>
         <div class="flex items-center gap-2">
-          <h1 class="text-lg font-semibold text-ink-gray-8">Telephony</h1>
+          <h1 class="text-lg font-semibold text-ink-gray-8">{{ __("Telephony") }}</h1>
           <Badge
             :class="[
               isDirty.twilio || isDirty.exotel || isDirty.telephonyAgent

@@ -17,7 +17,7 @@
         class="grid grid-cols-6 items-center gap-3 text-sm text-gray-600 ml-2"
       >
         <div class="col-span-5">Policy Name</div>
-        <div class="col-span-1">Enabled</div>
+        <div class="col-span-1">{{ __("Enabled") }}</div>
       </div>
       <hr class="mt-2 mx-2" />
       <div v-for="sla in slaPolicyList.list.data" :key="sla.name">

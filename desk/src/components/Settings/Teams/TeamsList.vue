@@ -62,7 +62,7 @@
       class="flex mt-28 justify-between w-full h-full"
     >
       <p class="text-sm text-gray-500 w-full flex justify-center">
-        No teams found
+        {{ __("No teams found") }}
       </p>
     </div>
   </div>

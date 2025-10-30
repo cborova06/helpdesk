@@ -81,7 +81,7 @@
       v-else
     >
       <LucideBell class="size-6" />
-      <p class="text-base text-ink-gray-8">You are all caught up!</p>
+      <p class="text-base text-ink-gray-8">{{ __("You are all caught up!") }}</p>
     </div>
   </span>
 </template>

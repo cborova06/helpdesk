@@ -103,10 +103,10 @@
               />
             </template>
             <template v-else-if="newSearch && query.length > 2">
-              <p class="text-ink-gray-6">Press enter to search</p>
+              <p class="text-ink-gray-6">{{ __("Press enter to search") }}</p>
             </template>
             <template v-else-if="search.loading">
-              <p class="text-ink-gray-6">Searching...</p>
+              <p class="text-ink-gray-6">{{ __("Searching...") }}</p>
             </template>
             <template v-else-if="searchResponse?.summary">
               <div class="space-y-1">
@@ -127,7 +127,7 @@
                   v-if="searchResponse.summary.corrected_query"
                   class="text-ink-gray-6"
                 >
-                  <span class="text-ink-gray-5">Searched for:</span>
+                  <span class="text-ink-gray-5">{{ __("Searched for:") }}</span>
                   <span class="ml-1 font-medium text-primary">
                     {{ searchResponse.summary.corrected_query }}
                   </span>

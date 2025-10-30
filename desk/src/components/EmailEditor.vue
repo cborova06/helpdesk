@@ -17,7 +17,7 @@
   >
     <template #top>
       <div class="mx-6 md:mx-10 flex items-center gap-2 border-y py-2.5">
-        <span class="text-xs text-gray-500">TO:</span>
+        <span class="text-xs text-gray-500">{{ __("TO:") }}</span>
         <MultiSelectInput
           v-model="toEmailsClone"
           class="flex-1"
@@ -40,7 +40,7 @@
         class="mx-10 flex items-center gap-2 py-2.5"
         :class="cc || showCC ? 'border-b' : ''"
       >
-        <span class="text-xs text-gray-500">CC:</span>
+        <span class="text-xs text-gray-500">{{ __("CC:") }}</span>
         <MultiSelectInput
           ref="ccInput"
           v-model="ccEmailsClone"
@@ -54,7 +54,7 @@
         class="mx-10 flex items-center gap-2 py-2.5"
         :class="bcc || showBCC ? 'border-b' : ''"
       >
-        <span class="text-xs text-gray-500">BCC:</span>
+        <span class="text-xs text-gray-500">{{ __("BCC:") }}</span>
         <MultiSelectInput
           ref="bccInput"
           v-model="bccEmailsClone"
