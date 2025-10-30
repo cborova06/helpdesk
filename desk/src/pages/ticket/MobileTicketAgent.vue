@@ -171,7 +171,7 @@
         >
           Confirm
         </Button>
-        <Button class="ml-2" @click="showSubjectDialog = false"> Close </Button>
+        <Button class="ml-2" @click="showSubjectDialog = false"> {{ __("Close") }} </Button>
       </template>
     </Dialog>
     <SetContactPhoneModal
