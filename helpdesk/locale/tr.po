@@ -3431,3 +3431,12 @@ msgstr "Son Duygu"
 
 msgid "Sentiment Trend"
 msgstr "Duygu Trendi"
+
+msgid "Create View"
+msgstr "Görünüm Oluştur"
+
+msgid "Default Views"
+msgstr "Varsayılan Görünüm"
+
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
