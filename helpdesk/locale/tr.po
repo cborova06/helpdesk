@@ -2953,6 +2953,40 @@ msgstr "Talebe yanıt verin"
 msgid "Add a comment on a ticket"
 msgstr "Talebe yorum ekleyin"
 
+# Settings > Email Accounts ekranındaki yeni metinler
+#: desk/src/components/Settings/EmailAccountList.vue
+msgid "Email Accounts"
+msgstr "E-posta Hesapları"
+
+#: desk/src/components/Settings/EmailAccountList.vue
+msgid "Manage your email accounts and configure incoming and outgoing settings."
+msgstr "E-posta hesaplarınızı yönetin ve gelen/çıkan ayarlarını yapılandırın."
+
+#: desk/src/components/Settings/EmailAccountList.vue
+msgid "Add Account"
+msgstr "Hesap Ekle"
+
+#: desk/src/components/Settings/EmailAccountList.vue
+msgid "Please add an email account to continue."
+msgstr "Devam etmek için lütfen bir e-posta hesabı ekleyin."
+
+# E-posta hesabı kartı rozetleri
+#: desk/src/components/Settings/EmailAccountCard.vue
+msgid "Default Sending and Inbox"
+msgstr "Varsayılan Gönderim ve Gelen Kutusu"
+
+#: desk/src/components/Settings/EmailAccountCard.vue
+msgid "Default Inbox"
+msgstr "Varsayılan Gelen Kutusu"
+
+#: desk/src/components/Settings/EmailAccountCard.vue
+msgid "Default Sending"
+msgstr "Varsayılan Gönderim"
+
+#: desk/src/components/Settings/EmailAccountCard.vue
+msgid "Inbox"
+msgstr "Gelen Kutusu"
+
 msgid "Create an article"
 msgstr "Bir makale oluşturun"
 
