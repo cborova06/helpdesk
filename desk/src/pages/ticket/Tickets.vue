@@ -115,6 +115,7 @@ const options = {
   doctype: "HD Ticket",
   columnConfig: {
     status: {
+      label: __('Durum'),
       custom: ({ item }) => {
         const status = getStatus(item);
         const label = isCustomerPortal.value
@@ -131,6 +132,7 @@ const options = {
       },
     },
     agreement_status: {
+      label: __('SLA Durumu'),
       custom: ({ item }) => {
         return h(Badge, {
           label: item,
@@ -140,9 +142,11 @@ const options = {
       },
     },
     response_by: {
+      label: __('İlk Yanıt'),
       custom: ({ row, item }) => handle_response_by_field(row, item),
     },
     resolution_by: {
+      label: __('Çözüm'),
       custom: ({ row, item }) => handle_resolution_by_field(row, item),
     },
     last_sentiment: {

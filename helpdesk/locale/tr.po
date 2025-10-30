@@ -3397,3 +3397,37 @@ msgstr "Efor Skoru"
 
 msgid "Effort Band"
 msgstr "Efor Bandı"
+
+# Field Labels
+msgid "Ticket Type"
+msgstr "Talep Türü"
+
+msgid "Priority"
+msgstr "Öncelik"
+
+msgid "Customer"
+msgstr "Müşteri"
+
+msgid "Team"
+msgstr "Ekip"
+
+msgid "Assignee"
+msgstr "Atanan"
+
+msgid "Subject"
+msgstr "Konu"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Effort Score"
+msgstr "Efor Skoru"
+
+msgid "Effort Band"
+msgstr "Efor Bandı"
+
+msgid "Last Sentiment"
+msgstr "Son Duygu"
+
+msgid "Sentiment Trend"
+msgstr "Duygu Trendi"
