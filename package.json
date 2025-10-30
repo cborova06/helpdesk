@@ -14,11 +14,11 @@
 	],
 	"resolutions": {
 		"cheerio": "1.1.2",
-		"prosemirror-model": "1.25.4"
+		"prosemirror-model": "1.25.4",
+		"vite": "5.4.21"
 	},
 	"dependencies": {
 		"cheerio": "1.1.2",
-		"prosemirror-model": "1.25.4",
-		"vite": "^7.1.12"
+		"prosemirror-model": "1.25.4"
 	}
 }
