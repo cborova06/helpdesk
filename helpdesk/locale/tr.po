@@ -1571,6 +1571,9 @@ msgstr "Konu"
 msgid "Subject Weight"
 msgstr "Konu Ağırlığı"
 
+msgid "No Tickets Found"
+msgstr "Destek Talebi bulunamadı"
+
 msgid "Submit"
 msgstr "Gönder"
 

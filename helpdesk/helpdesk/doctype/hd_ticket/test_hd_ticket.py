@@ -34,7 +34,16 @@ agent2 = "agent2@test.com"
 
 class TestHDTicket(FrappeTestCase):
     def setUp(self):
-        frappe.db.delete("HD Ticket")
+        # Only delete test tickets (subjects starting with "Test" or "_Test")
+        # to avoid wiping production data
+        test_tickets = frappe.get_all(
+            "HD Ticket",
+            filters={"subject": ["like", "%Test%"]},
+            pluck="name"
+        )
+        for ticket_name in test_tickets:
+            frappe.delete_doc("HD Ticket", ticket_name, force=True)
+        
         frappe.get_doc(
             {"doctype": "User", "first_name": "Non Agent", "email": non_agent}
         ).insert(ignore_if_duplicate=True)

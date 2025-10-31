@@ -1,4 +1,5 @@
 import frappe
+from frappe import _
 from frappe.utils import now_datetime, add_days
 from random import randint, choice
 
