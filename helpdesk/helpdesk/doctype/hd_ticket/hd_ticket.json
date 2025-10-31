@@ -460,9 +460,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Last Sentiment",
-   "options": "\nOlumlu\nPositive\nN\u00f6tr\nNeutral\nOlumsuz\nNegative",
-   "read_only": 1,
-   "translatable": 1
+   "options": "\nOlumlu\nOlumsuz\nNötr",
+   "read_only": 1
   },
   {
    "fieldname": "sentiment_trend",
@@ -485,9 +484,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Effort Band",
-   "options": "\nD\u00fc\u015f\u00fck\nLow\nOrta\nMedium\nY\u00fcksek\nHigh",
-   "read_only": 1,
-   "translatable": 1
+   "options": "\nDüşük\nOrta\nYüksek",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_ypsk",
@@ -509,7 +507,7 @@
  "icon": "fa fa-issue",
  "idx": 61,
  "links": [],
- "modified": "2025-10-30 10:13:33.632958",
+ "modified": "2025-10-31 13:34:56.732149",
  "modified_by": "Administrator",
  "module": "Helpdesk",
  "name": "HD Ticket",

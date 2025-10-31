@@ -9,15 +9,15 @@ frappe.listview_settings['HD Ticket'] = {
     last_sentiment: function(value) {
       if (!value) return '';
       
-      // Normalize value - support both English and Turkish
+      // Normalize value - only Turkish values
       const normalized = value.toLowerCase().trim();
       let config;
       
-      if (normalized.includes('olumlu') || normalized.includes('positive')) {
+      if (normalized.includes('olumlu')) {
         config = { emoji: '😊', color: '#28a745', bg: '#d4edda', label: __('Olumlu') };
-      } else if (normalized.includes('nötr') || normalized.includes('neutral') || normalized.includes('nautral')) {
+      } else if (normalized.includes('nötr')) {
         config = { emoji: '😐', color: '#856404', bg: '#fff3cd', label: __('Nötr') };
-      } else if (normalized.includes('olumsuz') || normalized.includes('negative')) {
+      } else if (normalized.includes('olumsuz')) {
         config = { emoji: '😟', color: '#721c24', bg: '#f8d7da', label: __('Olumsuz') };
       } else {
         config = { emoji: '❓', color: '#6c757d', bg: '#e9ecef', label: value };
@@ -76,15 +76,15 @@ frappe.listview_settings['HD Ticket'] = {
     effort_band: function(value) {
       if (!value) return '';
       
-      // Normalize value - support both English and Turkish
+      // Normalize value - only Turkish values
       const normalized = value.toLowerCase().trim();
       let config;
       
-      if (normalized.includes('düşük') || normalized.includes('low') || normalized.includes('düsük')) {
+      if (normalized.includes('düşük')) {
         config = { emoji: '✅', color: '#28a745', bg: '#d4edda', label: __('Düşük') };
-      } else if (normalized.includes('orta') || normalized.includes('medium') || normalized.includes('moderate')) {
+      } else if (normalized.includes('orta')) {
         config = { emoji: '⚠️', color: '#ffc107', bg: '#fff3cd', label: __('Orta') };
-      } else if (normalized.includes('yüksek') || normalized.includes('high') || normalized.includes('yuksek')) {
+      } else if (normalized.includes('yüksek')) {
         config = { emoji: '🔴', color: '#dc3545', bg: '#f8d7da', label: __('Yüksek') };
       } else {
         config = { emoji: '❓', color: '#6c757d', bg: '#e9ecef', label: value };
@@ -138,10 +138,9 @@ function enhance_sentiment_field(frm) {
   if (!sentiment) return;
   
   const sentiment_config = {
-    'Positive': { emoji: '😊', color: '#d4edda', border: '#c3e6cb', text: '#155724' },
-    'Nautral': { emoji: '😐', color: '#fff3cd', border: '#ffeaa7', text: '#856404' },
-    'Neutral': { emoji: '😐', color: '#fff3cd', border: '#ffeaa7', text: '#856404' },
-    'Negative': { emoji: '😟', color: '#f8d7da', border: '#f5c6cb', text: '#721c24' }
+    'Olumlu': { emoji: '😊', color: '#d4edda', border: '#c3e6cb', text: '#155724' },
+    'Nötr': { emoji: '😐', color: '#fff3cd', border: '#ffeaa7', text: '#856404' },
+    'Olumsuz': { emoji: '😟', color: '#f8d7da', border: '#f5c6cb', text: '#721c24' }
   };
   
   const config = sentiment_config[sentiment];
@@ -330,21 +329,21 @@ function enhance_effort_band_field(frm) {
   if (!band) return;
   
   const band_config = {
-    'Low': { 
+    'Düşük': { 
       emoji: '✅', 
       color: '#28a745', 
       bg: 'linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)',
       border: '#c3e6cb',
       label: __('Düşük Efor')
     },
-    'Medium': { 
+    'Orta': { 
       emoji: '⚠️', 
       color: '#ffc107', 
       bg: 'linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%)',
       border: '#ffeaa7',
       label: __('Orta Efor')
     },
-    'High': { 
+    'Yüksek': { 
       emoji: '🔴', 
       color: '#dc3545', 
       bg: 'linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%)',
@@ -563,17 +562,17 @@ function get_sentiment_badge_html(value) {
   const normalized = value.toLowerCase().trim();
   let emoji, bg, color, label;
   
-  if (normalized.includes('olumlu') || normalized.includes('positive')) {
+  if (normalized.includes('olumlu')) {
     emoji = '😊';
     bg = '#d4edda';
     color = '#155724';
     label = __('Olumlu');
-  } else if (normalized.includes('nötr') || normalized.includes('neutral')) {
+  } else if (normalized.includes('nötr')) {
     emoji = '😐';
     bg = '#fff3cd';
     color = '#856404';
     label = __('Nötr');
-  } else if (normalized.includes('olumsuz') || normalized.includes('negative')) {
+  } else if (normalized.includes('olumsuz')) {
     emoji = '😟';
     bg = '#f8d7da';
     color = '#721c24';
@@ -660,17 +659,17 @@ function get_effort_band_badge_html(value) {
   const normalized = value.toLowerCase().trim();
   let emoji, bg, color, label;
   
-  if (normalized.includes('düşük') || normalized.includes('low')) {
+  if (normalized.includes('düşük')) {
     emoji = '✅';
     bg = '#d4edda';
     color = '#155724';
     label = __('Düşük');
-  } else if (normalized.includes('orta') || normalized.includes('medium')) {
+  } else if (normalized.includes('orta')) {
     emoji = '⚠️';
     bg = '#fff3cd';
     color = '#856404';
     label = __('Orta');
-  } else if (normalized.includes('yüksek') || normalized.includes('high')) {
+  } else if (normalized.includes('yüksek')) {
     emoji = '🔴';
     bg = '#f8d7da';
     color = '#721c24';

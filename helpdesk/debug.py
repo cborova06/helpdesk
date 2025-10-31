@@ -515,9 +515,9 @@ def _plain_text(html: str) -> str:
 
 
 def _analyze_sentiment(text: str) -> str:
-    """Tiny lexicon-based sentiment: 'Positive' | 'Neutral' | 'Negative'."""
+    """Tiny lexicon-based sentiment: 'Olumlu' | 'Nötr' | 'Olumsuz'."""
     if not text:
-        return "Neutral"
+        return "Nötr"
     t = text.lower()
     pos_words = {
         "tesekkur", "teşekkür", "harika", "mükemmel", "süper", "çalıştı", "çözüm", "great",
@@ -530,17 +530,17 @@ def _analyze_sentiment(text: str) -> str:
     pos = sum(1 for w in pos_words if w in t)
     neg = sum(1 for w in neg_words if w in t)
     if neg > pos + 1:
-        return "Negative"
+        return "Olumsuz"
     if pos > neg + 1:
-        return "Positive"
-    return "Neutral"
+        return "Olumlu"
+    return "Nötr"
 
 
 def _trend_from_series(sentiments: list[str]) -> str:
     """Return Turkish label trend to match UI helper mapping."""
     if not sentiments:
         return "Analiz ediliyor"
-    score_map = {"Negative": -1, "Neutral": 0, "Positive": 1}
+    score_map = {"Olumsuz": -1, "Nötr": 0, "Olumlu": 1}
     nums = [score_map.get(s, 0) for s in sentiments]
     if len(nums) < 2:
         return "Sabit"
@@ -569,10 +569,10 @@ def _effort_score(num_msgs: int, total_chars: int, resolution_hours: float | Non
 
 def _effort_band(score: int) -> str:
     if score <= 33:
-        return "Low"
+        return "Düşük"
     if score <= 66:
-        return "Medium"
-    return "High"
+        return "Orta"
+    return "Yüksek"
 
 
 def _generate_summary(subject: str, first_msg: str, last_msg: str, status: str) -> str:
@@ -594,10 +594,10 @@ def _generate_reply_suggestion(last_customer_msg: str, sentiment: str) -> str:
     greeting = "Merhaba,"
     closing = "Saygılarımızla, Destek Ekibi"
     tone = {
-        "Positive": "yardımcı olmaya devam ediyoruz.",
-        "Neutral": "konuyu netleştirip çözüm sunuyoruz.",
-        "Negative": "yaşadığınız sorunu hızlıca çözeceğiz.",
-    }.get(sentiment or "Neutral")
+        "Olumlu": "yardımcı olmaya devam ediyoruz.",
+        "Nötr": "konuyu netleştirip çözüm sunuyoruz.",
+        "Olumsuz": "yaşadığınız sorunu hızlıca çözeceğiz.",
+    }.get(sentiment or "Nötr")
     body_hint = last_customer_msg.strip()[:240] if last_customer_msg else ""
     body = (
         f"{greeting}\n\n{tone} Aşağıdaki adımları deneyebilir misiniz?\n"
