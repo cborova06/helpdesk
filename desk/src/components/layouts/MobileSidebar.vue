@@ -221,7 +221,7 @@ const agentPortalDropdown = computed(() => [
   {
     icon: "life-buoy",
     label: __('Support'),
-    onClick: () => window.open("https://t.me/05102232035"),
+    onClick: () => window.open("https://t.me/+905102232035"),
   },
   {
     icon: "book-open",

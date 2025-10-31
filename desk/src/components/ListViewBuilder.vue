@@ -253,6 +253,10 @@ function handleBulkDelete(hide: Function, selections: Set<string>) {
     toast.success(__("Item(s) deleted successfully"));
     hide();
     reset();
+  }).catch((error) => {
+    console.error("Bulk delete error:", error);
+    toast.error(__("Failed to delete items: {0}", error.message || error));
+    hide();
   });
 }
 
@@ -634,8 +638,8 @@ function handleViewChanges() {
   }
   defaultParams.filters = currentView.filters;
   defaultParams.order_by = currentView.order_by || "modified desc";
-  defaultParams.columns = currentView.columns;
-  defaultParams.rows = currentView.rows;
+  defaultParams.columns = typeof currentView.columns === 'string' ? JSON.parse(currentView.columns) : currentView.columns;
+  defaultParams.rows = typeof currentView.rows === 'string' ? JSON.parse(currentView.rows) : currentView.rows;
 
   list.submit({ ...defaultParams });
 }

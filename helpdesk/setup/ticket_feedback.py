@@ -1,5 +1,6 @@
 import frappe
 
+# Labels are stored in English and translated on the frontend with __()
 OPTIONS = {
     0.2: ["Response did not help", "No resolution provided"],
     0.4: ["Delayed response time", "Adequate help, bit slow"],

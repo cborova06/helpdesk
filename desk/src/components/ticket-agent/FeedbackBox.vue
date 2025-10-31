@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="flex gap-[9px] mb-1.5 items-center">
       <p class="text-base text-ink-gray-8 font-medium">
-        {{ activity.feedback }}
+        {{ __(activity.feedback) }}
       </p>
       <StarRating :rating="activity.feedback_rating" />
     </div>
@@ -18,6 +18,7 @@
 import { FeedbackActivity } from "@/types";
 import { computed, PropType } from "vue";
 import StarRating from "../StarRating.vue";
+import { __ } from "@/translation";
 
 const props = defineProps({
   activity: {

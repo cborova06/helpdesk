@@ -1571,6 +1571,9 @@ msgstr "Konu"
 msgid "Subject Weight"
 msgstr "Konu Ağırlığı"
 
+msgid "Submit"
+msgstr "Gönder"
+
 msgid "Summary"
 msgstr "Özet"
 
@@ -2396,3 +2399,35 @@ msgstr "Takımlar oluşturun, yönetin ve belirli takımlara temsilciler atayın
 
 msgid "Can work on tickets, create custom views and manage private views."
 msgstr "Biletler üzerinde çalışabilir, özel görünümler oluşturabilir ve özel görünümleri yönetebilir."
+msgid "Response did not help"
+msgstr "Yanıt yardımcı olmadı"
+
+msgid "No resolution provided"
+msgstr "Çözüm sağlanmadı"
+
+msgid "Delayed response time"
+msgstr "Gecikmeli yanıt süresi"
+
+msgid "Adequate help, bit slow"
+msgstr "Yeterli yardım, biraz yavaş"
+
+msgid "Clear guidance given"
+msgstr "Net yönlendirme verildi"
+
+msgid "Helpful answers, reasonable wait"
+msgstr "Faydalı cevaplar, makul bekleme"
+
+msgid "Quick and precise solutions"
+msgstr "Hızlı ve kesin çözümler"
+
+msgid "Prompt, informative support"
+msgstr "Hızlı, bilgilendirici destek"
+
+msgid "Exceptional support experience"
+msgstr "Olağanüstü destek deneyimi"
+
+msgid "Instant, top-notch help"
+msgstr "Anında, birinci sınıf yardım"
+
+msgid "Tell us more"
+msgstr "Daha fazla ayrıntı"

@@ -103,7 +103,7 @@ def seed_kb_tickets(count=10):
     # Ticket scenarios based on actual KB articles
     scenarios = [
         {
-            "subject": _("Modem kurulumu sırasında bağlantı problemi"),
+            "subject": "Modem kurulumu sırasında bağlantı problemi",
             "description": "Yeni aldığım ADSL modemimi kurmaya çalışıyorum ancak internet bağlantısı sağlayamıyorum. Modemi prize taktım, DSL ışığı yanıyor ama internet erişimi yok. Ne yapmam gerekiyor?",
             "category": "c3rcp5si0d",
             "priority": "Medium",
@@ -129,7 +129,7 @@ def seed_kb_tickets(count=10):
             "resolution": "Müşteriye modem konfigürasyon adımları iletildi, sorun çözüldü.",
         },
         {
-            "subject": _("Fiber altyapı sorgulama sonucu alamıyorum"),
+            "subject": "Fiber altyapı sorgulama sonucu alamıyorum",
             "description": "Fiber Nerede uygulamasını kullanarak adresimi sorguladım ancak hiçbir sonuç gelmiyor. Fiber internet kullanmak istiyorum ama altyapı var mı yok mu öğrenemiyorum.",
             "category": "c3rcp5si0d",
             "priority": "Low",
@@ -147,7 +147,7 @@ def seed_kb_tickets(count=10):
             "resolution": "Müşteriye Fiber Nerede uygulaması sınırlamaları açıklandı ve alternatif başvuru yolları gösterildi.",
         },
         {
-            "subject": _("İnternet aboneliğimi feshetmek istiyorum"),
+            "subject": "İnternet aboneliğimi feshetmek istiyorum",
             "description": "Yurtdışına taşınacağım için internet aboneliğimi iptal etmek istiyorum. Nasıl bir prosedür uygulamam gerekiyor? Online yapabilir miyim?",
             "category": "c3rcp5si0d",
             "priority": "Medium",
@@ -161,7 +161,7 @@ def seed_kb_tickets(count=10):
             "resolution": "",
         },
         {
-            "subject": _("Ev içi arıza tespiti için ücret alındı"),
+            "subject": "Ev içi arıza tespiti için ücret alındı",
             "description": "Teknik ekip evime geldi ve sorunun modemmis olduğunu söyledi. Ama bana 150 TL ücret çıkarttılar. Ben bunun ücretsiz olduğunu düşünüyordum?",
             "category": "c3rcp5si0d",
             "priority": "High",
@@ -179,7 +179,7 @@ def seed_kb_tickets(count=10):
             "resolution": "",
         },
         {
-            "subject": _("Nakil işlemi için gerekli belgeler neler?"),
+            "subject": "Nakil işlemi için gerekli belgeler neler?",
             "description": "Yeni eve taşınacağım ve internet aboneliğimi de taşımak istiyorum. Hangi belgeleri hazırlayarak nereye başvurmam gerekiyor?",
             "category": "c3rcp5si0d",
             "priority": "Low",
@@ -197,7 +197,7 @@ def seed_kb_tickets(count=10):
             "resolution": "Müşteriye nakil işlemi için başvuru yerleri ve gerekli belgeler detaylı şekilde açıklandı.",
         },
         {
-            "subject": _("Paket değişikliği yapmak istiyorum ama taahhütlüyüm"),
+            "subject": "Paket değişikliği yapmak istiyorum ama taahhütlüyüm",
             "description": "Mevcut 16 Mbps paketim var ve 50 Mbps'ye geçmek istiyorum. 6 aylık kampanya taahhüdüm var, daha 3 ay kaldı. Paket değiştirebilir miyim?",
             "category": "c3rcp5si0d",
             "priority": "Medium",
@@ -215,7 +215,7 @@ def seed_kb_tickets(count=10):
             "resolution": "Taahhütlü müşteri için paket değişikliği kuralları açıklandı, müşteri kendi başvuracak.",
         },
         {
-            "subject": _("TekŞifre nedir ve nasıl kullanılır?"),
+            "subject": "TekŞifre nedir ve nasıl kullanılır?",
             "description": "Türk Telekom uygulamasına giriş yapmaya çalışıyorum ama 'TekŞifre ile giriş yapın' diyor. Bu nedir, nasıl alabilirim?",
             "category": "c3rcp5si0d",
             "priority": "Low",
@@ -233,7 +233,7 @@ def seed_kb_tickets(count=10):
             "resolution": "TekŞifre tanımı ve oluşturma adımları müşteriye iletildi, sorun çözüldü.",
         },
         {
-            "subject": _("Ödenmeyen fatura nedeniyle internet yavaşladı"),
+            "subject": "Ödenmeyen fatura nedeniyle internet yavaşladı",
             "description": "İnternetim çok yavaş, neredeyse hiçbir site açılmıyor. Faturamı geçen ay ödeyemedemedim, bu yüzden mi?",
             "category": "c3rcp5si0d",
             "priority": "High",
@@ -247,7 +247,7 @@ def seed_kb_tickets(count=10):
             "resolution": "",
         },
         {
-            "subject": _("Yalın İnternet paketi telefon hattı olmadan alınır mı?"),
+            "subject": "Yalın İnternet paketi telefon hattı olmadan alınır mı?",
             "description": "Evimde sabit telefon kullanmıyorum, sadece internet istiyorum. Bu mümkün mü? Ayrı bir hat çekmem mi gerekiyor?",
             "category": "c3rcp5si0d",
             "priority": "Low",
@@ -269,7 +269,7 @@ def seed_kb_tickets(count=10):
             "resolution": "Müşteriye Yalın İnternet paketi hakkında detaylı bilgi verildi, başvuru için yönlendirildi.",
         },
         {
-            "subject": _("Hat dondurma hizmeti nasıl kullanılır?"),
+            "subject": "Hat dondurma hizmeti nasıl kullanılır?",
             "description": "3 ay yurtdışında olacağım. Bu süre zarfında internet aboneliğimi dondurup daha sonra devam ettirebilir miyim? Yoksa iptal edip dönünce yeniden mi başvurmalıyım?",
             "category": "c3rcp5si0d",
             "priority": "Medium",
@@ -493,262 +493,3 @@ def fix_dashboard_metrics():
     print("  - Avg. Feedback Rating: ~4.2/5")
     
     return len(tickets)
-
-
-# -----------------------------
-# AI backfill utilities (heuristic)
-# -----------------------------
-def _plain_text(html: str) -> str:
-    """Convert HTML to plain text safely."""
-    if not html:
-        return ""
-    try:
-        from bs4 import BeautifulSoup  # dependency exists in app
-
-        soup = BeautifulSoup(html, "html.parser")
-        for tag in soup(["script", "style"]):
-            tag.decompose()
-        text = soup.get_text(" ")
-        return " ".join(text.split())[:4000]
-    except Exception:
-        return html
-
-
-def _analyze_sentiment(text: str) -> str:
-    """Tiny lexicon-based sentiment: 'Positive' | 'Neutral' | 'Negative'."""
-    if not text:
-        return "Neutral"
-    t = text.lower()
-    pos_words = {
-        "tesekkur", "teşekkür", "harika", "mükemmel", "süper", "çalıştı", "çözüm", "great",
-        "thanks", "thank you", "awesome", "works", "fixed", "+1", "👍", "😊", "😀", "mukemmel",
-    }
-    neg_words = {
-        "hata", "çalışmıyor", "olmuyor", "sorun", "şikayet", "yavaş", "kötü", "rezalet", "berbat",
-        "error", "fail", "doesn't", "broken", "slow", "angry", "-1", "👎", "😡", "😞",
-    }
-    pos = sum(1 for w in pos_words if w in t)
-    neg = sum(1 for w in neg_words if w in t)
-    if neg > pos + 1:
-        return "Negative"
-    if pos > neg + 1:
-        return "Positive"
-    return "Neutral"
-
-
-def _trend_from_series(sentiments: list[str]) -> str:
-    """Return Turkish label trend to match UI helper mapping."""
-    if not sentiments:
-        return "Analiz ediliyor"
-    score_map = {"Negative": -1, "Neutral": 0, "Positive": 1}
-    nums = [score_map.get(s, 0) for s in sentiments]
-    if len(nums) < 2:
-        return "Sabit"
-    delta = nums[-1] - nums[0]
-    variance = sum(abs(nums[i] - nums[i - 1]) for i in range(1, len(nums)))
-    if delta > 0:
-        return "İyileşiyor"
-    if delta < 0:
-        return "Kötüleşiyor"
-    return "Sabit" if variance <= 1 else "Değişken"
-
-
-def _effort_score(num_msgs: int, total_chars: int, resolution_hours: float | None, is_open: bool) -> int:
-    """Compute 0-100 effort score from few signals."""
-    msgs_component = min(num_msgs / 10.0, 1.0)  # up to 10 messages
-    text_component = min(total_chars / 3000.0, 1.0)  # up to 3k chars
-    if resolution_hours is not None:
-        time_component = min(resolution_hours / 72.0, 1.0)  # cap at 72h
-    else:
-        time_component = 0.5
-    base = 100 * (0.4 * msgs_component + 0.3 * text_component + 0.3 * time_component)
-    if is_open:
-        base += 7
-    return int(max(0, min(100, round(base))))
-
-
-def _effort_band(score: int) -> str:
-    if score <= 33:
-        return "Low"
-    if score <= 66:
-        return "Medium"
-    return "High"
-
-
-def _generate_summary(subject: str, first_msg: str, last_msg: str, status: str) -> str:
-    first = (first_msg or "").strip()[:180]
-    last = (last_msg or "").strip()[:180]
-    parts = []
-    if subject:
-        parts.append(f"Konu: {subject}.")
-    if first:
-        parts.append(f"Müşteri bildirimi: {first}")
-    if last and last != first:
-        parts.append(f"Son durum: {last}")
-    if status:
-        parts.append(f"Durum: {status}.")
-    return " \n".join(parts)[:1000]
-
-
-def _generate_reply_suggestion(last_customer_msg: str, sentiment: str) -> str:
-    greeting = "Merhaba,"
-    closing = "Saygılarımızla, Destek Ekibi"
-    tone = {
-        "Positive": "yardımcı olmaya devam ediyoruz.",
-        "Neutral": "konuyu netleştirip çözüm sunuyoruz.",
-        "Negative": "yaşadığınız sorunu hızlıca çözeceğiz.",
-    }.get(sentiment or "Neutral")
-    body_hint = last_customer_msg.strip()[:240] if last_customer_msg else ""
-    body = (
-        f"{greeting}\n\n{tone} Aşağıdaki adımları deneyebilir misiniz?\n"
-        "1) Modemi/uygulamayı yeniden başlatın\n"
-        "2) Ayarları varsayılan yapıp tekrar deneyin\n"
-        "3) Devam ederse bize ekran görüntüsü/çıktı paylaşın\n\n"
-    )
-    if body_hint:
-        body += f"Not: İletinizden anladığımız: '{body_hint}'.\n\n"
-    return body + closing
-
-
-def backfill_ticket_ai(limit: int | None = None, only_missing: bool = True):
-    """Backfill AI fields for HD Ticket using simple heuristics.
-
-    Args:
-        limit: Process at most this many tickets (None = all)
-        only_missing: If True, update only when the field is empty/NULL
-    """
-    from frappe.query_builder import DocType
-    from frappe.query_builder.functions import Coalesce
-
-    HDTicket = DocType("HD Ticket")
-    Communication = DocType("Communication")
-
-    missing_cond = (
-        (Coalesce(HDTicket.last_sentiment, "") == "")
-        | (Coalesce(HDTicket.sentiment_trend, "") == "")
-        | (HDTicket.effort_score.isnull())
-        | (Coalesce(HDTicket.effort_band, "") == "")
-        | (Coalesce(HDTicket.ai_summary, "") == "")
-        | (Coalesce(HDTicket.ai_reply_suggestion, "") == "")
-    )
-
-    q = (
-        frappe.qb.from_(HDTicket)
-        .select(
-            HDTicket.name,
-            HDTicket.subject,
-            HDTicket.description,
-            HDTicket.status,
-            HDTicket.priority,
-            HDTicket.resolution_time,
-            HDTicket.last_sentiment,
-            HDTicket.sentiment_trend,
-            HDTicket.effort_score,
-            HDTicket.effort_band,
-            HDTicket.ai_summary,
-            HDTicket.ai_reply_suggestion,
-        )
-    )
-    if only_missing:
-        q = q.where(missing_cond)
-    if limit:
-        q = q.limit(limit)
-
-    rows = q.run(as_dict=True)
-    print(f"Found {len(rows)} ticket(s) to backfill")
-
-    updated = 0
-    for row in rows:
-        name = row["name"]
-        comms = (
-            frappe.qb.from_(Communication)
-            .select(
-                Communication.name,
-                Communication.content,
-                Communication.sent_or_received,
-                Communication.creation,
-            )
-            .where(
-                (Communication.reference_doctype == "HD Ticket")
-                & (Communication.reference_name == name)
-            )
-            .orderby(Communication.creation)
-        ).run(as_dict=True)
-
-        texts = []
-        sentiments_series = []
-        last_customer_text = ""
-        for c in comms:
-            txt = _plain_text(c.get("content"))
-            if txt:
-                texts.append(txt)
-                s = _analyze_sentiment(txt)
-                sentiments_series.append(s)
-                if (c.get("sent_or_received") or "").lower() == "received":
-                    last_customer_text = txt
-
-        if not texts:
-            base_text = _plain_text(row.get("description")) or (row.get("subject") or "")
-            if base_text:
-                texts.append(base_text)
-                sentiments_series.append(_analyze_sentiment(base_text))
-                last_customer_text = base_text
-
-        last_sentiment = row.get("last_sentiment") or _analyze_sentiment("\n".join(texts[-3:]))
-        trend = row.get("sentiment_trend") or _trend_from_series(sentiments_series[-5:])
-
-        resolution_seconds = row.get("resolution_time") or 0
-        resolution_hours = (resolution_seconds or 0) / 3600.0 if resolution_seconds else None
-        score = row.get("effort_score") or _effort_score(
-            num_msgs=len(comms),
-            total_chars=sum(len(t) for t in texts),
-            resolution_hours=resolution_hours,
-            is_open=(row.get("status") or "").lower() == "open",
-        )
-        band = row.get("effort_band") or _effort_band(int(score))
-
-        ai_summary = row.get("ai_summary") or _generate_summary(
-            row.get("subject") or "",
-            texts[0] if texts else "",
-            last_customer_text,
-            row.get("status") or "",
-        )
-        ai_reply = row.get("ai_reply_suggestion") or _generate_reply_suggestion(
-            last_customer_text, last_sentiment
-        )
-
-        updates = {}
-
-        def need_set(key, value):
-            if not value:
-                return False
-            if not only_missing:
-                return True
-            cur = row.get(key)
-            if cur is None:
-                return True
-            if isinstance(cur, str) and cur.strip() == "":
-                return True
-            return False
-
-        if need_set("last_sentiment", last_sentiment):
-            updates["last_sentiment"] = last_sentiment
-        if need_set("sentiment_trend", trend):
-            updates["sentiment_trend"] = trend
-        if need_set("effort_score", score):
-            updates["effort_score"] = int(score)
-        if need_set("effort_band", band):
-            updates["effort_band"] = band
-        if need_set("ai_summary", ai_summary):
-            updates["ai_summary"] = ai_summary
-        if need_set("ai_reply_suggestion", ai_reply):
-            updates["ai_reply_suggestion"] = ai_reply
-
-        if updates:
-            frappe.db.set_value("HD Ticket", name, updates)
-            updated += 1
-            print(f"✓ Backfilled {name}: {list(updates.keys())}")
-
-    frappe.db.commit()
-    print(f"Done. Updated {updated} ticket(s)")
-    return updated
