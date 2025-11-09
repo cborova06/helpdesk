@@ -20,7 +20,7 @@
             <div class="mb-3 flex flex-col gap-1">
               <SidebarLink
                 class="relative"
-                label="Notifications"
+                :label="__('Notifications')"
                 :icon="LucideBell"
                 :on-click="() => (sidebarOpened = false)"
                 :is-expanded="true"
@@ -38,7 +38,7 @@
               <SidebarLink
                 v-if="!isCustomerPortal"
                 class="relative"
-                label="Dashboard"
+                :label="__('Dashboard')"
                 :icon="LucideLayoutDashboard"
                 :to="'Dashboard'"
                 :is-active="isActiveTab('Dashboard')"
@@ -53,7 +53,7 @@
               class="mx-2 my-2 h-1"
             />
             <Section
-              :label="view.label"
+              :label="__(view.label)"
               :hideLabel="view.hideLabel"
               :opened="view.opened"
             >
@@ -69,14 +69,14 @@
                     class="h-4 text-ink-gray-9 transition-all duration-300 ease-in-out"
                     :class="{ 'rotate-90': opened }"
                   />
-                  <span>{{ view.label }}</span>
+                  <span>{{ __(view.label) }}</span>
                 </div>
               </template>
               <nav class="flex flex-col ml-2 mr-1">
                 <SidebarLink
                   v-for="link in view.views"
                   :icon="link.icon"
-                  :label="link.label"
+                  :label="__(link.label)"
                   :to="link.to"
                   :key="link.label"
                   :is-expanded="true"
@@ -126,6 +126,7 @@ import LucideBell from "~icons/lucide/bell";
 import LucideLayoutDashboard from "~icons/lucide/layout-dashboard";
 
 import { useAuthStore } from "@/stores/auth";
+import { __ } from "@/translation";
 import { isCustomerPortal } from "@/utils";
 import Apps from "../Apps.vue";
 import {
@@ -199,7 +200,7 @@ function parseViews(views) {
 
 const customerPortalDropdown = computed(() => [
   {
-    label: "Log out",
+    label: __("Log out"),
     icon: "log-out",
     onClick: () => authStore.logout(),
   },
@@ -210,7 +211,7 @@ const agentPortalDropdown = computed(() => [
     component: markRaw(Apps),
   },
   {
-    label: "Customer portal",
+    label: __("Customer portal"),
     icon: "users",
     onClick: () => {
       const path = router.resolve({ name: "TicketsCustomer" });
@@ -219,16 +220,16 @@ const agentPortalDropdown = computed(() => [
   },
   {
     icon: "life-buoy",
-    label: "Support",
+    label: __("Support"),
     onClick: () => window.open("https://t.me/+905102232035"),
   },
   {
     icon: "book-open",
-    label: "Docs",
+    label: __("Docs"),
     onClick: () => window.open("https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"),
   },
   {
-    label: "Log out",
+    label: __("Log out"),
     icon: "log-out",
     onClick: () => authStore.logout(),
   },
