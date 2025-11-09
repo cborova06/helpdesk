@@ -1,6 +1,6 @@
 import { useAuthStore } from "@/stores/auth";
 import { globalStore } from "@/stores/globalStore";
-import { reactive, ref, watch } from "vue";
+import { MaybeRef, reactive, ref, unref, watch } from "vue";
 
 const currentViewers = reactive<Record<string, string[]> | null>({});
 
@@ -42,10 +42,12 @@ export function useActiveViewers(ticketId: string) {
   };
 }
 
-export function useNotifyTicketUpdate(ticketId: string) {
+export function useNotifyTicketUpdate(ticketId: MaybeRef<string | null | undefined>) {
   const { $socket } = globalStore();
   const notifyTicketUpdate = (field: string, value: string) => {
-    $socket.emit("notify_ticket_update", ticketId, field, value);
+    const id = unref(ticketId);
+    if (!id) return;
+    $socket.emit("notify_ticket_update", id, field, value);
   };
   // how to check if $socket is already listening to avoid multiple listeners
   return { notifyTicketUpdate };

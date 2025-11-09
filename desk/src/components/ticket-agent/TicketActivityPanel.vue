@@ -115,10 +115,17 @@ const _activities = computed(() => {
 
   const emailProps = activities.value?.data?.communications.map(
     (email, idx: number) => {
+      const fullName = email.user?.name || email.user?.full_name;
+      const emailAddr = email.user?.email;
       return {
         subject: email.subject,
         content: email.content,
-        sender: { name: email.user.email, full_name: email.user.name },
+        sender: {
+          name: fullName || emailAddr,
+          full_name: fullName || emailAddr,
+          email: emailAddr,
+          image: email.user?.image,
+        },
         to: email.recipients,
         type: "email",
         key: email.creation,

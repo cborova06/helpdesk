@@ -57,6 +57,10 @@ const showPhoneModal = ref(false);
 
 const ticketComposable = computed(() => useTicket(props.ticketId));
 const ticket = computed(() => ticketComposable.value.ticket);
+const refreshTicketData = () => {
+  ticket.value.reload();
+  ticketComposable.value.activities.reload();
+};
 const customizations: Resource<Customizations> = createResource({
   url: "helpdesk.helpdesk.doctype.hd_ticket.api.get_ticket_customizations",
   cache: ["HD Ticket", "customizations"],
@@ -126,6 +130,28 @@ type TicketUpdateData = {
   value: string;
 };
 
+const handleRealtimeTicketUpdate = (ticketId: string) => {
+  if (String(ticketId) !== String(ticket.value?.name)) {
+    return;
+  }
+  refreshTicketData();
+};
+
+const handleTicketUpdateToastAndRefresh = (data: TicketUpdateData) => {
+  if (String(data.ticket_id) !== String(ticket.value?.name)) {
+    return;
+  }
+  toast.info(`User ${data.user} updated ${data.field} to ${data.value}`);
+  refreshTicketData();
+};
+
+const handleCommunicationEvent = (payload: { ticket: string }) => {
+  if (String(payload.ticket) !== String(ticket.value?.name)) {
+    return;
+  }
+  refreshTicketData();
+};
+
 onMounted(() => {
   ticketsToNavigate.update({
     params: {
@@ -136,18 +162,18 @@ onMounted(() => {
   ticketsToNavigate.reload();
   ticket.value.markSeen.reload();
 
-  $socket.on("ticket_update", (data: TicketUpdateData) => {
-    if (data.ticket_id === ticket.value?.name) {
-      // Notify the user about the update
-      toast.info(`User ${data.user} updated ${data.field} to ${data.value}`);
-    }
-  });
+  $socket.on("ticket_update", handleTicketUpdateToastAndRefresh);
+  $socket.on("helpdesk:ticket-update", handleRealtimeTicketUpdate);
+  $socket.on("helpdesk:ticket-communication", handleCommunicationEvent);
 });
 
 onBeforeUnmount(() => {
   stopViewing(props.ticketId);
   showEmailBox.value = false;
   showCommentBox.value = false;
+  $socket.off("ticket_update", handleTicketUpdateToastAndRefresh);
+  $socket.off("helpdesk:ticket-update", handleRealtimeTicketUpdate);
+  $socket.off("helpdesk:ticket-communication", handleCommunicationEvent);
 });
 
 usePageMeta(() => {

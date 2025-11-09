@@ -71,6 +71,7 @@ import TicketCustomerSidebar from "@/components/ticket/TicketCustomerSidebar.vue
 import { setupCustomizations } from "@/composables/formCustomisation";
 import { useScreenSize } from "@/composables/screen";
 import { socket } from "@/socket";
+import { useNotifyTicketUpdate } from "@/composables/realtime";
 import { useConfigStore } from "@/stores/config";
 import { globalStore } from "@/stores/globalStore";
 import { isContentEmpty, isCustomerPortal, uploadFunction } from "@/utils";
@@ -84,6 +85,7 @@ import TicketConversation from "./TicketConversation.vue";
 import TicketFeedback from "./TicketFeedback.vue";
 import TicketTextEditor from "./TicketTextEditor.vue";
 import { useTicketStatusStore } from "@/stores/ticketStatus";
+import { __ } from "@/translation";
 
 interface P {
   ticketId: string;
@@ -115,7 +117,7 @@ const ticket = createResource({
     });
   },
   onError: () => {
-    toast.error("Ticket not found");
+    toast.error(__("Ticket not found"));
     router.replace("/my-tickets");
   },
 });
@@ -129,6 +131,8 @@ const isExpanded = ref(false);
 
 const { isMobileView } = useScreenSize();
 const { $dialog } = globalStore();
+
+const { notifyTicketUpdate } = useNotifyTicketUpdate(props.ticketId);
 
 const send = createResource({
   url: "run_doc_method",
@@ -147,6 +151,7 @@ const send = createResource({
     attachments.value = [];
     isExpanded.value = false;
     ticket.reload();
+    notifyTicketUpdate("communication", new Date().toISOString());
   },
 });
 
@@ -201,7 +206,7 @@ function showConfirmationDialog() {
             { fieldname: "status", value: "Closed" },
             {
               onSuccess: () => {
-                toast.success("Ticket closed");
+                toast.success(__('Ticket closed'));
               },
             }
           );
@@ -230,7 +235,7 @@ const setValue = createResource({
 });
 
 const breadcrumbs = computed(() => {
-  let items = [{ label: "Tickets", route: { name: "TicketsCustomer" } }];
+  let items = [{ label: __('Tickets'), route: { name: "TicketsCustomer" } }];
   items.push({
     label: ticket.data?.subject,
     route: { name: "TicketCustomer" },
@@ -249,17 +254,35 @@ const showFeedback = computed(() => {
   return hasAgentCommunication && isFeedbackMandatory;
 });
 
+const handleTicketUpdate = (ticketID: string) => {
+  if (String(ticketID) === props.ticketId) {
+    ticket.reload();
+  }
+};
+
+const handleTicketUpdateToast = (data: { ticket_id: string }) => {
+  if (String(data.ticket_id) === props.ticketId) {
+    ticket.reload();
+  }
+};
+
+const handleCommunicationEvent = (payload: { ticket: string }) => {
+  if (String(payload.ticket) === props.ticketId) {
+    ticket.reload();
+  }
+};
+
 onMounted(() => {
   document.title = props.ticketId;
-  socket.on("helpdesk:ticket-update", (ticketID) => {
-    if (ticketID === Number(props.ticketId)) {
-      ticket.reload();
-    }
-  });
+  socket.on("helpdesk:ticket-update", handleTicketUpdate);
+  socket.on("ticket_update", handleTicketUpdateToast);
+  socket.on("helpdesk:ticket-communication", handleCommunicationEvent);
 });
 
 onUnmounted(() => {
   document.title = "Helpdesk";
-  socket.off("helpdesk:ticket-update");
+  socket.off("helpdesk:ticket-update", handleTicketUpdate);
+  socket.off("ticket_update", handleTicketUpdateToast);
+  socket.off("helpdesk:ticket-communication", handleCommunicationEvent);
 });
 </script>

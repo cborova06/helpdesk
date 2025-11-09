@@ -46,11 +46,12 @@
 import { dayjs } from "@/dayjs";
 import { isElementInViewport } from "@/utils";
 import { Avatar } from "frappe-ui";
-import { orderBy } from "lodash";
+import { orderBy, startCase } from "lodash";
 import { computed, inject, nextTick, watch } from "vue";
 import { useRoute } from "vue-router";
 import TicketCommunication from "./TicketCommunication.vue";
 import { ITicket } from "./symbols";
+import { __ } from "@/translation";
 
 interface P {
   focus?: string;
@@ -63,8 +64,27 @@ const route = useRoute();
 const ticket = inject(ITicket);
 const communications = computed(() => {
   const _communications = ticket.data.communications || [];
-  return orderBy(_communications, (c) => dayjs(c.creation));
+  return orderBy(_communications, (c) => dayjs(c.creation)).map((c) => ({
+    ...c,
+    user: normalizeUser(c.user),
+  }));
 });
+
+function normalizeUser(user: any) {
+  if (!user) {
+    return { name: __("Unknown") };
+  }
+  const raw =
+    user.full_name ||
+    user.name ||
+    (user.email ? user.email.split("@")[0] : "") ||
+    __("Unknown");
+  const display = startCase(String(raw).toLowerCase());
+  return {
+    ...user,
+    name: display,
+  };
+}
 
 function scroll(id: string) {
   const e = document.getElementById(id);
@@ -82,4 +102,15 @@ nextTick(() => {
   const id = hash || communications.value.slice(-1).pop()?.name;
   if (id) setTimeout(() => scroll(id), 1000);
 });
+
+watch(
+  () => communications.value.length,
+  (len, old) => {
+    if (!len || len === old) return;
+    nextTick(() => {
+      const last = communications.value.slice(-1).pop()?.name;
+      if (last) setTimeout(() => scroll(last), 100);
+    });
+  }
+);
 </script>
