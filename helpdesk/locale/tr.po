@@ -1,0 +1,3991 @@
+msgid "- Default Ticket Status<br>"
+msgstr "- Varsayılan Talep Durumu<br>"
+
+msgid "- Ticket Reopen Status<br>"
+msgstr "- Yeniden Açma Durumu<br>"
+
+msgid "- {0} as Default Status<br>"
+msgstr "- Varsayılan Durum olarak {0}<br>"
+
+msgid "- {0} as Reopen Status<br>"
+msgstr "- Yeniden Açma Durumu olarak {0}<br>"
+
+msgid "0 is no feedback, 1 is Like, 2 is Dislike"
+msgstr "0 geri bildirim yok, 1 Beğeni, 2 Beğenmeme"
+
+msgid "<br>Please update HD Settings to use a different status before disabling this status."
+msgstr "<br>Bu durumu devre dışı bırakmadan önce farklı bir durumu kullanmak için HD Ayarlarını güncelleyin."
+
+msgid "<br>Please update the SLA(s) to use a different status before disabling this status."
+msgstr "<br>Bu durumu devre dışı bırakmadan önce farklı bir durum kullanmak için SLA(leri) güncelleyin."
+
+msgid "<span class=\"h3\" style=\"\"><a href=\"/helpdesk\">Visit Helpdesk</a></span>"
+msgstr "<span class=\"h3\" style=\"\"><a href=\"/helpdesk\">Yardım Masasını Ziyaret Et</a></span>"
+
+msgid "<span class=\"h4\">Helpdesk Configuration<br></span>"
+msgstr "<span class=\"h4\">Yardım Masası Yapılandırması<br></span>"
+
+msgid "Access denied"
+msgstr "Erişim reddedildi"
+
+msgid "Acknowledgement"
+msgstr "Alındı"
+
+msgid "Action"
+msgstr "İşlem"
+
+msgid "Action Required"
+msgstr "İşlem Gerekli"
+
+msgid "Action to perform when clicking the button. The doc will be available as `this`"
+msgstr "Butona tıklandığında yapılacak işlem. Belge `this` olarak mevcut olacaktır"
+
+msgid "Add a comment on a ticket"
+msgstr "Talebe yorum ekleyin"
+
+msgid "Add a condition"
+msgstr "Bir koşul ekle"
+
+msgid "Add a custom condition"
+msgstr "Özel koşul ekle"
+
+msgid "Add Account"
+msgstr "Hesap Ekle"
+
+msgid "Add Agents"
+msgstr "Temsilci Ekle"
+
+msgid "Add Assignee"
+msgstr "Atanan Ekle"
+
+msgid "Add condition"
+msgstr "Koşul ekle"
+
+msgid "Add row"
+msgstr "Satır ekle"
+
+msgid "Add to Holidays"
+msgstr "Tatillere Ekle"
+
+msgid "Add Weekly Holidays"
+msgstr "Haftalık Tatilleri Ekle"
+
+msgid "Add, manage agents and assign roles to them."
+msgstr "Temsilci ekleyin, yönetin ve onlara roller atayın."
+
+msgid "Additional Information"
+msgstr "Ek Bilgiler"
+
+msgid "Administrator"
+msgstr "Yönetici"
+
+msgid "Agent"
+msgstr "Temsilci"
+
+msgid "Agent Configuration"
+msgstr "Temsilci Yapılandırması"
+
+msgid "Agent Manager"
+msgstr "Temsilci Yöneticisi"
+
+msgid "Agent Name"
+msgstr "Temsilci Adı"
+
+msgid "Agent settings"
+msgstr "Temsilci ayarları"
+
+msgid "Agents"
+msgstr "Temsilciler"
+
+msgid "Agents & Teams"
+msgstr "Temsilciler & Takımlar"
+
+msgid "AI Insights"
+msgstr "Yapay Zeka İçgörüleri"
+
+msgid "AI Reply Suggestion"
+msgstr "Yapay Zeka Yanıt Önerisi"
+
+msgid "AI Summary"
+msgstr "Yapay Zeka Özeti"
+
+msgid "All"
+msgstr "Tümü"
+
+msgid "All available priorities have already been added"
+msgstr "Tüm mevcut öncelikler zaten eklendi"
+
+msgid "All Views"
+msgstr "Tüm Görünümler"
+
+msgid "Allow anyone to create tickets"
+msgstr "Herkesin talep oluşturmasına izin ver"
+
+msgid "Amber"
+msgstr "Kehribar"
+
+msgid "API"
+msgstr "API"
+
+msgid "Apply on new page"
+msgstr "Yeni sayfada uygula"
+
+msgid "Apply SLA for Resolution Time"
+msgstr "Çözüm Süresi için SLA'yı Uygulayın"
+
+msgid "Apply To"
+msgstr "Uygula"
+
+msgid "Apply to customer portal"
+msgstr "Müşteri portalına uygula"
+
+msgid "Apps"
+msgstr "Uygulamalar"
+
+msgid "Archived"
+msgstr "Arşivlendi"
+
+msgid "Are you sure you want to change tabs? Unsaved changes will be lost."
+msgstr "Sekmeyi değiştirmek istediğinizden emin misiniz? Kaydedilmemiş değişiklikler kaybolacak."
+
+msgid "Are you sure you want to go back? Unsaved changes will be lost."
+msgstr "Geri dönmek istediğinizden emin misiniz? Kaydedilmemiş değişiklikler kaybolacak."
+
+msgid "Are you sure you want to reset the content? Current content will be overridden."
+msgstr "İçeriği sıfırlamak istediğinize emin misiniz? Mevcut içerik üzerine yazılacaktır."
+
+msgid "Article"
+msgstr "Makale"
+
+msgid "Assign a ticket to an agent"
+msgstr "Talebi bir temsilciye atayın"
+
+msgid "Assign to"
+msgstr "Şuna ata"
+
+msgid "Assign to me"
+msgstr "Bana Ata"
+
+msgid "Assigned To"
+msgstr "Atanan"
+
+msgid "assigned you a ticket"
+msgstr "size bir talep atandı"
+
+msgid "Assignee"
+msgstr "Atanan"
+
+msgid "Assignee Rules"
+msgstr "Atama Kuralları"
+
+msgid "Assignees"
+msgstr "Atananlar"
+
+msgid "Assignment"
+msgstr "Atama"
+
+msgid "Assignment condition"
+msgstr "Atama koşulu"
+
+msgid "Assignment Conditions"
+msgstr "Atama Koşulları"
+
+msgid "Assignment Rule"
+msgstr "Atama Kuralı"
+
+msgid "Assignment rule"
+msgstr "Atama kuralı"
+
+msgid "Assignment Rules"
+msgstr "Atama Kuralları"
+
+msgid "Assignment rules"
+msgstr "Atama kuralları"
+
+msgid "Assignment Rules automatically route tickets to the right team members based on predefined conditions."
+msgstr "Atama Kuralları, önceden tanımlı koşullara göre talepleri doğru ekip üyelerine otomatik olarak yönlendirir."
+
+msgid "Assignment Schedule"
+msgstr "Atama Zamanlaması"
+
+msgid "At least one enabled status for <u>{0}</u> category must be enabled."
+msgstr "<u>{0}</u> kategorisi için en az bir etkin durum etkin olmalıdır."
+
+msgid "At-least one of priority, team and ticket type is required"
+msgstr "Öncelik, ekip veya talep türünden en az biri gereklidir"
+
+msgid "Attachment"
+msgstr "Ek"
+
+msgid "Author"
+msgstr "Yazar"
+
+msgid "Auto update status"
+msgstr "Durumu otomatik güncelle"
+
+msgid "Auto-close after (Days)"
+msgstr "Otomatik kapatma (Gün)"
+
+msgid "Auto-generated from the portal view — do not edit directly unless you know what you're doing! "
+msgstr "Portal görünümünden otomatik oluşturuldu — ne yaptığınızı bilmiyorsanız doğrudan düzenlemeyin! "
+
+msgid "Automatically Close Tickets when"
+msgstr "Aşağıdaki durumda Talepleri Otomatik Kapat"
+
+msgid "Automation"
+msgstr "Otomasyon"
+
+msgid "Average Response Time"
+msgstr "Ortalama Yanıt Süresi"
+
+msgid "back to email event list"
+msgstr "e-posta olay listesine geri dön"
+
+msgid "Base Support Rotation"
+msgstr "Temel Destek Rotasyonu"
+
+msgid "Base URL"
+msgstr "Temel URL"
+
+msgid "Based On"
+msgstr "Buna göre"
+
+msgid "Based on your HR Policy, select your leave allocation period's end date"
+msgstr "İnsan Kaynakları Politikanıza göre izin tahsis döneminizin bitiş tarihini seçin"
+
+msgid "Based on your HR Policy, select your leave allocation period's start date"
+msgstr "İnsan Kaynakları Politikanıza göre izin tahsis döneminizin başlangıç tarihini seçin"
+
+msgid "Black"
+msgstr "Siyah"
+
+msgid "Blue"
+msgstr "Mavi"
+
+msgid "Branding"
+msgstr "Markalama"
+
+msgid "Button"
+msgstr "Buton"
+
+msgid "Call Details"
+msgstr "Çağrı Ayrıntıları"
+
+msgid "Call duration in seconds"
+msgstr "Arama süresi (saniye)"
+
+msgid "Call Logs"
+msgstr "Arama Kayıtları"
+
+msgid "Can not send email. No sender email set up!"
+msgstr "E-posta gönderilemiyor. Gönderen e-postası ayarlı değil!"
+
+msgid "Canned Responses"
+msgstr "Hazır Yanıtlar"
+
+msgid "Canned responses"
+msgstr "Hazır Yanıtlar"
+
+msgid "Cannot delete the default SLA. At least one SLA must be marked as default."
+msgstr "Varsayılan SLA silinemez. En az bir SLA varsayılan olarak işaretlenmelidir."
+
+msgid "Cannot disable this status as it is linked in HD Settings:<br><br>"
+msgstr "Bu durum HD Ayarlarında bağlantılı olduğu için devre dışı bırakılamaz:<br><br>"
+
+msgid "Cannot disable this status as it is linked in the following SLAs:<br><br>"
+msgstr "Bu durum aşağıdaki SLA'lerde bağlantılı olduğu için devre dışı bırakılamaz:<br><br>"
+
+msgid "Cannot merge General category"
+msgstr "Genel kategori birleştirilemez"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Category must have atleast one article"
+msgstr "Kategori en az bir makaleye sahip olmalıdır"
+
+msgid "Channels"
+msgstr "Kanallar"
+
+msgid "Choose how tickets are distributed among selected assignees."
+msgstr "Taleplerin seçili atananlar arasında nasıl dağıtılacağını seçin."
+
+msgid "Choose the days of the week when this rule should be active."
+msgstr "Bu kuralın etkin olacağı hafta günlerini seçin."
+
+msgid "Choose which tickets are affected by this assignment rule."
+msgstr "Bu atama kuralından hangi taleplerin etkileneceğini seçin."
+
+msgid "Choose which tickets are affected by this un-assignment rule."
+msgstr "Bu atama kaldırma kuralından hangi taleplerin etkileneceğini seçin."
+
+msgid "Choose who receives the tickets."
+msgstr "Talepleri kimin alacağını seçin."
+
+msgid "Clear Table"
+msgstr "Tabloyu Temizle"
+
+msgid "Click on Add to Holidays. This will populate the holidays table with all the dates that fall on the selected weekly off. Repeat the process for populating the dates for all your weekly holidays"
+msgstr "Tatillere Ekle'ye tıklayın. Bu işlem, tatiller tablosunu seçilen haftalık izin gününe denk gelen tüm tarihlerle dolduracaktır. Tüm haftalık tatillerinizin tarihlerini doldurmak için işlemi tekrarlayın"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Closed or rated tickets cannot be updated by non-agents"
+msgstr "Kapalı veya derecelendirilmiş talepler, temsilci olmayanlar tarafından güncellenemez"
+
+msgid "Collapse"
+msgstr "Daralt"
+
+msgid "Color"
+msgstr "Renk"
+
+msgid "Columns"
+msgstr "Sütunlar"
+
+msgid "Comment"
+msgstr "Yorum"
+
+msgid "Commented By"
+msgstr "Yorumlayan"
+
+msgid "Condition"
+msgstr "Koşul"
+
+msgid "Configure your agent’s telephony details."
+msgstr "Temsilcinizin telefon ayrıntılarını yapılandırın."
+
+msgid "Connect your support email"
+msgstr "Destek e-postanızı bağlayın"
+
+msgid "Contact"
+msgstr "Kişi"
+
+msgid "Contact HTML"
+msgstr "İletişim HTML'si"
+
+msgid "Contact with us"
+msgstr "Bizimle iletişime geçin"
+
+msgid "Contacts"
+msgstr "Kişiler"
+
+msgid "Content"
+msgstr "İçerik"
+
+msgid "Content Type"
+msgstr "İçerik Türü"
+
+msgid "Could not an email due to: {0}"
+msgstr "Şu nedenle e-posta gönderilemedi: {0}"
+
+msgid "Could not send an acknowledgement email due to: {0}"
+msgstr "Şu nedenle alındı e-postası gönderilemedi: {0}"
+
+msgid "Could not send feedback email,due to: {0}"
+msgstr "Şu nedenle geri bildirim e-postası gönderilemedi: {0}"
+
+msgid "Create"
+msgstr "Oluştur"
+
+msgid "Create & invite a contact"
+msgstr "Kişi oluşturun ve davet edin"
+
+msgid "Create a ticket"
+msgstr "Bir talep oluşturun"
+
+msgid "Create an article"
+msgstr "Bir makale oluşturun"
+
+msgid "Create new"
+msgstr "Yeni oluştur"
+
+msgid "Create View"
+msgstr "Görünüm Oluştur"
+
+msgid "Creating a ticket"
+msgstr "Talep oluşturma"
+
+msgid "Criterion"
+msgstr "Kriter"
+
+msgid "Custom Actions"
+msgstr "Özel İşlemler"
+
+msgid "Custom Views"
+msgstr "Özel Görünümler"
+
+msgid "Customer"
+msgstr "Müşteri"
+
+msgid "Customer Name"
+msgstr "Müşteri Adı"
+
+msgid "Customer Portal"
+msgstr "Müşteri Portalı"
+
+msgid "Customer portal"
+msgstr "Müşteri portalı"
+
+msgid "Customers"
+msgstr "Müşteriler"
+
+msgid "Customers & Contacts"
+msgstr "Müşteriler & Kişiler"
+
+msgid "Customizations"
+msgstr "Özelleştirmeler"
+
+msgid "Customize your email notification preferences to stay informed about important updates and activities."
+msgstr "Önemli güncellemeler ve aktivitelerden haberdar olmak için e-posta bildirim tercihlerinizi özelleştirin."
+
+msgid "customize {0}"
+msgstr "{0}'ı özelleştir"
+
+msgid "Cyan"
+msgstr "Açık Mavi"
+
+msgid "Dashboard"
+msgstr "Gösterge Paneli"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Day count for auto closing tickets cannot be negative or zero"
+msgstr "Talepleri otomatik kapatma gün sayısı negatif veya sıfır olamaz"
+
+msgid "Default Inbox"
+msgstr "Varsayılan Gelen Kutusu"
+
+msgid "Default Priority"
+msgstr "Varsayılan Öncelik"
+
+msgid "Default priority"
+msgstr "Varsayılan öncelik"
+
+msgid "Default Sending"
+msgstr "Varsayılan Gönderim"
+
+msgid "Default Sending and Inbox"
+msgstr "Varsayılan Gönderim ve Gelen Kutusu"
+
+msgid "Default SLA"
+msgstr "Varsayılan SLA"
+
+msgid "Default template can not be deleted"
+msgstr "Varsayılan şablon silinemez"
+
+msgid "Default Ticket Status"
+msgstr "Varsayılan Talep Durumu"
+
+msgid "Default ticket status"
+msgstr "Varsayılan talep durumu"
+
+msgid "Default ticket type"
+msgstr "Varsayılan talep türü"
+
+msgid "Default Views"
+msgstr "Varsayılan Görünüm"
+
+msgid "Define who receives the tickets and how they’re distributed among agents."
+msgstr "Talepleri kimin alacağını ve ajanlar arasında nasıl dağıtılacağını tanımlayın."
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Description Template"
+msgstr "Açıklama Şablonu"
+
+msgid "Description Weight"
+msgstr "Açıklama Ağırlığı"
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "Değişken"
+msgstr "Değişken"
+
+msgid "Do not apply filters and restrictions to agents of this team"
+msgstr "Bu ekibin temsilcilerine filtre ve kısıtlamaları uygulama"
+
+msgid "Do not restrict tickets without a Team"
+msgstr "Ekibi olmayan talepleri kısıtlama"
+
+msgid "Docs"
+msgstr "Dokümanlar"
+
+msgid "DocType"
+msgstr "DocType"
+
+msgid "Domain"
+msgstr "Domain"
+
+msgid "Draft"
+msgstr "Taslak"
+
+msgid "Due in {0}"
+msgstr "Son tarih {0} içinde"
+
+msgid "Duplicate"
+msgstr "Kopyala"
+
+msgid "Duplicate Assignment Rule"
+msgstr "Atama Kuralını Kopyala"
+
+msgid "Duygu Trendi"
+msgstr "Duygu Trendi"
+
+msgid "Düşük"
+msgstr "Düşük"
+
+msgid "Düşük Efor"
+msgstr "Düşük Efor"
+
+msgid "Effort Band"
+msgstr "Efor Bandı"
+
+msgid "Effort Score"
+msgstr "Efor Skoru"
+
+msgid "Efor Bandı"
+msgstr "Efor Bandı"
+
+msgid "Efor Skoru"
+msgstr "Efor Skoru"
+
+msgid "Email"
+msgstr "E-posta"
+
+msgid "Email Account"
+msgstr "E-posta Hesabı"
+
+msgid "Email Accounts"
+msgstr "E-posta Hesapları"
+
+msgid "Email Content"
+msgstr "E-posta İçeriği"
+
+msgid "Email Notifications"
+msgstr "E-posta Bildirimleri"
+
+msgid "Enable feedback for Customer Portal"
+msgstr "Müşteri Portalı için geri bildirimi etkinleştir"
+
+msgid "Enabled"
+msgstr "Etkin"
+
+msgid "End Date"
+msgstr "Bitiş Tarihi"
+
+msgid "End Time"
+msgstr "Bitiş Zamanı"
+
+msgid "Enter a name for this HD Service Holiday List."
+msgstr "Bu HD Hizmet Tatil Listesi için bir ad girin."
+
+msgid "Error moving article to category"
+msgstr "Makaleyi kategoriye taşırken hata"
+
+msgid "Error while connecting to email account {0}"
+msgstr "E-posta hesabına bağlanırken hata oluştu {0}"
+
+msgid "Escalation rule already exists for this criteria"
+msgstr "Bu ölçüt için bir yükseltme kuralı zaten var"
+
+msgid "Expand"
+msgstr "Genişlet"
+
+msgid "Expected First Response"
+msgstr "Beklenen İlk Yanıt"
+
+msgid "Explore customer portal"
+msgstr "Müşteri portalını keşfedin"
+
+msgid "External link"
+msgstr "Harici bağlantı"
+
+msgid "Failed"
+msgstr "Başarısız"
+
+msgid "Failed by {0}"
+msgstr "{0} itibarıyla başarısız"
+
+msgid "Feedback"
+msgstr "Geri Bildirim"
+
+msgid "Feedback "
+msgstr "Geri Bildirim "
+
+msgid "Feedback (Extra)"
+msgstr "Geri Bildirim (Ek)"
+
+msgid "Feedback (Option)"
+msgstr "Geri Bildirim (Seçenek)"
+
+msgid "Feedback Already Exists"
+msgstr "Geri Bildirim Zaten Var"
+
+msgid "Feedback email has been sent to the customer"
+msgstr "Geri bildirim e-postası müşteriye gönderildi"
+
+msgid "Feedback Rating"
+msgstr "Geri Bildirim Puanı"
+
+msgid "Field (fieldname)"
+msgstr "Alan (fieldname)"
+
+msgid "Field `{0}` does not exist in Ticket"
+msgstr "Alan `{0}` Talep içinde mevcut değil"
+
+msgid "Field `{0}` is not allowed in Ticket Template"
+msgstr "Alan `{0}`, Talep Şablonunda kullanılamaz"
+
+msgid "Field Dependency"
+msgstr "Alan Bağımlılığı"
+
+msgid "Fields"
+msgstr "Alanlar"
+
+msgid "Filter"
+msgstr "Filtre"
+
+msgid "Filters"
+msgstr "Filtreler"
+
+msgid "Find out all of the variables that can be used in the content"
+msgstr "İçerikte kullanılabilecek tüm değişkenleri öğrenin"
+
+msgid "First Responded On"
+msgstr "İlk Yanıt Tarihi"
+
+msgid "First Response"
+msgstr "İlk Yanıt"
+
+msgid "First response"
+msgstr "İlk yanıt"
+
+msgid "First Response Due"
+msgstr "İlk Yanıt Son Tarihi"
+
+msgid "First Response Time"
+msgstr "İlk Yanıt Süresi"
+
+msgid "First response time"
+msgstr "İlk yanıt süresi"
+
+msgid "First Response Time for Tickets"
+msgstr "Talepler için İlk Müdahale Süresi"
+
+msgid "Form"
+msgstr "Form"
+
+msgid "Frappe Helpdesk Mobile"
+msgstr "Helpdesk Mobil"
+
+msgid "Friday"
+msgstr "Cuma"
+
+msgid "From"
+msgstr "Gönderen"
+
+msgid "From Date"
+msgstr "Başlangıç Tarihi"
+
+msgid "Fulfilled"
+msgstr "Karşılandı"
+
+msgid "Fulfilled in {0}"
+msgstr "{0} içinde karşılandı"
+
+msgid "General category can't be deleted"
+msgstr "Genel kategori silinemez"
+
+msgid "General category name can't be changed"
+msgstr "Genel kategori adı değiştirilemez"
+
+msgid "General Settings"
+msgstr "Genel Ayarlar"
+
+msgid "Getting Started"
+msgstr "Hızlı Başlangıç"
+
+msgid "Gray"
+msgstr "Gri"
+
+msgid "Green"
+msgstr "Yeşil"
+
+msgid "Group By"
+msgstr "Grup"
+
+msgid "Group By Field"
+msgstr "Gruplama Alanı"
+
+msgid "group_by"
+msgstr "group_by"
+
+msgid "Guest"
+msgstr "Ziyaretçi"
+
+msgid "has made a call"
+msgstr "bir arama yaptı"
+
+msgid "has reached out"
+msgstr "iletişime geçti"
+
+msgid "has reopened the ticket"
+msgstr "talebi yeniden açtı"
+
+msgid "HD Action"
+msgstr "HD İşlem"
+
+msgid "HD Agent"
+msgstr "HD Temsilci"
+
+msgid "HD Article"
+msgstr "HD Makale"
+
+msgid "HD Article Category"
+msgstr "HD Makale Kategorisi"
+
+msgid "HD Article Feedback"
+msgstr "HD Makale Geri Bildirimi"
+
+msgid "HD Canned Response"
+msgstr "HD Hazır Yanıtlar"
+
+msgid "HD Customer"
+msgstr "HD Müşteri"
+
+msgid "HD Desk Account Request"
+msgstr "HD Desk Hesap Talebi"
+
+msgid "Urgent"
+msgstr "Acil"
+
+msgid "HD Email Feedback"
+msgstr "HD E-posta Geri Bildirimi"
+
+msgid "HD Escalation Rule"
+msgstr "HD Yükseltme Kuralı"
+
+msgid "HD Form Script"
+msgstr "HD Form Betiği"
+
+msgid "HD Holiday"
+msgstr "HD Tatil"
+
+msgid "HD Notification"
+msgstr "HD Bildirim"
+
+msgid "HD Organization"
+msgstr "HD Organizasyon"
+
+msgid "HD Organization Contact Item"
+msgstr "HD Organizasyon İrtibat Öğesi"
+
+msgid "HD Portal Signup Request"
+msgstr "HD Portal Kayıt Talebi"
+
+msgid "HD Service Day"
+msgstr "HD Hizmet Günü"
+
+msgid "HD Service Holiday List"
+msgstr "HD Hizmet Tatil Listesi"
+
+msgid "HD Service Level Agreement"
+msgstr "HD Hizmet Seviyesi Anlaşması"
+
+msgid "HD Service Level Priority"
+msgstr "HD Hizmet Seviyesi Önceliği"
+
+msgid "HD Settings"
+msgstr "HD Ayarları"
+
+msgid "HD Stopword"
+msgstr "HD Stop Kelimesi"
+
+msgid "HD Support Search Source"
+msgstr "HD Destek Arama Kaynağı"
+
+msgid "HD Synonym"
+msgstr "HD Eş Anlamlı"
+
+msgid "HD Synonyms"
+msgstr "HD Eş Anlamlılar"
+
+msgid "HD Team"
+msgstr "HD Ekip"
+
+msgid "HD Team Member"
+msgstr "HD Ekip Üyesi"
+
+msgid "HD Ticket"
+msgstr "HD Talep"
+
+msgid "HD Ticket Activity"
+msgstr "HD Talep Aktivitesi"
+
+msgid "HD Ticket Comment"
+msgstr "HD Talep Yorumu"
+
+msgid "HD Ticket Feedback Option"
+msgstr "HD Talep Geri Bildirim Seçeneği"
+
+msgid "HD Ticket Priority"
+msgstr "HD Talep Önceliği"
+
+msgid "HD Ticket Status"
+msgstr "Talep Durumu"
+
+msgid "HD Ticket Template"
+msgstr "HD Talep Şablonu"
+
+msgid "HD Ticket Template Field"
+msgstr "HD Talep Şablonu Alanı"
+
+msgid "HD Ticket Type"
+msgstr "HD Talep Türü"
+
+msgid "HD View"
+msgstr "HD Görünüm"
+
+msgid "Headings Weight"
+msgstr "Başlık Ağırlığı"
+
+msgid "Help"
+msgstr "Yardım"
+
+msgid "HelpDesk"
+msgstr "Yardım Masası"
+
+msgid "Helpdesk"
+msgstr "Yardım Masası"
+
+msgid "Helpdesk Contact"
+msgstr "Yardım Masası İrtibatı"
+
+msgid "Helpdesk Reports"
+msgstr "Yardım Masası Raporları"
+
+msgid "Edit Canned Response"
+msgstr "Hazır Yanıtı Düzenle"
+
+msgid "Create Canned Response"
+msgstr "Hazır Yanıt Oluştur"
+
+msgid "here"
+msgstr "burada"
+
+msgid "Here, your weekly offs are pre-populated based on the previous selections. You can add more rows to also add public and national holidays individually."
+msgstr "Burada, haftalık izinleriniz önceki seçimlere göre önceden doldurulur. Resmi ve ulusal tatilleri ayrı ayrı eklemek için daha fazla satır ekleyebilirsiniz."
+
+msgid "Hide condition"
+msgstr "Gizleme koşulu"
+
+msgid "Hide from customer"
+msgstr "Müşteriden gizle"
+
+msgid "High"
+msgstr "Yüksek"
+
+msgid "Holiday List"
+msgstr "Tatil Listesi"
+
+msgid "Holiday List Name"
+msgstr "Tatil Listesi Adı"
+
+msgid "Holidays"
+msgstr "Tatiller"
+
+msgid "Icon"
+msgstr "Simge"
+
+msgid "If enabled, a ticket creation acknowledgement email will be sent to the user right after creating an email ticket"
+msgstr "Etkinleştirilirse, e-posta talebi oluşturulduktan hemen sonra kullanıcıya bir alındı e-postası gönderilir"
+
+msgid "If enabled, an email is sent to all of the recipients associated with an agent's reply"
+msgstr "Etkinleştirilirse, bir temsilcinin yanıtıyla ilişkili tüm alıcılara e-posta gönderilir"
+
+msgid "If enabled, an email will be sent to all of the assigned agents after a reply from one of the contacts"
+msgstr "Etkinleştirilirse, kişilerden birinden yanıt geldiğinde atanan tüm temsilcilere e-posta gönderilir"
+
+msgid "If enabled, anyone will be able to create tickets (without any permission). "
+msgstr "Etkinleştirilirse, herkes (herhangi bir izne gerek olmadan) talep oluşturabilir. "
+
+msgid "If enabled, feedback email will be sent to the customer when you mark a ticket as the status selected below.\n"
+msgstr "Etkinleştirilirse, bir talebi aşağıda seçilen duruma getirdiğinizde müşteriye geri bildirim e-postası gönderilir.\n"
+
+msgid "If enabled, the feedback dialog will be shown, when a user tries to close a ticket. \n"
+msgstr "Etkinleştirilirse, bir kullanıcı talebi kapatmaya çalıştığında geri bildirim iletişim kutusu gösterilir. \n"
+
+msgid "Ignore Restrictions"
+msgstr "Kısıtlamaları Yoksay"
+
+msgid "Image"
+msgstr "Resim"
+
+msgid "Image to be used in various places, including Login and Signup pages. An image with transparent background and 160 x 32 is preferred"
+msgstr "Giriş ve Kayıt sayfaları dahil çeşitli yerlerde kullanılacak görsel. Şeffaf arka planlı ve 160 x 32 boyutlarında görsel tercih edilir"
+
+msgid "Images"
+msgstr "Resimler"
+
+msgid "in a day"
+msgstr "bugün"
+
+msgid "in {0} days"
+msgstr "{0} gün içinde"
+
+msgid "in {0} hours"
+msgstr "{0} saat içinde"
+
+msgid "in {0} minutes"
+msgstr "{0} dakika içinde"
+
+msgid "Inbound Call"
+msgstr "Gelen Çağrı"
+
+msgid "Inbox"
+msgstr "Gelen Kutusu"
+
+msgid "Instantly send e-mail"
+msgstr "E-postayı anında gönder"
+
+msgid "Insufficient Permission for {0}"
+msgstr "{0} için Yetki Verilmemiş"
+
+msgid "Integer value"
+msgstr "Tamsayı değeri"
+
+msgid "Introduction"
+msgstr "Giriş"
+
+msgid "Invalid notification"
+msgstr "Geçersiz bildirim"
+
+msgid "Invite agent"
+msgstr "Temsilci davet et"
+
+msgid "Invite agents"
+msgstr "Temsilcileri davet edin"
+
+msgid "IP Address"
+msgstr "IP Adresi"
+
+msgid "Is Active"
+msgstr "Aktif"
+
+msgid "Is Customer Portal"
+msgstr "Müşteri Portalı"
+
+msgid "Is Default"
+msgstr "Varsayılan"
+
+msgid "Is name setup skipped"
+msgstr "Ad kurulumu atlandı"
+
+msgid "Is pinned"
+msgstr "Sabitlendi mi"
+
+msgid "Is setup complete"
+msgstr "Kurulum tamamlandı"
+
+msgid "Is Standard"
+msgstr "Standart"
+
+msgid "İyileşiyor"
+msgstr "İyileşiyor"
+
+msgid "John Doe"
+msgstr "John Doe"
+
+msgid "kanban"
+msgstr "kanban"
+
+msgid "Key"
+msgstr "Anahtar"
+
+msgid "Knowledge Base"
+msgstr "Bilgi Merkezi"
+
+msgid "Kötüleşiyor"
+msgstr "Kötüleşiyor"
+
+msgid "Label"
+msgstr "Etiket"
+
+msgid "Label (customer view)"
+msgstr "Etiket (müşteri görünümü)"
+
+msgid "Last"
+msgstr "Son"
+
+msgid "Last Modified"
+msgstr "Son Değişiklik"
+
+
+msgid "Last user assigned by this rule"
+msgstr "Bu kural tarafından en son atanan kullanıcı"
+
+msgid "Learn about conditions"
+msgstr "Koşullar hakkında bilgi edinin"
+
+msgid "Link"
+msgstr "Bağlantı"
+
+msgid "Link Options"
+msgstr "Bağlantı Seçenekleri"
+
+msgid "List"
+msgstr "Liste"
+
+msgid "list"
+msgstr "liste"
+
+msgid "Listen"
+msgstr "Dinle"
+
+msgid "Load Default Columns"
+msgstr "Varsayılan Sütunları Yükle"
+
+msgid "Log out"
+msgstr "Çıkış"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Low"
+msgstr "Düşük"
+
+msgid "Lower the Integer value, higher is the priority of the issue"
+msgstr "Tamsayı değeri ne kadar düşükse, konunun önceliği o kadar yüksektir"
+
+msgid "Manage your email accounts and configure incoming and outgoing settings."
+msgstr "E-posta hesaplarınızı yönetin ve gelen/çıkan ayarlarını yapılandırın."
+
+msgid "Masters"
+msgstr "Tanımlar"
+
+msgid "Medium"
+msgstr "Orta"
+
+msgid "Mention"
+msgstr "Bahsetme"
+
+msgid "mentioned you in ticket"
+msgstr "sizi bir talepte bahsetti"
+
+msgid "Merged With"
+msgstr "Şununla Birleştirildi"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Meta"
+msgstr "Meta"
+
+msgid "Misc"
+msgstr "Diğer"
+
+msgid "Mobile App Installation"
+msgstr "Mobil Uygulama Kurulumu"
+
+msgid "Monday"
+msgstr "Pazartesi"
+
+msgid "Monthly"
+msgstr "Aylık"
+
+msgid "Name"
+msgstr "Adı"
+
+msgid "Name shown on the customer portal<br> (e.g., Replied → Awaiting Response)."
+msgstr "Müşteri portalında gösterilen ad<br> (ör. Yanıtlandı → Yanıt Bekleniyor)."
+
+msgid "Name Weight"
+msgstr "Ad Ağırlığı"
+
+msgid "Negative"
+msgstr "Olumsuz"
+
+msgid "Neutral"
+msgstr "Nötr"
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "New Assignment Rule Name"
+msgstr "Yeni Atama Kuralı Adı"
+
+msgid "New HD Ticket Status"
+msgstr "Yeni Talep Durumu"
+
+msgid "No assignees"
+msgstr "Atanan yok"
+
+msgid "No Call Logs Found"
+msgstr "Arama Kaydı Bulunamadı"
+
+msgid "No items in the list"
+msgstr "Listede öğe yok"
+
+msgid "No priorities in the list"
+msgstr "Listede öncelik yok"
+
+msgid "No results found"
+msgstr "Sonuç bulunamadı"
+
+msgid "Not Allowed"
+msgstr "İzin Verilmiyor"
+
+msgid "Not Specified"
+msgstr "Belirtilmemiş"
+
+msgid "Notification Settings"
+msgstr "Bildirim Ayarları"
+
+msgid "Notifications"
+msgstr "Bildirimler"
+
+msgid "Old Condition"
+msgstr "Eski Koşul"
+
+msgid "On click (Javascript)"
+msgstr "Tıklamada (Javascript)"
+
+msgid "On Hold"
+msgstr "Beklemede"
+
+msgid "On Hold Since"
+msgstr "Beklemede Başlangıç"
+
+msgid "On Ticket Status"
+msgstr "Talep Durumunda"
+
+msgid "Only one default view is allowed per user for {0}"
+msgstr "{0} için kullanıcı başına yalnızca bir varsayılan görünümüne izin verilir"
+
+msgid "Only the 'color' and 'order' fields of the 'Closed' status can be modified."
+msgstr "Yalnızca 'Kapalı' durumunun 'renk' ve 'sıra' alanları değiştirilebilir."
+
+msgid "Open"
+msgstr "Açık"
+
+msgid "Open: SLA continues. <br>\nPaused: SLA is paused. <br>\nResolved: SLA timer stops."
+msgstr "Açık: SLA devam eder. <br>\nDuraklatıldı: SLA duraklatılır. <br>\nÇözüldü: SLA zamanlayıcısı durur."
+
+msgid "Opening Date"
+msgstr "Açılış Tarihi"
+
+msgid "Opening Time"
+msgstr "Açılış Saati"
+
+msgid "Orange"
+msgstr "Turuncu"
+
+msgid "Order"
+msgstr "Sıra"
+
+msgid "Order By"
+msgstr "Sırala"
+
+msgid "Orta"
+msgstr "Orta"
+
+msgid "Orta Efor"
+msgstr "Orta Efor"
+
+msgid "Outbound Call"
+msgstr "Giden Çağrı"
+
+msgid "Parent field, child field, and parent-child mapping are required."
+msgstr "Üst alan, alt alan ve üst-alt eşlemesi gereklidir."
+
+msgid "Paused"
+msgstr "Duraklatıldı"
+
+msgid "Pink"
+msgstr "Pembe"
+
+msgid "Pinned"
+msgstr "Sabitlendi"
+
+msgid "Placeholder"
+msgstr "Örnek Metin"
+
+msgid "Please add an email account to continue."
+msgstr "Devam etmek için lütfen bir e-posta hesabı ekleyin."
+
+msgid "Please add this priority in the <a href='/app/hd-service-level-agreement'>required SLA documents</a>"
+msgstr "Lütfen bu önceliği <a href='/app/hd-service-level-agreement'>gerekli SLA belgelerine</a> ekleyin"
+
+msgid "Please add {0} priority in {1} SLA"
+msgstr "Lütfen {1} SLA içine {0} önceliğini ekleyin"
+
+msgid "Please select weekly off day"
+msgstr "Haftalık izin gününü seçin"
+
+msgid "Positive"
+msgstr "Olumlu"
+
+msgid "Post Description Key"
+msgstr "Mesaj Açıklama Anahtarı"
+
+msgid "Post Route Key List"
+msgstr "Gönderi Rota Anahtar Listesi"
+
+msgid "Post Route String"
+msgstr "Gönderi Rota Dizesi"
+
+msgid "Post Title Key"
+msgstr "Gönderi Başlığı Anahtarı"
+
+msgid "Prefer knowledge base"
+msgstr "Bilgi merkezini tercih et"
+
+msgid "Priorities"
+msgstr "Öncelikler"
+
+msgid "Priority"
+msgstr "Öncelik"
+
+msgid "Priority <u>{0}</u> must be included in the SLA {1}."
+msgstr "<u>{0}</u> önceliği {1} SLA'sına dahil edilmelidir."
+
+msgid "Priority {0} has been repeated."
+msgstr "{0} önceliği tekrarlandı."
+
+msgid "Private Views"
+msgstr "Özel Görünümler"
+
+msgid "Public"
+msgstr "Herkese Açık"
+
+msgid "Public Views"
+msgstr "Herkese Açık Görünümler"
+
+msgid "Published"
+msgstr "Yayınlandı"
+
+msgid "Published On"
+msgstr "Yayınlanma Zamanı"
+
+msgid "purple"
+msgstr "mor"
+
+msgid "Quarterly"
+msgstr "3 Aylık"
+
+msgid "Query Options"
+msgstr "Sorgu Seçenekleri"
+
+msgid "Query Route String"
+msgstr "Sorgu Rota Dizesi"
+
+msgid "Raised By (Email)"
+msgstr "Oluşturan (E-posta)"
+
+msgid "Range"
+msgstr "Aralık"
+
+msgid "Rating"
+msgstr "Puan"
+
+msgid "Rating must be between 0.2 and 1.0"
+msgstr "Puan 0.2 ile 1.0 arasında olmalıdır"
+
+msgid "Rating {0} is not allowed"
+msgstr "{0} puanına izin verilmiyor"
+
+msgid "Reaction"
+msgstr "Tepki"
+
+msgid "Read"
+msgstr "Okuma"
+
+msgid "Recurring holidays"
+msgstr "Tekrarlayan tatiller"
+
+msgid "Red"
+msgstr "Kırmızı"
+
+msgid "Reference"
+msgstr "Referans"
+
+msgid "Reference Ticket"
+msgstr "Referans Talep"
+
+msgid "References"
+msgstr "Referanslar"
+
+msgid "Regenerate Search Index"
+msgstr "Arama Dizinini Yeniden Oluştur"
+
+msgid "Reply From Agent"
+msgstr "Temsilciden Yanıt"
+
+msgid "Reply From Contact"
+msgstr "Kişiden Yanıt"
+
+msgid "Reply on a ticket"
+msgstr "Talebe yanıt verin"
+
+msgid "Request Key"
+msgstr "İstek Anahtarı"
+
+msgid "Required"
+msgstr "Zorunlu"
+
+msgid "Required for exotel integration"
+msgstr "Exotel entegrasyonu için gereklidir"
+
+msgid "Reset Content"
+msgstr "İçeriği Sıfırla"
+
+msgid "Reset content"
+msgstr "İçeriği sıfırla"
+
+msgid "Resolution"
+msgstr "Çözüm"
+
+msgid "Resolution By"
+msgstr "Çözüm Süresi"
+
+msgid "Resolution Date"
+msgstr "Çözüm Tarihi"
+
+msgid "Resolution Details"
+msgstr "Çözüm Ayrıntıları"
+
+msgid "Resolution Due"
+msgstr "Çözüm Son Tarihi"
+
+msgid "Resolution Time"
+msgstr "Çözüm Süresi"
+
+msgid "Resolution time"
+msgstr "Çözüm süresi"
+
+msgid "Resolved"
+msgstr "Çözümlendi"
+
+msgid "Response"
+msgstr "Yanıt"
+
+msgid "Response and Resolution"
+msgstr "Yanıt ve Çözüm"
+
+msgid "Response By"
+msgstr "Yanıt Süresi"
+
+msgid "Response Options"
+msgstr "Yanıt Seçenekleri"
+
+msgid "Response Result Key Path"
+msgstr "Yanıt Sonuç Anahtar Yolu"
+
+msgid "Response Time for {0} priority in row {1} can't be greater than Resolution Time."
+msgstr "{1} satırındaki {0} önceliği için Yanıt Süresi, Çözüm Süresinden büyük olamaz."
+
+msgid "Restrict agent assignment to selected Team"
+msgstr "Temsilci atamasını seçili Ekiple sınırla"
+
+msgid "Restrict tickets by Team"
+msgstr "Talepleri Ekibe göre kısıtla"
+
+msgid "Result Preview Field"
+msgstr "Sonuç Önizleme Alanı"
+
+msgid "Result Route Field"
+msgstr "Sonuç Rota Alanı"
+
+msgid "Result Title Field"
+msgstr "Sonuç Başlık Alanı"
+
+msgid "Route Name"
+msgstr "Rota Adı"
+
+msgid "Rows"
+msgstr "Satırlar"
+
+msgid "Saturday"
+msgstr "Cumartesi"
+
+msgid "Save"
+msgstr "Kaydet"
+
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+msgid "Script"
+msgstr "Script"
+
+msgid "Search"
+msgstr "Arama"
+
+msgid "Search Index Regenerated"
+msgstr "Arama Dizini Yeniden Oluşturuldu"
+
+msgid "Search Score"
+msgstr "Arama Puanı"
+
+msgid "Search Term Param Name"
+msgstr "Arama Dönem Param Adı"
+
+msgid "Select a Default Priority."
+msgstr "Bir Varsayılan Öncelik seçin."
+
+msgid "Select your weekly off day"
+msgstr "Haftalık izin gününüzü seçin"
+
+msgid "Send feedback when"
+msgstr "Geri bildirimi şu durumda gönder"
+
+msgid "Sent to all of the assigned agents after a reply from one of the contacts"
+msgstr "Kişilerden birinin yanıtı sonrası tüm atanan temsilcilere gönderilir"
+
+msgid "Sent to all of the recipients associated with an agent's reply"
+msgstr "Bir temsilcinin yanıtıyla ilişkili tüm alıcılara gönderilir"
+
+msgid "Sent to the user right after creating an email ticket"
+msgstr "E-posta talebi oluşturulduktan hemen sonra kullanıcıya gönderilir"
+
+msgid "Sent to the user who has raised the ticket after the ticket is closed or resolved"
+msgstr "Talep kapatıldıktan veya çözümlendikten sonra talebi oluşturan kullanıcıya gönderilir"
+
+msgid "Sentiment Trend"
+msgstr "Duygu Trendi"
+
+msgid "Service Level Agreement"
+msgstr "Hizmet Seviyesi Anlaşması"
+
+msgid "Service Level Name"
+msgstr "Hizmet Seviyesi Adı"
+
+msgid "Set Resolution Time for Priority {0} in row {1}."
+msgstr "{1} satırında {0} Önceliği için Çözüm Süresini ayarlayın."
+
+msgid "Set Response Time for Priority {0} in row {1}."
+msgstr "{1} satırında {0} Önceliği için Yanıt Süresini ayarlayın."
+
+msgid "Setting <strong>{0}</strong> as the default SLA removes <strong>{1}</strong> as the default SLA. You’ll need to add a condition in <strong>{1}</strong> for the SLA to work."
+msgstr "<strong>{0}</strong> öğesini varsayılan SLA olarak ayarlamak, <strong>{1}</strong> öğesinin varsayılan SLA olmasını kaldırır. SLA'nın çalışması için <strong>{1}</strong> içinde bir koşul eklemeniz gerekecek."
+
+msgid "Setting up"
+msgstr "Kurulum"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Setup"
+msgstr "Kurulum"
+
+msgid "Setup SLA"
+msgstr "SLA ayarlayın"
+
+msgid "Share Feedback"
+msgstr "Geri Bildirim Paylaş"
+
+msgid "Show end users a different view"
+msgstr "Son kullanıcılara farklı bir görünüm göster"
+
+msgid "Simple Python Expression, Example: doc.status == 'Open' and doc.ticket_type == 'Bug'"
+msgstr "Basit Python İfadesi, Örnek: doc.status == 'Open' ve doc.ticket_type == 'Bug'"
+
+msgid "Skip e-mail workflow"
+msgstr "E-posta iş akışını atla"
+
+msgid "SLA"
+msgstr "SLA"
+
+msgid "SLA Creation"
+msgstr "SLA Oluşturma"
+
+msgid "SLA Mapping"
+msgstr "SLA Eşlemesi"
+
+msgid "SLA Status"
+msgstr "SLA Durumu"
+
+msgid "Son Duygu"
+msgstr "Son Duygu"
+
+msgid "Source and target category cannot be same"
+msgstr "Kaynak ve hedef kategori aynı olamaz"
+
+msgid "Source and target ticket cannot be same"
+msgstr "Kaynak ve hedef talep aynı olamaz"
+
+msgid "Source DocType"
+msgstr "Kaynak DocType"
+
+msgid "Source Name"
+msgstr "Kaynak Adı"
+
+msgid "Source ticket does not exist"
+msgstr "Kaynak talep mevcut değil"
+
+msgid "Source Type"
+msgstr "Kaynak Türü"
+
+msgid "Split and Merge"
+msgstr "Böl ve Birleştir"
+
+msgid "Stabil"
+msgstr "Stabil"
+
+msgid "Standard Form Scripts can't be modified, duplicate the script instead."
+msgstr "Standart Form Script'leri değiştirilemez, bunun yerine script'i kopyalayın."
+
+msgid "Start Date"
+msgstr "Başlangıç Tarihi"
+
+msgid "Start Time"
+msgstr "Başlangıç Zamanı"
+
+msgid "Start Time can't be greater than or equal to End Time in row <u>{0}</u>."
+msgstr "Başlangıç Zamanı, <u>{0}</u> satırında Bitiş Zamanından büyük veya ona eşit olamaz."
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Status "
+msgstr "Durum "
+
+msgid "Status Category"
+msgstr "Durum Kategorisi"
+
+msgid "Status Details"
+msgstr "Durum Ayrıntıları"
+
+msgid "Status of the ticket, when a customer replies on the ticket with this SLA.\n\nIf not selected, the value will be takes from HD Settings DocType."
+msgstr "Bu SLA ile müşteri talebe yanıt verdiğinde talebin durumu.\n\nSeçilmezse değer HD Ayarları DocType'ından alınır."
+
+msgid "Status of the ticket, when a customer replies on the ticket."
+msgstr "Müşteri talebe yanıt verdiğinde talebin durumu."
+
+msgid "Status of the ticket, when it is created in the system with this SLA.\nIf not selected, the value will be taken from HD Settings DocType"
+msgstr "Talep, bu SLA ile sistemde oluşturulduğunda talebin durumu.\nSeçilmezse değer HD Ayarları DocType'ından alınır"
+
+msgid "Status of the ticket, when it is created in the system."
+msgstr "Talep sistemde oluşturulduğunda talebin durumu."
+
+msgid "Still got questions? We're here to assist you."
+msgstr "Hâlâ sorularınız mı var? Size yardımcı olmak için buradayız."
+
+msgid "Subject"
+msgstr "Konu"
+
+msgid "Subject Weight"
+msgstr "Konu Ağırlığı"
+
+msgid "No Tickets Found"
+msgstr "Destek Talebi bulunamadı"
+
+msgid "Submit"
+msgstr "Gönder"
+
+msgid "Summary"
+msgstr "Özet"
+
+msgid "Sunday"
+msgstr "Pazar"
+
+msgid "Support"
+msgstr "Destek"
+
+msgid "Support Hour Distribution"
+msgstr "Destek Saat Dağılımı"
+
+msgid "Support Policy"
+msgstr "Destek Politikası"
+
+msgid "Support Team"
+msgstr "Destek Ekibi"
+
+msgid "synonym"
+msgstr "eşanlamlı"
+
+msgid "Synonyms"
+msgstr "Eşanlamlılar"
+
+msgid "System"
+msgstr "Sistem"
+
+msgid "System Manager"
+msgstr "Sistem Yöneticisi"
+
+msgid "System types can not be deleted"
+msgstr "Sistem türleri silinemez"
+
+msgid "Tampered Access"
+msgstr "Kurcalanmış Erişim"
+
+msgid "Target ticket does not exist"
+msgstr "Hedef talep mevcut değil"
+
+msgid "Teal"
+msgstr "Turkuaz"
+
+msgid "Team"
+msgstr "Ekip"
+
+msgid "Team Restrictions"
+msgstr "Takım Kısıtlamaları"
+
+msgid "Template"
+msgstr "Şablon"
+
+msgid "Template Name"
+msgstr "Şablon İsmi"
+
+msgid "The 'Closed' status cannot be renamed."
+msgstr "'Kapalı' durumu yeniden adlandırılamaz."
+
+msgid "The Condition '{0}' is invalid: {1}"
+msgstr "'{0}' koşulu geçersiz: {1}"
+
+msgid "The holiday on {0} is not between From Date and To Date"
+msgstr "{0} tarihindeki tatil Başlangıç Tarihi ile Bitiş Tarihi arasında değil"
+
+msgid "The status for sending feedback must be of <u>Resolved</u> category."
+msgstr "Geri bildirim göndermek için durum <u>Çözümlendi</u> kategorisinde olmalıdır."
+
+msgid "This doctype will be deprecated in the future"
+msgstr "Bu doctype gelecekte kullanımdan kaldırılacak"
+
+msgid "This field is used to send an email instantly without adding it into the queue. If this field is checked, the email will be sent immediately after clicking the \"Send\" button, instead of being added to the email queue for later processing."
+msgstr "Bu alan, e-postayı kuyruğa eklemeden anında göndermek için kullanılır. Bu alan işaretlenirse, e-posta \"Gönder\" düğmesine tıklandıktan hemen sonra gönderilir ve daha sonra işlenmek üzere e-posta kuyruğuna eklenmez."
+
+msgid "This field is used to skip email-related workflows for tickets. If this field is checked, no emails will be sent related to tickets, such as new ticket creation, status updates, or notifications."
+msgstr "Bu alan, taleplerle ilgili e-posta iş akışlarını atlamak için kullanılır. İşaretlenirse yeni talep oluşturma, durum güncellemeleri veya bildirimler gibi talep ilişkili hiçbir e-posta gönderilmez."
+
+msgid "This method is only meant for developer mode"
+msgstr "Bu yöntem yalnızca geliştirici modu için tasarlanmıştır"
+
+msgid "This ticket (#{0}) has been merged with ticket <a href = '/helpdesk/tickets/{1}'>#{1}</a>."
+msgstr "Bu talep (#{0}), <a href = '/helpdesk/tickets/{1}'>#{1}</a> numaralı taleple birleştirildi."
+
+msgid "This ticket has been split to a new ticket. Please follow up on ticket <a href={0}>#{1}</a>."
+msgstr "Bu talep yeni bir talebe bölündü. Lütfen <a href={0}>#{1}</a> numaralı talep üzerinden devam edin."
+
+msgid "Thursday"
+msgstr "Perşembe"
+
+msgid "Ticket"
+msgstr "Talep"
+
+msgid "Ticket #{0} copied to clipboard"
+msgstr "Talep #{0} panoya kopyalandı"
+
+msgid "Ticket Analytics"
+msgstr "Talep Analitiği"
+
+msgid "Ticket Configuration"
+msgstr "Talep Yapılandırması"
+
+msgid "Ticket details"
+msgstr "Talep detayları"
+
+msgid "Ticket does not exist."
+msgstr "Talep mevcut değil."
+
+msgid "Ticket ID"
+msgstr "Talep ID"
+
+msgid "Ticket Merged"
+msgstr "Talep Birleştirildi"
+
+msgid "Ticket must be resolved with a feedback"
+msgstr "Talep geri bildirim ile çözümlenmelidir"
+
+msgid "Ticket Not Found"
+msgstr "Talep Bulunamadı"
+
+msgid "Ticket not found"
+msgstr "Talep bulunamadı"
+
+msgid "Ticket not found for the provided key."
+msgstr "Verilen anahtar için talep bulunamadı."
+
+msgid "Ticket Priority"
+msgstr "Talep Önceliği"
+
+msgid "Ticket Reopen status"
+msgstr "Talep Yeniden Açılma durumu"
+
+msgid "Ticket Routing"
+msgstr "Talep Yönlendirme"
+
+msgid "Ticket Split From"
+msgstr "Talep Bölünmüş Kaynak"
+
+msgid "Ticket Summary"
+msgstr "Talep Özeti"
+
+msgid "Ticket Type"
+msgstr "Talep Türü"
+
+msgid "Ticket type"
+msgstr "Talep türü"
+
+msgid "Ticket type is mandatory"
+msgstr "Talep türü zorunludur"
+
+msgid "Ticket-Search Analysis"
+msgstr "Talep-Arama Analizi"
+
+msgid "Tickets"
+msgstr "Talepler"
+
+msgid "Tickets can only be assigned to agents"
+msgstr "Talepler yalnızca temsilcilere atanabilir"
+
+msgid "Title"
+msgstr "Başlık"
+
+msgid "Title Slug"
+msgstr "Başlık Kısa Adı"
+
+msgid "To"
+msgstr "Alıcı"
+
+msgid "To Date"
+msgstr "Bitiş Tarihi"
+
+msgid "To Date cannot be before From Date"
+msgstr "Bitiş Tarihi, Başlangıç Tarihi'nden önce olamaz"
+
+msgid "Top Result"
+msgstr "En İyi Sonuç"
+
+msgid "Total"
+msgstr "Toplam"
+
+msgid "Total Hold Time"
+msgstr "Toplam Bekleme Süresi"
+
+msgid "Total Holidays"
+msgstr "Toplam Tatil Günü"
+
+msgid "Total Ticket"
+msgstr "Toplam Talep"
+
+msgid "Tuesday"
+msgstr "Salı"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Type a message"
+msgstr "Bir mesaj yazın"
+
+msgid "Unassignment condition"
+msgstr "Atama kaldırma koşulu"
+
+msgid "Unauthorized Access"
+msgstr "Yetkisiz Erişim"
+
+msgid "Unauthorized access."
+msgstr "Yetkisiz erişim."
+
+msgid "Unclassified"
+msgstr "Sınıflandırılmamış"
+
+msgid "Understanding ticket view"
+msgstr "Talep görünümünü anlama"
+
+msgid "Unsaved"
+msgstr "Kaydedilmedi"
+
+msgid "Unsaved changes"
+msgstr "Kaydedilmemiş değişiklikler"
+
+msgid "Unspecified"
+msgstr "Belirtilmemiş"
+
+msgid "Untitled"
+msgstr "Başlıksız"
+
+msgid "Update status to"
+msgstr "Durumu şuna güncelle"
+
+msgid "URL/Method"
+msgstr "URL/Yöntem"
+
+msgid "User"
+msgstr "Kullanıcı"
+
+msgid "User Not found"
+msgstr "Kullanıcı bulunamadı"
+
+msgid "User Resolution Time"
+msgstr "Kullanıcı Çözüm Süresi"
+
+msgid "Users"
+msgstr "Kullanıcılar"
+
+msgid "Valid From"
+msgstr "Geçerlilik Başlangıç Tarihi"
+
+msgid "via"
+msgstr "üzerinden"
+
+msgid "Via Customer Portal"
+msgstr "Müşteri Portalı Üzerinden"
+
+msgid "viewed this"
+msgstr "görüntüledi"
+
+msgid "Views"
+msgstr "Görüntüleme"
+
+msgid "Violet"
+msgstr "Mor"
+
+msgid "Wednesday"
+msgstr "Çarşamba"
+
+msgid "Weekly"
+msgstr "Haftalık"
+
+msgid "Weekly Off"
+msgstr "Haftalık İzin"
+
+msgid "When enabled, the ticket status will automatically change to the status selected below whenever the agent responds to a ticket.\n"
+msgstr "Etkinleştirildiğinde, temsilci talebe yanıt verdiğinde talep durumu aşağıda seçilen duruma otomatik olarak değişir.\n"
+
+msgid "Word"
+msgstr "Kelime"
+
+msgid "Workday"
+msgstr "Çalışma Günü"
+
+msgid "Workday {0} has been repeated."
+msgstr "{0} iş günü tekrarlandı."
+
+msgid "Workflow"
+msgstr "İş Akışı"
+
+msgid "Working Hours"
+msgstr "Çalışma Saatleri"
+
+msgid "Yearly"
+msgstr "Yıllık"
+
+msgid "Yellow"
+msgstr "Sarı"
+
+msgid "You are all caught up!"
+msgstr "Tüm bildirimleriniz güncel!"
+
+msgid "You are not allowed to view this dashboard data."
+msgstr "Bu pano verilerini görüntüleme izniniz yok."
+
+msgid "You are not permitted to access this resource."
+msgstr "Bu kaynağa erişim izniniz yok."
+
+msgid "You are not permitted to add a comment"
+msgstr "Yorum ekleme izniniz yok"
+
+msgid "You can change the default calling medium from the settings"
+msgstr "Varsayılan arama ortamını ayarlardan değiştirebilirsiniz"
+
+msgid "You cannot disable the default SLA."
+msgstr "Varsayılan SLA'yı devre dışı bırakamazsınız."
+
+msgid "You cannot set more than one Default Priority."
+msgstr "Birden fazla Varsayılan Öncelik belirleyemezsiniz."
+
+msgid "You have already provided feedback for this ticket."
+msgstr "Bu talep için zaten geri bildirim verdiniz."
+
+msgid "You must set one SLA as Default. Please check the Default SLA option."
+msgstr "Bir SLA'yı Varsayılan olarak ayarlamalısınız. Lütfen Varsayılan SLA seçeneğini işaretleyin."
+
+msgid "Yüksek"
+msgstr "Yüksek"
+
+msgid "Yüksek Efor"
+msgstr "Yüksek Efor"
+
+msgid "{0} hours ago"
+msgstr "{0} saat önce"
+
+
+msgid "Send Invites"
+msgstr "Davetleri Gönder"
+
+msgid "Clear All"
+msgstr "Tümünü Temizle"
+
+msgid "No agents found"
+msgstr "Ajan bulunamadı"
+
+msgid "Categories"
+msgstr "Kategoriler"
+
+msgid "Create a ticket &rightarrow;"
+msgstr "Ticket oluştur &rightarrow;"
+
+msgid "Created By"
+msgstr "Oluşturan"
+
+msgid "Enabled"
+msgstr "Etkin"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "No answers found"
+msgstr "Cevap bulunamadı"
+
+msgid "No members found"
+msgstr "Üye bulunamadı"
+
+msgid "Press enter to search"
+msgstr "Aramak için Enter'a basın"
+
+msgid "Searching..."
+msgstr "Aranıyor..."
+
+msgid "You are all caught up!"
+msgstr "Hepsi tamam!"
+
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+msgid "Activity"
+msgstr "Aktivite"
+
+msgid "added a"
+msgstr "ekledi"
+
+msgid "Add recurring holidays such as weekends."
+msgstr "Hafta sonu gibi tekrarlayan tatilleri ekleyin."
+
+msgid "Apps"
+msgstr "Uygulamalar"
+
+msgid "Assignee"
+msgstr "Atanan"
+
+msgid "BCC:"
+msgstr "BCC:"
+
+msgid "CC:"
+msgstr "CC:"
+
+msgid "changes from"
+msgstr "değişiklikler"
+
+msgid "Choose how long this SLA policy will be active."
+msgstr "Bu SLA politikasının ne kadar süre aktif olacağını seçin."
+
+msgid "Choose the duration of this holiday list."
+msgstr "Bu tatil listesinin süresini seçin."
+
+msgid "Choose the email service provider you want to configure."
+msgstr "Yapılandırmak istediğiniz e-posta servis sağlayıcısını seçin."
+
+msgid "comment"
+msgstr "yorum"
+
+msgid "Details"
+msgstr "Detaylar"
+
+msgid "Edit Email"
+msgstr "E-postayı Düzenle"
+
+msgid "Email"
+msgstr "E-posta"
+
+msgid "emails/ comments"
+msgstr "e-postalar/ yorumlar"
+
+msgid "Field Dependencies"
+msgstr "Alan Bağımlılıkları"
+
+msgid "Holidays"
+msgstr "Tatiller"
+
+msgid "Hrs"
+msgstr "Saat"
+
+msgid "in"
+msgstr "içinde"
+
+msgid "Min"
+msgstr "Dakika"
+
+msgid "No field dependencies found."
+msgstr "Alan bağımlılığı bulunamadı."
+
+msgid "No items in the list"
+msgstr "Listede öğe yok"
+
+msgid "No options found"
+msgstr "Seçenek bulunamadı"
+
+msgid "No priorities in the list"
+msgstr "Listede öncelik yok"
+
+msgid "No shortcuts defined"
+msgstr "Kısayol tanımlanmamış"
+
+msgid "No teams found"
+msgstr "Takım bulunamadı"
+
+msgid "No workdays in the list"
+msgstr "Listede çalışma günü yok"
+
+msgid "Other"
+msgstr "Diğer"
+
+msgid "Pending Invites"
+msgstr "Bekleyen Davetler"
+
+msgid "Pick an option"
+msgstr "Bir seçenek seçin"
+
+msgid "Please add an email account to continue."
+msgstr "Devam etmek için lütfen bir e-posta hesabı ekleyin."
+
+msgid "Please select a child field first"
+msgstr "Lütfen önce bir alt alan seçin"
+
+msgid "Please select a parent field first"
+msgstr "Lütfen önce bir üst alan seçin"
+
+msgid "Please select a parent value first"
+msgstr "Lütfen önce bir üst değer seçin"
+
+msgid "Portal"
+msgstr "Portal"
+
+msgid "Priority"
+msgstr "Öncelik"
+
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+msgid "Searched for:"
+msgstr "Aranan:"
+
+msgid "Sec"
+msgstr "Saniye"
+
+msgid "Select a rating"
+msgstr "Bir değerlendirme seçin"
+
+msgid "Select child field value"
+msgstr "Alt alan değeri seçin"
+
+msgid "Select parent field value"
+msgstr "Üst alan değeri seçin"
+
+msgid "Select time"
+msgstr "Zaman seçin"
+
+msgid "Service Level Agreements (SLAs)"
+msgstr "Hizmet Seviyesi Anlaşmaları (SLA)"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Setup Email"
+msgstr "E-posta Kurulumu"
+
+msgid "SLA"
+msgstr "SLA"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Telephony"
+msgstr "Telefon"
+
+msgid "TO:"
+msgstr "KIME:"
+
+msgid "Valid from"
+msgstr "Geçerlilik başlangıcı"
+
+msgid "via"
+msgstr "üzerinden"
+
+msgid "(View All)"
+msgstr "(Tümünü Gör)"
+
+msgid "View Name"
+msgstr "Görünüm Adı"
+
+msgid "Add New Customer"
+msgstr "Yeni Müşteri Ekle"
+
+msgid "No Customers Found"
+msgstr "Müşteri Bulunamadı"
+
+msgid "New customer"
+msgstr "Yeni müşteri"
+
+msgid "All available priorities have already been added"
+msgstr "Tüm mevcut öncelikler zaten eklenmiş"
+
+msgid "Article created"
+msgstr "Makale oluşturuldu"
+
+msgid "Article deleted"
+msgstr "Makale silindi"
+
+msgid "Article moved"
+msgstr "Makale taşındı"
+
+msgid "Articles deleted"
+msgstr "Makaleler silindi"
+
+msgid "Articles moved"
+msgstr "Makaleler taşındı"
+
+msgid "Article updated"
+msgstr "Makale güncellendi"
+
+msgid "Assignment rule created"
+msgstr "Atama kuralı oluşturuldu"
+
+msgid "Assignment rule deleted"
+msgstr "Atama kuralı silindi"
+
+msgid "Assignment rule duplicated"
+msgstr "Atama kuralı kopyalandı"
+
+msgid "Assignment rule updated"
+msgstr "Atama kuralı güncellendi"
+
+msgid "At least one email is required"
+msgstr "En az bir e-posta gereklidir"
+
+msgid "At least one email required"
+msgstr "En az bir e-posta gerekli"
+
+msgid "A workday with this name already exists"
+msgstr "Bu adda bir iş günü zaten mevcut"
+
+msgid "Brand logo updated"
+msgstr "Marka logosu güncellendi"
+
+msgid "Cannot enable rule without adding users in it"
+msgstr "Kullanıcı eklemeden kural etkinleştirilemez"
+
+msgid "Category created"
+msgstr "Kategori oluşturuldu"
+
+msgid "Category deleted"
+msgstr "Kategori silindi"
+
+msgid "Category merged"
+msgstr "Kategori birleştirildi"
+
+msgid "Category updated"
+msgstr "Kategori güncellendi"
+
+msgid "Comment cannot be empty"
+msgstr "Yorum boş olamaz"
+
+msgid "Comment deleted"
+msgstr "Yorum silindi"
+
+msgid "Comment updated"
+msgstr "Yorum güncellendi"
+
+msgid "Contact created"
+msgstr "İletişim oluşturuldu"
+
+msgid "Contact invited successfully"
+msgstr "İletişim başarıyla davet edildi"
+
+msgid "Contact updated"
+msgstr "İletişim güncellendi"
+
+msgid "Contact with email already exists"
+msgstr "Bu e-posta ile iletişim zaten mevcut"
+
+msgid "Copied to clipboard"
+msgstr "Panoya kopyalandı"
+
+msgid "Create New Contact"
+msgstr "Yeni İletişim Oluştur"
+
+msgid "Customer created"
+msgstr "Müşteri oluşturuldu"
+
+msgid "Customer name is required"
+msgstr "Müşteri adı gereklidir"
+
+msgid "Customer updated"
+msgstr "Müşteri güncellendi"
+
+msgid "Email account created"
+msgstr "E-posta hesabı oluşturuldu"
+
+msgid "Email account updated successfully"
+msgstr "E-posta hesabı başarıyla güncellendi"
+
+msgid "Email should not be empty"
+msgstr "E-posta boş olmamalıdır"
+
+msgid "Emails pulled successfully"
+msgstr "E-postalar başarıyla çekildi"
+
+msgid "Enter a valid email"
+msgstr "Geçerli bir e-posta girin"
+
+msgid "Enter a valid phone number"
+msgstr "Geçerli bir telefon numarası girin"
+
+msgid "Error updating customer"
+msgstr "Müşteri güncellenirken hata oluştu"
+
+msgid "Error uploading file"
+msgstr "Dosya yüklenirken hata oluştu"
+
+msgid "Error: Unable to find the holiday to update"
+msgstr "Hata: Güncellenecek tatil bulunamadı"
+
+msgid "Failed to update, please try again"
+msgstr "Güncelleme başarısız, lütfen tekrar deneyin"
+
+msgid "Favicon updated, please refresh the page to see the changes"
+msgstr "Favicon güncellendi, değişiklikleri görmek için sayfayı yenileyin"
+
+msgid "Field dependency deleted successfully"
+msgstr "Alan bağımlılığı başarıyla silindi"
+
+msgid "Field dependency updated successfully."
+msgstr "Alan bağımlılığı başarıyla güncellendi."
+
+msgid "First name should not be empty"
+msgstr "Ad boş olmamalıdır"
+
+msgid "Holiday already exists"
+msgstr "Tatil zaten mevcut"
+
+msgid "Holiday list created"
+msgstr "Tatil listesi oluşturuldu"
+
+msgid "Holiday list deleted"
+msgstr "Tatil listesi silindi"
+
+msgid "Holiday list duplicated"
+msgstr "Tatil listesi kopyalandı"
+
+msgid "Holiday list updated"
+msgstr "Tatil listesi güncellendi"
+
+msgid "Holiday with the same day and repetition already exists"
+msgstr "Aynı gün ve tekrarla tatil zaten mevcut"
+
+msgid "Invalid file type, only PNG and JPG images are allowed"
+msgstr "Geçersiz dosya türü, yalnızca PNG ve JPG görsellere izin verilir"
+
+msgid "Invitation cancelled successfully"
+msgstr "Davet başarıyla iptal edildi"
+
+msgid "Invites sent successfully!"
+msgstr "Davetler başarıyla gönderildi!"
+
+msgid "Item(s) deleted successfully"
+msgstr "Öğe(ler) başarıyla silindi"
+
+msgid "No changes to save"
+msgstr "Kaydedilecek değişiklik yok"
+
+msgid "Please fill all required fields"
+msgstr "Lütfen tüm gerekli alanları doldurun"
+
+msgid "Please fill all required fields for Exotel"
+msgstr "Lütfen Exotel için tüm gerekli alanları doldurun"
+
+msgid "Please fill all required fields for Twilio"
+msgstr "Lütfen Twilio için tüm gerekli alanları doldurun"
+
+msgid "Please fix the errors in the form"
+msgstr "Lütfen formdaki hataları düzeltin"
+
+msgid "Please select a day of the week"
+msgstr "Lütfen haftanın bir gününü seçin"
+
+msgid "Please select a priority"
+msgstr "Lütfen bir öncelik seçin"
+
+msgid "Please select at least one repetition option"
+msgstr "Lütfen en az bir tekrar seçeneği seçin"
+
+msgid "Resolution time must be a positive number"
+msgstr "Çözüm süresi pozitif bir sayı olmalıdır"
+
+msgid "Response time must be a positive number"
+msgstr "Yanıt süresi pozitif bir sayı olmalıdır"
+
+msgid "SLA policy created"
+msgstr "SLA politikası oluşturuldu"
+
+msgid "SLA policy deleted"
+msgstr "SLA politikası silindi"
+
+msgid "SLA policy duplicated"
+msgstr "SLA politikası kopyalandı"
+
+msgid "SLA policy status updated"
+msgstr "SLA politikası durumu güncellendi"
+
+msgid "SLA policy updated"
+msgstr "SLA politikası güncellendi"
+
+msgid "SLA set as default cannot be disabled"
+msgstr "Varsayılan olarak ayarlanan SLA devre dışı bırakılamaz"
+
+msgid "Subject is required"
+msgstr "Konu gereklidir"
+
+msgid "Team created"
+msgstr "Takım oluşturuldu"
+
+msgid "Team deleted"
+msgstr "Takım silindi"
+
+msgid "Team renamed"
+msgstr "Takım yeniden adlandırıldı"
+
+msgid "Telephony settings updated!"
+msgstr "Telefon ayarları güncellendi!"
+
+msgid "Ticket closed"
+msgstr "Ticket kapatıldı"
+
+msgid "Ticket merged successfully"
+msgstr "Ticket başarıyla birleştirildi"
+
+msgid "Ticket not found"
+msgstr "Ticket bulunamadı"
+
+msgid "Ticket split successfully"
+msgstr "Ticket başarıyla bölündü"
+
+msgid "Ticket updated"
+msgstr "Ticket güncellendi"
+
+msgid "Unable to make call."
+msgstr "Arama yapılamıyor."
+
+msgid "Workday added"
+msgstr "İş günü eklendi"
+
+msgid "Workday updated"
+msgstr "İş günü güncellendi"
+
+msgid "Comma separated emails to invite"
+msgstr "Davet etmek için virgülle ayrılmış e-postalar"
+
+msgid "Easily invite new agents, managers, or admins"
+msgstr "Kolayca yeni temsilciler, yöneticiler veya yöneticiler davet edin"
+
+msgid "Send Invites"
+msgstr "Davetleri Gönder"
+
+msgid "Configure your telephony settings."
+msgstr "Telefon ayarlarınızı yapılandırın."
+
+msgid "Set your team's working days, hours, and holidays using a template or custom schedule."
+msgstr "Ekibinizin çalışma günlerini, saatlerini ve tatillerini bir şablon veya özel program kullanarak ayarlayın."
+
+msgid "Customise Helpdesk with your own branding."
+msgstr "Yardım Masasını kendi markanızla özelleştirin."
+
+msgid "Manage your email accounts and configure incoming and outgoing settings."
+msgstr "E-posta hesaplarınızı yönetin ve gelen ve giden ayarlarını yapılandırın."
+
+msgid "Create and manage teams and assign agents to specific teams."
+msgstr "Takımlar oluşturun, yönetin ve belirli takımlara temsilciler atayın."
+
+msgid "Can work on tickets, create custom views and manage private views."
+msgstr "Biletler üzerinde çalışabilir, özel görünümler oluşturabilir ve özel görünümleri yönetebilir."
+msgid "Response did not help"
+msgstr "Yanıt yardımcı olmadı"
+
+msgid "No resolution provided"
+msgstr "Çözüm sağlanmadı"
+
+msgid "Delayed response time"
+msgstr "Gecikmeli yanıt süresi"
+
+msgid "Adequate help, bit slow"
+msgstr "Yeterli yardım, biraz yavaş"
+
+msgid "Clear guidance given"
+msgstr "Net yönlendirme verildi"
+
+msgid "Helpful answers, reasonable wait"
+msgstr "Faydalı cevaplar, makul bekleme"
+
+msgid "Quick and precise solutions"
+msgstr "Hızlı ve kesin çözümler"
+
+msgid "Prompt, informative support"
+msgstr "Hızlı, bilgilendirici destek"
+
+msgid "Exceptional support experience"
+msgstr "Olağanüstü destek deneyimi"
+
+msgid "Instant, top-notch help"
+msgstr "Anında, birinci sınıf yardım"
+
+msgid "Tell us more"
+msgstr "Daha fazla ayrıntı"
+
+msgid "Today"
+msgstr "Bugün"
+
+msgid "Last 7 Days"
+msgstr "Son 7 Gün"
+
+msgid "Last 30 Days"
+msgstr "Son 30 Gün"
+
+msgid "Last 60 Days"
+msgstr "Son 60 Gün"
+
+msgid "Last 90 Days"
+msgstr "Son 90 Gün"
+
+msgid "Custom Range"
+msgstr "Özel Aralık"
+
+msgid "Select Range"
+msgstr "Aralık Seçin"
+
+msgid "Period"
+msgstr "Dönem"
+
+msgid "Tickets by Team"
+msgstr "Ekibe Göre Talepler"
+
+msgid "Percentage of Total Tickets by Team"
+msgstr "Toplam Taleplerin Ekibe Göre Yüzdesi"
+
+msgid "Total Tickets by Team"
+msgstr "Ekibe Göre Toplam Talepler"
+
+msgid "Tickets by Type"
+msgstr "Türe Göre Talepler"
+
+msgid "Percentage of Total Tickets by Type"
+msgstr "Toplam Taleplerin Türe Göre Yüzdesi"
+
+msgid "Total Tickets by Type"
+msgstr "Türe Göre Toplam Talepler"
+
+msgid "Tickets by Priority"
+msgstr "Önceliğe Göre Talepler"
+
+msgid "Percentage of Total Tickets by Priority"
+msgstr "Toplam Taleplerin Önceliğe Göre Yüzdesi"
+
+msgid "Total Tickets by Priority"
+msgstr "Önceliğe Göre Toplam Talepler"
+
+msgid "Tickets by Channel"
+msgstr "Kanala Göre Talepler"
+
+msgid "Percentage of Total Tickets by Channel"
+msgstr "Toplam Taleplerin Kanala Göre Yüzdesi"
+
+msgid "Ticket Trend"
+msgstr "Talep Trendi"
+
+msgid "Average tickets per day is around {0}"
+msgstr "Günlük ortalama talep sayısı yaklaşık {0}"
+
+msgid "Feedback Trend"
+msgstr "Geri Bildirim Trendi"
+
+msgid "Average feedback rating per day is around {0} stars"
+msgstr "Günlük ortalama geri bildirim puanı yaklaşık {0} yıldız"
+
+msgid "Rated Tickets"
+msgstr "Puanlanan Talepler"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Add"
+msgstr "Ekle"
+
+msgid "Enter Customer"
+msgstr "Müşteri Girin"
+
+msgid "Enter Team"
+msgstr "Ekip Girin"
+
+msgid "Select Priority"
+msgstr "Öncelik Seçin"
+
+msgid "Select Ticket Type"
+msgstr "Talep Türü Seçin"
+
+msgid "Recent Tickets"
+msgstr "Son Talepler"
+
+msgid "Similar Tickets"
+msgstr "Benzer Talepler"
+
+msgid "Completed"
+msgstr "Tamamlandı"
+
+msgid "Replied"
+msgstr "Yanıtlandı"
+
+msgid "Closed"
+msgstr "Kapatıldı"
+
+
+# Auto-added by vue_i18n_wrap.py on 2025-11-04T10:07:50
+msgid "% SLA"
+msgstr "% SLA"
+
+msgid "% SLA Fulfilled"
+msgstr "% SLA Yerine Getirildi"
+
+msgid "% of tickets created that were resolved within SLA"
+msgstr "SLA içinde çözülen oluşturulan taleplerin %'si"
+
+msgid "*"
+msgstr "*"
+
+msgid "********"
+msgstr "********"
+
+msgid "+18596748596"
+msgstr "+18596748596"
+
+msgid "+19138276548"
+msgstr "+19138276548"
+
+msgid "+91 98765 43210"
+msgstr "+91 98765 43210"
+
+msgid "+918956895623"
+msgstr "+918956895623"
+
+msgid ","
+msgstr ","
+
+msgid "."
+msgstr "."
+
+msgid "/"
+msgstr "/"
+
+msgid "10rem"
+msgstr "10rem"
+
+msgid "11/01/2025"
+msgstr "11/01/2025"
+
+msgid "25/12/2025"
+msgstr "25/12/2025"
+
+msgid "<"
+msgstr "<"
+
+msgid "<="
+msgstr "<="
+
+msgid ">"
+msgstr ">"
+
+msgid ">="
+msgstr ">="
+
+msgid "@John could you please look into this?"
+msgstr "@John bu konuya bakabilir misiniz?"
+
+msgid "@me"
+msgstr "@ben"
+
+msgid "A short description"
+msgstr "Kısa bir açıklama"
+
+msgid "API Key"
+msgstr "API Anahtarı"
+
+msgid "API Secret"
+msgstr "API Gizli Anahtarı"
+
+msgid "API Token"
+msgstr "API Token"
+
+msgid "Accept"
+msgstr "Kabul Et"
+
+msgid "Account Name"
+msgstr "Hesap Adı"
+
+msgid "Account SID"
+msgstr "Hesap SID"
+
+msgid "Active"
+msgstr "Aktif"
+
+msgid "Add Column"
+msgstr "Sütun Ekle"
+
+msgid "Add Column After"
+msgstr "Sonrasına Sütun Ekle"
+
+msgid "Add Column Before"
+msgstr "Öncesine Sütun Ekle"
+
+msgid "Add Filter"
+msgstr "Filtre Ekle"
+
+msgid "Add Holiday"
+msgstr "Tatil Ekle"
+
+msgid "Add Holidays"
+msgstr "Tatiller Ekle"
+
+msgid "Add New Article"
+msgstr "Yeni Makale Ekle"
+
+msgid "Add Recurring Holiday"
+msgstr "Yinelenen Tatil Ekle"
+
+msgid "Add Row After"
+msgstr "Sonrasına Satır Ekle"
+
+msgid "Add Row Before"
+msgstr "Öncesine Satır Ekle"
+
+msgid "Add Sort"
+msgstr "Sıralama Ekle"
+
+msgid "Add a subject for the new ticket"
+msgstr "Yeni talep için konu ekleyin"
+
+msgid "Add condition group"
+msgstr "Koşul grubu ekle"
+
+msgid "Add new"
+msgstr "Yeni ekle"
+
+msgid "Align Center"
+msgstr "Ortala"
+
+msgid "Align Left"
+msgstr "Sola Hizala"
+
+msgid "Align Right"
+msgstr "Sağa Hizala"
+
+msgid "Analiz Ediliyor"
+msgstr "Analiz Ediliyor"
+
+msgid "Any"
+msgstr "Herhangi"
+
+msgid "Apply"
+msgstr "Uygula"
+
+msgid "Are you sure you want to delete this team? This action cannot be reversed!"
+msgstr "Bu ekibi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!"
+
+msgid "Ask a question..."
+msgstr "Bir soru sorun..."
+
+msgid "Assign Condition JSON"
+msgstr "Atama Koşulu JSON"
+
+msgid "Assign To"
+msgstr "Şuna Ata"
+
+msgid "Assign by workload"
+msgstr "İş yüküne göre ata"
+
+msgid "Assigned to"
+msgstr "Atanan"
+
+msgid "At least one feedback option must be enabled for rating {0}"
+msgstr "{0} değerlendirmesi için en az bir geri bildirim seçeneği etkin olmalıdır"
+
+msgid "Auth Token"
+msgstr "Kimlik Doğrulama Token"
+
+msgid "Auto-rotate"
+msgstr "Otomatik döndür"
+
+msgid "Avg. Feedback Rating"
+msgstr "Ort. Geri Bildirim Puanı"
+
+msgid "Avg. First Response"
+msgstr "Ort. İlk Yanıt"
+
+msgid "Avg. Resolution"
+msgstr "Ort. Çözüm"
+
+msgid "Avg. feedback rating for the tickets resolved"
+msgstr "Çözülen talepler için ortalama geri bildirim puanı"
+
+msgid "Avg. time taken to first respond to a ticket"
+msgstr "Bir talebe ilk yanıt vermek için geçen ortalama süre"
+
+msgid "Avg. time taken to resolve a ticket"
+msgstr "Bir talebi çözmek için geçen ortalama süre"
+
+msgid "BCC"
+msgstr "BCC"
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Between"
+msgstr "Arasında"
+
+msgid "Blockquote"
+msgstr "Alıntı"
+
+msgid "Bold"
+msgstr "Kalın"
+
+msgid "Brand Favicon"
+msgstr "Marka Favicon"
+
+msgid "Brand Logo"
+msgstr "Marka Logosu"
+
+msgid "Bug"
+msgstr "Hata"
+
+msgid "Bullet List"
+msgstr "Madde İşaretli Liste"
+
+msgid "Business Holidays"
+msgstr "İş Tatilleri"
+
+msgid "Busy"
+msgstr "Meşgul"
+
+msgid "CC"
+msgstr "CC"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Call Received By"
+msgstr "Çağrıyı Alan"
+
+msgid "Caller"
+msgstr "Arayan"
+
+msgid "Calling Medium"
+msgstr "Arama Ortamı"
+
+msgid "Calls"
+msgstr "Aramalar"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Canceled"
+msgstr "İptal Edildi"
+
+msgid "Clear"
+msgstr "Temizle"
+
+msgid "Clear Sort"
+msgstr "Sıralamayı Temizle"
+
+msgid "Clear all Filter"
+msgstr "Tüm Filtreleri Temizle"
+
+msgid "Clear all filters"
+msgstr "Tüm filtreleri temizle"
+
+msgid "Close Ticket"
+msgstr "Talebi Kapat"
+
+msgid "Code"
+msgstr "Kod"
+
+msgid "Comments"
+msgstr "Yorumlar"
+
+msgid "Confirm"
+msgstr "Onayla"
+
+msgid "Confirm Delete"
+msgstr "Silmeyi Onayla"
+
+msgid "Confirm overwrite"
+msgstr "Üzerine yazmayı onayla"
+
+msgid "Create New"
+msgstr "Yeni Oluştur"
+
+msgid "Create dependencies between fields to dynamically control options based on user selections."
+msgstr "Kullanıcı seçimlerine göre seçenekleri dinamik olarak kontrol etmek için alanlar arasında bağımlılıklar oluşturun."
+
+msgid "Create new business holiday"
+msgstr "Yeni iş tatili oluştur"
+
+msgid "Created"
+msgstr "Oluşturuldu"
+
+msgid "Created On"
+msgstr "Oluşturulma Tarihi"
+
+msgid "Customer Query Resolved"
+msgstr "Müşteri Sorgusu Çözüldü"
+
+msgid "Customise your Helpdesk"
+msgstr "Yardım Masanızı Özelleştirin"
+
+msgid "Day"
+msgstr "Gün"
+
+msgid "Days"
+msgstr "Günler"
+
+msgid "Default Incoming"
+msgstr "Varsayılan Gelen"
+
+msgid "Default Outgoing"
+msgstr "Varsayılan Giden"
+
+msgid "Default medium"
+msgstr "Varsayılan ortam"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete Article"
+msgstr "Makaleyi Sil"
+
+msgid "Delete Column"
+msgstr "Sütunu Sil"
+
+msgid "Delete Comment"
+msgstr "Yorumu Sil"
+
+msgid "Delete Row"
+msgstr "Satırı Sil"
+
+msgid "Delete Table"
+msgstr "Tabloyu Sil"
+
+msgid "Delete articles?"
+msgstr "Makaleleri sil?"
+
+msgid "Delete category?"
+msgstr "Kategoriyi sil?"
+
+msgid "Delete team"
+msgstr "Ekibi sil"
+
+msgid "Desk"
+msgstr "Masaüstü"
+
+msgid "Detailed explanation"
+msgstr "Detaylı açıklama"
+
+msgid "Disable Agent"
+msgstr "Temsilciyi Devre Dışı Bırak"
+
+msgid "Discard"
+msgstr "Vazgeç"
+
+msgid "Discard Article"
+msgstr "Makaleyi Vazgeç"
+
+msgid "Discard changes?"
+msgstr "Değişikliklerden vazgeç?"
+
+msgid "Download"
+msgstr "İndir"
+
+msgid "Duplicate Holiday List"
+msgstr "Tatil Listesini Kopyala"
+
+msgid "Duplicate SLA Policy"
+msgstr "SLA Politikasını Kopyala"
+
+msgid "Duration"
+msgstr "Süre"
+
+msgid "Durum"
+msgstr "Durum"
+
+msgid "Edit"
+msgstr "Düzenle"
+
+msgid "Edit Title"
+msgstr "Başlığı Düzenle"
+
+msgid "Edit response and resolution"
+msgstr "Yanıt ve çözümü düzenle"
+
+msgid "Email ID"
+msgstr "E-posta ID"
+
+msgid "Email Id"
+msgstr "E-posta Id"
+
+msgid "Emails"
+msgstr "E-postalar"
+
+msgid "Enable Agent"
+msgstr "Temsilciyi Etkinleştir"
+
+msgid "Enable Incoming"
+msgstr "Geleni Etkinleştir"
+
+msgid "Enable Outgoing"
+msgstr "Gideni Etkinleştir"
+
+msgid "End time"
+msgstr "Bitiş zamanı"
+
+msgid "Equals"
+msgstr "Eşittir"
+
+msgid "Every fifth week"
+msgstr "Her beşinci hafta"
+
+msgid "Every first week"
+msgstr "Her ilk hafta"
+
+msgid "Every fourth week"
+msgstr "Her dördüncü hafta"
+
+msgid "Every second week"
+msgstr "Her ikinci hafta"
+
+msgid "Every third week"
+msgstr "Her üçüncü hafta"
+
+msgid "Every week"
+msgstr "Her hafta"
+
+msgid "Excel"
+msgstr "Excel"
+
+msgid "Exotel"
+msgstr "Exotel"
+
+msgid "Exotel number"
+msgstr "Exotel numarası"
+
+msgid "Expected Resolution"
+msgstr "Beklenen Çözüm"
+
+msgid "Export"
+msgstr "Dışa Aktar"
+
+msgid "Export Type"
+msgstr "Dışa Aktarma Türü"
+
+msgid "Fiber altyapÄ± sorgulama sonucu alamÄ±yorum"
+msgstr "Fiber altyapı sorgulama sonucu alamıyorum"
+
+msgid "Field"
+msgstr "Alan"
+
+msgid "First Name"
+msgstr "Ad"
+
+msgid "First name"
+msgstr "Ad"
+
+msgid "Font Color"
+msgstr "Yazı Rengi"
+
+msgid "Frappe Helpdesk"
+msgstr "HelpdeskAI"
+
+msgid "Frappe Mail Site"
+msgstr "HelpdeskAI Mail Website"
+
+msgid "From (number)"
+msgstr "Kimden (numara)"
+
+msgid "From date"
+msgstr "Başlangıç tarihi"
+
+msgid "General"
+msgstr "Genel"
+
+msgid "Getting started"
+msgstr "Başlangıç"
+
+msgid "HD Service Holiday List Name"
+msgstr "HD Hizmet Tatil Listesi Adı"
+
+msgid "Heading 1"
+msgstr "Başlık 1"
+
+msgid "Heading 2"
+msgstr "Başlık 2"
+
+msgid "Heading 3"
+msgstr "Başlık 3"
+
+msgid "Heading 4"
+msgstr "Başlık 4"
+
+msgid "Heading 5"
+msgstr "Başlık 5"
+
+msgid "Heading 6"
+msgstr "Başlık 6"
+
+msgid "Help centre"
+msgstr "Yardım merkezi"
+
+msgid "Horizontal Rule"
+msgstr "Yatay Çizgi"
+
+msgid "I understand, add conditions"
+msgstr "Anlıyorum, koşulları ekle"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "In"
+msgstr "İçinde"
+
+msgid "In Progress"
+msgstr "Devam Ediyor"
+
+msgid "Inactive"
+msgstr "Pasif"
+
+msgid "Incoming"
+msgstr "Gelen"
+
+msgid "Initiated"
+msgstr "Başlatıldı"
+
+msgid "Insert Table"
+msgstr "Tablo Ekle"
+
+msgid "Integrations"
+msgstr "Entegrasyonlar"
+
+msgid "Invite Agents"
+msgstr "Temsilcileri Davet Et"
+
+msgid "Invite as user"
+msgstr "Kullanıcı olarak davet et"
+
+msgid "Invite by email"
+msgstr "E-posta ile davet et"
+
+msgid "Is"
+msgstr "Eşittir"
+
+msgid "Italic"
+msgstr "İtalik"
+
+msgid "Jump to"
+msgstr "Git"
+
+msgid "Jump to ticket"
+msgstr "Talebe git"
+
+msgid "Last 6 Months"
+msgstr "Son 6 Ay"
+
+msgid "Last Month"
+msgstr "Geçen Ay"
+
+msgid "Last Name"
+msgstr "Soyad"
+
+msgid "Last Quarter"
+msgstr "Geçen Çeyrek"
+
+msgid "Last Updated By"
+msgstr "Son Güncelleyen"
+
+msgid "Last Updated On"
+msgstr "Son Güncelleme Tarihi"
+
+msgid "Last Week"
+msgstr "Geçen Hafta"
+
+msgid "Last Year"
+msgstr "Geçen Yıl"
+
+msgid "Learn more about SLA"
+msgstr "SLA hakkında daha fazla bilgi"
+
+msgid "Like"
+msgstr "Gibi"
+
+msgid "Link to a customer"
+msgstr "Müşteriye bağla"
+
+msgid "List View"
+msgstr "Liste Görünümü"
+
+msgid "Load More"
+msgstr "Daha Fazla Yükle"
+
+msgid "Log a Call"
+msgstr "Arama Kaydet"
+
+msgid "Login to Frappe Cloud"
+msgstr "Frappe Cloud'a Giriş Yap"
+
+msgid "Login to Frappe Cloud?"
+msgstr "Frappe Cloud'a giriş yapılsın mı?"
+
+msgid "Low-Medium"
+msgstr "Düşük-Orta"
+
+msgid "Make a Call"
+msgstr "Arama Yap"
+
+msgid "Make call"
+msgstr "Arama yap"
+
+msgid "Manager"
+msgstr "Yönetici"
+
+msgid "Mark all as read"
+msgstr "Tümünü okundu olarak işaretle"
+
+msgid "Medium-High"
+msgstr "Orta-Yüksek"
+
+msgid "Members"
+msgstr "Üyeler"
+
+msgid "Merge"
+msgstr "Birleştir"
+
+msgid "Merge Cells"
+msgstr "Hücreleri Birleştir"
+
+msgid "Merge Ticket"
+msgstr "Talebi Birleştir"
+
+msgid "Merge with another category"
+msgstr "Başka bir kategori ile birleştir"
+
+msgid "Merge with another ticket"
+msgstr "Başka bir talep ile birleştir"
+
+msgid "Mobile Number"
+msgstr "Cep Telefonu"
+
+msgid "Modified By"
+msgstr "Değiştiren"
+
+msgid "Modified On"
+msgstr "Değiştirilme Tarihi"
+
+msgid "Move"
+msgstr "Taşı"
+
+msgid "Move To"
+msgstr "Şuraya Taşı"
+
+msgid "My Filter"
+msgstr "Filtrem"
+
+msgid "My Open Tickets"
+msgstr "Açık Taleplerim"
+
+msgid "National holiday, etc."
+msgstr "Ulusal tatil, vb."
+
+msgid "Nested conditions"
+msgstr "İç içe koşullar"
+
+msgid "New Article"
+msgstr "Yeni Makale"
+
+msgid "New Call Log"
+msgstr "Yeni Arama Kaydı"
+
+msgid "New Canned Response"
+msgstr "Yeni Hazır Yanıt"
+
+msgid "New Comment"
+msgstr "Yeni Yorum"
+
+msgid "New Email"
+msgstr "Yeni E-posta"
+
+msgid "New Holiday List Name"
+msgstr "Yeni Tatil Listesi Adı"
+
+msgid "New SLA Policy Name"
+msgstr "Yeni SLA Politikası Adı"
+
+msgid "New Subject"
+msgstr "Yeni Konu"
+
+msgid "New Ticket"
+msgstr "Yeni Talep"
+
+msgid "New Ticket Subject"
+msgstr "Yeni Talep Konusu"
+
+msgid "New contact"
+msgstr "Yeni kişi"
+
+msgid "New team"
+msgstr "Yeni ekip"
+
+msgid "Next 6 Months"
+msgstr "Önümüzdeki 6 Ay"
+
+msgid "Next Month"
+msgstr "Gelecek Ay"
+
+msgid "Next Quarter"
+msgstr "Gelecek Çeyrek"
+
+msgid "Next Week"
+msgstr "Gelecek Hafta"
+
+msgid "Next Year"
+msgstr "Gelecek Yıl"
+
+msgid "No"
+msgstr "Hayır"
+
+msgid "No Answer"
+msgstr "Cevap Yok"
+
+msgid "No Canned Responses Found"
+msgstr "Hazır Yanıt Bulunamadı"
+
+msgid "No Contacts Found"
+msgstr "Kişi Bulunamadı"
+
+msgid "No Data"
+msgstr "Veri Yok"
+
+msgid "No Data Found"
+msgstr "Veri Bulunamadı"
+
+msgid "No templates found"
+msgstr "Şablon bulunamadı"
+
+msgid "Not Equals"
+msgstr "Eşit Değil"
+
+msgid "Not In"
+msgstr "İçinde Değil"
+
+msgid "Not Like"
+msgstr "Benzemez"
+
+msgid "Not Saved"
+msgstr "Kaydedilmedi"
+
+msgid "Not Set"
+msgstr "Ayarlanmadı"
+
+msgid "Now"
+msgstr "Şimdi"
+
+msgid "Numbered List"
+msgstr "Numaralı Liste"
+
+msgid "NÃ¶tr"
+msgstr "Nötr"
+
+msgid "Olumlu"
+msgstr "Olumlu"
+
+msgid "Olumsuz"
+msgstr "Olumsuz"
+
+msgid "Open nested conditions"
+msgstr "İç içe koşulları aç"
+
+msgid "Options"
+msgstr "Seçenekler"
+
+msgid "Outgoing"
+msgstr "Giden"
+
+msgid "Owner"
+msgstr "Sahip"
+
+msgid "Paragraph"
+msgstr "Paragraf"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Personal mobile no"
+msgstr "Kişisel cep telefonu"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Product Experts"
+msgstr "Ürün Uzmanları"
+
+msgid "Product experts"
+msgstr "Ürün uzmanları"
+
+msgid "Pull Emails"
+msgstr "E-postaları Çek"
+
+msgid "Question"
+msgstr "Soru"
+
+msgid "Queued"
+msgstr "Kuyrukta"
+
+msgid "Rate this ticket"
+msgstr "Bu talebi değerlendirin"
+
+msgid "Receiver"
+msgstr "Alıcı"
+
+msgid "Record Calls"
+msgstr "Aramaları Kaydet"
+
+msgid "Redo"
+msgstr "Yinele"
+
+msgid "Refresh"
+msgstr "Yenile"
+
+msgid "Refresh Apps"
+msgstr "Uygulamaları Yenile"
+
+msgid "Reject"
+msgstr "Reddet"
+
+msgid "Remove"
+msgstr "Kaldır"
+
+msgid "Remove group"
+msgstr "Grubu kaldır"
+
+msgid "Remove photo"
+msgstr "Fotoğrafı kaldır"
+
+msgid "Rename Subject"
+msgstr "Konuyu Yeniden Adlandır"
+
+msgid "Rename team"
+msgstr "Ekibi yeniden adlandır"
+
+msgid "Repetition"
+msgstr "Tekrar"
+
+msgid "Reply"
+msgstr "Yanıtla"
+
+msgid "Reset"
+msgstr "Sıfırla"
+
+msgid "Reset Changes"
+msgstr "Değişiklikleri Sıfırla"
+
+msgid "Reset all"
+msgstr "Tümünü sıfırla"
+
+msgid "Reset onboarding steps"
+msgstr "Başlangıç adımlarını sıfırla"
+
+msgid "Reset to Default"
+msgstr "Varsayılana Sıfırla"
+
+msgid "Response time"
+msgstr "Yanıt süresi"
+
+msgid "Ringing"
+msgstr "Çalıyor"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "SLA Durumu"
+msgstr "SLA Durumu"
+
+msgid "SLA Policies"
+msgstr "SLA Politikaları"
+
+msgid "SLAs align your team and customers with defined timelines for a reliable experience."
+msgstr "SLA'lar ekibinizi ve müşterilerinizi güvenilir bir deneyim için belirli zaman dilimleri ile uyumlu hale getirir."
+
+msgid "Search agents"
+msgstr "Temsilcileri ara"
+
+msgid "Search articles..."
+msgstr "Makaleleri ara..."
+
+msgid "Search by keyword"
+msgstr "Anahtar kelimeye göre ara"
+
+msgid "Search canned responses"
+msgstr "Hazır yanıtları ara"
+
+msgid "Search index not available. Please contact administrator."
+msgstr "Arama dizini mevcut değil. Lütfen yöneticiye başvurun."
+
+msgid "Search members"
+msgstr "Üyeleri ara"
+
+msgid "Search query must be at least 2 characters"
+msgstr "Arama sorgusu en az 2 karakter olmalıdır"
+
+msgid "Search tickets, comments, and communications..."
+msgstr "Talepleri, yorumları ve iletişimleri ara..."
+
+msgid "Search tickets, emails, comments, or #234 to navigate to ticket"
+msgstr "Talepleri, e-postaları, yorumları arayın veya #234 ile talebe gidin"
+
+msgid "Select"
+msgstr "Seç"
+
+msgid "Select All"
+msgstr "Tümünü Seç"
+
+msgid "Select Category"
+msgstr "Kategori Seç"
+
+msgid "Select Child Field values"
+msgstr "Alt Alan değerlerini seç"
+
+msgid "Select Ticket"
+msgstr "Talep Seç"
+
+msgid "Select Workday"
+msgstr "İş Günü Seç"
+
+msgid "Select an option"
+msgstr "Bir seçenek seçin"
+
+msgid "Select options..."
+msgstr "Seçenekleri seçin..."
+
+msgid "Send"
+msgstr "Gönder"
+
+msgid "Set"
+msgstr "Ayarla"
+
+msgid "Set Phone Number"
+msgstr "Telefon Numarası Ayarla"
+
+msgid "Set as default SLA"
+msgstr "Varsayılan SLA olarak ayarla"
+
+msgid "Set default priority"
+msgstr "Varsayılan önceliği ayarla"
+
+msgid "Set working days, hours, and holidays by selecting a predefined schedule or creating a new one."
+msgstr "Önceden tanımlanmış bir program seçerek veya yeni bir tane oluşturarak çalışma günlerini, saatlerini ve tatilleri ayarlayın."
+
+msgid "Share"
+msgstr "Paylaş"
+
+msgid "Shortcuts"
+msgstr "Kısayollar"
+
+msgid "Site Down"
+msgstr "Site Çalışmıyor"
+
+msgid "Skip"
+msgstr "Atla"
+
+msgid "Skip all"
+msgstr "Tümünü atla"
+
+msgid "Sort"
+msgstr "Sırala"
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "Split Cell"
+msgstr "Hücreyi Böl"
+
+msgid "Split Ticket"
+msgstr "Talebi Böl"
+
+msgid "Split into new ticket"
+msgstr "Yeni talebe böl"
+
+msgid "Split ticket"
+msgstr "Talebi böl"
+
+msgid "Start time"
+msgstr "Başlangıç zamanı"
+
+msgid "Strikethrough"
+msgstr "Üstü Çizili"
+
+msgid "Subdomain"
+msgstr "Alt Alan Adı"
+
+msgid "Support / Sales"
+msgstr "Destek / Satış"
+
+msgid "Support Issues"
+msgstr "Destek Sorunları"
+
+msgid "Task List"
+msgstr "Görev Listesi"
+
+msgid "Teams"
+msgstr "Ekipler"
+
+msgid "Tesla Inc."
+msgstr "Tesla Inc."
+
+msgid "Test Ticket"
+msgstr "Test Talebi"
+
+msgid "This Month"
+msgstr "Bu Ay"
+
+msgid "This Quarter"
+msgstr "Bu Çeyrek"
+
+msgid "This Week"
+msgstr "Bu Hafta"
+
+msgid "This Year"
+msgstr "Bu Yıl"
+
+msgid "Ticket Subject"
+msgstr "Talep Konusu"
+
+msgid "Ticket reopen status"
+msgstr "Talep yeniden açma durumu"
+
+msgid "Timespan"
+msgstr "Zaman Aralığı"
+
+msgid "To (number)"
+msgstr "Kime (numara)"
+
+msgid "To date"
+msgstr "Bitiş tarihi"
+
+msgid "Toggle Header Cell"
+msgstr "Başlık Hücresini Değiştir"
+
+msgid "Toggle Header Column"
+msgstr "Başlık Sütununu Değiştir"
+
+msgid "Toggle Header Row"
+msgstr "Başlık Satırını Değiştir"
+
+msgid "Tomorrow"
+msgstr "Yarın"
+
+msgid "Total number of tickets created"
+msgstr "Oluşturulan toplam talep sayısı"
+
+msgid "Turn into a group"
+msgstr "Gruba dönüştür"
+
+msgid "TwiML App Name"
+msgstr "TwiML Uygulama Adı"
+
+msgid "TwiML App SID"
+msgstr "TwiML Uygulama SID"
+
+msgid "Twilio"
+msgstr "Twilio"
+
+msgid "Twilio number"
+msgstr "Twilio numarası"
+
+msgid "Type emails"
+msgstr "E-postaları yazın"
+
+msgid "Unassign Condition JSON"
+msgstr "Atama Kaldırma Koşulu JSON"
+
+msgid "Underline"
+msgstr "Altı Çizili"
+
+msgid "Undo"
+msgstr "Geri Al"
+
+msgid "Ungroup conditions"
+msgstr "Koşul grubunu çöz"
+
+msgid "Update"
+msgstr "Güncelle"
+
+msgid "Update Account"
+msgstr "Hesabı Güncelle"
+
+msgid "Upgrade plan"
+msgstr "Planı yükselt"
+
+msgid "Upload Image"
+msgstr "Resim Yükle"
+
+msgid "Video"
+msgstr "Video"
+
+msgid "View Assignment rule"
+msgstr "Atama kuralını görüntüle"
+
+msgid "Webhook Verify Token"
+msgstr "Webhook Doğrulama Token"
+
+msgid "Width"
+msgstr "Genişlik"
+
+msgid "Write your article here..."
+msgstr "Makalenizi buraya yazın..."
+
+msgid "YalÄ±n Ä°nternet paketi telefon hattÄ± olmadan alÄ±nÄ±r mÄ±?"
+msgstr "Yalın İnternet paketi telefon hattı olmadan alınır mı?"
+
+msgid "Yes"
+msgstr "Evet"
+
+msgid "Yesterday"
+msgstr "Dün"
+
+msgid "Your query has been resolved. Thank you for reaching out."
+msgstr "Sorgunuz çözüldü. Bize ulaştığınız için teşekkür ederiz."
+
+msgid "condition"
+msgstr "koşul"
+
+msgid "description"
+msgstr "açıklama"
+
+msgid "desk"
+msgstr "masaüstü"
+
+msgid "eg: tesla.com, mycompany.com"
+msgstr "örn: tesla.com, sirketim.com"
+
+msgid "example.com"
+msgstr "ornek.com"
+
+msgid "func.def"
+msgstr "fonk.tanım"
+
+msgid "html"
+msgstr "html"
+
+msgid "https://frappemail.com"
+msgstr "https://brvsoftware.com.tr"
+
+msgid "interpol"
+msgstr "interpol"
+
+msgid "john.doe@example.com"
+msgstr "ahmet.yilmaz@ornek.com"
+
+msgid "johndoe@example.com"
+msgstr "ahmetyilmaz@ornek.com"
+
+msgid "operator"
+msgstr "operatör"
+
+msgid "shebang"
+msgstr "shebang"
+
+msgid "symbol"
+msgstr "sembol"
+
+msgid "use_strict"
+msgstr "use_strict"
+
+msgid "user1@example.com, user2@example.com, ..."
+msgstr "kullanici1@ornek.com, kullanici2@ornek.com, ..."
+
+
+# Auto-added by vue_i18n_wrap.py on 2025-11-04T10:36:00
+msgid "Can invite new agents, manage tickets, create custom views and manage public views."
+msgstr "Yeni ajanlar davet edebilir, talepleri yönetebilir, özel görünümler oluşturabilir ve genel görünümleri yönetebilir."
+
+msgid "Can manage all aspects of Helpdesk."
+msgstr "Yardım Masasının tüm özelliklerini yönetebilir."
+
+msgid "Hi John, we are looking into this issue."
+msgstr "Merhaba John, bu sorunu inceliyoruz."
+
+msgid "If enabled, all outgoing emails will be sent from this account. Note: Only one account can be default outgoing."
+msgstr "Etkinleştirilirse, tüm giden e-postalar bu hesaptan gönderilir. Not: Yalnızca bir hesap varsayılan giden hesap olabilir."
+
+msgid "If enabled, all replies to your company (eg: replies@yourcomany.com) will come to this account. Note: Only one account can be default incoming."
+msgstr "Etkinleştirilirse, şirketinize gelen tüm yanıtlar (örn: yanitlar@sirketiniz.com) bu hesaba gelir. Not: Yalnızca bir hesap varsayılan gelen hesap olabilir."
+
+msgid "If enabled, outgoing emails can be sent from this account."
+msgstr "Etkinleştirilirse, bu hesaptan giden e-postalar gönderilebilir."
+
+msgid "If enabled, tickets can be created from the incoming emails on this account."
+msgstr "Etkinleştirilirse, bu hesaba gelen e-postalardan talepler oluşturulabilir."
+
+msgstr "E-posta hesapları ayarlama hakkında daha fazla bilgi için tıklayın"
+
+msgid "Width can be in number, pixel or rem (eg. 3, 30px, 10rem)"
+msgstr "Genişlik sayı, piksel veya rem olabilir (örn. 3, 30px, 10rem)"
+
+# Correct Turkish encodings
+msgid "Nötr"
+msgstr "Nötr"
+
+msgid "·"
+msgstr "·"
+
+msgid "Çözüm"
+msgstr "Çözüm"
+
+msgid "İlk Yanıt"
+msgstr "İlk Yanıt"
+
+msgid "To know more about setting up email accounts, click"
+msgstr "E-posta hesapları ayarlama hakkında daha fazla bilgi için tıklayın"
+
+# Time-related translations for useTimeAgo
+msgid "just now"
+msgstr "az önce"
+
+msgid "{0} ago"
+msgstr "{0} önce"
+
+msgid "in {0}"
+msgstr "{0} içinde"
+
+msgid "yesterday"
+msgstr "dün"
+
+msgid "tomorrow"
+msgstr "yarın"
+
+msgid "last week"
+msgstr "geçen hafta"
+
+msgid "next week"
+msgstr "gelecek hafta"
+
+msgid "last month"
+msgstr "geçen ay"
+
+msgid "next month"
+msgstr "gelecek ay"
+
+msgid "last year"
+msgstr "geçen yıl"
+
+msgid "next year"
+msgstr "gelecek yıl"
+
+msgid "days"
+msgstr "gün"
+
+msgid "weeks"
+msgstr "hafta"
+
+msgid "months"
+msgstr "ay"
+
+msgid "years"
+msgstr "yıl"
+
+msgid "hours"
+msgstr "saat"
+
+msgid "minutes"
+msgstr "dakika"
+
+msgid "seconds"
+msgstr "saniye"
+
+msgid "invalid date"
+msgstr "geçersiz tarih"
+
+
+# Email notification translations
+msgid "You have a new reply on this ticket"
+msgstr "Bu talep hakkında yeni bir yanıt aldınız"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Please visit the customer portal to reply to this message"
+msgstr "Bu mesaja yanıt vermek için lütfen müşteri portalını ziyaret edin"
+
+msgid "View in Portal"
+msgstr "Portalde Görüntüle"
+
+msgid "You have a new reply on the ticket"
+msgstr "Talep hakkında yeni bir yanıt aldınız"
+
+msgid "Raised By"
+msgstr "Tarafından Oluşturuldu"
+
+msgid "You can view and respond to this ticket by"
+msgstr "Bu talebi görüntüleyip yanıtlamak için"
+
+msgid "clicking here"
+msgstr "buraya tıklayın"
+
+msgid "Regards"
+msgstr "Saygılarımızla"
+
+msgid "Support Team"
+msgstr "Destek Ekibi"
+
+msgid "Thanks for reaching out to us. We'd love your feedback on your recent support experience with ticket"
+msgstr "Bize ulaştığınız için teşekkürler. Talep ile ilgili son destek deneyiminiz hakkında geri bildiriminizi almayı çok isteriz"
+
+msgid "Share Feedback"
+msgstr "Geri Bildirim Paylaş"
+
+msgid "Thank you!"
+msgstr "Teşekkür ederiz!"
+
+msgid "Hi"
+msgstr "Merhaba"
+
+msgid "Thank you for reaching out to us. We've received your request and created a support ticket."
+msgstr "Bize ulaştığınız için teşekkür ederiz. Talebinizi aldık ve bir destek talebi oluşturduk."
+
+msgid "Ticket ID"
+msgstr "Talep Numarası"
+
+msgid "Our team is reviewing it and will get back to you shortly."
+msgstr "Ekibimiz inceliyor ve en kısa sürede size geri dönüş yapacak."
+
+msgid "Best"
+msgstr "İyi çalışmalar"
+
+msgid "Send (⌘ + ⏎)"
+msgstr "Gönder (⌘ + ⏎)"
+
+msgid "Send (Ctrl + ⏎)"
+msgstr "Gönder (Ctrl + ⏎)"
+
+msgid "Comment (⌘ + ⏎)"
+msgstr "Yorum (⌘ + ⏎)"
+
+msgid "Comment (Ctrl + ⏎)"
+msgstr "Yorum (Ctrl + ⏎)"
+
+msgid "Create Category"
+msgstr "Kategori Oluştur"
+
+msgid "Edit Category"
+msgstr "Kategoriyi Düzenle"
+
+msgid "Please enter a subject to continue"
+msgstr "Devam etmek için lütfen bir konu girin"
+
+msgid "Edit Call Log"
+msgstr "Arama Kaydını Düzenle"
+
+msgid "Access all team tickets"
+msgstr "Tüm ekip taleplerine erişim"
+
+msgid "Access only this team's tickets"
+msgstr "Yalnızca bu ekibin taleplerine erişim"
+
+msgid "Make Private"
+msgstr "Özel Yap"
+
+msgid "Make Public"
+msgstr "Herkese Açık Yap"
+
+msgid "Duplicate View"
+msgstr "Görünümü Kopyala"
+
+msgid "Pin View"
+msgstr "Görünümü Sabitle"
+
+msgid "Unpin View"
+msgstr "Görünümü Sabitlemeyi Kaldır"
+
+msgid "No new notifications"
+msgstr "Yeni bildirim yok"
+
+msgid "Empty - Choose a field to filter by"
+msgstr "Boş - Filtrelemek için bir alan seçin"
+
+msgid "Empty - Choose a field to sort by"
+msgstr "Boş - Sıralamak için bir alan seçin"
+
+msgid "Disable Bypass Restrictions"
+msgstr "Kısıtlamaları Atlamayı Devre Dışı Bırak"
+
+msgid "Enable Bypass Restrictions"
+msgstr "Kısıtlamaları Atlamayı Etkinleştir"
+
+msgid "Field Dependency created successfully"
+msgstr "Alan Bağımlılığı başarıyla oluşturuldu"
+
+msgid "Field Dependency updated successfully"
+msgstr "Alan Bağımlılığı başarıyla güncellendi"
+
+msgid "Members of this team will be able to see the tickets assigned to all the teams"
+msgstr "Bu ekibin üyeleri, tüm ekiplere atanan talepleri görebilecektir"
+
+msgid "Members of this team will see the tickets assigned to this team only"
+msgstr "Bu ekibin üyeleri yalnızca bu ekibe atanan talepleri görecektir"
+
+msgid "Add time targets around support milestones like first reply and resolution times"
+msgstr "İlk yanıt ve çözüm süreleri gibi destek kilometre taşları etrafında zaman hedefleri ekleyin"
+
+msgid "Assignment conditions"
+msgstr "Atama koşulları"
+
+msgid "Can't find what you're looking for?"
+msgstr "Aradığınızı bulamıyor musunuz?"
+
+msgid "Child Field"
+msgstr "Alt Alan"
+
+msgid "Choose which tickets are affected by this policy."
+msgstr "Bu politikadan hangi taleplerin etkileneceğini seçin."
+
+msgid "Conditions for this SLA were created from"
+msgstr "Bu SLA için koşullar şuradan oluşturuldu"
+
+msgid "Conditions for this rule were created from"
+msgstr "Bu kural için koşullar şuradan oluşturuldu"
+
+msgid "Did this article solve your issue?"
+msgstr "Bu makale sorununuzu çözdü mü?"
+
+msgid "K"
+msgstr "K"
+
+msgid "Parent Field"
+msgstr "Üst Alan"
+
+msgid "Response and resolution"
+msgstr "Yanıt ve çözüm"
+
+msgid "Set the default status assigned when a ticket is created, and the status to apply when a ticket is reopened. If not specified, the default status from HD Settings will be used."
+msgstr "Talep oluşturulduğunda atanan varsayılan durumu ve talep yeniden açıldığında uygulanacak durumu ayarlayın. Belirtilmezse, HD Ayarlarından varsayılan durum kullanılacaktır."
+
+msgid "Status details"
+msgstr "Durum ayrıntıları"
+
+msgid "which are not compatible with this UI, you will need to recreate the conditions here if you want to manage and add new conditions from this UI."
+msgstr "bu UI ile uyumlu değil, bu UI'dan koşulları yönetmek ve yeni koşullar eklemek istiyorsanız koşulları burada yeniden oluşturmanız gerekecektir."
