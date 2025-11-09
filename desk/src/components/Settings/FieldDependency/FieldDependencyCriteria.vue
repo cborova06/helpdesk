@@ -15,7 +15,7 @@
               {{ selections.parentField }} is set to</span
             >
             <DocumentationButton
-              url="https://docs.frappe.io/helpdesk/field-dependency#handling-visibility-of-child-field"
+              url="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/field-dependency#handling-visibility-of-child-field"
               color="!text-ink-gray-6"
             />
           </div>
@@ -41,7 +41,7 @@
               {{ selections.parentField }} is set to</span
             >
             <DocumentationButton
-              url="https://docs.frappe.io/helpdesk/field-dependency#handling-if-the-child-field-is-mandatory"
+              url="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/field-dependency#handling-if-the-child-field-is-mandatory"
               color="!text-ink-gray-6"
             />
           </div>

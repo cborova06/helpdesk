@@ -10,8 +10,8 @@ body:
         Welcome to Frappe Helpdesk issue tracker! Before creating an issue, please consider the following:
 
         1. This tracker should only be used to report bugs and request features / enhancements to Frappe Helpdesk
-            - For questions and general support, checkout the [documentation](https://docs.frappe.io/helpdesk) or use the [forum](https://discuss.frappe.io) to get inputs from the open source community.
-            - For documentation issues, propose edit on the [documentation site](https://docs.frappe.io/helpdesk) directly.
+            - For questions and general support, checkout the [documentation](https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun) or use the [forum](https://discuss.frappe.io) to get inputs from the open source community.
+            - For documentation issues, propose edit on the [documentation site](https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun) directly.
         2. When making a bug report, make sure you provide all required information. The easier it is for
            maintainers to reproduce, the faster it'll be fixed.
         3. If you think you know what the reason for the bug is, share it with us. Maybe put in a PR 😉

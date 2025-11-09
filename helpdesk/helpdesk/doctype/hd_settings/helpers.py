@@ -1,56 +1,55 @@
 def is_email_content_empty(content: str | None) -> bool:
     return content is None or content.strip() == ""
-
-
+    
 def get_default_email_content(type: str) -> str:
     if type == "share_feedback":
         return """\
-<p>Hello,</p>
-<p>Thanks for reaching out to us. We’d love your feedback on your recent support experience with ticket #{{ doc.name }}.</p>
-<a href="{{ url }}" class="btn btn-primary">Share Feedback</a>
+<p>Merhaba,</p>
+<p>Bize ulaştığınız için teşekkür ederiz. #{{ doc.name }} numaralı destek deneyiminizle ilgili geri bildiriminizi almak isteriz.</p>
+<a href="{{ url }}" class="btn btn-primary">Geri Bildirim Ver</a>
 
-<p>Thank you!<br>Support Team</p>"""
+<p>Teşekkürler!<br>Destek Ekibi</p>"""
 
     if type == "acknowledgement":
         return """\
-<p>Hi,</p>
+<p>Merhaba,</p>
 <br />
-<p>Thank you for reaching out to us. We've received your request and created a support ticket.</p>
+<p>Bize ulaştığınız için teşekkür ederiz. Talebinizi aldık ve bir destek bileti oluşturduk.</p>
 <p>
-    <strong>Ticket ID:</strong> {{ doc.name }}<br />
-    <strong>Subject:</strong> {{ doc.subject }}<br />
+    <strong>Bilet ID:</strong> {{ doc.name }}<br />
+    <strong>Konu:</strong> {{ doc.subject }}<br />
 </p>
-<p>Our team is reviewing it and will get back to you shortly.</p>
+<p>Ekibimiz talebinizi inceliyor ve kısa süre içinde size geri dönecek.</p>
 <br />
-<p>Best,<br />Support Team</p>
+<p>Saygılarımızla,<br />Destek Ekibi</p>
 """
 
     if type == "reply_to_agents":
         return """\
 <div>
-  <p>Hello,</p>
-  <p>You have a new reply on the ticket <strong>#{{ doc.name }}</strong>.</p>
-  <p><strong>Subject:</strong> {{ doc.subject }}</p>
-  <p><strong>Raised By:</strong> {{ doc.raised_by }}</p>
-  <p><strong>Priority:</strong> {{ doc.priority }}</p>
+  <p>Merhaba,</p>
+  <p><strong>#{{ doc.name }}</strong> numaralı bilet için yeni bir yanıtınız var.</p>
+  <p><strong>Konu:</strong> {{ doc.subject }}</p>
+  <p><strong>Gönderen:</strong> {{ doc.raised_by }}</p>
+  <p><strong>Öncelik:</strong> {{ doc.priority }}</p>
 
   <br />
   <p>
-    You can view and respond to this ticket by
-    <a href="{{ ticket_url }}">clicking here</a>.
+    Bu bileti görüntülemek ve yanıtlamak için
+    <a href="{{ ticket_url }}">buraya tıklayın</a>.
   </p>
-  <p>Regards,<br />Support Team</p>
+  <p>Saygılarımızla,<br />Destek Ekibi</p>
 </div>
 """
 
     if type == "reply_via_agent":
         return """\
 <div>
-  <h2><strong>Ticket #{{ doc.name }}</strong></h2>
-  <h3>You have a new reply on this ticket</h3>
+  <h2><strong>Bilet #{{ doc.name }}</strong></h2>
+  <h3>Bu bilet için yeni bir yanıtınız var</h3>
   <br />
   <div style="margin-bottom: 10px">
-    <h3 style="margin-bottom: 20px">Message</h3>
+    <h3 style="margin-bottom: 20px">Mesaj</h3>
     <div
       style="
         background: #f3f5f8;
@@ -62,13 +61,13 @@ def get_default_email_content(type: str) -> str:
       {{ message }}
     </div>
   </div>
-  <p>Please visit the customer portal to reply to this message</p>
+  <p>Bu mesaja yanıt vermek için lütfen müşteri portalını ziyaret edin</p>
   <a
     class="btn btn-primary"
     href="{{ ticket_url }}"
     rel="noopener noreferrer"
     target="_blank"
-  >View in Portal</a>
+  >Portalda Görüntüle</a>
   <br />
 </div>
 """

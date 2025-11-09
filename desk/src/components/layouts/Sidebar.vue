@@ -148,7 +148,7 @@
       appName="helpdesk"
       title="Frappe Helpdesk"
       :logo="logo"
-      docsLink="https://docs.frappe.io/helpdesk"
+      docsLink="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"
       :afterSkip="(step) => capture('onboarding_step_skipped_' + step)"
       :afterSkipAll="() => capture('onboarding_steps_skipped')"
       :afterReset="(step) => capture('onboarding_step_reset_' + step)"
@@ -321,12 +321,12 @@ const agentPortalDropdown = computed(() => [
   {
     icon: "life-buoy",
     label: "Support",
-    onClick: () => window.open("https://t.me/frappedesk"),
+    onClick: () => window.open("https://t.me/+905102232035"),
   },
   {
     icon: "book-open",
     label: "Docs",
-    onClick: () => window.open("https://docs.frappe.io/helpdesk"),
+    onClick: () => window.open("https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"),
   },
   {
     label: "Login to Frappe Cloud",

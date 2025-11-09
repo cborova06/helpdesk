@@ -7,7 +7,7 @@
     v-model:content="content"
     :defaultContent="defaultContent"
     v-model:enabled="enabled"
-    documentationLink="https://docs.frappe.io/helpdesk/email-notifications#available-variables-share-feedback"
+    documentationLink="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/email-notifications#available-variables-share-feedback"
     :onBack="props.onBack"
     :onSubmit="onSubmit"
     :onGetDataSuccess="onGetDataSuccess"

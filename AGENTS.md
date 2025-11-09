@@ -320,7 +320,7 @@ const ticket = createDocumentResource({
 
 - [README.md](../README.md) — Full setup and feature list
 - [Frappe Docs](https://frappeframework.com/docs/) — Framework documentation
-- [Frappe Helpdesk Docs](https://docs.frappe.io/helpdesk) — Project-specific docs
+- [Frappe Helpdesk Docs](https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun) — Project-specific docs
 - [Vue 3 Style Guide](https://vuejs.org/style-guide/) — Vue.js best practices
 - [Tailwind CSS](https://tailwindcss.com/docs) — Utility-first CSS framework
 

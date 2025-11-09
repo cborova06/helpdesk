@@ -11,7 +11,7 @@
           SLAs align your team and customers with defined timelines for a
           reliable experience.
           <a
-            href="https://docs.frappe.io/helpdesk/service-level-agreement"
+            href="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/service-level-agreement"
             target="_blank"
             class="underline"
             >Learn more about SLA

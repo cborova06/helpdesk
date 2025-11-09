@@ -220,12 +220,12 @@ const agentPortalDropdown = computed(() => [
   {
     icon: "life-buoy",
     label: "Support",
-    onClick: () => window.open("https://t.me/frappedesk"),
+    onClick: () => window.open("https://t.me/+905102232035"),
   },
   {
     icon: "book-open",
     label: "Docs",
-    onClick: () => window.open("https://docs.frappe.io/helpdesk"),
+    onClick: () => window.open("https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"),
   },
   {
     label: "Log out",
