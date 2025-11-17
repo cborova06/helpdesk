@@ -2,12 +2,12 @@
   <div class="w-full h-full flex flex-col">
     <!-- Header -->
     <SettingsLayoutHeader
-      title="Teams"
-      description="Create and manage teams and assign agents to specific teams."
+      :title="__('Teams')"
+      :description="__('Create and manage teams and assign agents to specific teams.')"
     >
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="() => (showForm = !showForm)"
@@ -17,7 +17,7 @@
       <template #bottom-section>
         <FormControl
           v-model="search"
-          :placeholder="'Search'"
+          :placeholder="__('Search')"
           type="text"
           :debounce="300"
           class="w-60"
@@ -62,7 +62,7 @@
       class="flex mt-28 justify-between w-full h-full"
     >
       <p class="text-sm text-gray-500 w-full flex justify-center">
-        No teams found
+        {{ __("No teams found") }}
       </p>
     </div>
   </div>
@@ -80,7 +80,7 @@
 import { Avatar, FormControl, createListResource } from "frappe-ui";
 import { ref, watch } from "vue";
 import NewTeamModal from "../NewTeamModal.vue";
-
+import { __ } from "@/translation";
 interface E {
   (event: "update:step", step: string, team: string): void;
 }

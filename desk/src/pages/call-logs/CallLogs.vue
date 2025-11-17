@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Button
-          label="New Call Log"
+          :label="__('New Call Log')"
           theme="gray"
           variant="solid"
           @click="newCallLog"
@@ -46,7 +46,7 @@ import CallLogDetailModal from "./CallLogDetailModal.vue";
 import CallLogModal from "./CallLogModal.vue";
 import { statusColorMap, statusLabelMap } from "./utils";
 import { PhoneIcon } from "@/components/icons";
-
+import { __ } from "@/translation";
 const showCallLogModal = ref(false);
 const showCallLogDetailModal = ref(false);
 const callLogId = ref("");
@@ -59,7 +59,7 @@ const options = computed(() => {
     selectable: true,
     showSelectBanner: true,
     emptyState: {
-      title: "No Call Logs Found",
+      title: __('No Call Logs Found'),
       icon: PhoneIcon,
     },
     columnConfig: {
@@ -135,7 +135,7 @@ function openCallLog(id: string): void {
 
 usePageMeta(() => {
   return {
-    title: "Call Logs",
+    title: __('Call Logs'),
   };
 });
 </script>

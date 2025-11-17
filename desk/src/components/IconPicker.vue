@@ -37,7 +37,7 @@
             <div class="flex-1">
               <FormControl
                 type="text"
-                placeholder="Search by keyword"
+                :placeholder="__('Search by keyword')"
                 v-model="search"
                 :debounce="300"
               />
@@ -72,7 +72,7 @@
 import { ref, computed } from "vue";
 import { Popover } from "frappe-ui";
 import { gemoji } from "gemoji";
-
+import { __ } from "@/translation";
 const search = ref("");
 const emoji = defineModel();
 const reaction = defineModel("reaction");

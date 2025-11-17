@@ -115,7 +115,7 @@ import {
 import { watchDebounced } from "@vueuse/core";
 import { Avatar, createListResource, Popover } from "frappe-ui";
 import { computed, ref } from "vue";
-
+import { __ } from "@/translation";
 const emit = defineEmits(["addAssignee"]);
 const query = ref("");
 const showNewAgentsDialog = ref(false);

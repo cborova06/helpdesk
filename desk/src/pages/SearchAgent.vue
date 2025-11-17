@@ -13,7 +13,7 @@
           <TextInput
             ref="searchInput"
             class="flex-1"
-            placeholder="Search tickets, comments, and communications..."
+            :placeholder="__('Search tickets, comments, and communications...')"
             autocomplete="off"
             :model-value="query"
             @update:model-value="updateQuery"
@@ -83,7 +83,7 @@
               class="ml-auto text-ink-gray-5"
               variant="gray-ghost"
               @click="clearFilters"
-              label="Clear all filters"
+              :label="__('Clear all filters')"
             />
           </div>
         </div>
@@ -103,10 +103,10 @@
               />
             </template>
             <template v-else-if="newSearch && query.length > 2">
-              <p class="text-ink-gray-6">Press enter to search</p>
+              <p class="text-ink-gray-6">{{ __("Press enter to search") }}</p>
             </template>
             <template v-else-if="search.loading">
-              <p class="text-ink-gray-6">Searching...</p>
+              <p class="text-ink-gray-6">{{ __("Searching...") }}</p>
             </template>
             <template v-else-if="searchResponse?.summary">
               <div class="space-y-1">
@@ -127,7 +127,7 @@
                   v-if="searchResponse.summary.corrected_query"
                   class="text-ink-gray-6"
                 >
-                  <span class="text-ink-gray-5">Searched for:</span>
+                  <span class="text-ink-gray-5">{{ __("Searched for:") }}</span>
                   <span class="ml-1 font-medium text-primary">
                     {{ searchResponse.summary.corrected_query }}
                   </span>
@@ -214,6 +214,7 @@ import {
 } from "frappe-ui";
 import { computed, onMounted, ref, useTemplateRef, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import { __ } from "@/translation";
 // Icons
 
 // Type Definitions
@@ -340,9 +341,9 @@ const priorityFilterOptions = computed(() => {
 
 const doctypesFilterOptions = computed(() => {
   return [
-    { value: "HD Ticket", label: "Tickets", count: 0 },
-    { value: "Communication", label: "Emails", count: 0 },
-    { value: "HD Ticket Comment", label: "Comments", count: 0 },
+    { value: "HD Ticket", label: __('Tickets'), count: 0 },
+    { value: "Communication", label: __('Emails'), count: 0 },
+    { value: "HD Ticket Comment", label: __('Comments'), count: 0 },
   ];
 });
 

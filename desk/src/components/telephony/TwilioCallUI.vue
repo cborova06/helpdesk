@@ -62,7 +62,7 @@
             size="md"
             variant="solid"
             theme="red"
-            :label="'Cancel'"
+            :label="__('Cancel')"
             @click="cancelCall"
             class="rounded-lg"
           >
@@ -76,7 +76,7 @@
             size="md"
             variant="solid"
             theme="green"
-            :label="'Accept'"
+            :label="__('Accept')"
             class="rounded-lg"
             @click="acceptIncomingCall"
           >
@@ -88,7 +88,7 @@
             size="md"
             variant="solid"
             theme="red"
-            :label="'Reject'"
+            :label="__('Reject')"
             class="rounded-lg"
             @click="rejectIncomingCall"
           >
@@ -180,7 +180,7 @@ import { inject, ref, watch } from "vue";
 import LucidePhone from "~icons/lucide/phone";
 import CountUpTimer from "./CountUpTimer.vue";
 import MinimizeIcon from "./Icons/MinimizeIcon.vue";
-
+import { __ } from "@/translation";
 const telephonyStore = useTelephonyStore();
 
 const onCallStarted = inject<() => void>("onCallStarted");
@@ -414,7 +414,7 @@ async function makeOutgoingCall(number) {
   } else {
     onCallFailed && onCallFailed();
     log.value = "Unable to make call.";
-    toast.error("Unable to make call.");
+    toast.error(__("Unable to make call."));
   }
 }
 

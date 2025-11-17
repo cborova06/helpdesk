@@ -1,6 +1,7 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 # License: GNU General Public License v3. See license.txt
 
+from frappe import _
 from datetime import timedelta
 
 import frappe
@@ -18,8 +19,8 @@ class TestHDServiceHolidayList(IntegrationTestCase):
         hd_service_holiday_list = make_hd_service_holiday_list(
             "test_hd_service_holiday_list",
             holiday_dates=[
-                {"holiday_date": test_holiday_dates[0], "description": "test holiday"},
-                {"holiday_date": test_holiday_dates[1], "description": "test holiday2"},
+                {"holiday_date": test_holiday_dates[0], "description": _("test holiday")},
+                {"holiday_date": test_holiday_dates[1], "description": _("test holiday2")},
             ],
         )
         fetched_hd_service_holiday_list = frappe.get_value(

@@ -9,7 +9,7 @@
       >
         <div class="flex gap-2">
           <AppsIcon />
-          <span class="whitespace-nowrap">Apps</span>
+          <span class="whitespace-nowrap">{{ __("Apps") }}</span>
         </div>
         <ChevronRight class="h-4 w-4 stroke-1.5" />
       </button>
@@ -37,7 +37,7 @@
 import { Popover, createResource } from "frappe-ui";
 import AppsIcon from "./icons/AppsIcon.vue";
 import ChevronRight from "~icons/lucide/chevron-right";
-
+import { __ } from "@/translation";
 const apps = createResource({
   url: "frappe.apps.get_apps",
   cache: "apps",

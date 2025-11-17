@@ -84,17 +84,17 @@
       <span>{{ emptyText }}</span>
       <Button
         v-if="title == 'Emails'"
-        label="New Email"
+        :label="__('New Email')"
         @click="communicationAreaRef?.toggleEmailBox() ?? toggleEmailBox()"
       />
       <Button
         v-else-if="title == 'Comments'"
-        label="New Comment"
+        :label="__('New Comment')"
         @click="communicationAreaRef?.toggleCommentBox() ?? toggleCommentBox()"
       />
       <Button
         v-else-if="title == 'Calls'"
-        label="Make a Call"
+        :label="__('Make a Call')"
         @click="makeCall()"
       />
     </div>
@@ -123,7 +123,7 @@ import { Avatar, FeatherIcon } from "frappe-ui";
 import { PropType, Ref, computed, h, inject, nextTick, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import FeedbackBox from "../ticket-agent/FeedbackBox.vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   activities: {
     type: Array as PropType<TicketActivity[]>,

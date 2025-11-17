@@ -11,7 +11,7 @@
         />
         <Button
           v-if="ticket.data.status !== 'Closed'"
-          label="Close"
+          :label="__('Close')"
           theme="gray"
           variant="solid"
           @click="handleClose()"
@@ -40,14 +40,14 @@
             v-model:attachments="attachments"
             v-model:content="editorContent"
             v-model:expand="isExpanded"
-            placeholder="Type a message"
+            :placeholder="__('Type a message')"
             autofocus
             @clear="() => (isExpanded = false)"
             :uploadFunction="(file:any)=>uploadFunction(file, 'HD Ticket', props.ticketId)"
           >
             <template #bottom-right>
               <Button
-                label="Send"
+                :label="__('Send')"
                 theme="gray"
                 variant="solid"
                 :disabled="$refs.editor?.editor.isEmpty || send.loading"
@@ -179,7 +179,7 @@ function updateTicket(fieldname: string, value: string) {
     auto: true,
     onSuccess: () => {
       ticket.reload();
-      toast.success("Ticket updated");
+      toast.success(__("Ticket updated"));
     },
   });
 }
@@ -194,11 +194,11 @@ function handleClose() {
 
 function showConfirmationDialog() {
   $dialog({
-    title: "Close Ticket",
+    title: __('Close Ticket'),
     message: "Are you sure you want to close this ticket?",
     actions: [
       {
-        label: "Confirm",
+        label: __('Confirm'),
         variant: "solid",
         onClick(close: Function) {
           ticket.data.status = "Closed";

@@ -8,7 +8,7 @@
       <template #actions>
         <Button
           @click="() => (showNewAgentsDialog = !showNewAgentsDialog)"
-          label="New"
+          :label="__('New')"
           variant="solid"
         >
           <template #prefix>
@@ -20,7 +20,7 @@
         <div class="flex items-center gap-2 justify-between">
           <FormControl
             v-model="search"
-            :placeholder="'Search'"
+            :placeholder="__('Search')"
             type="text"
             :debounce="300"
             class="w-60"
@@ -81,7 +81,7 @@
       class="flex mt-28 justify-between w-full h-full"
     >
       <p class="text-sm text-gray-500 w-full flex justify-center">
-        No agents found
+        {{ __("No agents found") }}
       </p>
     </div>
     <!-- Agent List -->
@@ -153,7 +153,7 @@ import LucideCheck from "~icons/lucide/check";
 import IconMoreHorizontal from "~icons/lucide/more-horizontal";
 import AgentCard from "./AgentCard.vue";
 import { activeFilter, showNewAgentsDialog, useAgents } from "./agents";
-
+import { __ } from "@/translation";
 const { getUserRole, updateUserRoleCache } = useUserStore();
 const { isManager } = useAuthStore();
 
@@ -165,7 +165,7 @@ function getRoles(agent: string) {
   const agentRole = getUserRole(agent);
   const roles = [
     {
-      label: "Agent",
+      label: __('Agent'),
       component: (props) =>
         RoleOption({
           role: "Agent",
@@ -179,7 +179,7 @@ function getRoles(agent: string) {
   ];
   if (isManager) {
     roles.unshift({
-      label: "Manager",
+      label: __('Manager'),
       component: (props) =>
         RoleOption({
           role: "Manager",
@@ -234,7 +234,7 @@ function getOptions(agent) {
   let filters = agentStore.filters;
   return [
     {
-      label: "Disable Agent",
+      label: __('Disable Agent'),
       icon: "x-circle",
       onClick: async () => {
         await agentStore.updateAgent(agent.name, 0);
@@ -243,7 +243,7 @@ function getOptions(agent) {
       condition: () => agent.is_active,
     },
     {
-      label: "Enable Agent",
+      label: __('Enable Agent'),
       icon: "check-circle",
       onClick: async () => {
         await agentStore.updateAgent(agent.name, 1);
@@ -256,7 +256,7 @@ function getOptions(agent) {
 
 const dropdownOptions = [
   {
-    label: "All",
+    label: __('All'),
     onClick: () => {
       agentStore.filters["is_active"] = ["in", [0, 1]];
       activeFilter.value = "All";

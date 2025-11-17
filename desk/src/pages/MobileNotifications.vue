@@ -9,7 +9,7 @@
       <Tooltip :text="'Mark all as read'">
         <div>
           <Button
-            :label="'Mark all as read'"
+            :label="__('Mark all as read')"
             @click="() => notificationStore.clear.submit()"
           >
             <template #prefix>
@@ -77,6 +77,7 @@ import { dayjs } from "@/dayjs";
 import { Notification } from "@/types";
 import { UserAvatar } from "@/components";
 import LucideBell from "~icons/lucide/bell";
+import { __ } from "@/translation";
 const notificationStore = useNotificationStore();
 const target = ref(null);
 onClickOutside(

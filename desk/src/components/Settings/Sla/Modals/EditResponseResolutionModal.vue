@@ -11,14 +11,14 @@
           :type="'select'"
           size="sm"
           variant="subtle"
-          placeholder="Select Priority"
-          label="Priority"
+          :placeholder="__('Select Priority')"
+          :label="__('Priority')"
           v-model="priorityData.priority"
           :options="priorityOptions"
           required
         />
         <div>
-          <FormLabel label="Response time" required />
+          <FormLabel :label="__('Response time')" required />
           <Popover class="mt-2">
             <template #target="{ togglePopover }" class="w-max">
               <div
@@ -42,7 +42,7 @@
           </Popover>
         </div>
         <div>
-          <FormLabel label="Resolution time" required />
+          <FormLabel :label="__('Resolution time')" required />
           <Popover class="mt-2">
             <template #target="{ togglePopover }" class="w-max">
               <div
@@ -67,7 +67,7 @@
         </div>
         <Checkbox
           v-model="priorityData.default_priority"
-          label="Set default priority"
+          :label="__('Set default priority')"
         />
       </div>
     </template>
@@ -87,9 +87,9 @@
             variant="subtle"
             theme="gray"
             @click="dialog = false"
-            label="Cancel"
+            :label="__('Cancel')"
           />
-          <Button variant="solid" @click="onSave" label="Save" />
+          <Button variant="solid" @click="onSave" :label="__('Save')" />
         </div>
       </div>
     </template>
@@ -110,7 +110,7 @@ import { inject, ref } from "vue";
 import { formatTimeHMS } from "../utils";
 import DurationPicker from "@/components/frappe-ui/DurationPicker.vue";
 import { slaData } from "@/stores/sla";
-
+import { __ } from "@/translation";
 const dialog = defineModel<boolean>();
 const emit = defineEmits(["onDefaultPriorityChange"]);
 const isConfirmingDelete = ref(false);
@@ -133,19 +133,19 @@ const priorityData = ref({
 
 const validateForm = () => {
   if (!priorityData.value.priority) {
-    toast.error("Please select a priority");
+    toast.error(__("Please select a priority"));
     return false;
   }
 
   const resolutionTime = parseInt(priorityData.value.resolution_time);
   if (isNaN(resolutionTime) || resolutionTime <= 0) {
-    toast.error("Resolution time must be a positive number");
+    toast.error(__("Resolution time must be a positive number"));
     return false;
   }
 
   const responseTime = parseInt(priorityData.value.response_time);
   if (isNaN(responseTime) || responseTime <= 0) {
-    toast.error("Response time must be a positive number");
+    toast.error(__("Response time must be a positive number"));
     return false;
   }
 

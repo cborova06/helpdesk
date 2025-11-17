@@ -17,7 +17,7 @@
   >
     <template #top>
       <div class="mx-6 md:mx-10 flex items-center gap-2 border-y py-2.5">
-        <span class="text-xs text-gray-500">TO:</span>
+        <span class="text-xs text-gray-500">{{ __("TO:") }}</span>
         <MultiSelectInput
           v-model="toEmailsClone"
           class="flex-1"
@@ -25,12 +25,12 @@
           :error-message="(value) => `${value} is an invalid email address`"
         />
         <Button
-          :label="'CC'"
+          :label="__('CC')"
           :class="[cc ? 'bg-gray-300 hover:bg-gray-200' : '']"
           @click="toggleCC()"
         />
         <Button
-          :label="'BCC'"
+          :label="__('BCC')"
           :class="[bcc ? 'bg-gray-300 hover:bg-gray-200' : '']"
           @click="toggleBCC()"
         />
@@ -40,7 +40,7 @@
         class="mx-10 flex items-center gap-2 py-2.5"
         :class="cc || showCC ? 'border-b' : ''"
       >
-        <span class="text-xs text-gray-500">CC:</span>
+        <span class="text-xs text-gray-500">{{ __("CC:") }}</span>
         <MultiSelectInput
           ref="ccInput"
           v-model="ccEmailsClone"
@@ -54,7 +54,7 @@
         class="mx-10 flex items-center gap-2 py-2.5"
         :class="bcc || showBCC ? 'border-b' : ''"
       >
-        <span class="text-xs text-gray-500">BCC:</span>
+        <span class="text-xs text-gray-500">{{ __("BCC:") }}</span>
         <MultiSelectInput
           ref="bccInput"
           v-model="bccEmailsClone"
@@ -134,7 +134,7 @@
         <div
           class="flex items-center justify-end space-x-2 sm:mt-0 w-[40%] mr-9"
         >
-          <Button label="Discard" @click="handleDiscard" />
+          <Button :label="__('Discard')" @click="handleDiscard" />
           <Button
             variant="solid"
             :disabled="emailEmpty"
@@ -187,7 +187,7 @@ import {
 } from "frappe-ui";
 import { useOnboarding } from "frappe-ui/frappe";
 import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
-
+import { __ } from "@/translation";
 const editorRef = ref(null);
 const showCannedResponseSelectorModal = ref(false);
 

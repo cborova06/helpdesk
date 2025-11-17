@@ -1,3 +1,4 @@
+from frappe import _
 import frappe
 from frappe.utils import add_to_date, getdate
 
@@ -170,7 +171,7 @@ def create_field_dependency():
     child_field = "priority"
     mapping = '{"Unspecified":["Urgent","High"],"Question":["Medium","High"],"Bug":["Medium"],"Incident":["Urgent","High","Medium","Low"]}'
     enabled = 1
-    fields_criteria = '{"display":{"enabled":true,"value":[{"label":"Any","value":"Any"}]},"mandatory":{"enabled":true,"value":[{"label":"Question","value":"Question"},{"label":"Bug","value":"Bug"}]}}'
+    fields_criteria = '{"display":{"enabled":true,"value":[{"label": _("Any"),"value":"Any"}]},"mandatory":{"enabled":true,"value":[{"label": _("Question"),"value":"Question"},{"label": _("Bug"),"value":"Bug"}]}}'
 
     create_update_field_dependency(
         parent_field, child_field, mapping, enabled, fields_criteria

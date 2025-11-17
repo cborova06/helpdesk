@@ -16,11 +16,11 @@
   >
     <template #body-content>
       <div class="flex flex-col gap-4">
-        <FormControl type="text" v-model="mobileNumber" label="Mobile Number" />
+        <FormControl type="text" v-model="mobileNumber" :label="__('Mobile Number')" />
         <FormControl
           type="select"
           v-model="callMedium"
-          :label="'Calling Medium'"
+          :label="__('Calling Medium')"
           :options="['Twilio', 'Exotel']"
         />
         <div class="flex flex-col gap-1">
@@ -47,7 +47,7 @@ import TwilioCallUI from "./TwilioCallUI.vue";
 import ExotelCallUI from "./ExotelCallUI.vue";
 import { useTelephonyStore } from "@/stores/telephony";
 import { storeToRefs } from "pinia";
-
+import { __ } from "@/translation";
 const telephonyStore = useTelephonyStore();
 const { defaultCallingMedium, isExotelEnabled, isTwilioEnabled } =
   storeToRefs(telephonyStore);

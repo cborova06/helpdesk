@@ -2,6 +2,7 @@
 # See license.txt
 
 import frappe
+from frappe import _
 from frappe.tests import IntegrationTestCase
 from frappe.utils import add_to_date, get_datetime, getdate
 
@@ -22,7 +23,7 @@ def get_ticket_obj():
     return {
         "doctype": "HD Ticket",
         "subject": "Test Ticket",
-        "description": "Test Ticket Description",
+        "description": _("Test Ticket Description"),
     }
 
 

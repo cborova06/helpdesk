@@ -18,8 +18,8 @@
       <form class="space-y-2" @submit.prevent="newTeam.submit">
         <FormControl
           v-model="newTeamTitle"
-          label="Title"
-          placeholder="Product experts"
+          :label="__('Title')"
+          :placeholder="__('Product experts')"
           type="text"
         />
       </form>
@@ -31,7 +31,7 @@
 import { createResource, toast } from "frappe-ui";
 import { isEmpty } from "lodash";
 import { ref } from "vue";
-
+import { __ } from "@/translation";
 const emit = defineEmits(["create"]);
 const show = defineModel();
 
@@ -51,7 +51,7 @@ const newTeam = createResource({
   },
   auto: false,
   onSuccess() {
-    toast.success("Team created");
+    toast.success(__("Team created"));
     newTeamTitle.value = null;
     show.value = false;
     emit("create");

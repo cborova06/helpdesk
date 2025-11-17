@@ -1,3 +1,4 @@
+from frappe import _
 import frappe
 from frappe.query_builder import Case
 

@@ -9,7 +9,7 @@
     <UserMenu class="mb-2" :options="profileSettings" />
     <SidebarLink
       v-if="!isCustomerPortal"
-      label="Search"
+      :label="__('Search')"
       class="my-0.5"
       :icon="LucideSearch"
       :on-click="() => openCommandPalette()"
@@ -18,14 +18,14 @@
       <template #right>
         <span class="flex items-center gap-0.5 font-medium text-gray-600">
           <component :is="device.modifierIcon" class="h-3 w-3" />
-          <span>K</span>
+          <span>{{ __("K") }}</span>
         </span>
       </template>
     </SidebarLink>
     <SidebarLink
       v-if="!isCustomerPortal"
       class="relative my-0.5 min-h-7"
-      label="Dashboard"
+      :label="__('Dashboard')"
       :icon="LucideLayoutDashboard"
       :to="'Dashboard'"
       :is-active="isActiveTab('Dashboard')"
@@ -40,7 +40,7 @@
       />
       <SidebarLink
         class="relative my-0.5"
-        label="Notifications"
+        :label="__('Notifications')"
         :icon="LucideBell"
         :on-click="() => notificationStore.toggle()"
         :is-expanded="isExpanded"
@@ -117,7 +117,7 @@
       <SidebarLink
         v-if="isOnboardingStepsCompleted && !isCustomerPortal"
         :icon="HelpIcon"
-        :label="'Help'"
+        :label="__('Help')"
         :is-expanded="isExpanded"
         @click="
           () => {
@@ -146,7 +146,7 @@
       v-model="showHelpModal"
       v-model:articles="articles"
       appName="helpdesk"
-      title="Frappe Helpdesk"
+      :title="__('Frappe Helpdesk')"
       :logo="logo"
       docsLink="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"
       :afterSkip="(step) => capture('onboarding_step_skipped_' + step)"
@@ -223,7 +223,7 @@ import Timer from "~icons/lucide/timer";
 import UserPen from "~icons/lucide/user-pen";
 import LucideUserPlus from "~icons/lucide/user-plus";
 import { setActiveSettingsTab } from "../Settings/settingsModal";
-
+import { __ } from "@/translation";
 const { isMobileView } = useScreenSize();
 
 const route = useRoute();
@@ -254,7 +254,7 @@ const allViews = computed(() => {
 
   const options = [
     {
-      label: "All Views",
+      label: __('All Views'),
       hideLabel: true,
       opened: true,
       views: items,
@@ -262,7 +262,7 @@ const allViews = computed(() => {
   ];
   if (publicViews.value?.length && !isCustomerPortal.value) {
     options.push({
-      label: "Public Views",
+      label: __('Public Views'),
       opened: true,
       hideLabel: false,
       views: parseViews(publicViews.value),
@@ -270,7 +270,7 @@ const allViews = computed(() => {
   }
   if (pinnedViews.value?.length) {
     options.push({
-      label: "Private Views",
+      label: __('Private Views'),
       opened: true,
       hideLabel: false,
       views: parseViews(pinnedViews.value),
@@ -300,7 +300,7 @@ function parseViews(views) {
 
 const customerPortalDropdown = computed(() => [
   {
-    label: "Log out",
+    label: __('Log out'),
     icon: "log-out",
     onClick: () => authStore.logout(),
   },
@@ -311,7 +311,7 @@ const agentPortalDropdown = computed(() => [
     component: markRaw(Apps),
   },
   {
-    label: "Customer portal",
+    label: __('Customer portal'),
     icon: "users",
     onClick: () => {
       const path = router.resolve({ name: "TicketsCustomer" });
@@ -320,27 +320,27 @@ const agentPortalDropdown = computed(() => [
   },
   {
     icon: "life-buoy",
-    label: "Support",
+    label: __('Support'),
     onClick: () => window.open("https://t.me/+905102232035"),
   },
   {
     icon: "book-open",
-    label: "Docs",
+    label: __('Docs'),
     onClick: () => window.open("https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"),
   },
   {
-    label: "Login to Frappe Cloud",
+    label: __('Login to Frappe Cloud'),
     icon: FrappeCloudIcon,
     onClick: () => confirmLoginToFrappeCloud(),
     condition: () => !isMobileView.value && window.is_fc_site,
   },
   {
-    label: "Shortcuts",
+    label: __('Shortcuts'),
     icon: h(LucideKeyboard),
     onClick: () => (showShortcutsModal.value = true),
   },
   {
-    label: "Settings",
+    label: __('Settings'),
     icon: "settings",
     onClick: () => (showSettingsModal.value = true),
     condition: () => authStore.isAdmin || authStore.isManager,
@@ -350,7 +350,7 @@ const agentPortalDropdown = computed(() => [
     hideLabel: true,
     items: [
       {
-        label: "Log out",
+        label: __('Log out'),
         icon: "log-out",
         onClick: () => authStore.logout(),
       },
@@ -394,7 +394,7 @@ const showOnboardingBanner = computed(() => {
 const steps = [
   {
     name: "setup_email_account",
-    title: "Connect your support email",
+    title: __('Connect your support email'),
     completed: false,
     icon: markRaw(LucideMail),
     onClick: () => {
@@ -405,7 +405,7 @@ const steps = [
   },
   {
     name: "invite_agents",
-    title: "Invite agents",
+    title: __('Invite agents'),
     completed: false,
     icon: markRaw(LucideUserPlus),
     onClick: () => {
@@ -416,7 +416,7 @@ const steps = [
   },
   {
     name: "setup_sla",
-    title: "Setup SLA",
+    title: __('Setup SLA'),
     completed: false,
     icon: markRaw(Timer),
     onClick: () => {
@@ -427,7 +427,7 @@ const steps = [
   },
   {
     name: "create_first_ticket",
-    title: "Create a ticket",
+    title: __('Create a ticket'),
     completed: false,
     icon: markRaw(Ticket),
     onClick: () => {
@@ -437,7 +437,7 @@ const steps = [
   },
   {
     name: "assign_to_agent",
-    title: "Assign a ticket to an agent",
+    title: __('Assign a ticket to an agent'),
     completed: false,
     icon: markRaw(UserPen),
     onClick: async () => {
@@ -448,7 +448,7 @@ const steps = [
   },
   {
     name: "reply_on_ticket",
-    title: "Reply on a ticket",
+    title: __('Reply on a ticket'),
     completed: false,
     icon: markRaw(MailOpen),
     onClick: async () => {
@@ -460,7 +460,7 @@ const steps = [
   },
   {
     name: "comment_on_ticket",
-    title: "Add a comment on a ticket",
+    title: __('Add a comment on a ticket'),
     completed: false,
     icon: markRaw(MessageCircle),
     onClick: async () => {
@@ -472,7 +472,7 @@ const steps = [
   },
   {
     name: "first_article",
-    title: "Create an article",
+    title: __('Create an article'),
     completed: false,
     icon: markRaw(FileText),
     onClick: async () => {
@@ -480,7 +480,7 @@ const steps = [
       router.push({
         name: "NewArticle",
         query: {
-          title: "General",
+          title: __('General'),
         },
         params: { id: generalCategory },
       });
@@ -489,13 +489,13 @@ const steps = [
   },
   {
     name: "add_invite_contact",
-    title: "Create & invite a contact",
+    title: __('Create & invite a contact'),
     completed: false,
     icon: markRaw(InviteCustomer),
     onClick: () => {
       minimize.value = true;
       currentStep.value = {
-        title: "Create & invite a contact",
+        title: __('Create & invite a contact'),
         buttonLabel: "Create",
         videoURL: "/assets/helpdesk/desk/videos/createInviteContact.mp4",
         onClick: async () => {
@@ -509,7 +509,7 @@ const steps = [
   },
   {
     name: "explore_customer_portal",
-    title: "Explore customer portal",
+    title: __('Explore customer portal'),
     completed: false,
     icon: markRaw(Globe),
     onClick: () => {
@@ -522,77 +522,77 @@ const steps = [
 
 const articles = ref([
   {
-    title: "Introduction",
+    title: __('Introduction'),
     opened: false,
     subArticles: [
-      { name: "introduction", title: "Introduction" },
-      { name: "setting-up", title: "Setting up" },
+      { name: "introduction", title: __('Introduction') },
+      { name: "setting-up", title: __('Setting up') },
     ],
   },
   {
-    title: "Getting Started",
+    title: __('Getting Started'),
     opened: false,
     subArticles: [
       {
         name: "lesson-1-your-first-ticket",
-        title: "Creating a ticket",
+        title: __('Creating a ticket'),
       },
       {
         name: "lesson-2understanding-ticket-view",
-        title: "Understanding ticket view",
+        title: __('Understanding ticket view'),
       },
       {
         name: "lesson-3-agents-teams",
-        title: "Agents & Teams",
+        title: __('Agents & Teams'),
       },
       {
         name: "customers-contacts",
-        title: "Customers & Contacts",
+        title: __('Customers & Contacts'),
       },
       {
         name: "lesson-4-knowledge-base",
-        title: "Knowledge Base",
+        title: __('Knowledge Base'),
       },
       {
         name: "customer-portal",
-        title: "Customer Portal",
+        title: __('Customer Portal'),
       },
     ],
   },
   {
-    title: "Masters",
+    title: __('Masters'),
     opened: false,
     subArticles: [
-      { name: "ticket", title: "Ticket" },
-      { name: "agent", title: "Agent" },
-      { name: "team", title: "Team" },
-      { name: "contact", title: "Contact" },
-      { name: "customer", title: "Customer" },
-      { name: "knowledge-base", title: "Knowledge Base" },
-      { name: "canned-response", title: "Canned Responses" },
-      { name: "service-level-agreement", title: "Service Level Agreement" },
-      { name: "ticket-type", title: "Ticket Type" },
-      { name: "ticket-priority", title: "Ticket Priority" },
+      { name: "ticket", title: __('Ticket') },
+      { name: "agent", title: __('Agent') },
+      { name: "team", title: __('Team') },
+      { name: "contact", title: __('Contact') },
+      { name: "customer", title: __('Customer') },
+      { name: "knowledge-base", title: __('Knowledge Base') },
+      { name: "canned-response", title: __('Canned Responses') },
+      { name: "service-level-agreement", title: __('Service Level Agreement') },
+      { name: "ticket-type", title: __('Ticket Type') },
+      { name: "ticket-priority", title: __('Ticket Priority') },
     ],
   },
   {
-    title: "Customizations",
+    title: __('Customizations'),
     opened: false,
     subArticles: [
-      { name: "custom-actions", title: "Custom Actions" },
-      { name: "field-dependency", title: "Field Dependency" },
-      { name: "custom-views", title: "Custom Views" },
+      { name: "custom-actions", title: __('Custom Actions') },
+      { name: "field-dependency", title: __('Field Dependency') },
+      { name: "custom-views", title: __('Custom Views') },
       {
         name: "settings",
-        title: "Settings",
+        title: __('Settings'),
       },
     ],
   },
   {
-    title: "Frappe Helpdesk Mobile",
+    title: __('Frappe Helpdesk Mobile'),
     opened: false,
     subArticles: [
-      { name: "pwa-installation", title: "Mobile App Installation" },
+      { name: "pwa-installation", title: __('Mobile App Installation') },
     ],
   },
 ]);

@@ -105,7 +105,7 @@ import dayjs from "dayjs";
 import { timeAgo } from "@/utils";
 import { statusColorMap, statusLabelMap } from "./utils";
 import { useAuthStore } from "@/stores/auth";
-
+import { __ } from "@/translation";
 const show = defineModel();
 const callLog = ref(null);
 const { isManager } = useAuthStore();

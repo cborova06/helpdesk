@@ -2,7 +2,7 @@
   <div class="flex w-[382px] flex-col border-l gap-4">
     <!-- Ticket ID -->
     <div class="flex items-center justify-between border-b px-5 py-3">
-      <span class="cursor-copy text-lg font-semibold">Ticket details</span>
+      <span class="cursor-copy text-lg font-semibold">{{ __("Ticket details") }}</span>
     </div>
     <!-- user info and sla info -->
     <div class="flex flex-col gap-4 pt-0 px-5 py-3 border-b">
@@ -90,7 +90,7 @@ import { Field } from "@/types";
 import { formatTime } from "@/utils";
 import { Avatar, Tooltip } from "frappe-ui";
 import { computed, inject } from "vue";
-
+import { __ } from "@/translation";
 const emit = defineEmits(["open"]);
 
 const ticket = inject(ITicket);
@@ -100,13 +100,13 @@ const slaData = computed(() => {
   const resolution = resolutionData();
   return [
     {
-      title: "First Response",
+      title: __('First Response'),
       value: ticket.data.first_responded_on || ticket.data.response_by,
       label: firstResponse.label,
       theme: firstResponse.color,
     },
     {
-      title: "Resolution",
+      title: __('Resolution'),
       value: ticket.data.resolution_date || ticket.data.resolution_by,
       label: resolution.label,
       theme: resolution.color,
@@ -142,7 +142,7 @@ function firstResponseData() {
     };
   } else {
     firstResponse = {
-      label: "Failed",
+      label: __('Failed'),
       color: "red",
     };
   }
@@ -170,7 +170,7 @@ function resolutionData() {
     };
   } else {
     resolution = {
-      label: "Failed",
+      label: __('Failed'),
       color: "red",
     };
   }
@@ -179,11 +179,11 @@ function resolutionData() {
 
 const ticketBasicInfo = computed(() => [
   {
-    label: "Ticket ID",
+    label: __('Ticket ID'),
     value: ticket.data.name,
   },
   {
-    label: "Status",
+    label: __('Status'),
     value: ticket.data.status,
     bold: true,
   },
@@ -192,15 +192,15 @@ const ticketBasicInfo = computed(() => [
 const ticketAdditionalInfo = computed(() => {
   const fields = [
     {
-      label: "Subject",
+      label: __('Subject'),
       value: ticket.data.subject,
     },
     {
-      label: "Team",
+      label: __('Team'),
       value: ticket.data.agent_group || "-",
     },
     {
-      label: "Priority",
+      label: __('Priority'),
       value: ticket.data.priority,
     },
   ];

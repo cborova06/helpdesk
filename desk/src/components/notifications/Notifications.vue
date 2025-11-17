@@ -13,7 +13,7 @@
     <div
       class="sticky top-0 z-10 flex items-center justify-between border-b bg-white px-5 py-2.5"
     >
-      <span class="text-lg font-medium">Notifications</span>
+      <span class="text-lg font-medium">{{ __("Notifications") }}</span>
       <div>
         <Button
           theme="blue"
@@ -81,7 +81,7 @@
       v-else
     >
       <LucideBell class="size-6" />
-      <p class="text-base text-ink-gray-8">You are all caught up!</p>
+      <p class="text-base text-ink-gray-8">{{ __("You are all caught up!") }}</p>
     </div>
   </span>
 </template>
@@ -94,7 +94,7 @@ import { useSidebarStore } from "@/stores/sidebar";
 import { Notification } from "@/types";
 import { onClickOutside } from "@vueuse/core";
 import { ref } from "vue";
-
+import { __ } from "@/translation";
 const notificationStore = useNotificationStore();
 const sidebarStore = useSidebarStore();
 const target = ref(null);

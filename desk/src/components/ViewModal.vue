@@ -20,7 +20,7 @@
           class="flex-1"
           size="md"
           type="text"
-          placeholder="My Open Tickets"
+          :placeholder="__('My Open Tickets')"
           v-model="view.label"
         />
       </div>
@@ -41,7 +41,7 @@ import { ref } from "vue";
 import { Dialog } from "frappe-ui";
 import IconPicker from "@/components/IconPicker.vue";
 import { computed } from "vue";
-
+import { __ } from "@/translation";
 let viewDialog = defineModel();
 
 const view = ref({

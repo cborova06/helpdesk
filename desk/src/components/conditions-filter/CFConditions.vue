@@ -20,7 +20,7 @@
       <Dropdown v-slot="{ open }" :options="dropdownOptions">
         <Button
           :disabled="props.disableAddCondition"
-          label="Add condition"
+          :label="__('Add condition')"
           icon-left="plus"
           :icon-right="open ? 'chevron-up' : 'chevron-down'"
         />
@@ -34,7 +34,7 @@ import { Button, Dropdown } from "frappe-ui";
 import { computed, onMounted } from "vue";
 import CFCondition from "./CFCondition.vue";
 import { filterableFields } from "./filterableFields";
-
+import { __ } from "@/translation";
 const props = defineProps({
   conditions: {
     type: Array<any>,
@@ -75,7 +75,7 @@ const isGroupCondition = (condition) => {
 const dropdownOptions = computed(() => {
   const options = [
     {
-      label: "Add condition",
+      label: __('Add condition'),
       onClick: () => {
         const conjunction = getConjunction();
         props.conditions.push(conjunction, ["", "", ""]);
@@ -84,7 +84,7 @@ const dropdownOptions = computed(() => {
   ];
   if (props.level < 3) {
     options.push({
-      label: "Add condition group",
+      label: __('Add condition group'),
       onClick: () => {
         const conjunction = getConjunction();
         props.conditions.push(conjunction, [[]]);

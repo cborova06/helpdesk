@@ -22,22 +22,22 @@
           v-if="!ticket.doc.via_customer_portal"
           class="text-ink-gray-4 flex items-center"
         >
-          <span class="text-ink-gray-4 mr-[6px]">via</span>
+          <span class="text-ink-gray-4 mr-[6px]">{{ __("via") }}</span>
           <EmailIcon class="size-4 inline-block mr-1" />
-          <span class="">Email</span>
+          <span class="">{{ __("Email") }}</span>
         </div>
         <!-- Via Portal -->
         <div v-else class="text-ink-gray-4 flex items-center">
-          <span class="text-ink-gray-4 mr-[6px]">via</span>
+          <span class="text-ink-gray-4 mr-[6px]">{{ __("via") }}</span>
           <GlobeIcon class="size-4 inline-block mr-1" />
-          <span class="font-medium">Portal</span>
+          <span class="font-medium">{{ __("Portal") }}</span>
         </div>
       </div>
       <!-- divider -->
       <div class="border-l border-outline-gray-2 h-[13px]" />
       <!-- First Response -->
       <div class="flex items-center gap-1">
-        <span>First Response</span>
+        <span>{{ __("First Response") }}</span>
         <Badge
           :label="firstResponse.label"
           variant="subtle"
@@ -48,7 +48,7 @@
       <div class="border-l border-outline-gray-2 h-[13px]" />
       <!-- Resolution by -->
       <div class="flex items-center gap-1">
-        <span>Resolution </span>
+        <span>{{ __("Resolution") }} </span>
         <Badge
           v-if="resolutionBy"
           :label="resolutionBy.label"
@@ -70,7 +70,7 @@ import { copyToClipboard } from "@/utils";
 import { dayjs } from "frappe-ui";
 import Badge from "frappe-ui/src/components/Badge/Badge.vue";
 import { computed, inject } from "vue";
-
+import { __ } from "@/translation";
 const ticket = inject(TicketSymbol);
 
 const firstResponse = computed(() => {

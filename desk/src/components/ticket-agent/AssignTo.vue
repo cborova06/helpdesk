@@ -2,7 +2,7 @@
   <Popover class="flex w-full" placement="bottom-end">
     <template #target="{ open, close, togglePopover }">
       <div class="flex flex-col gap-1.5 w-full">
-        <span class="block text-xs text-gray-600">Assignee</span>
+        <span class="block text-xs text-gray-600">{{ __("Assignee") }}</span>
         <Button
           variant="outline"
           class="!flex !justify-start w-full active:!bg-inherit hover:shadow-sm"
@@ -57,6 +57,7 @@ import { inject, useTemplateRef } from "vue";
 import LucideChevronDown from "~icons/lucide/chevron-down";
 import MultipleAvatar from "../MultipleAvatar.vue";
 import AssignToBody from "./AssignToBody.vue";
+import { __ } from "@/translation";
 const ticket = inject(TicketSymbol);
 const assignees = inject(AssigneeSymbol);
 const activities = inject(ActivitiesSymbol);

@@ -196,7 +196,7 @@ import {
 } from "vue";
 import LucideChevronDown from "~icons/lucide/chevron-down";
 import LucideX from "~icons/lucide/x";
-
+import { __ } from "@/translation";
 // Type Definitions
 interface MultiSelectOption {
   value: string;
@@ -223,8 +223,8 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  placeholder: "Select options...",
-  label: "Options",
+  placeholder: __('Select options...'),
+  label: __('Options'),
   selectionText: "items",
   options: () => [],
 });

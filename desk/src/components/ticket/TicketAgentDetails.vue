@@ -34,7 +34,7 @@ import {
 } from "@/utils";
 import { Badge, Tooltip } from "frappe-ui";
 import { computed, onUnmounted, ref, watch } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   ticket: {
     type: Object,
@@ -82,7 +82,7 @@ const firstResponseBadge = computed(() => {
     };
   } else {
     firstResponse = {
-      label: "Failed",
+      label: __('Failed'),
       color: "red",
     };
   }
@@ -126,7 +126,7 @@ const resolutionBadge = computed(() => {
     };
   } else {
     resolution = {
-      label: "Failed",
+      label: __('Failed'),
       color: "red",
     };
   }
@@ -145,13 +145,13 @@ function getCalculatedResolution() {
 
 const sections = computed(() => [
   {
-    label: "First Response",
+    label: __('First Response'),
     tooltipValue: dateFormat(props.ticket.response_by, dateTooltipFormat),
     badgeText: firstResponseBadge.value.label,
     badgeColor: firstResponseBadge.value.color,
   },
   {
-    label: "Resolution",
+    label: __('Resolution'),
     tooltipValue: dateFormat(
       props.ticket.resolution_date || props.ticket.resolution_by,
       dateTooltipFormat
@@ -160,7 +160,7 @@ const sections = computed(() => [
     badgeColor: resolutionBadge.value.color,
   },
   {
-    label: "Source",
+    label: __('Source'),
     value: props.ticket.via_customer_portal ? "Portal" : "Mail",
   },
 ]);

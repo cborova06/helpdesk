@@ -128,6 +128,7 @@ import { CopyIcon } from "../icons";
 import EmailIcon from "../icons/EmailIcon.vue";
 import PhoneIcon from "../icons/PhoneIcon.vue";
 import Section from "../Section.vue";
+import { __ } from "@/translation";
 const telephonyStore = useTelephonyStore();
 const { isCallingEnabled } = storeToRefs(telephonyStore);
 
@@ -157,7 +158,7 @@ const sections = computed(() => {
   const _sections = [];
   if (recentTickets.length) {
     _sections.push({
-      label: "Recent Tickets",
+      label: __('Recent Tickets'),
       tooltipMessage: "Tickets recently raised by this contact/customer",
       hideLabel: false,
       opened: true,
@@ -166,7 +167,7 @@ const sections = computed(() => {
   }
   if (similarTickets.length) {
     _sections.push({
-      label: "Similar Tickets",
+      label: __('Similar Tickets'),
       tooltipMessage: "Tickets with similar queries",
       hideLabel: false,
       opened: true,

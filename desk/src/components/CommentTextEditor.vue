@@ -69,7 +69,7 @@
           </div>
           <div class="flex items-center justify-end space-x-2 w-[40%]">
             <Button
-              label="Discard"
+              :label="__('Discard')"
               @click="
                 () => {
                   newComment = '';
@@ -121,7 +121,7 @@ import {
   uploadFunction,
 } from "@/utils";
 import { useStorage } from "@vueuse/core";
-
+import { __ } from "@/translation";
 const { updateOnboardingStep } = useOnboarding("helpdesk");
 const { agents: agentsList } = useAgentStore();
 const { isManager } = useAuthStore();

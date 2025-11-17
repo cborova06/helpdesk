@@ -55,8 +55,8 @@
           :type="'text'"
           size="sm"
           variant="subtle"
-          placeholder="Name"
-          label="Name"
+          :placeholder="__('Name')"
+          :label="__('Name')"
           v-model="assignmentRuleData.assignmentRuleName"
           required
           maxlength="50"
@@ -68,7 +68,7 @@
         />
       </div>
       <div class="flex flex-col gap-1.5">
-        <FormLabel label="Priority" />
+        <FormLabel :label="__('Priority')" />
         <Popover>
           <template #target="{ togglePopover }">
             <div
@@ -114,8 +114,8 @@
           :type="'textarea'"
           size="sm"
           variant="subtle"
-          placeholder="Description"
-          label="Description"
+          :placeholder="__('Description')"
+          :label="__('Description')"
           required
           maxlength="250"
           @change="validateAssignmentRule('description')"
@@ -174,14 +174,11 @@
           "
         >
           <span class="text-p-sm">
-            Conditions for this rule were created from
-            <a :href="deskUrl" target="_blank" class="underline">desk</a> which
-            are not compatible with this UI, you will need to recreate the
-            conditions here if you want to manage and add new conditions from
-            this UI.
+            {{ __("Conditions for this rule were created from") }}
+            <a :href="deskUrl" target="_blank" class="underline">desk</a> {{ __("which are not compatible with this UI, you will need to recreate the conditions here if you want to manage and add new conditions from this UI.") }}
           </span>
           <Button
-            label="I understand, add conditions"
+            :label="__('I understand, add conditions')"
             variant="subtle"
             theme="gray"
             @click="useNewUIForAssignCondition = true"
@@ -255,14 +252,11 @@
           "
         >
           <span class="text-p-sm">
-            Conditions for this rule were created from
-            <a :href="deskUrl" target="_blank" class="underline">desk</a> which
-            are not compatible with this UI, you will need to recreate the
-            conditions here if you want to manage and add new conditions from
-            this UI.
+            {{ __("Conditions for this rule were created from") }}
+            <a :href="deskUrl" target="_blank" class="underline">desk</a> {{ __("which are not compatible with this UI, you will need to recreate the conditions here if you want to manage and add new conditions from this UI.") }}
           </span>
           <Button
-            label="I understand, add conditions"
+            :label="__('I understand, add conditions')"
             variant="subtle"
             theme="gray"
             @click="useNewUIForUnassignCondition = true"
@@ -333,7 +327,7 @@ import AssignmentRulesSection from "./AssignmentRulesSection.vue";
 import AssignmentSchedule from "./AssignmentSchedule.vue";
 import { convertToConditions } from "@/utils";
 import { disableSettingModalOutsideClick } from "../settingsModal";
-
+import { __ } from "@/translation";
 const isDirty = ref(false);
 const initialData = ref(null);
 const isLoading = ref(false);
@@ -429,7 +423,7 @@ if (!assignmentRulesActiveScreen.value.data) {
 const goBack = () => {
   const confirmDialogInfo = {
     show: true,
-    title: "Unsaved changes",
+    title: __('Unsaved changes'),
     message: "Are you sure you want to go back? Unsaved changes will be lost.",
     onConfirm: goBack,
   };
@@ -486,7 +480,7 @@ const saveAssignmentRule = () => {
 const showOverwriteConfirm = () => {
   showConfirmDialog.value = {
     show: true,
-    title: "Confirm overwrite",
+    title: __('Confirm overwrite'),
     message:
       "Your old condition will be overwritten. Are you sure you want to save?",
     onConfirm: () => {
@@ -537,7 +531,7 @@ const createAssignmentRule = () => {
         })
         .then(() => {
           isLoading.value = false;
-          toast.success("Assignment rule created");
+          toast.success(__("Assignment rule created"));
         });
       assignmentRulesActiveScreen.value = {
         screen: "view",
@@ -552,9 +546,9 @@ const createAssignmentRule = () => {
 
 const priorityOptions = [
   { label: "Low", value: "0" },
-  { label: "Low-Medium", value: "1" },
+  { label: __('Low-Medium'), value: "1" },
   { label: "Medium", value: "2" },
-  { label: "Medium-High", value: "3" },
+  { label: __('Medium-High'), value: "3" },
   { label: "High", value: "4" },
 ];
 
@@ -624,7 +618,7 @@ const updateAssignmentRule = async () => {
   }
 
   isLoading.value = false;
-  toast.success("Assignment rule updated");
+  toast.success(__("Assignment rule updated"));
 };
 
 watch(

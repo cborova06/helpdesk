@@ -6,7 +6,7 @@
     >
       {{ isMobileView ? "..." : label }}
     </router-link>
-    <span class="mx-0.5 text-base text-ink-gray-4" aria-hidden="true"> / </span>
+    <span class="mx-0.5 text-base text-ink-gray-4" aria-hidden="true"> {{ __("/") }} </span>
     <Dropdown :options="options">
       <template #default="{ open }">
         <Button
@@ -86,7 +86,7 @@ import { useScreenSize } from "@/composables/screen";
 import { Icon } from "@iconify/vue";
 import { Dropdown } from "frappe-ui";
 import { useRoute } from "vue-router";
-
+import { __ } from "@/translation";
 const props = defineProps({
   routeName: {
     type: String,

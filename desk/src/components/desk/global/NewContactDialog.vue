@@ -33,7 +33,7 @@
           </div>
           <div class="flex justify-end space-x-2">
             <Button
-              label="Create"
+              :label="__('Create')"
               :loading="contactResource.loading"
               theme="gray"
               variant="solid"
@@ -62,7 +62,7 @@ import {
 import zod from "zod";
 
 import { AutoCompleteItem } from "@/types";
-
+import { __ } from "@/translation";
 interface Props {
   modelValue: boolean;
 }
@@ -103,7 +103,7 @@ interface FormField {
 
 const formFields: FormField[] = [
   {
-    label: "Email Id",
+    label: __('Email Id'),
     value: "emailID",
     error: "emailValidationError",
     type: "input",
@@ -111,7 +111,7 @@ const formFields: FormField[] = [
     action: () => validateEmailInput(state.value.emailID),
   },
   {
-    label: "First Name",
+    label: __('First Name'),
     value: "firstName",
     error: "firstNameValidationError",
     type: "input",
@@ -119,14 +119,14 @@ const formFields: FormField[] = [
     action: () => validateFirstName(state.value.firstName),
   },
   {
-    label: "Last Name",
+    label: __('Last Name'),
     value: "lastName",
     error: "lastNameValidationError",
     type: "input",
     required: false,
   },
   {
-    label: "Phone",
+    label: __('Phone'),
     value: "phone",
     error: "phoneValidationError",
     type: "input",
@@ -134,7 +134,7 @@ const formFields: FormField[] = [
     action: () => validatePhone(state.value.phone),
   },
   {
-    label: "Customer",
+    label: __('Customer'),
     value: "selectedCustomer",
     error: "customerValidationError",
     type: "autocomplete",
@@ -177,7 +177,7 @@ const contactResource = createResource({
       phone: "",
       selectedCustomer: null,
     };
-    toast.success("Contact created");
+    toast.success(__("Contact created"));
     emit("contactCreated");
   },
 });

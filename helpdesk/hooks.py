@@ -4,7 +4,7 @@ app_publisher = "Frappe Technologies"
 app_description = "Customer Service Software"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "hello@frappe.io"
+app_email = "info@brvsoftware.com.tr"
 app_license = "AGPLv3"
 required_apps = ["frappe/telephony"]
 

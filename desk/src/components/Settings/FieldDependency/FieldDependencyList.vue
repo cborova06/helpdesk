@@ -4,7 +4,7 @@
       <template #title>
         <div class="flex items-center gap-2">
           <h1 class="text-lg font-semibold text-ink-gray-8">
-            Field Dependencies
+            {{ __("Field Dependencies") }}
           </h1>
           <DocumentationButton
             url="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/field-dependency"
@@ -14,13 +14,12 @@
       </template>
       <template #description>
         <p class="text-p-sm max-w-md text-ink-gray-6">
-          Create dependencies between fields to dynamically control options
-          based on user selections.
+          {{ __("Create dependencies between fields to dynamically control options based on user selections.") }}
         </p>
       </template>
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="$emit('update:step', 'fd')"
@@ -47,7 +46,7 @@
       class="flex mt-28 justify-between w-full h-full"
     >
       <p class="text-sm text-gray-500 w-full flex justify-center">
-        No field dependencies found.
+        {{ __("No field dependencies found.") }}
       </p>
     </div>
 
@@ -59,9 +58,9 @@
     >
       <!-- table heading -->
       <div class="flex w-full p-2">
-        <p class="w-7/12 text-p-sm text-ink-gray-5">Name</p>
-        <p class="w-3/12 text-p-sm text-ink-gray-5">Created By</p>
-        <p class="w-1/12 text-p-sm text-ink-gray-5">Enabled</p>
+        <p class="w-7/12 text-p-sm text-ink-gray-5">{{ __("Name") }}</p>
+        <p class="w-3/12 text-p-sm text-ink-gray-5">{{ __("Created By") }}</p>
+        <p class="w-1/12 text-p-sm text-ink-gray-5">{{ __("Enabled") }}</p>
         <p class="w-1/12 text-p-sm text-ink-gray-5"></p>
       </div>
       <div class="h-px border-t mx-1 border-outline-gray-modals" />
@@ -131,7 +130,7 @@ import { onMounted, ref } from "vue";
 import { fieldDependenciesList } from "./fieldDependency";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
 import DocumentationButton from "@/components/DocumentationButton.vue";
-
+import { __ } from "@/translation";
 onMounted(() => {
   fieldDependenciesList.reload();
 });
@@ -144,7 +143,7 @@ function getOptions(rowName: string) {
     onConfirmDelete: () => {
       fieldDependenciesList.delete.submit(rowName, {
         onSuccess: () => {
-          toast.success("Field dependency deleted successfully");
+          toast.success(__("Field dependency deleted successfully"));
           fieldDependenciesList.reload();
         },
       });
@@ -160,7 +159,7 @@ function handleSwitchToggle(rowName: string, value: boolean) {
     },
     {
       onSuccess: () => {
-        toast.success("Field dependency updated successfully.");
+        toast.success(__("Field dependency updated successfully."));
       },
     }
   );

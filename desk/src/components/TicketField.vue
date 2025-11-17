@@ -4,7 +4,7 @@
       <Tooltip :text="field.label">
         <span>{{ field.label }}</span>
       </Tooltip>
-      <span v-if="field.required" class="text-red-500"> * </span>
+      <span v-if="field.required" class="text-red-500"> {{ __("*") }} </span>
     </div>
     <div
       class="-m-0.5 min-h-[28px] flex-1 items-center overflow-hidden p-0.5 text-base"
@@ -51,7 +51,7 @@ import {
 } from "frappe-ui";
 import DatePicker from "frappe-ui/src/components/DatePicker/DatePicker.vue";
 import { computed, h } from "vue";
-
+import { __ } from "@/translation";
 interface P {
   field: Field;
   value: FieldValue;

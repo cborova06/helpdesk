@@ -75,14 +75,14 @@
       {{ subject }}
     </div> -->
     <div class="text-sm leading-5 text-gray-600">
-      <span v-if="to" class="text-2xs mr-1 font-bold text-gray-500">TO:</span>
+      <span v-if="to" class="text-2xs mr-1 font-bold text-gray-500">{{ __("TO:") }}</span>
       <span v-if="to"> {{ to }} </span>
-      <span v-if="cc">, </span>
-      <span v-if="cc" class="text-2xs mr-1 font-bold text-gray-500"> CC: </span>
+      <span v-if="cc">{{ __(",") }} </span>
+      <span v-if="cc" class="text-2xs mr-1 font-bold text-gray-500"> {{ __("CC:") }} </span>
       <span v-if="cc">{{ cc }}</span>
-      <span v-if="bcc">, </span>
+      <span v-if="bcc">{{ __(",") }} </span>
       <span v-if="bcc" class="text-2xs mr-1 font-bold text-gray-500">
-        BCC:
+        {{ __("BCC:") }}
       </span>
       <span v-if="bcc">{{ bcc }}</span>
     </div>
@@ -115,7 +115,7 @@ import { ReplyAllIcon, ReplyIcon } from "./icons";
 import TicketSplitModal from "./ticket/TicketSplitModal.vue";
 import { useAuthStore } from "@/stores/auth";
 import { storeToRefs } from "pinia";
-
+import { __ } from "@/translation";
 const props = defineProps({
   activity: {
     type: Object,
@@ -251,7 +251,7 @@ const replyAll = () => {
 //   editor.editor
 //     .chain()
 //     .clearContent()
-//     .insertContent("<p>.</p>")
+//     .insertContent("<p>{{ __(".") }}</p>")
 //     .updateAttributes("paragraph", { class: "reply-to-content" })
 //     .insertContent(repliedMessage)
 //     .focus("all")

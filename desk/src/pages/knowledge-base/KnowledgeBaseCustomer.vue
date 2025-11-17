@@ -11,7 +11,7 @@
       <SearchPopover
         :popoverClass="['max-w-[310px] md:max-w-[842px] !top-1']"
         v-model="query"
-        placeholder="Ask a question..."
+        :placeholder="__('Ask a question...')"
         size="md"
         :autofocus="true"
       />
@@ -19,7 +19,7 @@
       <!-- Categories Folder -->
       <section class="flex flex-col gap-3">
         <!-- Heading -->
-        <p class="text-lg text-gray-900">Categories</p>
+        <p class="text-lg text-gray-900">{{ __("Categories") }}</p>
         <CategoryFolderContainer />
       </section>
     </div>
@@ -34,7 +34,7 @@ import { LayoutHeader } from "@/components";
 import CategoryFolderContainer from "@/components/knowledge-base/CategoryFolderContainer.vue";
 import SearchPopover from "@/components/SearchPopover.vue";
 import { capture } from "@/telemetry";
-
+import { __ } from "@/translation";
 const query = ref("");
 
 onMounted(() => {
@@ -42,7 +42,7 @@ onMounted(() => {
 });
 usePageMeta(() => {
   return {
-    title: "Knowledge Base",
+    title: __('Knowledge Base'),
   };
 });
 </script>

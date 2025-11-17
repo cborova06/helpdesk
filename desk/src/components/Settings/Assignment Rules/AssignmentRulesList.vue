@@ -35,7 +35,7 @@ import {
   resetAssignmentRuleData,
 } from "../../../stores/assignmentRules";
 import AssignmentRulesListView from "./AssignmentRulesListView.vue";
-
+import { __ } from "@/translation";
 const assignmentRulesListData = createResource({
   url: "helpdesk.api.assignment_rule.get_assignment_rules_list",
   cache: ["assignmentRules", "get_assignment_rules_list"],

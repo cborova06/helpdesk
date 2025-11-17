@@ -3,15 +3,15 @@
     <template #body-content>
       <div class="flex flex-col gap-4">
         <p class="text-p-base text-ink-gray-8">
-          All
-          <span class="underline">emails/ comments</span>
-          from this email onwards will be moved to new ticket.
+          {{ __("All") }}
+          <span class="underline">{{ __("emails/ comments") }}</span>
+          {{ __("from this email onwards will be moved to new ticket.") }}
         </p>
         <FormControl
-          label="New Ticket Subject"
+          :label="__('New Ticket Subject')"
           type="text"
           v-model="subject"
-          placeholder="Add a subject for the new ticket"
+          :placeholder="__('Add a subject for the new ticket')"
         />
         <div
           class="flex items-center gap-2 rounded-md p-2 ring-1 ring-gray-200"
@@ -30,7 +30,7 @@
       <Button
         class="w-full"
         variant="solid"
-        label="Split into new ticket"
+        :label="__('Split into new ticket')"
         :loading="splitTicket.loading"
         :icon-left="LucideSplit"
         @click="handleTicketSplit"
@@ -44,7 +44,7 @@ import { Dialog, createResource, toast } from "frappe-ui";
 import { ref } from "vue";
 import LucideSplit from "~icons/lucide/split";
 import TriangleAlert from "~icons/lucide/triangle-alert";
-
+import { __ } from "@/translation";
 interface Props {
   ticket_id: string;
   communication_id: string;
@@ -74,7 +74,7 @@ const splitTicket = createResource({
     if (!communication_id) throw { message: "Communication ID is required" };
   },
   onSuccess: (newTicket: string) => {
-    toast.success("Ticket split successfully");
+    toast.success(__("Ticket split successfully"));
     showDialog.value = false;
     window.open(
       window.location.origin + "/helpdesk/tickets/" + newTicket,

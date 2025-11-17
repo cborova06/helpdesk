@@ -12,7 +12,7 @@
         <Button
           variant="solid"
           :loading="isLoading"
-          label="Rename"
+          :label="__('Rename')"
           @click="handleRename"
         />
       </div>
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { TicketSymbol } from "@/types";
 import { inject, ref } from "vue";
-
+import { __ } from "@/translation";
 const ticket = inject(TicketSymbol);
 const showSubjectDialog = defineModel();
 const renameSubject = ref(ticket.value?.doc?.subject || "");

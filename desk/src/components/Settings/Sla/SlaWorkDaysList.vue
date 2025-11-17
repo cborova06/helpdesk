@@ -16,7 +16,7 @@
         }"
       >
         {{ column.label }}
-        <span v-if="column.isRequired" class="text-red-500">*</span>
+        <span v-if="column.isRequired" class="text-red-500">{{ __("*") }}</span>
       </div>
     </div>
     <hr v-if="slaData.support_and_resolution?.length !== 0" />
@@ -38,7 +38,7 @@
     <Button
       v-if="slaData.support_and_resolution.length < 7"
       variant="subtle"
-      label="Add row"
+      :label="__('Add row')"
       @click="addWorkDay"
       icon-left="plus"
     />
@@ -51,7 +51,7 @@ import { Button } from "frappe-ui";
 import SlaWorkDaysListItem from "./SlaWorkDaysListItem.vue";
 import { slaData, slaDataErrors } from "@/stores/sla";
 import { getGridTemplateColumnsForTable } from "@/utils";
-
+import { __ } from "@/translation";
 interface Column {
   key: string;
   label: string;
@@ -84,17 +84,17 @@ const addWorkDay = () => {
 
 const columns: Column[] = [
   {
-    label: "Day",
+    label: __('Day'),
     key: "workday",
     isRequired: true,
   },
   {
-    label: "Start time",
+    label: __('Start time'),
     key: "start_time",
     isRequired: true,
   },
   {
-    label: "End time",
+    label: __('End time'),
     key: "end_time",
     isRequired: true,
   },

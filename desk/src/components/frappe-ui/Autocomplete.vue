@@ -54,7 +54,7 @@
                 "
                 :value="query"
                 autocomplete="off"
-                placeholder="Search"
+                :placeholder="__('Search')"
               />
               <button
                 class="absolute right-1.5 inline-flex h-7 w-7 items-center justify-center"
@@ -134,7 +134,7 @@ import {
 } from "@headlessui/vue";
 import { Popover, Button, FeatherIcon } from "frappe-ui";
 import { ref, computed, useAttrs, useSlots, watch, nextTick } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   modelValue: {
     type: [String, Object],

@@ -9,7 +9,7 @@
       >
         <span>{{ `${show_others ? "Hide " : "Show "}` }}</span>
         <span>+{{ relatedActivities.length }} </span>
-        <span>changes from </span>
+        <span>{{ __("changes from") }} </span>
         <span>{{ user }}</span>
 
         <Button
@@ -63,6 +63,7 @@
 import { SelectIcon } from "@/components/icons";
 import { dateFormat, dateTooltipFormat, timeAgo } from "@/utils";
 import { ref } from "vue";
+import { __ } from "@/translation";
 const props = defineProps({
   activity: {
     type: Object,

@@ -144,7 +144,7 @@ import { createResource, Switch, LoadingIndicator } from "frappe-ui";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
 import ConfirmDialog from "@/components/ConfirmDialog.vue";
 import { disableSettingModalOutsideClick } from "../settingsModal";
-
+import { __ } from "@/translation";
 const props = defineProps<{
   title: string;
   description: string;

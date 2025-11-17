@@ -5,7 +5,7 @@
     <!-- left box -->
     <div class="flex-1 flex flex-col gap-1.5">
       <span class="block text-xs text-ink-gray-5">
-        Select parent field value
+        {{ __("Select parent field value") }}
       </span>
       <div class="border flex-1 border-r-0 rounded-l p-2 flex flex-col gap-2">
         <template v-if="state.selectedParentField">
@@ -64,7 +64,7 @@
     <!-- right box -->
     <div class="flex-1 flex flex-col gap-1.5">
       <span class="block text-xs text-ink-gray-5 pl-1.5">
-        Select child field value
+        {{ __("Select child field value") }}
       </span>
       <div class="border flex-1 rounded-r p-2 flex flex-col gap-2">
         <template
@@ -134,7 +134,7 @@
 <script setup lang="ts">
 import { FieldCriteriaState } from "@/types";
 import { computed } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps<{
   isNew: boolean;
   parentFields: any[];

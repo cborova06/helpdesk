@@ -307,9 +307,20 @@ class HDTicket(Document):
 		if self.feedback or is_agent() or not self.has_agent_replied:
 			return
 
-		frappe.throw(
-			_("Ticket must be resolved with a feedback"), frappe.ValidationError
-		)
+		previous_doc = self.get_doc_before_save()
+		if not previous_doc:
+			return
+
+		closing_categories = {"Resolved", "Closed"}
+		prev_category = previous_doc.status_category
+		new_category = self.status_category
+
+		# Only enforce feedback requirement if the user is transitioning
+		# into a resolved/closed category from a non-closing state.
+		if new_category in closing_categories and prev_category not in closing_categories:
+			frappe.throw(
+				_("Ticket must be resolved with a feedback"), frappe.ValidationError
+			)
 
 	def check_update_perms(self):
 		if self.is_new() or is_agent() or not self.via_customer_portal:
@@ -916,78 +927,78 @@ class HDTicket(Document):
 				"width": "5rem",
 			},
 			{
-				"label": "Subject",
+				"label": _("Subject"),
 				"type": "Data",
 				"key": "subject",
 				"width": "25rem",
 			},
 			{
-				"label": "Status",
+				"label": _("Status"),
 				"type": "Select",
 				"key": "status",
 				"width": "8rem",
 			},
 			{
-				"label": "First response",
+				"label": _("First response"),
 				"type": "Datetime",
 				"key": "response_by",
 				"width": "8rem",
 			},
 			{
-				"label": "Resolution",
+				"label": _("Resolution"),
 				"type": "Datetime",
 				"key": "resolution_by",
 				"width": "8rem",
 			},
 			{
-				"label": "Assigned To",
+				"label": _("Assigned To"),
 				"type": "MultipleAvatar",
 				"key": "_assign",
 				"width": "8rem",
 			},
 			{
-				"label": "Customer",
+				"label": _("Customer"),
 				"type": "Link",
 				"key": "customer",
 				"options": "HD Customer",
 				"width": "8rem",
 			},
 			{
-				"label": "Priority",
+				"label": _("Priority"),
 				"type": "Link",
 				"options": "HD Ticket Priority",
 				"key": "priority",
 				"width": "10rem",
 			},
 			{
-				"label": "Type",
+				"label": _("Type"),
 				"type": "Link",
 				"options": "HD Ticket Type",
 				"key": "ticket_type",
 				"width": "11rem",
 			},
 			{
-				"label": "Team",
+				"label": _("Team"),
 				"type": "Link",
 				"options": "HD Team",
 				"key": "agent_group",
 				"width": "10rem",
 			},
 			{
-				"label": "Contact",
+				"label": _("Contact"),
 				"type": "Link",
 				"key": "contact",
 				"options": "Contact",
 				"width": "8rem",
 			},
 			{
-				"label": "Rating",
+				"label": _("Rating"),
 				"type": "Rating",
 				"key": "feedback_rating",
 				"width": "10rem",
 			},
 			{
-				"label": "Created",
+				"label": _("Created"),
 				"type": "Datetime",
 				"key": "creation",
 				"options": "Contact",
@@ -1002,45 +1013,45 @@ class HDTicket(Document):
 				"width": "5rem",
 			},
 			{
-				"label": "Subject",
+				"label": _("Subject"),
 				"type": "Data",
 				"key": "subject",
 				"width": "22rem",
 			},
 			{
-				"label": "Status",
+				"label": _("Status"),
 				"type": "Select",
 				"key": "status",
 				"width": "11rem",
 			},
 			{
-				"label": "Priority",
+				"label": _("Priority"),
 				"type": "Link",
 				"options": "HD Ticket Priority",
 				"key": "priority",
 				"width": "10rem",
 			},
 			{
-				"label": "First response",
+				"label": _("First response"),
 				"type": "Datetime",
 				"key": "response_by",
 				"width": "8rem",
 			},
 			{
-				"label": "Resolution",
+				"label": _("Resolution"),
 				"type": "Datetime",
 				"key": "resolution_by",
 				"width": "8rem",
 			},
 			{
-				"label": "Team",
+				"label": _("Team"),
 				"type": "Link",
 				"options": "HD Team",
 				"key": "agent_group",
 				"width": "10rem",
 			},
 			{
-				"label": "Created",
+				"label": _("Created"),
 				"type": "Datetime",
 				"key": "creation",
 				"options": "Contact",

@@ -28,7 +28,7 @@
           <input
             v-if="column.key === 'description'"
             :type="'text'"
-            placeholder="Description"
+            :placeholder="__('Description')"
             v-model="holiday[column.key]"
             class="!bg-white w-full text-base px-0 focus:!ring-0 border-none hover:bg-white outline-none no-underline focus:!outline-none"
           />
@@ -61,7 +61,7 @@ import dayjs from "dayjs";
 import { ConfirmDelete, getFormattedDate } from "@/utils";
 import { holidayData } from "@/stores/holidayList";
 import AddHolidayModal from "./Modals/AddHolidayModal.vue";
-
+import { __ } from "@/translation";
 const isConfirmingDelete = ref(false);
 
 interface Holiday {
@@ -72,7 +72,7 @@ interface Holiday {
 
 const dropdownOptions = (holiday: Holiday) => [
   {
-    label: "Edit",
+    label: __('Edit'),
     onClick: () => editHoliday(holiday),
     icon: "edit",
   },
@@ -97,11 +97,11 @@ const holidays = computed(() => {
 
 const columns = [
   {
-    label: "Date",
+    label: __('Date'),
     key: "holiday_date",
   },
   {
-    label: "Description",
+    label: __('Description'),
     key: "description",
   },
 ];

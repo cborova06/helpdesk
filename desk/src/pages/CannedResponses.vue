@@ -9,7 +9,7 @@
           <TextInput
             v-model="searchQuery"
             type="text"
-            :placeholder="'Search canned responses'"
+            :placeholder="__('Search canned responses')"
             class="input input-bordered h-8 px-2 text-sm"
             style="min-width: 290px"
           >
@@ -18,7 +18,7 @@
             </template>
           </TextInput>
           <Button
-            label="Create"
+            :label="__('Create')"
             theme="gray"
             variant="solid"
             @click="
@@ -94,7 +94,7 @@
       </div>
       <EmptyState
         v-else
-        title="No Canned Responses Found"
+        :title="__('No Canned Responses Found')"
         @emptyStateAction="showNewDialog = true"
       />
     </div>
@@ -143,11 +143,11 @@ import {
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import EmptyState from "../components/EmptyState.vue";
-
+import { __ } from "@/translation";
 const { getUser } = useUserStore();
 
 const breadcrumbs = [
-  { label: "Canned Responses", route: { name: "CannedResponses" } },
+  { label: __('Canned Responses'), route: { name: "CannedResponses" } },
 ];
 const route = useRoute();
 
@@ -200,7 +200,7 @@ async function deleteItem(name) {
 
 usePageMeta(() => {
   return {
-    title: "Canned Responses",
+    title: __('Canned Responses'),
   };
 });
 </script>

@@ -11,9 +11,9 @@
           <span class="font-medium text-gray-800">
             {{ commenter }}
           </span>
-          <span> added a</span>
+          <span> {{ __("added a") }}</span>
           <span class="max-w-xs truncate font-medium text-gray-800">
-            comment
+            {{ __("comment") }}
           </span>
         </p>
       </div>
@@ -66,8 +66,8 @@
       >
         <template #bottom v-if="editable">
           <div class="flex flex-row-reverse gap-2">
-            <Button label="Save" @click="handleSaveComment" variant="solid" />
-            <Button label="Discard" @click="handleDiscard" />
+            <Button :label="__('Save')" @click="handleSaveComment" variant="solid" />
+            <Button :label="__('Discard')" @click="handleDiscard" />
           </div>
         </template>
       </TextEditor>
@@ -121,6 +121,7 @@ import {
   toast,
 } from "frappe-ui";
 import { PropType, computed, onMounted, ref } from "vue";
+import { __ } from "@/translation";
 const authStore = useAuthStore();
 const props = defineProps({
   activity: {
@@ -166,7 +167,7 @@ const deleteComment = createResource({
   onSuccess() {
     emit("update");
     showDialog.value = false;
-    toast.success("Comment deleted");
+    toast.success(__("Comment deleted"));
   },
 });
 
@@ -176,7 +177,7 @@ function handleSaveComment() {
     return;
   }
   if (isContentEmpty(_content.value)) {
-    toast.error("Comment cannot be empty");
+    toast.error(__("Comment cannot be empty"));
     return;
   }
 
@@ -191,7 +192,7 @@ function handleSaveComment() {
       onSuccess: () => {
         editable.value = false;
         emit("update");
-        toast.success("Comment updated");
+        toast.success(__("Comment updated"));
       },
     }
   );

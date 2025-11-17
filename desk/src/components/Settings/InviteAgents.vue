@@ -3,21 +3,21 @@
     <form @submit.prevent="onSubmit" class="flex flex-col gap-5">
       <div class="sticky top-0 z-10 bg-white pt-8 pb-1">
         <SettingsLayoutHeader
-          title="Invite Agents"
-          description="Easily invite new agents, managers, or admins"
+          :title="__('Invite Agents')"
+          :description="__('Easily invite new agents, managers, or admins')"
         />
       </div>
       <FormControl
         type="textarea"
         :required="true"
-        label="Invite by email"
-        placeholder="user1@example.com, user2@example.com, ..."
+        :label="__('Invite by email')"
+        :placeholder="__('user1@example.com, user2@example.com, ...')"
         v-model="emails"
         :debounce="100"
-        description="Comma separated emails to invite"
+        :description="__('Comma separated emails to invite')"
       />
       <FormControl
-        label="Role"
+        :label="__('Role')"
         type="select"
         :required="true"
         :options="roleOptions"
@@ -34,7 +34,7 @@
       >
     </form>
     <template v-if="pendingInvitesResource.data?.length">
-      <h2 class="mt-8 text-base font-semibold">Pending Invites</h2>
+      <h2 class="mt-8 text-base font-semibold">{{ __("Pending Invites") }}</h2>
       <ul class="flex flex-col gap-[0.375rem] mt-3">
         <li
           v-for="invite in pendingInvitesResource.data"
@@ -101,7 +101,7 @@ import { FormControl, Button, Tooltip, createResource, toast } from "frappe-ui";
 import { computed, ref } from "vue";
 import { useOnboarding } from "frappe-ui/frappe";
 import SettingsLayoutHeader from "./SettingsLayoutHeader.vue";
-
+import { __ } from "@/translation";
 const authStore = useAuthStore();
 const { isAdmin, isManager } = authStore;
 
@@ -134,21 +134,19 @@ const roleOptions: [RoleOption, ...RoleOption[]] = [
   {
     label: roleToLabel("Agent"),
     value: "Agent",
-    description:
-      "Can work on tickets, create custom views and manage private views.",
+    description: __('Can work on tickets, create custom views and manage private views.'),
   },
 ];
 const managerRoleOption: RoleOption = {
   label: roleToLabel("Agent Manager"),
   value: "Agent Manager",
-  description:
-    "Can invite new agents, manage tickets, create custom views and manage public views.",
+  description: __('Can invite new agents, manage tickets, create custom views and manage public views.'),
 };
 if (isAdmin) {
   roleOptions.push(managerRoleOption, {
     label: roleToLabel("System Manager"),
     value: "System Manager",
-    description: "Can manage all aspects of Helpdesk.",
+    description: __('Can manage all aspects of Helpdesk.'),
   });
 } else if (isManager) {
   roleOptions.push(managerRoleOption);
@@ -163,7 +161,7 @@ const roleDescription = computed(
 
 const onSubmit = async () => {
   if (emails.value.trim() === "") {
-    toast.error("At least one email required");
+    toast.error(__("At least one email required"));
   }
   await inviteByEmailResource.submit({
     emails: emails.value,
@@ -225,7 +223,7 @@ const cancelInviteResource = createResource({
   url: "frappe.core.api.user_invitation.cancel_invitation",
   method: "PATCH",
   onSuccess() {
-    toast.success("Invitation cancelled successfully");
+    toast.success(__("Invitation cancelled successfully"));
     pendingInvitesResource.fetch();
   },
 });

@@ -80,7 +80,7 @@ import {
   toast,
 } from "frappe-ui";
 import { inject, ref } from "vue";
-
+import { __ } from "@/translation";
 const assignmentRulesList = inject<any>("assignmentRulesList");
 
 const props = defineProps({
@@ -92,9 +92,9 @@ const props = defineProps({
 
 const priorityOptions = [
   { label: "Low", value: "0" },
-  { label: "Low-Medium", value: "1" },
+  { label: __('Low-Medium'), value: "1" },
   { label: "Medium", value: "2" },
-  { label: "Medium-High", value: "3" },
+  { label: __('Medium-High'), value: "3" },
   { label: "High", value: "4" },
 ];
 
@@ -115,7 +115,7 @@ const deleteAssignmentRule = () => {
     onSuccess: () => {
       assignmentRulesList.reload();
       isConfirmingDelete.value = false;
-      toast.success("Assignment rule deleted");
+      toast.success(__("Assignment rule deleted"));
     },
     auto: true,
   });
@@ -123,7 +123,7 @@ const deleteAssignmentRule = () => {
 
 const dropdownOptions = [
   {
-    label: "Duplicate",
+    label: __('Duplicate'),
     onClick: () => {
       duplicateDialog.value = {
         show: true,
@@ -147,7 +147,7 @@ const duplicate = () => {
     },
     onSuccess: (data) => {
       assignmentRulesList.reload();
-      toast.success("Assignment rule duplicated");
+      toast.success(__("Assignment rule duplicated"));
       duplicateDialog.value.show = false;
       duplicateDialog.value.name = "";
       assignmentRulesActiveScreen.value = {
@@ -167,7 +167,7 @@ const onPriorityChange = () => {
 
 const onToggle = () => {
   if (!props.data.users_exists && props.data.disabled) {
-    toast.error("Cannot enable rule without adding users in it");
+    toast.error(__("Cannot enable rule without adding users in it"));
     return;
   }
   setAssignmentRuleValue("disabled", !props.data.disabled, "status");

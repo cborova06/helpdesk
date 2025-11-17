@@ -7,7 +7,7 @@
     <template #body>
       <div class="flex" :style="{ height: 'calc(100vh - 8rem)' }">
         <div class="flex w-52 shrink-0 flex-col bg-gray-50 p-2">
-          <h1 class="px-2 pt-2 text-lg font-semibold mb-3">Settings</h1>
+          <h1 class="px-2 pt-2 text-lg font-semibold mb-3">{{ __("Settings") }}</h1>
           <div v-for="tab in tabs">
             <div
               v-if="!tab.hideLabel"
@@ -78,7 +78,7 @@ import {
   nextActiveTab,
   tabs,
 } from "./settingsModal";
-
+import { __ } from "@/translation";
 const show: ModelRef<boolean> = defineModel();
 
 const showConfirmDialog = ref(false);

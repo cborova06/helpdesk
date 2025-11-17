@@ -2,6 +2,7 @@
 # License: GNU General Public License v3. See license.txt
 
 
+from frappe import _
 import json
 
 import frappe

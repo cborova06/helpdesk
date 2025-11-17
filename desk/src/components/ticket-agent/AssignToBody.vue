@@ -76,7 +76,7 @@ import { useUserStore } from "@/stores/user";
 import { capture } from "@/telemetry";
 import { Tooltip, Switch, createResource, call } from "frappe-ui";
 import { ref, watch, useTemplateRef, nextTick } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   doctype: {
     type: String,

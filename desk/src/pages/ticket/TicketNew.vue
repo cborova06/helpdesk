@@ -41,13 +41,13 @@
       >
         <div class="flex flex-col gap-2">
           <span class="block text-sm text-gray-700">
-            Subject
-            <span class="place-self-center text-red-500"> * </span>
+            {{ __("Subject") }}
+            <span class="place-self-center text-red-500"> {{ __("*") }} </span>
           </span>
           <FormControl
             v-model="subject"
             type="text"
-            placeholder="A short description"
+            :placeholder="__('A short description')"
           />
         </div>
         <SearchArticles
@@ -60,7 +60,7 @@
             v-show="subject.length <= 2 && description.length === 0"
             class="text-p-sm text-gray-500 ml-1"
           >
-            Please enter a subject to continue
+            {{ __("Please enter a subject to continue") }}
           </h4>
           <TicketTextEditor
             v-show="subject.length > 2 || description.length > 0"
@@ -73,7 +73,7 @@
           >
             <template #bottom-right>
               <Button
-                label="Submit"
+                :label="__('Submit')"
                 theme="gray"
                 variant="solid"
                 :disabled="
@@ -92,12 +92,12 @@
           ref="editor"
           v-model:attachments="attachments"
           v-model:content="description"
-          placeholder="Detailed explanation"
+          :placeholder="__('Detailed explanation')"
           expand
         >
           <template #bottom-right>
             <Button
-              label="Submit"
+              :label="__('Submit')"
               theme="gray"
               variant="solid"
               :disabled="
@@ -140,7 +140,7 @@ import { computed, onMounted, reactive, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import SearchArticles from "../../components/SearchArticles.vue";
 import TicketTextEditor from "./TicketTextEditor.vue";
-
+import { __ } from "@/translation";
 interface P {
   templateId?: string;
 }
@@ -275,13 +275,13 @@ function sanitize(html: string) {
 const breadcrumbs = computed(() => {
   const items = [
     {
-      label: "Tickets",
+      label: __('Tickets'),
       route: {
         name: isCustomerPortal.value ? "TicketsCustomer" : "TicketsAgent",
       },
     },
     {
-      label: "New Ticket",
+      label: __('New Ticket'),
       route: {
         name: "TicketNew",
       },
@@ -291,7 +291,7 @@ const breadcrumbs = computed(() => {
 });
 
 usePageMeta(() => ({
-  title: "New Ticket",
+  title: __('New Ticket'),
 }));
 
 onMounted(() => {

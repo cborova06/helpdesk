@@ -43,7 +43,7 @@ import { validateConditions } from "@/utils";
 import { watchDebounced } from "@vueuse/core";
 import { Button, Dropdown, ErrorMessage, FeatherIcon } from "frappe-ui";
 import { validateAssignmentRule } from "../../../stores/assignmentRules";
-
+import { __ } from "@/translation";
 const props = defineProps({
   conditions: Array<any>,
   name: String,
@@ -62,13 +62,13 @@ const getConjunction = () => {
 
 const dropdownOptions = [
   {
-    label: "Add condition",
+    label: __('Add condition'),
     onClick: () => {
       addCondition();
     },
   },
   {
-    label: "Add condition group",
+    label: __('Add condition group'),
     onClick: () => {
       const conjunction = getConjunction();
       props.conditions.push(conjunction, [[]]);

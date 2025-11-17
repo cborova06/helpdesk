@@ -1,3 +1,4 @@
+from frappe import _
 from typing import Literal
 
 import frappe

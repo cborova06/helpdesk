@@ -44,7 +44,7 @@
                 type="text"
                 :value="query"
                 autocomplete="off"
-                placeholder="Search"
+                :placeholder="__('Search')"
                 @change="
                   (e) => {
                     query = e.target.value;
@@ -129,7 +129,7 @@ import {
 } from "@headlessui/vue";
 import { Popover, Button, FeatherIcon } from "frappe-ui";
 import { ref, computed, useAttrs, useSlots, watch, nextTick } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   modelValue: {
     type: String,

@@ -21,11 +21,11 @@
         <div class="flex flex-col gap-2 mt-6">
           <FormControl
             v-model="contactDetails.phone"
-            label="Phone"
+            :label="__('Phone')"
             type="text"
             size="sm"
             variant="subtle"
-            placeholder="+918956895623"
+            :placeholder="__('+918956895623')"
             :disabled="false"
           />
           <ErrorMessage :message="error" />
@@ -39,7 +39,7 @@
 import { createResource, Dialog, ErrorMessage, toast } from "frappe-ui";
 import { ref, watch } from "vue";
 import { z } from "zod";
-
+import { __ } from "@/translation";
 const emit = defineEmits(["onUpdate"]);
 const show = defineModel<boolean>();
 const error = ref("");
@@ -79,7 +79,7 @@ const onSubmit = () => {
     auto: true,
     onSuccess: () => {
       emit("onUpdate");
-      toast.success("Contact updated");
+      toast.success(__("Contact updated"));
       show.value = false;
     },
   });

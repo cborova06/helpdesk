@@ -5,7 +5,7 @@
       <!-- was this article helpful? -->
       <div class="flex items-center gap-2">
         <span class="text-gray-800 text-sm"
-          >Did this article solve your issue?</span
+          >{{ __("Did this article solve your issue?") }}</span
         >
         <div class="flex items-center gap-1">
           <component
@@ -24,10 +24,10 @@
     <!-- Create a ticket CTA -->
     <div class="flex items-center justify-center gap-2">
       <span class="font-normal text-sm">
-        Can’t find what you’re looking for?
+        {{ __("Can’t find what you’re looking for?") }}
       </span>
       <router-link :to="{ name: 'TicketNew' }">
-        <p class="underline font-base text-sm">Create a ticket &rightarrow;</p>
+        <p class="underline font-base text-sm">{{ __("Create a ticket &rightarrow;") }}</p>
       </router-link>
     </div>
   </div>
@@ -43,7 +43,7 @@ import {
 } from "@/components/icons";
 import { setFeedback } from "@/stores/knowledgeBase";
 import { ref } from "vue";
-
+import { __ } from "@/translation";
 interface P {
   feedback: FeedbackAction;
   articleId: string;

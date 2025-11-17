@@ -189,19 +189,19 @@ def get_agents_team():
 
 contact_default_columns = [
     {
-        "label": "Name",
+        "label": _("Name"),
         "type": "Data",
         "key": "full_name",
         "width": "17rem",
     },
     {
-        "label": "Email",
+        "label": _("Email"),
         "type": "Data",
         "key": "email_id",
         "width": "24rem",
     },
     {
-        "label": "Created On",
+        "label": _("Created On"),
         "type": "Datetime",
         "key": "creation",
         "width": "8rem",
@@ -210,27 +210,27 @@ contact_default_columns = [
 
 call_log_default_columns = [
     {
-        "label": "Name",
+        "label": _("Name"),
         "type": "Data",
         "key": "name",
         "width": "9rem",
     },
     {
-        "label": "Caller",
+        "label": _("Caller"),
         "type": "Link",
         "key": "caller",
         "options": "User",
         "width": "12rem",
     },
     {
-        "label": "Receiver",
+        "label": _("Receiver"),
         "type": "Link",
         "key": "receiver",
         "options": "User",
         "width": "12rem",
     },
     {
-        "label": "Type",
+        "label": _("Type"),
         "type": "Select",
         "key": "type",
         "width": "9rem",
@@ -242,31 +242,31 @@ call_log_default_columns = [
         "width": "9rem",
     },
     {
-        "label": "Status",
+        "label": _("Status"),
         "type": "Select",
         "key": "status",
         "width": "9rem",
     },
     {
-        "label": "Duration",
+        "label": _("Duration"),
         "type": "Duration",
         "key": "duration",
         "width": "6rem",
     },
     {
-        "label": "From (number)",
+        "label": _("From (number)"),
         "type": "Data",
         "key": "from",
         "width": "9rem",
     },
     {
-        "label": "To (number)",
+        "label": _("To (number)"),
         "type": "Data",
         "key": "to",
         "width": "9rem",
     },
     {
-        "label": "Created On",
+        "label": _("Created On"),
         "type": "Datetime",
         "key": "creation",
         "width": "8rem",

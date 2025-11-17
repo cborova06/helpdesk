@@ -106,7 +106,7 @@ import PlayIcon from "./icons/PlayIcon.vue";
 import { statusColorMap, statusLabelMap } from "@/pages/call-logs/utils";
 import CallLogDetailModal from "@/pages/call-logs/CallLogDetailModal.vue";
 import CallLogModal from "@/pages/call-logs/CallLogModal.vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   activity: Object,
 });

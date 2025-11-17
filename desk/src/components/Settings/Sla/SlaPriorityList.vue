@@ -19,7 +19,7 @@
         }"
       >
         {{ column.label }}
-        <span v-if="column.isRequired" class="text-red-500">*</span>
+        <span v-if="column.isRequired" class="text-red-500">{{ __("*") }}</span>
       </div>
     </div>
     <hr v-if="slaData.priorities?.length !== 0" />
@@ -49,7 +49,7 @@
       <Button
         v-if="slaData.priorities.length !== priorityOptions.length"
         variant="subtle"
-        label="Add row"
+        :label="__('Add row')"
         @click="addRow"
         icon-left="plus"
       />
@@ -72,7 +72,7 @@ import {
 } from "@/stores/sla";
 import { watchDebounced } from "@vueuse/core";
 import { getGridTemplateColumnsForTable } from "@/utils";
-
+import { __ } from "@/translation";
 createResource({
   url: "frappe.client.get_list",
   params: {
@@ -114,7 +114,7 @@ const addRow = () => {
   );
 
   if (availablePriorities.length === 0) {
-    toast.error("All available priorities have already been added");
+    toast.error(__("All available priorities have already been added"));
     return;
   }
 
@@ -130,27 +130,27 @@ const addRow = () => {
 
 const columns = computed(() => [
   {
-    label: "Priority",
+    label: __('Priority'),
     key: "priority",
     isRequired: true,
   },
   {
-    label: "Default priority",
+    label: __('Default priority'),
     key: "default_priority",
     isRequired: true,
   },
   {
-    label: "First response time",
+    label: __('First response time'),
     key: "response_time",
     isRequired: true,
   },
   {
-    label: "Resolution time",
+    label: __('Resolution time'),
     key: "resolution_time",
     isRequired: true,
   },
   //   slaData.value.apply_sla_for_resolution && {
-  //     label: "Resolution time",
+  //     label: __('Resolution time'),
   //     key: "resolution_time",
   //     isRequired: Boolean(slaData.value.apply_sla_for_resolution),
   //   },

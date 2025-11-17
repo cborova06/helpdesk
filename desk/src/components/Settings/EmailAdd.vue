@@ -2,9 +2,9 @@
   <div class="flex h-full flex-col gap-4">
     <!-- title and desc -->
     <div role="heading" aria-level="1" class="flex flex-col gap-1">
-      <h5 class="text-lg font-semibold pt-[5px]">Setup Email</h5>
+      <h5 class="text-lg font-semibold pt-[5px]">{{ __("Setup Email") }}</h5>
       <p class="text-sm text-gray-600">
-        Choose the email service provider you want to configure.
+        {{ __("Choose the email service provider you want to configure.") }}
       </p>
     </div>
     <!-- email service provider selection -->
@@ -77,14 +77,14 @@
     <!-- action button -->
     <div v-if="selectedService" class="mt-auto flex justify-between">
       <Button
-        label="Back"
+        :label="__('Back')"
         theme="gray"
         variant="outline"
         :disabled="addEmailRes.loading"
         @click="emit('update:step', 'email-list')"
       />
       <Button
-        label="Create"
+        :label="__('Create')"
         variant="solid"
         :loading="addEmailRes.loading"
         @click="createEmailAccount"
@@ -107,7 +107,7 @@ import {
   validateInputs,
 } from "./emailConfig";
 import EmailProviderIcon from "./EmailProviderIcon.vue";
-
+import { __ } from "@/translation";
 interface E {
   (event: "update:step", value: EmailStep): void;
 }
@@ -148,7 +148,7 @@ const addEmailRes = createResource({
     };
   },
   onSuccess: () => {
-    toast.success("Email account created");
+    toast.success(__("Email account created"));
     emit("update:step", "email-list");
     updateOnboardingStep("setup_email_account");
   },

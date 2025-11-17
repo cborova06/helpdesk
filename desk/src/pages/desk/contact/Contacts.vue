@@ -6,7 +6,7 @@
       </template>
       <template #right-header>
         <Button
-          label="New contact"
+          :label="__('New contact')"
           theme="gray"
           variant="solid"
           @click="showNewContactModal = !showNewContactModal"
@@ -44,7 +44,7 @@ import { Avatar, toast, usePageMeta } from "frappe-ui";
 import { computed, h, ref } from "vue";
 import ContactDialog from "./ContactDialog.vue";
 import { showNewContactModal } from "./dialogState";
-
+import { __ } from "@/translation";
 const isContactDialogVisible = ref(false);
 const selectedContact = ref(null);
 
@@ -70,7 +70,7 @@ const options = computed(() => {
       },
     },
     emptyState: {
-      title: "No Contacts Found",
+      title: __('No Contacts Found'),
     },
   };
 });
@@ -86,13 +86,13 @@ function openContact(id: string): void {
 }
 
 function handleContactUpdated(): void {
-  toast.success("Contact updated");
+  toast.success(__("Contact updated"));
   isContactDialogVisible.value = !isContactDialogVisible.value;
   listViewRef.value?.reload();
 }
 usePageMeta(() => {
   return {
-    title: "Contacts",
+    title: __('Contacts'),
   };
 });
 </script>

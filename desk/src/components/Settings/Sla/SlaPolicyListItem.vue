@@ -45,7 +45,7 @@
     <template #body-content>
       <div class="flex flex-col gap-4">
         <FormControl
-          label="New SLA Policy Name"
+          :label="__('New SLA Policy Name')"
           type="text"
           v-model="duplicateDialog.name"
         />
@@ -55,10 +55,10 @@
       <div class="flex gap-2 justify-end">
         <Button
           variant="subtle"
-          label="Close"
+          :label="__('Close')"
           @click="duplicateDialog.show = false"
         />
-        <Button variant="solid" label="Duplicate" @click="duplicate()" />
+        <Button variant="solid" :label="__('Duplicate')" @click="duplicate()" />
       </div>
     </template>
   </Dialog>
@@ -75,7 +75,7 @@ import {
 import { ref, inject } from "vue";
 import { slaActiveScreen } from "@/stores/sla";
 import { ConfirmDelete } from "@/utils";
-
+import { __ } from "@/translation";
 const slaPolicyList = inject<any>("slaPolicyList");
 
 const duplicateDialog = ref({
@@ -94,7 +94,7 @@ const isConfirmingDelete = ref(false);
 
 const dropdownOptions = [
   {
-    label: "Duplicate",
+    label: __('Duplicate'),
     onClick: () => {
       duplicateDialog.value = {
         show: true,
@@ -118,7 +118,7 @@ const duplicate = () => {
     },
     onSuccess: (data) => {
       slaPolicyList.reload();
-      toast.success("SLA policy duplicated");
+      toast.success(__("SLA policy duplicated"));
       duplicateDialog.value = {
         show: false,
         name: "",
@@ -143,14 +143,14 @@ const deleteSla = () => {
 
   slaPolicyList.delete.submit(props.data.name, {
     onSuccess: () => {
-      toast.success("SLA policy deleted");
+      toast.success(__("SLA policy deleted"));
     },
   });
 };
 
 const onToggle = () => {
   if (props.data.default_sla) {
-    toast.error("SLA set as default cannot be disabled");
+    toast.error(__("SLA set as default cannot be disabled"));
     return;
   }
   slaPolicyList.setValue.submit(
@@ -160,7 +160,7 @@ const onToggle = () => {
     },
     {
       onSuccess: () => {
-        toast.success("SLA policy status updated");
+        toast.success(__("SLA policy status updated"));
       },
     }
   );

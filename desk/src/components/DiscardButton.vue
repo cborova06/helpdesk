@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 import { globalStore } from "@/stores/globalStore";
+import { __ } from "@/translation";
 const { $dialog } = globalStore();
 const emit = defineEmits<{
   (event: "discard"): void;
@@ -34,7 +35,7 @@ function handleDiscard() {
     },
     actions: [
       {
-        label: "Confirm",
+        label: __('Confirm'),
         variant: "solid",
         onClick(close: Function) {
           emit("discard");

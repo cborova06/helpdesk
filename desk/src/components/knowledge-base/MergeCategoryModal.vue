@@ -19,9 +19,9 @@
       <Link
         class="form-control"
         doctype="HD Article Category"
-        placeholder="Select Category"
+        :placeholder="__('Select Category')"
         v-model="toCategory"
-        label="Category"
+        :label="__('Category')"
         :page-length="100"
       />
     </template>
@@ -29,7 +29,7 @@
       <Button
         class="w-full"
         variant="solid"
-        label="Merge"
+        :label="__('Merge')"
         @click="emit('merge', categoryId, toCategory)"
       />
     </template>
@@ -39,6 +39,7 @@
 import { ref } from "vue";
 import { Dialog } from "frappe-ui";
 import { Link } from "@/components";
+import { __ } from "@/translation";
 defineProps<{
   categoryId: string;
   categoryTitle: string;

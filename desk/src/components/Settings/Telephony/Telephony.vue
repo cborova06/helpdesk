@@ -1,16 +1,16 @@
 <template>
   <div class="px-10 py-8">
-    <SettingsLayoutHeader description="Configure your telephony settings.">
+    <SettingsLayoutHeader :description="__('Configure your telephony settings.')">
       <template #title>
         <div class="flex items-center gap-2">
-          <h1 class="text-lg font-semibold text-ink-gray-8">Telephony</h1>
+          <h1 class="text-lg font-semibold text-ink-gray-8">{{ __("Telephony") }}</h1>
           <Badge
             :class="[
               isDirty.twilio || isDirty.exotel || isDirty.telephonyAgent
                 ? 'opacity-100'
                 : 'opacity-0',
             ]"
-            label="Unsaved"
+            :label="__('Unsaved')"
             theme="orange"
             variant="subtle"
           />
@@ -18,7 +18,7 @@
       </template>
       <template #actions>
         <Button
-          label="Save"
+          :label="__('Save')"
           theme="gray"
           variant="solid"
           @click="save"
@@ -43,7 +43,7 @@
     </div>
     <div class="grid grid-cols-2 gap-4 mt-4">
       <div class="flex flex-col gap-1.5">
-        <FormLabel label="Default medium" />
+        <FormLabel :label="__('Default medium')" />
         <Select
           v-if="telephonyAgent.doc"
           :options="telephonyProviders"
@@ -59,7 +59,7 @@
         v-if="telephonyAgent.doc && twilio.doc?.enabled"
       >
         <FormControl
-          label="Twilio number"
+          :label="__('Twilio number')"
           type="text"
           required
           v-model="telephonyAgent.doc.twilio_number"
@@ -71,7 +71,7 @@
         v-if="telephonyAgent.doc && exotel.doc?.enabled"
       >
         <FormControl
-          label="Exotel number"
+          :label="__('Exotel number')"
           type="text"
           required
           v-model="telephonyAgent.doc.exotel_number"
@@ -83,7 +83,7 @@
         v-if="telephonyAgent.doc && exotel.doc?.enabled"
       >
         <FormControl
-          label="Personal mobile no"
+          :label="__('Personal mobile no')"
           type="text"
           required
           v-model="telephonyAgent.doc.mobile_no"
@@ -97,12 +97,12 @@
       <div class="mt-4">
         <div class="grid grid-cols-2 gap-4">
           <Checkbox
-            label="Enabled"
+            :label="__('Enabled')"
             v-model="twilio.doc.enabled"
             @update:modelValue="twilio.doc.enabled = $event ? 1 : 0"
           />
           <Checkbox
-            label="Record Calls"
+            :label="__('Record Calls')"
             v-model="twilio.doc.record_calls"
             v-if="twilio.doc.enabled"
             @update:modelValue="twilio.doc.record_calls = $event ? 1 : 0"
@@ -111,31 +111,31 @@
         <div class="grid grid-cols-2 gap-4 mt-4" v-if="twilio.doc.enabled">
           <div class="flex flex-col gap-2">
             <FormControl
-              label="Account SID"
+              :label="__('Account SID')"
               required
               v-model="twilio.doc.account_sid"
-              placeholder="Account SID"
+              :placeholder="__('Account SID')"
             />
             <ErrorMessage :message="twilioErrors.accountSid" />
           </div>
           <div class="flex flex-col gap-2">
             <Password
-              label="Auth Token"
+              :label="__('Auth Token')"
               required
               v-model="twilio.doc.auth_token"
-              placeholder="Auth Token"
+              :placeholder="__('Auth Token')"
             />
             <ErrorMessage :message="twilioErrors.authToken" />
           </div>
           <FormControl
             v-if="twilio.doc.api_key"
-            label="API Key"
+            :label="__('API Key')"
             v-model="twilio.doc.api_key"
             disabled
           />
           <Password
             v-if="twilio.doc.api_secret"
-            label="API Secret"
+            :label="__('API Secret')"
             v-model="twilio.doc.api_secret"
             disabled
           />
@@ -148,7 +148,7 @@
           >
             <template #footer="{ togglePopover }">
               <Button
-                label="Refresh Apps"
+                :label="__('Refresh Apps')"
                 theme="gray"
                 variant="subtle"
                 class="w-full"
@@ -160,7 +160,7 @@
           </Autocomplete>
           <FormControl
             v-if="twilio.doc.twiml_sid"
-            label="TwiML App SID"
+            :label="__('TwiML App SID')"
             v-model="twilio.doc.twiml_sid"
             disabled
           />
@@ -172,12 +172,12 @@
       <div class="mt-4">
         <div class="grid grid-cols-2 gap-4">
           <Checkbox
-            label="Enabled"
+            :label="__('Enabled')"
             v-model="exotel.doc.enabled"
             @update:modelValue="exotel.doc.enabled = $event ? 1 : 0"
           />
           <Checkbox
-            label="Record Calls"
+            :label="__('Record Calls')"
             v-model="exotel.doc.record_call"
             v-if="exotel.doc.enabled"
             @update:modelValue="exotel.doc.record_call = $event ? 1 : 0"
@@ -186,47 +186,47 @@
         <div class="grid grid-cols-2 gap-4 mt-4" v-if="exotel.doc.enabled">
           <div class="flex flex-col gap-2">
             <FormControl
-              label="Account SID"
+              :label="__('Account SID')"
               required
               v-model="exotel.doc.account_sid"
-              placeholder="Account SID"
+              :placeholder="__('Account SID')"
             />
             <ErrorMessage :message="exotelErrors.accountSid" />
           </div>
           <div class="flex flex-col gap-2">
             <FormControl
-              label="Webhook Verify Token"
+              :label="__('Webhook Verify Token')"
               required
               v-model="exotel.doc.webhook_verify_token"
-              placeholder="Webhook Verify Token"
+              :placeholder="__('Webhook Verify Token')"
             />
             <ErrorMessage :message="exotelErrors.webhookVerifyToken" />
           </div>
 
           <div class="flex flex-col gap-2">
             <FormControl
-              label="API Key"
+              :label="__('API Key')"
               required
               v-model="exotel.doc.api_key"
-              placeholder="API Key"
+              :placeholder="__('API Key')"
             />
             <ErrorMessage :message="exotelErrors.apiKey" />
           </div>
           <div class="flex flex-col gap-2">
             <Password
-              label="API Token"
+              :label="__('API Token')"
               required
               v-model="exotel.doc.api_token"
-              placeholder="API Token"
+              :placeholder="__('API Token')"
             />
             <ErrorMessage :message="exotelErrors.apiToken" />
           </div>
           <div class="flex flex-col gap-2">
             <FormControl
-              label="Subdomain"
+              :label="__('Subdomain')"
               required
               v-model="exotel.doc.subdomain"
-              placeholder="Subdomain"
+              :placeholder="__('Subdomain')"
             />
             <ErrorMessage :message="exotelErrors.subdomain" />
           </div>
@@ -256,7 +256,7 @@ import { nextTick, ref, watch } from "vue";
 import { isDocDirty, validateExotel, validateTwilio } from "./utils";
 import { useAuthStore } from "@/stores/auth";
 import { useTelephonyStore } from "@/stores/telephony";
-
+import { __ } from "@/translation";
 const auth = useAuthStore();
 const telephonyStore = useTelephonyStore();
 const isDirty = ref({
@@ -317,19 +317,19 @@ const twilioAppsResource = createResource({
 
 const telephonyProviders = [
   { label: "", value: "" },
-  { label: "Twilio", value: "Twilio" },
-  { label: "Exotel", value: "Exotel" },
+  { label: __('Twilio'), value: "Twilio" },
+  { label: __('Exotel'), value: "Exotel" },
 ];
 
 async function save() {
   validateTwilio(twilio.doc, telephonyAgent.doc, twilioErrors);
   validateExotel(exotel.doc, telephonyAgent.doc, exotelErrors);
   if (Object.values(twilioErrors.value).some((v) => v)) {
-    toast.error("Please fill all required fields for Twilio");
+    toast.error(__("Please fill all required fields for Twilio"));
     return;
   }
   if (Object.values(exotelErrors.value).some((v) => v)) {
-    toast.error("Please fill all required fields for Exotel");
+    toast.error(__("Please fill all required fields for Exotel"));
     return;
   }
 
@@ -370,7 +370,7 @@ async function save() {
   const results = await Promise.all(promises);
 
   if (!results.some((result) => result == undefined)) {
-    toast.success("Telephony settings updated!");
+    toast.success(__("Telephony settings updated!"));
   }
 
   // Reload twilio to prevent "doc has been modified" error, as an application is created and doc is updated on save

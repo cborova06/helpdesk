@@ -4,7 +4,7 @@
       <FormControl
         v-model="form.export_type"
         variant="outline"
-        :label="'Export Type'"
+        :label="__('Export Type')"
         type="select"
         :options="[
           {
@@ -16,7 +16,7 @@
             value: 'CSV',
           },
         ]"
-        :placeholder="'Excel'"
+        :placeholder="__('Excel')"
       />
 
       <div class="mt-3">
@@ -29,7 +29,7 @@
     </template>
     <template #actions>
       <Button
-        label="Download"
+        :label="__('Download')"
         variant="solid"
         @click="() => emit('update', form)"
         class="w-full"
@@ -40,7 +40,7 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
-
+import { __ } from "@/translation";
 defineProps<{
   rowCount: number;
 }>();

@@ -1,12 +1,12 @@
 <template>
   <div class="px-10 py-8">
     <SettingsLayoutHeader
-      title="Business Holidays"
-      description="Set your team’s working days, hours, and holidays using a template or custom schedule."
+      :title="__('Business Holidays')"
+      :description="__('Set your team’s working days, hours, and holidays using a template or custom schedule.')"
     >
       <template #actions>
         <Button
-          label="New"
+          :label="__('New')"
           theme="gray"
           variant="solid"
           @click="goToNew()"
@@ -27,7 +27,7 @@ import {
 } from "@/stores/holidayList";
 import HolidayList from "./HolidayList.vue";
 import SettingsLayoutHeader from "../SettingsLayoutHeader.vue";
-
+import { __ } from "@/translation";
 const goToNew = () => {
   resetHolidayData();
   holidayListActiveScreen.value = {

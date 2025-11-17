@@ -11,8 +11,8 @@
             :type="'select'"
             size="sm"
             variant="subtle"
-            placeholder="Select Workday"
-            label="Workday"
+            :placeholder="__('Select Workday')"
+            :label="__('Workday')"
             v-model="workDayData.workday"
             :options="[
               {
@@ -55,8 +55,8 @@
             :type="'time'"
             size="sm"
             variant="subtle"
-            placeholder="Start Time"
-            label="Start Time"
+            :placeholder="__('Start Time')"
+            :label="__('Start Time')"
             v-model="workDayData.start_time"
             :class="{ 'border-red-500': errors.start_time }"
             @blur="validateField('start_time')"
@@ -69,8 +69,8 @@
             :type="'time'"
             size="sm"
             variant="subtle"
-            placeholder="End Time"
-            label="End Time"
+            :placeholder="__('End Time')"
+            :label="__('End Time')"
             v-model="workDayData.end_time"
             :class="{ 'border-red-500': errors.end_time }"
             @blur="validateTimeRange"
@@ -101,9 +101,9 @@
             variant="subtle"
             theme="gray"
             @click="dialog.show = false"
-            label="Cancel"
+            :label="__('Cancel')"
           />
-          <Button variant="solid" @click="onSave" label="Save" />
+          <Button variant="solid" @click="onSave" :label="__('Save')" />
         </div>
       </div>
     </template>
@@ -113,7 +113,7 @@
 <script setup lang="ts">
 import { ref, defineModel, reactive, watch } from "vue";
 import { Dialog, FormControl, Button, toast } from "frappe-ui";
-
+import { __ } from "@/translation";
 const isConfirmingDelete = ref(false);
 const props = defineProps({
   workDaysList: {
@@ -240,7 +240,7 @@ const validateForm = () => {
 
 const onSave = () => {
   if (!validateForm()) {
-    toast.error("Please fix the errors in the form");
+    toast.error(__("Please fix the errors in the form"));
     return;
   }
 
@@ -255,7 +255,7 @@ const onSave = () => {
           ...workDayData,
         };
         props.workDaysList.splice(itemIndex, 1, updatedItem);
-        toast.success("Workday updated");
+        toast.success(__("Workday updated"));
       }
     } else {
       const isDuplicate = props.workDaysList.some(
@@ -264,13 +264,13 @@ const onSave = () => {
 
       if (isDuplicate) {
         errors.workday = "This workday already exists";
-        toast.error("A workday with this name already exists");
+        toast.error(__("A workday with this name already exists"));
         return;
       }
 
       const newWorkDay = { ...workDayData };
       props.workDaysList.push(newWorkDay);
-      toast.success("Workday added");
+      toast.success(__("Workday added"));
     }
     dialog.value.show = false;
   } catch (error) {

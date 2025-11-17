@@ -23,7 +23,7 @@
       <div v-else class="flex items-center justify-center flex-col mt-20">
         <LoadingIndicator :scale="8" class="text-ink-gray-5" />
         <p class="text-xl font-medium text-ink-gray-5 absolute top-[50%]">
-          Loading...
+          {{ __("Loading...") }}
         </p>
       </div>
     </TabPanel>
@@ -66,7 +66,7 @@ import { LoadingIndicator, TabList, TabPanel, Tabs } from "frappe-ui";
 import { storeToRefs } from "pinia";
 import { computed, ComputedRef, inject, ref } from "vue";
 import TicketAgentActivities from "../ticket/TicketAgentActivities.vue";
-
+import { __ } from "@/translation";
 const ticket = inject(TicketSymbol);
 const activities = inject(ActivitiesSymbol);
 
@@ -79,17 +79,17 @@ const tabs: ComputedRef<TabObject[]> = computed(() => {
   const _tabs: TabObject[] = [
     {
       name: "activity",
-      label: "Activity",
+      label: __('Activity'),
       icon: ActivityIcon,
     },
     {
       name: "email",
-      label: "Emails",
+      label: __('Emails'),
       icon: EmailIcon,
     },
     {
       name: "comment",
-      label: "Comments",
+      label: __('Comments'),
       icon: CommentIcon,
     },
   ];
@@ -97,7 +97,7 @@ const tabs: ComputedRef<TabObject[]> = computed(() => {
   if (isCallingEnabled.value) {
     _tabs.push({
       name: "call",
-      label: "Calls",
+      label: __('Calls'),
       icon: PhoneIcon,
     });
   }

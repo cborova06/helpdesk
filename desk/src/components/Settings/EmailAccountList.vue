@@ -2,12 +2,12 @@
   <div>
     <!-- header -->
     <SettingsLayoutHeader
-      title="Email Accounts"
-      description="Manage your email accounts and configure incoming and outgoing settings."
+      :title="__('Email Accounts')"
+      :description="__('Manage your email accounts and configure incoming and outgoing settings.')"
     >
       <template #actions>
         <Button
-          label="Add Account"
+          :label="__('Add Account')"
           theme="gray"
           variant="solid"
           @click="emit('update:step', 'email-add')"
@@ -39,7 +39,7 @@ import { EmailAccount } from "@/types";
 import { createListResource } from "frappe-ui";
 import EmailAccountCard from "./EmailAccountCard.vue";
 import SettingsLayoutHeader from "./SettingsLayoutHeader.vue";
-
+import { __ } from "@/translation";
 const emit = defineEmits(["update:step"]);
 
 const emailAccounts = createListResource({

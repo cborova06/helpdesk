@@ -27,9 +27,9 @@
         <Link
           doctype="HD Agent"
           class="form-control flex-1"
-          placeholder="Search members"
+          :placeholder="__('Search members')"
           v-model="search"
-          label="Members"
+          :label="__('Members')"
           :hide-me="true"
           :filters="agentFilters"
         >
@@ -53,7 +53,7 @@
           </template>
         </Link>
         <Button
-          label="Add"
+          :label="__('Add')"
           variant="solid"
           :disabled="!search"
           @click="addMember(search)"
@@ -93,20 +93,19 @@
         </div>
       </div>
       <div v-else class="flex justify-center h-full">
-        <p class="text-p-base text-gray-500">No members found</p>
+        <p class="text-p-base text-gray-500">{{ __("No members found") }}</p>
       </div>
     </div>
   </div>
   <Dialog v-model="showDelete" :options="{ title: 'Delete team' }">
     <template #body-content>
       <p class="text-p-base text-ink-gray-7">
-        Are you sure you want to delete this team? This action cannot be
-        reversed!
+        {{ __("Are you sure you want to delete this team? This action cannot be reversed!") }}
       </p>
       <Button
         variant="solid"
         class="mt-4 float-right"
-        label="Confirm"
+        :label="__('Confirm')"
         theme="red"
         @click="
           () => {
@@ -121,8 +120,8 @@
     <template #body-content>
       <FormControl
         v-model="_teamName"
-        label="Title"
-        placeholder="Product Experts"
+        :label="__('Title')"
+        :placeholder="__('Product Experts')"
       />
     </template>
   </Dialog>
@@ -149,7 +148,7 @@ import AgentCard from "../AgentCard.vue";
 import Settings from "~icons/lucide/settings-2";
 import { assignmentRulesActiveScreen } from "@/stores/assignmentRules";
 import { setActiveSettingsTab } from "../settingsModal";
-
+import { __ } from "@/translation";
 const props = defineProps<{
   teamName: string;
 }>();
@@ -168,7 +167,7 @@ const team = createDocumentResource({
   auto: true,
   delete: {
     onSuccess() {
-      toast.success("Team deleted");
+      toast.success(__("Team deleted"));
       emit("update:step", "team-list");
     },
   },
@@ -223,11 +222,11 @@ function addMember(user: string) {
 const showRename = ref(false);
 
 const renameDialogOptions = {
-  title: "Rename team",
+  title: __('Rename team'),
   message: "Enter the new name for the team",
   actions: [
     {
-      label: "Confirm",
+      label: __('Confirm'),
       variant: "solid",
       loading: team.loading,
       onClick: ({ close }) => {
@@ -253,7 +252,7 @@ function renameTeam(close) {
         return "New and old title cannot be same";
     },
     onSuccess() {
-      toast.success("Team renamed");
+      toast.success(__("Team renamed"));
       close();
       emit("update:step", "team-list");
     },
@@ -264,11 +263,11 @@ function renameTeam(close) {
 
 const showDelete = ref(false);
 const deleteDialogOptions = {
-  title: "Delete team",
+  title: __('Delete team'),
   message: `Are you sure you want to delete this team? This action cannot be reversed!`,
   actions: [
     {
-      label: "Confirm",
+      label: __('Confirm'),
       variant: "solid",
       onClick: (ctx) => {
         team.delete.submit();
@@ -280,7 +279,7 @@ const deleteDialogOptions = {
 
 const options = [
   {
-    label: "View Assignment rule",
+    label: __('View Assignment rule'),
     icon: markRaw(h(Settings, { class: "rotate-90" })),
     onClick: () => {
       assignmentRulesActiveScreen.value = {
@@ -291,7 +290,7 @@ const options = [
     },
   },
   {
-    label: "Rename",
+    label: __('Rename'),
     icon: "edit-3",
     onClick: () => (showRename.value = !showRename.value),
   },
@@ -343,9 +342,9 @@ const options = [
       ),
   },
   {
-    label: "Delete",
+    label: __('Delete'),
     component: h(Button, {
-      label: "Delete",
+      label: __('Delete'),
       variant: "ghost",
       iconLeft: "trash-2",
       theme: "red",

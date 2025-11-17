@@ -19,7 +19,7 @@
       <span>{{
         contact?.full_name ?? (contact?.mobile_no || contact?.phone)
       }}</span>
-      <span>·</span>
+      <span>{{ __("·") }}</span>
       <div v-if="callStatus == 'In progress'">
         {{ counterUp?.updatedTime }}
       </div>
@@ -97,7 +97,7 @@ import { inject, onBeforeUnmount, ref, watch } from "vue";
 import CountUpTimer from "./CountUpTimer.vue";
 import AvatarIcon from "./Icons/AvatarIcon.vue";
 import MinimizeIcon from "./Icons/MinimizeIcon.vue";
-
+import { __ } from "@/translation";
 const telephonyStore = useTelephonyStore();
 
 const onCallStarted = inject<() => void>("onCallStarted");

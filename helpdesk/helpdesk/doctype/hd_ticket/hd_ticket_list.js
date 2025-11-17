@@ -65,7 +65,7 @@ onload(listview) {
           em = "🙁";
         }
         return pill(`${em} ${frappe.utils.escape_html(val || "-")}`, `hd-sent ${k}`, {
-          title: "Last Sentiment",
+          title: __('Last Sentiment'),
         });
       },
 
@@ -82,7 +82,7 @@ onload(listview) {
           icon = "📉";
         }
         return pill(`${icon} ${frappe.utils.escape_html(val || "-")}`, `hd-trend ${k}`, {
-          title: "Sentiment Trend",
+          title: __('Sentiment Trend'),
         });
       },
 
@@ -92,7 +92,7 @@ onload(listview) {
         const txt = isFinite(num) ? formatNum(num, 2) : "-";
         const band = bandForScore(num); // good/mid/bad
         // TR: İçerik olarak sadece sayıyı yaz; ekstra ::after KULLANMIYORUZ => tekrar yok.
-        return chip(`${txt}`, `hd-score ${band}`, { title: "Effort Score" });
+        return chip(`${txt}`, `hd-score ${band}`, { title: __('Effort Score') });
       },
 
       // (5) TR: Effort Band – sadece çerçeve rengi; Low=iyi (yeşil), High=kırmızı
@@ -104,7 +104,7 @@ onload(listview) {
           ? "high"
           : "medium";
         return chip(`${frappe.utils.escape_html(val || "-")}`, `hd-eff ${k}`, {
-          title: "Effort Band",
+          title: __('Effort Band'),
         });
       },
 

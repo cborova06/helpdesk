@@ -26,12 +26,12 @@
           </FileUploader>
           <Button
             v-if="contact.doc?.image"
-            label="Remove photo"
+            :label="__('Remove photo')"
             @click="updateImage(null)"
           />
           <Button
             v-if="!contact.doc?.user && isManager"
-            label="Invite as user"
+            :label="__('Invite as user')"
             @click="inviteContact"
             :loading="isLoading"
           />
@@ -41,7 +41,7 @@
             <div class="text-xs">Emails</div>
             <MultiSelect
               v-model:items="emails"
-              placeholder="john.doe@example.com"
+              :placeholder="__('john.doe@example.com')"
               :validate="validateEmail"
             />
           </div>
@@ -49,7 +49,7 @@
             <div class="text-xs">Phone Nos</div>
             <MultiSelect
               v-model:items="phones"
-              placeholder="+91 98765 43210"
+              :placeholder="__('+91 98765 43210')"
               :validate="validatePhone"
             />
           </div>
@@ -58,7 +58,7 @@
             <Link
               doctype="HD Customer"
               class="form-control flex-1"
-              placeholder="Link to a customer"
+              :placeholder="__('Link to a customer')"
               v-model="selectedCustomer"
               :hide-me="true"
             />
@@ -88,7 +88,7 @@ import Link from "@/components/frappe-ui/Link.vue";
 import MultiSelect from "@/components/MultiSelect.vue";
 import { useAuthStore } from "@/stores/auth";
 import { AutoCompleteItem, File } from "@/types";
-
+import { __ } from "@/translation";
 interface Props {
   name: {
     type: string;
@@ -125,7 +125,7 @@ const emails = computed({
   },
   set(newVal) {
     if (newVal.length === 0) {
-      toast.error("At least one email is required");
+      toast.error(__("At least one email is required"));
       return;
     }
     if (newVal.length !== contact.doc.email_ids.length) {
@@ -229,7 +229,7 @@ const options = computed(() => ({
   title: contact.doc?.name,
   actions: [
     {
-      label: "Save",
+      label: __('Save'),
       theme: "gray",
       variant: "solid",
       onClick: () => update(),
@@ -239,7 +239,7 @@ const options = computed(() => ({
 
 function update(): void {
   if (!isDirty.value) {
-    toast.error("No changes to save");
+    toast.error(__("No changes to save"));
     return;
   }
   contact.setValue.submit({
@@ -283,7 +283,7 @@ function validatePhone(input: AutoCompleteItem): string | void {
 function validateFile(file: File): string | void {
   let extn = file.name.split(".").pop().toLowerCase();
   if (!["png", "jpg", "jpeg"].includes(extn)) {
-    toast.error("Invalid file type, only PNG and JPG images are allowed");
+    toast.error(__("Invalid file type, only PNG and JPG images are allowed"));
     return "Invalid file type, only PNG and JPG images are allowed";
   }
 }
@@ -298,7 +298,7 @@ async function inviteContact(): Promise<void> {
         contact: contact.doc.name,
       }
     );
-    toast.success("Contact invited successfully");
+    toast.success(__("Contact invited successfully"));
     await contact.setValue.submit({
       user: user,
     });

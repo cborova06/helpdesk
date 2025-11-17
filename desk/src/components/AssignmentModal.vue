@@ -9,7 +9,7 @@
     <template #body-content>
       <AutocompleteNew
         v-if="showRestrictedMembers"
-        placeholder="Search agents"
+        :placeholder="__('Search agents')"
         :model-value="search"
         :options="members"
         @update:model-value="
@@ -87,7 +87,7 @@ import { useUserStore } from "@/stores/user";
 import { call, createResource } from "frappe-ui";
 import { useOnboarding } from "frappe-ui/frappe";
 import { computed, onMounted, ref } from "vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   doctype: {
     type: String,

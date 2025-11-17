@@ -21,7 +21,7 @@
             :variant="'subtle'"
             :theme="'orange'"
             size="sm"
-            label="Unsaved changes"
+            :label="__('Unsaved changes')"
             v-if="isDirty"
           />
         </div>
@@ -32,10 +32,10 @@
           @click="toggleEnabled"
         >
           <Switch size="sm" v-model="slaData.enabled" />
-          <span class="text-sm text-ink-gray-7 font-medium">Enabled</span>
+          <span class="text-sm text-ink-gray-7 font-medium">{{ __("Enabled") }}</span>
         </div>
         <Button
-          label="Save"
+          :label="__('Save')"
           theme="gray"
           variant="solid"
           @click="saveSla()"
@@ -52,8 +52,8 @@
           :type="'text'"
           size="sm"
           variant="subtle"
-          placeholder="Name"
-          label="Name"
+          :placeholder="__('Name')"
+          :label="__('Name')"
           v-model="slaData.service_level"
           required
           @change="validateSlaData('service_level')"
@@ -65,8 +65,8 @@
         :type="'textarea'"
         size="sm"
         variant="subtle"
-        placeholder="Description"
-        label="Description"
+        :placeholder="__('Description')"
+        :label="__('Description')"
         v-model="slaData.description"
       />
     </div>
@@ -74,16 +74,16 @@
     <div>
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold text-ink-gray-8"
-          >Assignment conditions</span
+          >{{ __("Assignment conditions") }}</span
         >
         <span class="text-p-sm text-ink-gray-6">
-          Choose which tickets are affected by this policy.
+          {{ __("Choose which tickets are affected by this policy.") }}
         </span>
       </div>
       <div class="mt-3">
         <div class="flex items-center justify-between">
           <Checkbox
-            label="Set as default SLA"
+            :label="__('Set as default SLA')"
             :model-value="slaData.default_sla"
             @update:model-value="toggleDefaultSla"
             class="text-ink-gray-6 text-base font-medium"
@@ -112,14 +112,12 @@
             v-if="!useNewUI"
           >
             <span class="text-p-sm">
-              Conditions for this SLA were created from
+              {{ __("Conditions for this SLA were created from") }}
               <a :href="deskUrl" target="_blank" class="underline">desk</a>
-              which are not compatible with this UI, you will need to recreate
-              the conditions here if you want to manage and add new conditions
-              from this UI.
+              {{ __("which are not compatible with this UI, you will need to recreate the conditions here if you want to manage and add new conditions from this UI.") }}
             </span>
             <Button
-              label="I understand, add conditions"
+              :label="__('I understand, add conditions')"
               variant="subtle"
               theme="gray"
               @click="useNewUI = true"
@@ -135,18 +133,18 @@
     <hr class="my-8" />
     <div>
       <div class="flex flex-col gap-1">
-        <span class="text-lg font-semibold text-ink-gray-8">Valid from</span>
+        <span class="text-lg font-semibold text-ink-gray-8">{{ __("Valid from") }}</span>
         <span class="text-p-sm text-ink-gray-6">
-          Choose how long this SLA policy will be active.
+          {{ __("Choose how long this SLA policy will be active.") }}
         </span>
       </div>
       <div class="mt-3.5 flex gap-5 flex-col md:flex-row">
         <div class="w-full space-y-1.5">
-          <FormLabel label="From date" for="from_date" />
+          <FormLabel :label="__('From date')" for="from_date" />
           <DatePicker
             v-model="slaData.start_date"
             variant="subtle"
-            placeholder="11/01/2025"
+            :placeholder="__('11/01/2025')"
             class="w-full"
             id="from_date"
             @change="validateSlaData('start_date')"
@@ -159,11 +157,11 @@
           <ErrorMessage :message="slaDataErrors.start_date" />
         </div>
         <div class="w-full space-y-1.5">
-          <FormLabel label="To date" for="to_date" />
+          <FormLabel :label="__('To date')" for="to_date" />
           <DatePicker
             v-model="slaData.end_date"
             variant="subtle"
-            placeholder="25/12/2025"
+            :placeholder="__('25/12/2025')"
             class="w-full"
             id="to_date"
             @change="validateSlaData('end_date')"
@@ -181,11 +179,10 @@
     <div>
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold text-ink-gray-8"
-          >Response and resolution</span
+          >{{ __("Response and resolution") }}</span
         >
         <span class="text-p-sm text-ink-gray-6">
-          Add time targets around support milestones like first reply and
-          resolution times
+          {{ __("Add time targets around support milestones like first reply and resolution times") }}
         </span>
       </div>
       <div class="mt-5">
@@ -226,12 +223,10 @@
     <div>
       <div class="flex flex-col gap-1">
         <span class="text-lg font-semibold text-ink-gray-8"
-          >Status details</span
+          >{{ __("Status details") }}</span
         >
         <span class="text-p-sm text-ink-gray-6">
-          Set the default status assigned when a ticket is created, and the
-          status to apply when a ticket is reopened. If not specified, the
-          default status from HD Settings will be used.
+          {{ __("Set the default status assigned when a ticket is created, and the status to apply when a ticket is reopened. If not specified, the default status from HD Settings will be used.") }}
         </span>
       </div>
       <div class="mt-5">
@@ -280,7 +275,7 @@ import SlaPriorityList from "./SlaPriorityList.vue";
 import SlaStatusList from "./SlaStatusList.vue";
 import { disableSettingModalOutsideClick } from "../settingsModal";
 import { useOnboarding } from "frappe-ui/frappe";
-
+import { __ } from "@/translation";
 const { updateOnboardingStep } = useOnboarding("helpdesk");
 
 const showConfirmDialog = ref({
@@ -344,7 +339,7 @@ if (slaActiveScreen.value.data && slaActiveScreen.value.fetchData) {
 const goBack = () => {
   const confirmDialogInfo = {
     show: true,
-    title: "Unsaved changes",
+    title: __('Unsaved changes'),
     message: "Are you sure you want to go back? Unsaved changes will be lost.",
     onConfirm: goBack,
   };
@@ -381,7 +376,7 @@ const saveSla = () => {
     if (isOldSla.value && useNewUI.value) {
       showConfirmDialog.value = {
         show: true,
-        title: "Confirm overwrite",
+        title: __('Confirm overwrite'),
         message:
           "Your old conditions will be overwritten. Are you sure you want to save?",
         onConfirm: () => {
@@ -417,7 +412,7 @@ const createSla = () => {
     },
     {
       onSuccess(data) {
-        toast.success("SLA policy created");
+        toast.success(__("SLA policy created"));
         slaActiveScreen.value.data = data;
         slaActiveScreen.value.screen = "view";
         getSlaData.submit({
@@ -455,7 +450,7 @@ const updateSla = () => {
     {
       onSuccess() {
         getSlaData.submit();
-        toast.success("SLA policy updated");
+        toast.success(__("SLA policy updated"));
         slaPolicyList.reload();
       },
     }
@@ -464,7 +459,7 @@ const updateSla = () => {
 
 const toggleEnabled = () => {
   if (slaData.value.default_sla) {
-    toast.error("SLA set as default cannot be disabled");
+    toast.error(__("SLA set as default cannot be disabled"));
     return;
   }
   slaData.value.enabled = !slaData.value.enabled;

@@ -35,7 +35,7 @@
           <Autocomplete
             :options="filterableFields.data"
             v-model="props.condition[0]"
-            :placeholder="'Field'"
+            :placeholder="__('Field')"
             @update:modelValue="updateField"
           />
         </div>
@@ -44,7 +44,7 @@
             v-if="!props.condition[0]"
             disabled
             type="text"
-            :placeholder="'operator'"
+            :placeholder="__('operator')"
             class="w-[100px]"
           />
           <FormControl
@@ -62,7 +62,7 @@
             v-if="!props.condition[0]"
             disabled
             type="text"
-            :placeholder="'condition'"
+            :placeholder="__('condition')"
             class="w-full"
           />
           <component
@@ -70,7 +70,7 @@
             :is="getValueControl()"
             v-model="props.condition[2]"
             @change="updateValue"
-            :placeholder="'condition'"
+            :placeholder="__('condition')"
           />
         </div>
       </div>
@@ -85,7 +85,7 @@
         variant="outline"
         v-if="props.isGroup && (props.level == 2 || props.level == 4)"
         @click="show = true"
-        label="Open nested conditions"
+        :label="__('Open nested conditions')"
       />
     </div>
     <div :class="'w-max'">
@@ -124,7 +124,7 @@ import GroupIcon from "~icons/lucide/group";
 import UnGroupIcon from "~icons/lucide/ungroup";
 import CFConditions from "./CFConditions.vue";
 import { filterableFields } from "./filterableFields";
-
+import { __ } from "@/translation";
 const show = ref(false);
 const emit = defineEmits([
   "remove",
@@ -167,7 +167,7 @@ const dropdownOptions = computed(() => {
 
   if (!props.isGroup && props.level < 4) {
     options.push({
-      label: "Turn into a group",
+      label: __('Turn into a group'),
       icon: () => h(GroupIcon),
       onClick: () => {
         emit("turnIntoGroup");
@@ -177,7 +177,7 @@ const dropdownOptions = computed(() => {
 
   if (props.isGroup) {
     options.push({
-      label: "Ungroup conditions",
+      label: __('Ungroup conditions'),
       icon: () => h(UnGroupIcon),
       onClick: () => {
         emit("unGroupConditions");
@@ -186,7 +186,7 @@ const dropdownOptions = computed(() => {
   }
 
   options.push({
-    label: "Remove",
+    label: __('Remove'),
     component: (props) =>
       TemplateOption({
         option: "Remove",
@@ -201,7 +201,7 @@ const dropdownOptions = computed(() => {
   });
 
   options.push({
-    label: "Remove group",
+    label: __('Remove group'),
     component: (props) =>
       TemplateOption({
         option: "Remove group",
@@ -250,11 +250,11 @@ function getValueControl() {
       type: "select",
       options: [
         {
-          label: "Set",
+          label: __('Set'),
           value: "set",
         },
         {
-          label: "Not Set",
+          label: __('Not Set'),
           value: "not set",
         },
       ],
@@ -334,32 +334,32 @@ function getOperators() {
   if (typeString.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
-        { label: "Like", value: "like" },
-        { label: "Not Like", value: "not like" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
+        { label: __('Like'), value: "like" },
+        { label: __('Not Like'), value: "not like" },
         { label: "In", value: "in" },
-        { label: "Not In", value: "not in" },
+        { label: __('Not In'), value: "not in" },
         { label: "Is", value: "is" },
       ]
     );
   }
   if (fieldname === "_assign") {
     options = [
-      { label: "Like", value: "like" },
-      { label: "Not Like", value: "not like" },
+      { label: __('Like'), value: "like" },
+      { label: __('Not Like'), value: "not like" },
       { label: "Is", value: "is" },
     ];
   }
   if (typeNumber.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
-        { label: "Like", value: "like" },
-        { label: "Not Like", value: "not like" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
+        { label: __('Like'), value: "like" },
+        { label: __('Not Like'), value: "not like" },
         { label: "In", value: "in" },
-        { label: "Not In", value: "not in" },
+        { label: __('Not In'), value: "not in" },
         { label: "Is", value: "is" },
         { label: "<", value: "<" },
         { label: ">", value: ">" },
@@ -371,10 +371,10 @@ function getOperators() {
   if (typeSelect.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
         { label: "In", value: "in" },
-        { label: "Not In", value: "not in" },
+        { label: __('Not In'), value: "not in" },
         { label: "Is", value: "is" },
       ]
     );
@@ -382,26 +382,26 @@ function getOperators() {
   if (typeLink.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
-        { label: "Like", value: "like" },
-        { label: "Not Like", value: "not like" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
+        { label: __('Like'), value: "like" },
+        { label: __('Not Like'), value: "not like" },
         { label: "In", value: "in" },
-        { label: "Not In", value: "not in" },
+        { label: __('Not In'), value: "not in" },
         { label: "Is", value: "is" },
       ]
     );
   }
   if (typeCheck.includes(fieldtype)) {
-    options.push(...[{ label: "Equals", value: "==" }]);
+    options.push(...[{ label: __('Equals'), value: "==" }]);
   }
   if (["Duration"].includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Like", value: "like" },
-        { label: "Not Like", value: "not like" },
+        { label: __('Like'), value: "like" },
+        { label: __('Not Like'), value: "not like" },
         { label: "In", value: "in" },
-        { label: "Not In", value: "not in" },
+        { label: __('Not In'), value: "not in" },
         { label: "Is", value: "is" },
       ]
     );
@@ -409,22 +409,22 @@ function getOperators() {
   if (typeDate.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
         { label: "Is", value: "is" },
         { label: ">", value: ">" },
         { label: "<", value: "<" },
         { label: ">=", value: ">=" },
         { label: "<=", value: "<=" },
-        { label: "Between", value: "between" },
+        { label: __('Between'), value: "between" },
       ]
     );
   }
   if (typeRating.includes(fieldtype)) {
     options.push(
       ...[
-        { label: "Equals", value: "==" },
-        { label: "Not Equals", value: "!=" },
+        { label: __('Equals'), value: "==" },
+        { label: __('Not Equals'), value: "!=" },
         { label: "Is", value: "is" },
         { label: ">", value: ">" },
         { label: "<", value: "<" },

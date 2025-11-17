@@ -19,12 +19,12 @@
           <!-- Switch -->
           <div class="flex gap-2 items-center">
             <Switch v-model="state.enabled" class="!w-fit" />
-            <span class="text-p-base text-ink-gray-6">Enabled</span>
+            <span class="text-p-base text-ink-gray-6">{{ __("Enabled") }}</span>
           </div>
           <!-- Actions -->
           <div class="flex gap-1">
             <Button
-              label="Save"
+              :label="__('Save')"
               variant="solid"
               size="sm"
               :disabled="
@@ -67,7 +67,7 @@
   </div>
   <ConfirmDialog
     v-model="showConfirmDialog"
-    title="Unsaved changes"
+    :title="__('Unsaved changes')"
     message="Are you sure you want to go back? Unsaved changes will be lost."
     :onConfirm="() => $emit('update:step', 'fd-list')"
     :onCancel="() => (showConfirmDialog = false)"
@@ -86,7 +86,7 @@ import { getFieldOptions, hiddenChildFields } from "./fieldDependency";
 import FieldDependencyCriteria from "./FieldDependencyCriteria.vue";
 import FieldDependencyFieldsSelection from "./FieldDependencyFieldsSelection.vue";
 import FieldDependencyValueSelection from "./FieldDependencyValueSelection.vue";
-
+import { __ } from "@/translation";
 const props = defineProps({
   fieldDependencyName: {
     type: String,
@@ -145,11 +145,11 @@ let state = reactive({
 let fieldCriteriaState = reactive({
   display: {
     enabled: true,
-    value: [{ label: "Any", value: "Any" }],
+    value: [{ label: __('Any'), value: "Any" }],
   },
   mandatory: {
     enabled: true,
-    value: [{ label: "Any", value: "Any" }],
+    value: [{ label: __('Any'), value: "Any" }],
   },
 });
 
@@ -206,11 +206,11 @@ function parseFieldCriteria(data: string) {
   const criteria = JSON.parse(data || "{}");
   fieldCriteriaState.display = criteria.display || {
     enabled: true,
-    value: [{ label: "Any", value: "Any" }],
+    value: [{ label: __('Any'), value: "Any" }],
   };
   fieldCriteriaState.mandatory = criteria.mandatory || {
     enabled: true,
-    value: [{ label: "Any", value: "Any" }],
+    value: [{ label: __('Any'), value: "Any" }],
   };
 }
 

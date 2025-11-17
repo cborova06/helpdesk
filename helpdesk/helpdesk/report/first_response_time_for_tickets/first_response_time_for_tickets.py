@@ -1,7 +1,7 @@
 # Copyright (c) 2013, Frappe Technologies Pvt. Ltd. and contributors
 # For license information, please see license.txt
-
 from __future__ import unicode_literals
+from frappe import _
 
 import frappe
 
@@ -10,14 +10,14 @@ def execute(filters=None):
     columns = [
         {
             "fieldname": "creation_date",
-            "label": "Date",
+            "label": _("Date"),
             "fieldtype": "Date",
             "width": 300,
         },
         {
             "fieldname": "first_response_time",
             "fieldtype": "Duration",
-            "label": "First Response Time",
+            "label": _("First Response Time"),
             "width": 300,
         },
     ]

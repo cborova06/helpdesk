@@ -83,7 +83,7 @@
                   :value="query"
                   @change="query = $event.target.value"
                   autocomplete="off"
-                  placeholder="Search"
+                  :placeholder="__('Search')"
                 />
                 <button
                   class="absolute right-0 inline-flex h-7 w-7 items-center justify-center"
@@ -182,12 +182,12 @@
                 >
                   <Button
                     v-if="!areAllOptionsSelected"
-                    label="Select All"
+                    :label="__('Select All')"
                     @click.stop="selectAll"
                   />
                 </div>
                 <div v-else class="flex items-center justify-end">
-                  <Button label="Clear" @click.stop="selectedValue = null" />
+                  <Button :label="__('Clear')" @click.stop="selectedValue = null" />
                 </div>
               </slot>
             </div>
@@ -210,7 +210,7 @@ import { LoadingIndicator, Popover } from "frappe-ui";
 import { nextTick } from "vue";
 import LucideCheckSquare from "~icons/lucide/check-square";
 import LucideSquare from "~icons/lucide/square";
-
+import { __ } from "@/translation";
 export default {
   name: "Autocomplete",
   props: [

@@ -6,7 +6,7 @@
       aria-level="1"
       class="flex gap-1 justify-between pt-[5px]"
     >
-      <h5 class="text-lg font-semibold">Edit Email</h5>
+      <h5 class="text-lg font-semibold">{{ __("Edit Email") }}</h5>
     </div>
     <div class="w-fit">
       <EmailProviderIcon
@@ -64,7 +64,7 @@
     <!-- action buttons -->
     <div class="mt-auto flex justify-between">
       <Button
-        label="Back"
+        :label="__('Back')"
         theme="gray"
         variant="outline"
         :disabled="loading"
@@ -72,14 +72,14 @@
       />
       <div class="flex gap-2">
         <Button
-          label="Update Account"
+          :label="__('Update Account')"
           variant="solid"
           @click="updateAccount"
           :loading="loading"
         />
         <Button
           v-if="accountData.enable_incoming"
-          label="Pull Emails"
+          :label="__('Pull Emails')"
           variant="subtle"
           @click="pullEmails"
           :loading="loadingPull"
@@ -105,7 +105,7 @@ import {
   services,
   validateInputs,
 } from "./emailConfig";
-
+import { __ } from "@/translation";
 interface P {
   accountData: EmailAccount;
 }
@@ -135,7 +135,7 @@ const state = reactive({
 });
 
 const info = {
-  description: "To know more about setting up email accounts, click",
+  description: __('To know more about setting up email accounts, click'),
   link: "https://docs.erpnext.com/docs/user/manual/en/email-account",
 };
 
@@ -212,7 +212,7 @@ function pullEmails() {
     .then(() => {
       localStorage.removeItem(`loading-emails-${state.email_account_name}`);
       loadingPull.value = null;
-      toast.success("Emails pulled successfully");
+      toast.success(__("Emails pulled successfully"));
     })
     .catch(() => {
       localStorage.removeItem(`loading-emails-${state.email_account_name}`);
@@ -255,7 +255,7 @@ async function callSetValue(values) {
 
 function succesHandler() {
   emit("update:step", "email-list");
-  toast.success("Email account updated successfully");
+  toast.success(__("Email account updated successfully"));
 }
 
 function errorHandler() {

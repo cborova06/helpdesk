@@ -50,7 +50,7 @@
               <Button
                 class="w-full !justify-start !text-ink-gray-5"
                 variant="ghost"
-                label="Create new business holiday"
+                :label="__('Create new business holiday')"
                 @click="createNewHolidayList()"
                 icon-left="plus"
               />
@@ -75,7 +75,7 @@ import {
 } from "@/stores/holidayList";
 import { watchDebounced } from "@vueuse/core";
 import { slaData, validateSlaData } from "@/stores/sla";
-
+import { __ } from "@/translation";
 const createNewHolidayList = () => {
   setActiveSettingsTab("Business Holidays");
   holidayListActiveScreen.value = {

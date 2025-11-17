@@ -12,7 +12,7 @@
         }"
         target="_blank"
       >
-        <span class="text-xs underline">(View All)</span>
+        <span class="text-xs underline">{{ __("(View All)") }}</span>
       </RouterLink>
     </div>
     <dl
@@ -54,7 +54,7 @@
   >
     <Icon icon="heroicons-outline:search" class="h-8 w-8 text-gray-400" />
     <div class="flex items-center flex-col justify-center">
-      <p class="font-base">No answers found</p>
+      <p class="font-base">{{ __("No answers found") }}</p>
       <span class="font-base text-p-sm text-gray-600 text-center"
         >Rephrase the question and try again with some keywords</span
       >
@@ -66,7 +66,7 @@
   >
     <Icon icon="heroicons-outline:search" class="h-8 w-8 text-gray-400" />
     <div class="flex items-center flex-col justify-center">
-      <p class="font-base">Searching...</p>
+      <p class="font-base">{{ __("Searching...") }}</p>
       <span class="font-base text-p-sm text-gray-600 text-center"
         >Please wait while we search for the answers</span
       >
@@ -80,6 +80,7 @@ import { createResource } from "frappe-ui";
 import { isEmpty } from "lodash";
 import { Icon } from "@iconify/vue";
 import { capture } from "@/telemetry";
+import { __ } from "@/translation";
 interface P {
   query: string;
   hideViewAll?: boolean;

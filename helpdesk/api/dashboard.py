@@ -144,12 +144,12 @@ def get_ticket_count(from_date, to_date, conds="", return_result=False):
     )
 
     return {
-        "title": "Tickets",
+        "title": _("Tickets"),
         "value": current_month_tickets,
         "delta": delta_in_percentage,
         "deltaSuffix": "%",
         "negativeIsBetter": True,
-        "tooltip": "Total number of tickets created",
+        "tooltip": _("Total number of tickets created"),
     }
 
 
@@ -210,12 +210,12 @@ def get_sla_fulfilled_count(from_date, to_date, conds="", resolved_statuses=None
         current_month_fulfilled_percentage - prev_month_fulfilled_percentage
     )
     return {
-        "title": "% SLA Fulfilled",
+        "title": _("% SLA Fulfilled"),
         "value": current_month_fulfilled_percentage,
         "suffix": "%",
         "delta": delta_in_percentage,
         "deltaSuffix": "%",
-        "tooltip": "% of tickets created that were resolved within SLA",
+        "tooltip": _("% of tickets created that were resolved within SLA"),
     }
 
 
@@ -259,13 +259,13 @@ def get_avg_first_response_time(from_date, to_date, conds=""):
     delta = current_month_avg - prev_month_avg if prev_month_avg else 0
 
     return {
-        "title": "Avg. First Response",
+        "title": _("Avg. First Response"),
         "value": current_month_avg,
-        "suffix": " hrs",
+        "suffix": _(" hrs"),
         "delta": delta,
-        "deltaSuffix": " hrs",
+        "deltaSuffix": _(" hrs"),
         "negativeIsBetter": True,
-        "tooltip": "Avg. time taken to first respond to a ticket",
+        "tooltip": _("Avg. time taken to first respond to a ticket"),
     }
 
 
@@ -306,13 +306,13 @@ def get_avg_resolution_time(from_date, to_date, conds="", resolved_statuses=None
 
     delta = current_month_avg - prev_month_avg if prev_month_avg else 0
     return {
-        "title": "Avg. Resolution",
+        "title": _("Avg. Resolution"),
         "value": current_month_avg,
-        "suffix": " days",
+        "suffix": _(" days"),
         "delta": delta,
-        "deltaSuffix": " days",
+        "deltaSuffix": _(" days"),
         "negativeIsBetter": True,
-        "tooltip": "Avg. time taken to resolve a ticket",
+        "tooltip": _("Avg. time taken to resolve a ticket"),
     }
 
 
@@ -355,12 +355,12 @@ def get_avg_feedback_score(from_date, to_date, conds=""):
     delta = current_month_avg - prev_month_avg
 
     return {
-        "title": "Avg. Feedback Rating",
+        "title": _("Avg. Feedback Rating"),
         "value": current_month_avg * 5,
         "suffix": "/5",
         "delta": delta * 5,
-        "deltaSuffix": " stars",
-        "tooltip": "Avg. feedback rating for the tickets resolved",
+        "deltaSuffix": _(" stars"),
+        "tooltip": _("Avg. feedback rating for the tickets resolved"),
     }
 
 
@@ -393,23 +393,23 @@ def get_team_chart_data(from_date, to_date, filters=None):
     )
     for r in result:
         if not r.team:
-            r.team = "No Team"
+            r.team = _("No Team")
 
     if len(result) < 7:
         return get_pie_chart_config(
             result,
-            "Tickets by Team",
-            "Percentage of Total Tickets by Team",
+            _("Tickets by Team"),
+            _("Percentage of Total Tickets by Team"),
             "team",
             "count",
         )
     else:
         return get_bar_chart_config(
             result,
-            "Tickets by Team",
-            "Total Tickets by Team",
-            {"key": "team", "type": "category", "title": "Team", "timeGrain": "day"},
-            "Tickets",
+            _("Tickets by Team"),
+            _("Total Tickets by Team"),
+            {"key": "team", "type": "category", "title": _("Team"), "timeGrain": "day"},
+            _("Tickets"),
             [{"name": "count", "type": "bar"}],
         )
 
@@ -429,18 +429,18 @@ def get_ticket_type_chart_data(from_date, to_date, filters=None):
     if len(result) < 7:
         return get_pie_chart_config(
             result,
-            "Tickets by Type",
-            "Percentage of Total Tickets by Type",
+            _("Tickets by Type"),
+            _("Percentage of Total Tickets by Type"),
             "type",
             "count",
         )
     else:
         return get_bar_chart_config(
             result,
-            "Tickets by Type",
-            "Total Tickets by Type",
-            {"key": "type", "type": "category", "title": "Type", "timeGrain": "day"},
-            "Tickets",
+            _("Tickets by Type"),
+            _("Total Tickets by Type"),
+            {"key": "type", "type": "category", "title": _("Type"), "timeGrain": "day"},
+            _("Tickets"),
             [{"name": "count", "type": "bar"}],
         )
 
@@ -460,23 +460,23 @@ def get_ticket_priority_chart_data(from_date, to_date, filters=None):
     if len(result) < 7:
         return get_pie_chart_config(
             result,
-            "Tickets by Priority",
-            "Percentage of Total Tickets by Priority",
+            _("Tickets by Priority"),
+            _("Percentage of Total Tickets by Priority"),
             "priority",
             "count",
         )
     else:
         return get_bar_chart_config(
             result,
-            "Tickets by Priority",
-            "Total Tickets by Priority",
+            _("Tickets by Priority"),
+            _("Total Tickets by Priority"),
             {
                 "key": "priority",
                 "type": "category",
-                "title": "Priority",
+                "title": _("Priority"),
                 "timeGrain": "day",
             },
-            "Tickets",
+            _("Tickets"),
             [{"name": "count", "type": "bar"}],
         )
 
@@ -494,12 +494,12 @@ def get_ticket_channel_chart_data(from_date, to_date, filters=None):
     )
 
     for row in result:
-        row.channel = "Portal" if row.channel == 1 else "Email"
+        row.channel = _("Portal") if row.channel == 1 else _("Email")
 
     return get_pie_chart_config(
         result,
-        "Tickets by Channel",
-        "Percentage of Total Tickets by Channel",
+        _("Tickets by Channel"),
+        _("Percentage of Total Tickets by Channel"),
         "channel",
         "count",
     )
@@ -551,13 +551,13 @@ def get_ticket_trend_data(
         as_dict=1,
     )
     avg_tickets = get_avg_tickets_per_day(from_date, to_date, conds)
-    subtitle = f"Average tickets per day is around {avg_tickets:.0f}"
+    subtitle = _("Average tickets per day is around {0}").format(f"{avg_tickets:.0f}")
     return get_bar_chart_config(
         result,
-        "Ticket Trend",
+        _("Ticket Trend"),
         subtitle,
-        {"key": "date", "type": "time", "title": "Date", "timeGrain": "day"},
-        "Tickets",
+        {"key": "date", "type": "time", "title": _("Date"), "timeGrain": "day"},
+        _("Tickets"),
         [
             {"name": "closed", "type": "bar"},
             {"name": "open", "type": "bar"},
@@ -570,7 +570,7 @@ def get_ticket_trend_data(
         ],
         stacked=True,
         y2Axis={
-            "title": "% SLA",
+            "title": _("% SLA"),
             "yMin": 0,
             "yMax": 100,
         },
@@ -619,14 +619,16 @@ def get_feedback_trend_data(from_date, to_date, conds=""):
     )
     avg_rating = avg_rating_result[0] if avg_rating_result[0] else 0
 
-    subtitle = f"Average feedback rating per day is around {avg_rating:.1f} stars"
+    subtitle = _("Average feedback rating per day is around {0} stars").format(
+        f"{avg_rating:.1f}"
+    )
 
     return get_bar_chart_config(
         result,
-        "Feedback Trend",
+        _("Feedback Trend"),
         subtitle,
-        {"key": "date", "type": "time", "title": "Date", "timeGrain": "day"},
-        "Rated Tickets",
+        {"key": "date", "type": "time", "title": _("Date"), "timeGrain": "day"},
+        _("Rated Tickets"),
         [
             {"name": "rated_tickets", "type": "bar"},
             {
@@ -638,7 +640,7 @@ def get_feedback_trend_data(from_date, to_date, conds=""):
             },
         ],
         y2Axis={
-            "title": "Rating",
+            "title": _("Rating"),
             "yMin": 0,
             "yMax": 5,
         },

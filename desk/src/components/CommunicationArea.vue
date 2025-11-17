@@ -7,7 +7,7 @@
         <Button
           ref="sendEmailRef"
           variant="ghost"
-          label="Reply"
+          :label="__('Reply')"
           :class="[showEmailBox ? '!bg-gray-300 hover:!bg-gray-200' : '']"
           @click="toggleEmailBox()"
         >
@@ -17,7 +17,7 @@
         </Button>
         <Button
           variant="ghost"
-          label="Comment"
+          :label="__('Comment')"
           :class="[showCommentBox ? '!bg-gray-300 hover:!bg-gray-200' : '']"
           @click="toggleCommentBox()"
         >
@@ -38,10 +38,10 @@
       <EmailEditor
         ref="emailEditorRef"
         :label="
-          isMobileView ? 'Send' : isMac ? 'Send (⌘ + ⏎)' : 'Send (Ctrl + ⏎)'
+          isMobileView ? 'Gönder' : isMac ? 'Gönder (⌘ + ⏎)' : 'Gönder (Ctrl + ⏎)'
         "
         v-model:content="content"
-        placeholder="Hi John, we are looking into this issue."
+        :placeholder="__('Hi John, we are looking into this issue.')"
         :ticketId="ticketId"
         :to-emails="toEmails"
         :cc-emails="ccEmails"
@@ -69,15 +69,15 @@
         ref="commentTextEditorRef"
         :label="
           isMobileView
-            ? 'Comment'
+            ? 'Yorum Yap'
             : isMac
-            ? 'Comment (⌘ + ⏎)'
-            : 'Comment (Ctrl + ⏎)'
+            ? 'Yorum Yap (⌘ + ⏎)'
+            : 'Yorum Yap (Ctrl + ⏎)'
         "
         :ticketId="ticketId"
         :editable="showCommentBox"
         :doctype="doctype"
-        placeholder="@John could you please look into this?"
+        :placeholder="__('@John could you please look into this?')"
         @submit="
           () => {
             showCommentBox = false;
@@ -219,7 +219,7 @@ defineExpose({
 });
 
 import { onClickOutside } from "@vueuse/core";
-
+import { __ } from "@/translation";
 onClickOutside(emailBoxRef, () => {
   if (showEmailBox.value) {
     showEmailBox.value = false;

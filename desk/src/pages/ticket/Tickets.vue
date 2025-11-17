@@ -3,7 +3,7 @@
     <LayoutHeader>
       <template #left-header>
         <ViewBreadcrumbs
-          label="Tickets"
+          :label="__('Tickets')"
           :route-name="isCustomerPortal ? 'TicketsCustomer' : 'TicketsAgent'"
           :options="dropdownOptions"
           :dropdown-actions="viewActions"
@@ -14,7 +14,7 @@
         <RouterLink
           :to="{ name: isCustomerPortal ? 'TicketNew' : 'TicketAgentNew' }"
         >
-          <Button label="Create" theme="gray" variant="solid">
+          <Button :label="__('Create')" theme="gray" variant="solid">
             <template #prefix>
               <LucidePlus class="h-4 w-4" />
             </template>
@@ -76,7 +76,7 @@ import { getIcon, isCustomerPortal } from "@/utils";
 import { Badge, FeatherIcon, toast, Tooltip, usePageMeta } from "frappe-ui";
 import { computed, h, onMounted, reactive, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
-
+import { __ } from "@/translation";
 const router = useRouter();
 const route = useRoute();
 
@@ -101,7 +101,7 @@ const { getStatus } = useTicketStatusStore();
 const listSelections = ref(new Set());
 const selectBannerActions = [
   {
-    label: "Export",
+    label: __('Export'),
     icon: "download",
     onClick: (selections: Set<string>) => {
       listSelections.value = new Set(selections);
@@ -144,13 +144,32 @@ const options = {
     resolution_by: {
       custom: ({ row, item }) => handle_resolution_by_field(row, item),
     },
+    custom_last_sentiment: {
+      custom: ({ item }) => renderSentimentPill(getSentimentMeta(item)),
+    },
+    custom_sentiment_trend: {
+      custom: ({ item }) => renderSentimentPill(getTrendMeta(item)),
+    },
+    custom_effort_score: {
+      custom: ({ row, item }) =>
+        renderEffortScorePill(
+          item,
+          extractBandValue(row.custom_effort_band)
+        ),
+    },
+    custom_effort_band: {
+      custom: ({ item }) =>
+        renderEffortBandPill(
+          extractBandValue(item)
+        ),
+    },
   },
   isCustomerPortal: isCustomerPortal.value,
   selectable: true,
   showSelectBanner: true,
   selectBannerActions,
   emptyState: {
-    title: "No Tickets Found",
+    title: __('No Tickets Found'),
     icon: h(TicketIcon, {
       class: "h-10 w-10",
     }),
@@ -165,20 +184,20 @@ const options = {
 function handle_response_by_field(row: any, item: string) {
   if (!row.first_responded_on && dayjs(item).isBefore(new Date())) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
   }
   if (row.first_responded_on && dayjs(row.first_responded_on).isBefore(item)) {
     return h(Badge, {
-      label: "Fulfilled",
+      label: __('Fulfilled'),
       theme: "green",
       variant: "outline",
     });
   } else if (dayjs(row.first_responded_on).isAfter(item)) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
@@ -197,19 +216,19 @@ function handle_resolution_by_field(row: any, item: string) {
   const status = getStatus(row.status) || {};
   if (status.category === "Paused") {
     return h(Badge, {
-      label: "Paused",
+      label: __('Paused'),
       theme: "blue",
       variant: "outline",
     });
   } else if (row.resolution_date && dayjs(row.resolution_date).isBefore(item)) {
     return h(Badge, {
-      label: "Fulfilled",
+      label: __('Fulfilled'),
       theme: "green",
       variant: "outline",
     });
   } else if (dayjs(row.resolution_date).isAfter(item)) {
     return h(Badge, {
-      label: "Failed",
+      label: __('Failed'),
       theme: "red",
       variant: "outline",
     });
@@ -257,6 +276,157 @@ function reset(reload = false) {
   if (reload) listViewRef.value.reload();
 }
 
+const sentimentPalette = {
+  positive: {
+    emoji: "😊",
+    bg: "bg-green-50",
+    text: "text-green-700",
+    label: __('Positive'),
+  },
+  neutral: {
+    emoji: "😐",
+    bg: "bg-gray-100",
+    text: "text-gray-700",
+    label: __('Neutral'),
+  },
+  negative: {
+    emoji: "🙁",
+    bg: "bg-red-50",
+    text: "text-red-700",
+    label: __('Negative'),
+  },
+};
+
+const trendPalette = {
+  improving: {
+    emoji: "📈",
+    bg: "bg-green-50",
+    text: "text-green-700",
+    label: __('Improving'),
+  },
+  stable: {
+    emoji: "⚖️",
+    bg: "bg-indigo-50",
+    text: "text-indigo-700",
+    label: __('Stable'),
+  },
+  declining: {
+    emoji: "📉",
+    bg: "bg-red-50",
+    text: "text-red-700",
+    label: __('Declining'),
+  },
+};
+
+const effortPalette = {
+  low: {
+    emoji: "🟢",
+    bg: "bg-emerald-50",
+    text: "text-emerald-700",
+  },
+  medium: {
+    emoji: "🟡",
+    bg: "bg-amber-50",
+    text: "text-amber-700",
+  },
+  high: {
+    emoji: "🔴",
+    bg: "bg-rose-50",
+    text: "text-rose-700",
+  },
+};
+
+function renderSentimentPill(meta) {
+  return h(
+    "div",
+    {
+      class: `inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium ${meta.bg} ${meta.text}`,
+    },
+    [h("span", { class: "text-base" }, meta.emoji), h("span", meta.label)]
+  );
+}
+
+function getEffortMeta(band) {
+  return (
+    effortPalette[(band || "").toString().toLowerCase()] || {
+      emoji: "⚪",
+      bg: "bg-gray-50",
+      text: "text-gray-700",
+    }
+  );
+}
+
+function renderEffortScorePill(score, band) {
+  const meta = getEffortMeta(band);
+  const value = typeof score === "number" ? score.toFixed(1) : score || "–";
+  return h(
+    "div",
+    {
+      class: `inline-flex items-center gap-2 rounded-full px-2.5 py-1 text-xs font-medium ${meta.bg} ${meta.text}`,
+    },
+    [
+      h("span", meta.emoji),
+      h("span", { class: "font-semibold" }, `${value}`),
+    ]
+  );
+}
+
+function renderEffortBandPill(band) {
+  const meta = getEffortMeta(band);
+  const bandLabel = band || "Unknown";
+  return h(
+    "div",
+    {
+      class: `inline-flex items-center gap-2 rounded-full px-2.5 py-1 text-xs font-medium ${meta.bg} ${meta.text}`,
+    },
+    [
+      h("span", meta.emoji),
+      h("span", { class: "uppercase tracking-wide" }, bandLabel),
+    ]
+  );
+}
+
+function normalizeValue(value) {
+  return value?.toString().trim().toLowerCase();
+}
+
+function getSentimentMeta(value) {
+  const key = normalizeValue(value);
+  if (["positive", "olumlu"].includes(key)) return sentimentPalette.positive;
+  if (["negative", "olumsuz"].includes(key)) return sentimentPalette.negative;
+  if (["neutral", "nötr", "notr"].includes(key)) return sentimentPalette.neutral;
+  return {
+    emoji: "❔",
+    bg: "bg-gray-50",
+    text: "text-gray-700",
+    label: value || "Unknown",
+  };
+}
+
+function getTrendMeta(value) {
+  const key = normalizeValue(value);
+  if (["improving", "artıyor", "artiyor"].includes(key))
+    return trendPalette.improving;
+  if (["declining", "düşüyor", "dusuyor", "azalıyor", "azaliyor"].includes(key))
+    return trendPalette.declining;
+  if (["stable", "stabil"].includes(key)) return trendPalette.stable;
+  return {
+    emoji: "❔",
+    bg: "bg-gray-50",
+    text: "text-gray-700",
+    label: value || "Unknown",
+  };
+}
+
+function extractBandValue(raw) {
+  if (!raw) return undefined;
+  if (typeof raw === "string") return raw;
+  if (typeof raw === "object") {
+    return raw.value || raw.label || raw.name;
+  }
+  return String(raw);
+}
+
 const slaStatusColorMap = {
   Fulfilled: "green",
   Failed: "red",
@@ -281,7 +451,7 @@ const dropdownOptions = computed(() => {
       group: "Default Views",
       items: [
         {
-          label: "List View",
+          label: __('List View'),
           icon: "align-justify",
           onClick: () =>
             router.push({
@@ -317,7 +487,7 @@ const dropdownOptions = computed(() => {
     hideLabel: true,
     items: [
       {
-        label: "Create View",
+        label: __('Create View'),
         icon: "plus",
         onClick: () => {
           resetState();
@@ -341,7 +511,7 @@ const viewActions = (view) => {
       hideLabel: true,
       items: [
         {
-          label: "Duplicate",
+          label: __('Duplicate'),
           icon: h(FeatherIcon, { name: "copy" }),
           onClick: () => {
             viewDialog.view.label = _view.label + " (New)";
@@ -357,7 +527,7 @@ const viewActions = (view) => {
   ];
   if (!_view.public || isManager) {
     actions[0].items.push({
-      label: "Edit",
+      label: __('Edit'),
       icon: h(EditIcon, { class: "h-4 w-4" }),
       onClick: () => {
         viewDialog.view.label = _view.label;
@@ -400,7 +570,7 @@ const viewActions = (view) => {
                 "This view is currently public. Changing it to private will hide it for all the users.",
               actions: [
                 {
-                  label: "Confirm",
+                  label: __('Confirm'),
                   variant: "solid",
                   onClick({ close }) {
                     close();
@@ -420,7 +590,7 @@ const viewActions = (view) => {
       hideLabel: true,
       items: [
         {
-          label: "Delete",
+          label: __('Delete'),
           icon: "trash-2",
           onClick: () => {
             $dialog({
@@ -433,7 +603,7 @@ const viewActions = (view) => {
               }`,
               actions: [
                 {
-                  label: "Confirm",
+                  label: __('Confirm'),
                   variant: "solid",
                   onClick({ close }) {
                     if (route.query.view === _view.name) {
@@ -548,7 +718,7 @@ function resetState() {
 onMounted(() => {
   if (!route.query.view) {
     currentView.value = {
-      label: "List",
+      label: __('List'),
       icon: "lucide:align-justify",
     };
   }
@@ -558,7 +728,7 @@ onMounted(() => {
 });
 usePageMeta(() => {
   return {
-    title: "Tickets",
+    title: __('Tickets'),
   };
 });
 </script>
