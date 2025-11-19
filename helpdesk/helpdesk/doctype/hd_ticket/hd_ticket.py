@@ -523,8 +523,25 @@ class HDTicket(Document):
 
 	@property
 	def portal_uri(self):
-		root_uri = frappe.utils.get_url()
-		return f"{root_uri}/helpdesk/my-tickets/{self.name}"
+		"""Public portal URL for this ticket.
+
+		Prefer an explicit host_name / hostname from site config so that
+		email linkleri 127.0.0.1:8000 yerine gerçek domain (örn. https://helpdeskai.com)
+		üzerinden üretilir. host_name tanımlı değilse mevcut get_url() davranışına
+		geri düşer.
+		"""
+		root_uri = frappe.local.conf.host_name or frappe.local.conf.hostname
+
+		if not root_uri:
+			root_uri = frappe.utils.get_url()
+
+		# Eğer şema yoksa, mail linkleri için https varsayalım
+		if not (root_uri.startswith("http://") or root_uri.startswith("https://")):
+			root_uri = "https://" + root_uri
+
+		from urllib.parse import urljoin
+
+		return urljoin(root_uri, f"/helpdesk/my-tickets/{self.name}")
 
 	@frappe.whitelist()
 	def new_comment(self, content: str, attachments: List[str] = []):
