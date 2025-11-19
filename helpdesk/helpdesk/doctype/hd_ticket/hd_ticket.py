@@ -790,7 +790,7 @@ class HDTicket(Document):
 		try:
 			frappe.sendmail(
 				recipients=[self.raised_by],
-				subject=f"Ticket #{self.name}: We've received your request",
+				subject=_("Ticket #{0}: We've received your request").format(self.name),
 				message=self._get_rendered_template(
 					acknowledgement_email_content,
 					default_acknowledgement_email_content,
