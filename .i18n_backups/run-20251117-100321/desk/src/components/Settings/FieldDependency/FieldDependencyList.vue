@@ -7,7 +7,7 @@
             Field Dependencies
           </h1>
           <DocumentationButton
-            url="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/field-dependency"
+            url="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"
             color="!text-ink-gray-6"
           />
         </div>

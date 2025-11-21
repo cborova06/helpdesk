@@ -140,7 +140,7 @@
             }}
             <a
               class="font-medium underline"
-              href="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun/assignment-rule"
+              href="https://www.brvsoftware.com.tr/ilk-talebinizi-olusturun"
               target="_blank"
               >{{ __("Learn about conditions") }}</a
             >
